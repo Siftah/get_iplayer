@@ -36,3 +36,6 @@ If you're on Linux/OSX, you may want to ensure the new script is executable by r
 
 `chmod a+x <insert script location here>`
 
+or, if the script is in your PATH:
+
+`chmod a+x `\``which get_iplayer`\`
