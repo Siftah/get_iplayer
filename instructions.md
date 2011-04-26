@@ -2,7 +2,7 @@
 
 1. **Download the new script**
     
-    Go this URL in your web browser:
+    Go to this URL in your web browser:
     
     <https://github.com/dinkypumpkin/get_iplayer/raw/HEAD/get_iplayer>
     
