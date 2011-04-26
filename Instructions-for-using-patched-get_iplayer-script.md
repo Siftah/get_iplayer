@@ -30,11 +30,9 @@ If you're on Linux/OSX, again, only you will know where the script is located.  
 
 \3. Replace the current script
 
-Back up the current script that you located as described above and replace it with the downloaded script.  Be sure it has same name as the current script (with or without a .pl extension).
+Back up the current script that you located above and replace it with the downloaded script.  Be sure it has same name as the current script (with or without a .pl extension).
 
-If you're on Linux/OSX, you may want to ensure the new script is executable by running:
+If you're on Linux/OSX, you may want to ensure the new script is executable by running the following command from a shell prompt:
 
-`chmod a+x <location of new script>`
-
-from a command prompt.
+`chmod a+x <insert script location here>`
 
