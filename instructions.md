@@ -12,6 +12,8 @@
     
     You can also point curl, wget, etc. at the above URL.
     
+    **NOTE:** Your browser may save the downloaded file as _get\_iplayer.txt_ or _get\_iplayer.pl.txt_.  Be aware of this when you look for the file to use it as a replacement for the current script (see below).
+
 2. **Locate the current script**
    
     If you're on Windows and you used the get\_iplayer installer, the current script will almost certainly be:
@@ -30,7 +32,7 @@
     
 3. **Replace the current script**
     
-    Back up the current script that you located above and replace it with the downloaded script.  Be sure it has same name as the current script (with or without a .pl extension).
+    Back up the current script that you located above and replace it with the new downloaded script.  Be sure to give the new script file the same name as the current script (Windows:  _get\_iplayer.pl_, Linux/OSX:  _get\_iplayer_ ).
     
     If you're on Linux/OSX, you may want to ensure the new script is executable by running the following command from a shell prompt:
     
