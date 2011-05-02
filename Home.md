@@ -1,3 +1,3 @@
 Welcome to the get_iplayer wiki!
 
-[[instructions]]
+[Instructions for using patched get_iplayer script](instructions)
