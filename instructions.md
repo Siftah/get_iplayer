@@ -4,7 +4,7 @@
     
     Go to this URL in your web browser:
     
-    <https://github.com/dinkypumpkin/get_iplayer/raw/HEAD/get_iplayer>
+    <https://github.com/dinkypumpkin/get_iplayer/raw/master/get_iplayer>
     
     You should see the full script in the browser window.
     
