@@ -1,6 +1,26 @@
 ## Instructions for using patched get_iplayer script
 
-1. **Download the new script**
+1. **Check master repository first**
+
+    You should first check the change log at the master repository to see if a fix for your particular problem has been committed there:
+
+    <http://git.infradead.org/get_iplayer.git>
+
+    If so, go to the repository tree view:
+
+    <http://git.infradead.org/get_iplayer.git/tree>
+
+    Click on **raw** at the far right of the line with _get\_iplayer_.  It will look something like:
+    
+    `-rwxr-xr-x	332549	get_iplayer	blob | history | raw`
+    
+    This will load the latest get_iplayer script in your browser.
+    
+    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  Proceed to Step 3 below.
+  
+    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched get_iplayer.
+
+2. **Download the new script**
     
     Go to this URL in your web browser:
     
@@ -14,7 +34,7 @@
     
     **NOTE:** Your browser may save the downloaded file as _get\_iplayer.txt_ or _get\_iplayer.pl.txt_.  Be aware of this when you look for the file to use it as a replacement for the current script (see below).
 
-2. **Locate the current script**
+3. **Locate the current script**
    
     If you're on Windows and you used the get\_iplayer installer, the current script will almost certainly be:
     
@@ -30,7 +50,7 @@
     
     If you're on Linux/OSX, again, only you will know where the script is located.  In this case, the file will almost certainly be named _get\_iplayer_.
     
-3. **Replace the current script**
+4. **Replace the current script**
     
     Back up the current script that you located above and replace it with the new downloaded script.  Be sure to give the new script file the same name as the current script (Windows:  _get\_iplayer.pl_, Linux/OSX:  _get\_iplayer_ ).
     
