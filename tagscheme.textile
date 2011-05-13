@@ -40,7 +40,7 @@ fn2. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
 
 fn3. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
 
-fn4. @<title>@ used if ==--==tag-fulltitle given
+fn4. @<title>@ used if ==--tag-fulltitle== given
 
 fn5. _BBC TV_, _BBC Radio_, _BBC Podcast_
 
@@ -50,17 +50,17 @@ fn7. If @<firstbcast>@ is not valid date, current date is used
 
 fn8. @<player>@ and @<web>@ appended if present
 
-fn9. ==--==tag-longdesc required for compatible AtomicParsley version
+fn9. ==--tag-longdesc== required for compatible AtomicParsley version
 
-fn10. ==--==tag-longdescription required for compatible AtomicParsley version
+fn10. ==--tag-longdescription== required for compatible AtomicParsley version
 
 fn11. _true_ if @<mode>@ contains "hd", _false_ otherwise
 
-fn12. ==--==tag-hdvideo required for compatible AtomicParsley version
+fn12. ==--tag-hdvideo== required for compatible AtomicParsley version
 
 fn13. If @<senum>@ empty, @<pid>@ is used
 
-fn14. ==--==tag-podcast required if @<type>@ != "podcast"
+fn14. ==--tag-podcast== required if @<type>@ != "podcast"
 
 fn15. Uses same rules as genre [6]
 
