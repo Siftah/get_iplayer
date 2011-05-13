@@ -1,37 +1,36 @@
-|_\2.Tag Mapping |_\2.MP4 Tagging |_\2.ID3 Tagging |
-|_.Tag Name |_.get_iplayer Variable |_.AtomicParsley Param |_.MP4 atom (Audio::M4P) |_.id3v2 Param |_.ID3 Frame (MP3::Tag) |
-|stik[1]         |@<ext>@            |==--==stik                |stik   |           |         |
-|advisory[2]     |@<guidance>@       |==--==advisory            |rtng   |           |         |
-|copyright[3]    |@<dldate>@         |==--==copyright           |cprt   |==--==TCOP |TCOP     |
-|title           |@<episode>@[4]     |==--==title               |(C)nam |==--==TIT2 |TIT2     |
-|artist          |@<channel>@        |==--==artist              |(C)ART |==--==TPE1 |TPE1     |
-|albumArtist     |BBC @<type>@[5]    |==--==albumArtist         |aART   |==--==TPE2 |TPE2     |
-|album           |@<name>@           |==--==album               |(C)alb |==--==TALB |TALB     |
-|grouping        |@<categories>@     |==--==grouping            |(C)grp |==--==TIT1 |TIT1     |
-|composer        |BBC iPlayer        |==--==composer            |(C)wrt |==--==TCOM |TCOM     |
-|genre[6]        |@<categories>@     |==--==genre               |(C)gen |==--==TCON |TCON     |
-|comment         |@<descshort>@      |==--==comment             |(C)cmt |==--==COMM |COMM     |
-|year            |@<firstbcast>@[7]  |==--==year                |(C)day |==--==TYER |TYER     |
-|tracknum        |@<episodenum>@     |==--==tracknum            |trkn   |==--==TRCK |TRCK     |
-|disk            |@<seriesnum>@      |==--==disk                |disk   |==--==TPOS |TPOS     |
-|lyrics          |@<desc>@[8]        |==--==lyrics              |(C)lyr |==--==USLT |USLT     |
-|description     |@<descshort>@      |==--==description         |desc   |           |TIT3[14] |
-|longDescription |@<desc>@           |==--==longdesc[9]         |ldes   |           |TDES[14] |
-|                |                   |==--==longDescription[10] |       |           |         |
-|hdvideo[11]     |@<mode>@           |==--==hdvideo[12]         |hdvd   |           |         |
-|TVShowName      |@<name>@           |==--==TVShowName          |tvsh   |           |         |
-|TVEpisode       |@<senum>@ [13]     |==--==TVEpisode           |tven   |           |         |
-|TVSeasonNum     |@<seriesnum>@      |==--==TVSeasonNum         |tvsh   |           |         |
-|TVEpisodeNum    |@<episodenum>@     |==--==TVEpisodeNum        |tves   |           |         |
-|TVNetwork       |@<channel>@        |==--==TVNetwork           |tvnn   |           |         |
-|artwork         |@<thumbfile>@      |==--==artwork             |covr   |           |APIC     |
-|podcastFlag[14] |true               |==--==podcastFlag         |pcst   |           |PCST     |
-|category[14]    |@<categories>@[15] |==--==category            |catg   |           |TCAT     |
-|keyword[14]     |@<categories>@     |==--==keyword             |keyw   |           |TKWD     |
-|podcastGUID[14] |@<player>@         |==--==podcastGUID         |egid   |           |TGID     |
-|                |                   |                          |       |==--==TDAT |TDAT[16] |
-|                |                   |                          |       |==--==TIME |TIME[16] |
-|                |                   |                          |       |           |TDRL[17] |
+|_\2.Tag Mapping |_\2.MP4 Tagging |_\2.ID3 Tagging |_.iTunes|
+|_.Tag Name |_.get_iplayer Variable |_.AtomicParsley&#160;Param |_.MP4 atom |_.id3v2 Param |_.ID3 Frame |_.Info Field |
+|stik[1]         |@<ext>@            |==--==stik                  |stik   |           |         |Options:Media&#160;Kind        |
+|advisory[2]     |@<guidance>@       |==--==advisory              |rtng   |           |         |Summary:Advisory               |
+|copyright[3]    |@<dldate>@         |==--==copyright             |cprt   |==--==TCOP |TCOP     |Summary:Copyright              |
+|title           |@<episode>@[4]     |==--==title                 |(C)nam |==--==TIT2 |TIT2     |Info:Name                      |
+|artist          |@<channel>@        |==--==artist                |(C)ART |==--==TPE1 |TPE1     |Info:Artist                    |
+|albumArtist     |BBC @<type>@[5]    |==--==albumArtist           |aART   |==--==TPE2 |TPE2     |Info:Album&#160;Artist         |
+|album           |@<name>@           |==--==album                 |(C)alb |==--==TALB |TALB     |Info:Album                     |
+|grouping        |@<categories>@     |==--==grouping              |(C)grp |==--==TIT1 |TIT1     |Info:Grouping                  |
+|composer        |BBC iPlayer        |==--==composer              |(C)wrt |==--==TCOM |TCOM     |Info:Composer                  |
+|comment         |@<descshort>@      |==--==comment               |(C)cmt |==--==COMM |COMM     |Info:Comments                  |
+|genre[6]        |@<categories>@     |==--==genre                 |(C)gen |==--==TCON |TCON     |Info:Genre                     |
+|year            |@<firstbcast>@[7]  |==--==year                  |(C)day |==--==TYER |TYER     |Info:Year                      |
+|tracknum        |@<episodenum>@     |==--==tracknum              |trkn   |==--==TRCK |TRCK     |Info:Track&#160;Number         |
+|disk            |@<seriesnum>@      |==--==disk                  |disk   |==--==TPOS |TPOS     |Info:Disc&#160;Number          |
+|lyrics          |@<desc>@[8]        |==--==lyrics                |(C)lyr |==--==USLT |USLT     |Lyrics                         |
+|description     |@<descshort>@      |==--==description           |desc   |           |TIT3[14] |Video:Description              |
+|longDescription |@<desc>@           |==--==longdesc[9]&#160;_OR_<br/>==--==longDescription[10] |ldes | |TDES[14] |(Hidden):Long&#160;Description |
+|hdvideo[11]     |@<mode>@           |==--==hdvideo[12]           |hdvd   |           |         |(Browser):HD&#160;Icon         |
+|TVShowName      |@<name>@           |==--==TVShowName            |tvsh   |           |         |Video:Show                     |
+|TVEpisode       |@<senum>@ [13]     |==--==TVEpisode             |tven   |           |         |Video:Episode&#160;ID          |
+|TVSeasonNum     |@<seriesnum>@      |==--==TVSeasonNum           |tvsh   |           |         |Video:Season&#160;Number       |
+|TVEpisodeNum    |@<episodenum>@     |==--==TVEpisodeNum          |tves   |           |         |Video:Episode&#160;Number      |
+|TVNetwork       |@<channel>@        |==--==TVNetwork             |tvnn   |           |         |(Hidden):TV&#160;Network       |
+|artwork         |@<thumbfile>@      |==--==artwork               |covr   |           |APIC     |Artwork                        |
+|podcastFlag[14] |true               |==--==podcastFlag           |pcst   |           |PCST     |Options:Media&#160;Kind        |
+|category[14]    |@<categories>@[15] |==--==category              |catg   |           |TCAT     |(Hidden):Podcast&#160;Category |
+|keyword[14]     |@<categories>@     |==--==keyword               |keyw   |           |TKWD     |(Hidden):Podcast&#160;Keywords |
+|podcastGUID[14] |@<player>@         |==--==podcastGUID           |egid   |           |TGID     |(Hidden):Podcast&#160;GUID     |
+|                |                   |                            |       |==--==TDAT |TDAT[16] |                               |
+|                |                   |                            |       |==--==TIME |TIME[16] |                               |
+|                |                   |                            |       |           |TDRL[17] |                               |
 
 fn1. _TV Show_ if MP4/M4V, _Movie_ if MP4/M4V and @<categories>@ contains "Film", _Normal_ otherwise
 
