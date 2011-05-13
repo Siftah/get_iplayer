@@ -1,5 +1,5 @@
-[Instructions for Using Patched get_iplayer](instructions)
+[Instructions for Using Patched get_iplayer](wiki/instructions)
 
-[Tagging Scheme for get_iplayer](tagscheme)
+[Tagging Scheme for get_iplayer](wiki/tagscheme)
 
-[get_iplayer Tagging Changes](tagging)
+[get_iplayer Tagging Changes](wiki/tagging)
