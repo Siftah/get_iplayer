@@ -29,7 +29,6 @@
 |category [15]    |@<categories>@     |==--==category             |catg   |           |TCAT      |
 |keyword          |@<categories>@     |==--==keyword              |keyw   |           |TKWD      |
 |podcastGUID      |@<player>@         |==--==podcastGUID          |egid   |           |TGID      |
-|website          |@<web>@            |                           |       |           |          |
 |                 |                   |                           |       |==--==TDAT |TDAT [16] |
 |                 |                   |                           |       |==--==TIME |TIME [16] |
 |                 |                   |                           |       |           |TDRL [17] |
