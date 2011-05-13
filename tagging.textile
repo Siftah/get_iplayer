@@ -1,0 +1,89 @@
+h2. @get_iplayer@ Tagging Changes
+
+h3. Description
+
+I have implemented some new tagging code in my fork of @get_iplayer@.  This new code enhances the existing tagging functionality as much as possible and provides an optional mechanism to harmonise MP3 and MP4 tagging.
+
+The new tagging functionality is encapsulated primarily in the @Tagger@ class that can be found at the end of the @get_iplayer@ script.  This code was culled from an earlier abandoned experiment to convert my existing Python/Mutagen tagging application into a full-blown tagging library for @get_iplayer@, described here:
+
+"https://github.com/dinkypumpkin/get_iplayer_taggerlib/wiki/taggerlib":https://github.com/dinkypumpkin/get_iplayer_taggerlib/wiki/taggerlib
+
+h2. Installation
+
+h3. Update @get_iplayer@
+
+For instructions on replacing an existing version of @get_iplayer@ with my patched version, see:
+
+"https://github.com/dinkypumpkin/get_iplayer/wiki/instructions":https://github.com/dinkypumpkin/get_iplayer/wiki/instructions
+
+h3. Perl Modules
+
+If you wish to take advantage of the enhanced MP3 tagging functionality (e.g. adding artwork), you will need to install the @MP3::Tag@ module.
+
+For Linux/OSX users, and Windows users with their own Perl installations, use your favourite CPAN client to install the modules.  For Windows users who only have the version of Perl supplied with the @get_iplayer@ installer, additional steps are necessary, as described below:
+
+h4. Install Full Perl Distribution
+
+The Perl version provided with the @get_iplayer@ installer is a partial distribution tailored for @get_iplayer@.  In order to take advantage of new tagging functionality, a full distribution that can be augmented with additional modules is necessary.
+
+Got to "http://strawberryperl.com/":http://strawberryperl.com/ and download one of the @.msi@ installer packages, version 5.10.0 or above.  After running the installer, log out and back in to Windows to ensure the installer's changes to the system environment are complete.
+
+Select @Strawberry Perl->CPAN Client@ from the Start menu.  A terminal window will open and you will be at a @cpan>@ prompt.  Type: @install MP3::Tag@ to install the @MP3::Tag@ module.
+
+h4. Remove Perl Installed by @get_iplayer@ Windows Installer
+
+Back up and delete the following files and folders in @C:\Program Files\get_iplayer@:
+
+* perl.exe
+* perl510.dll
+* perl-license
+* lib
+
+h4. Check Perl Installation
+
+Open @get_iplayer@ from the Start menu.  At the command prompt, type @perl -V@ to show extended information about the current Perl version.  At the end of the listing that appears on your screen should be some lines that look like:
+
+<pre>
+  @INC:
+    C:/strawberry/perl/lib
+    C:/strawberry/perl/site/lib
+    .
+</pre>
+
+The paths may differ slightly, but you should see references to the library directories for the version of Strawberry Perl you just installed.
+
+h2. Usage
+
+h3. Invocation
+
+There is no change in the invocation of @get_iplayer@.  If the @MP3::Tag@ module is installed, it will automatically be utilised.  If not, @get_iplayer@  will fall back to using @id3v2@ for MP3 tagging, if available.  @AtomicParsley@ is still used for MP4 tagging.
+
+h3. Available Options
+
+|_.Command&#160;Line|_.Option&#160;File |_.Description|
+|_\3<.Tagging|
+|==--tag-fulltitle==|tag_fulltitle (0/1)|Use complete title (including series) instead of shorter episode title|
+|==--tag-hdvideo==|tag_hdvideo (0/1)|AtomicParsley supports ==--hdvideo== argument for HD video flag|
+|==--tag-longdesc==|tag_longdesc (0/1)|AtomicParsley supports ==--longdesc== argument for long description text|
+|==--tag-longdescription==|tag_longdescription (0/1)|AtomicParsley supports ==--longDescription== argument for long description text|
+|==--tag-podcast==|tag_podcast (0/1)|Tag downloaded radio/tv programmes as iTunes podcasts|
+|==--tag-utf8==|tag_utf8 (0/1)|AtomicParsley expects UTF-8 input|
+
+The options related to @AtomicParsley@ are provided to support variations in different versions that emerged after primary development ceased at version 0.9.0.  The version of @AtomicParsley@ supplied with the @get_iplayer@ Windows installer does not support any of these options.
+
+h2. Tagging
+
+h3. Tagging Scheme
+
+The tagging scheme is described here:
+
+"https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme":https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme
+
+If you wish to experiment with variations, the conversion of @get_iplayer@ metadata to tag values is encapsulated in the @Tagger::tags_from_metadata@ function.
+
+h3. Tagging Differences
+
+Aside from the additional tags available, there are two notable differences from the previous scheme:
+
+# MP4 tagging differed from MP3 tagging in that it used the full programme title (including series).  To harmonise things, I chose the MP3 style of using the shorter episode title as the default.  The ==--tag-fulltitle== option was added to use the full programme title instead.
+# See the notes regarding @genre@ in the tagging scheme description referenced above.  Rather than using the previous MP4 style of assigning the full list of programme categories as the genre, I've implemented some logic to select a single category as the genre.  Many media managers, including iTunes, cannot work with multi-valued genres.  The full category list is retained in the @grouping@ tag.
