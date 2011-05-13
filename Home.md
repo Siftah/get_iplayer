@@ -1,1 +1,3 @@
-[Instructions for using patched get_iplayer script](wiki/instructions)
+[Instructions for Using Patched get_iplayer](wiki/instructions)
+
+[Tagging Scheme for get_iplayer](wiki/tagscheme)
