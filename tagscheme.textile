@@ -40,7 +40,7 @@ fn2. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
 
 fn3. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
 
-fn4. @<title>@ used if ==--==tag-longtitle given
+fn4. @<title>@ used if ==--==tag-fulltitle given
 
 fn5. _BBC TV_, _BBC Radio_, _BBC Podcast_
 
