@@ -4,8 +4,8 @@ h3. Description
 
 I have implemented new tagging code in my fork of @get_iplayer@.  This new code:
 
-* Maximises what can be done with id3v2 and AtomicParsley
-* Brings MP3 tagging up to par with MP4 (with optional MP3::Tag module)
+* Maximises what can be done with @id3v2@ and @AtomicParsley@
+* Brings MP3 tagging up to par with MP4 (with optional @MP3::Tag@ module)
 * Creates a common scheme for generating tags from metadata
 * Supports tagging programmes as podcasts (for iTunes users) 
 
@@ -25,7 +25,7 @@ h3. Perl Modules
 
 If you wish to take advantage of the enhanced MP3 tagging functionality (e.g. adding artwork), you will need to install the @MP3::Tag@ module.
 
-For Linux/OSX users, and Windows users with their own Perl installations, use your favourite CPAN client to install the modules.  For Windows users who only have the version of Perl supplied with the @get_iplayer@ installer, additional steps are necessary, as described below:
+For Linux/OSX users, and Windows users with their own Perl installations, use your favourite CPAN client to install the module.  For Windows users who only have the version of Perl supplied with the @get_iplayer@ installer, additional steps are necessary, as described below:
 
 h4. Install Full Perl Distribution
 
@@ -33,7 +33,7 @@ The Perl version provided with the @get_iplayer@ installer is a partial distribu
 
 Got to "http://strawberryperl.com/":http://strawberryperl.com/ and download one of the @.msi@ installer packages, version 5.10.0 or above.  After running the installer, log out and back in to Windows to ensure the installer's changes to the system environment are complete.
 
-Select @Strawberry Perl->CPAN Client@ from the Start menu.  A terminal window will open and you will be at a @cpan>@ prompt.  Type: @install MP3::Tag@ to install the @MP3::Tag@ module.
+Select @Strawberry Perl->CPAN Client@ from the Start menu.  A terminal window will open and you will be at a @cpan>@ prompt.  Type: @install MP3::Tag@ to install the @MP3::Tag@ module.  Once the installation is complete, close the terminal window.
 
 h4. Remove Perl Installed by @get_iplayer@ Windows Installer
 
@@ -84,7 +84,7 @@ The tagging scheme is described here:
 
 "https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme":https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme
 
-If you wish to experiment with variations, the conversion of @get_iplayer@ metadata to tag values is encapsulated in the @Tagger::tags_from_metadata@ function.
+If you wish to experiment with variations, the conversion of @get_iplayer@ metadata to tag values is encapsulated in the @Tagger::tags_from_metadata@ subroutine.
 
 h3. Tagging Differences
 
