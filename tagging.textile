@@ -78,13 +78,17 @@ The options related to @AtomicParsley@ are provided to support variations in dif
 
 h2. Tagging
 
-h3. Tagging Scheme
+h3. Tag Scheme
 
-The tagging scheme is described here:
+The tag scheme is described here:
 
 "https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme":https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme
 
 If you wish to experiment with variations, the conversion of @get_iplayer@ metadata to tag values is encapsulated in the @Tagger::tags_from_metadata@ subroutine.
+
+h3. Tag Encodings
+
+The @get_iplayer@ metadata is assumed to be encoded as UTF-8 and is then re-encoded as necessary for the different tagging applications.  This doesn't always hold true, so substitution characters may sometimes appear in the tags, particularly @lyrics@ or @longDescription@.
 
 h3. Tagging Differences
 
