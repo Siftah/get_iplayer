@@ -2,9 +2,14 @@ h2. @get_iplayer@ Tagging Changes
 
 h3. Description
 
-I have implemented some new tagging code in my fork of @get_iplayer@.  This new code enhances the existing tagging functionality as much as possible and provides an optional mechanism to harmonise MP3 and MP4 tagging.
+I have implemented new tagging code in my fork of @get_iplayer@.  This new code:
 
-The new tagging functionality is encapsulated primarily in the @Tagger@ class that can be found at the end of the @get_iplayer@ script.  This code was culled from an earlier abandoned experiment to convert my existing Python/Mutagen tagging application into a full-blown tagging library for @get_iplayer@, described here:
+* Maximises what can be done with id3v2 and AtomicParsley
+* Brings MP3 tagging up to par with MP4 (with optional MP3::Tag module)
+* Creates a common scheme for generating tags from metadata
+* Supports tagging programmes as podcasts (for iTunes users) 
+
+The new tagging functionality is encapsulated in the @Tagger@ class that can be found at the end of the @get_iplayer@ script.  This code was culled from an earlier abandoned experiment to convert my existing Python/Mutagen tagging application into a full-blown tagging library for @get_iplayer@, described here:
 
 "https://github.com/dinkypumpkin/get_iplayer_taggerlib/wiki/taggerlib":https://github.com/dinkypumpkin/get_iplayer_taggerlib/wiki/taggerlib
 
