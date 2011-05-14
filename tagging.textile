@@ -1,4 +1,4 @@
-h2. @get_iplayer@ Tagging Changes
+h2. get_iplayer Tagging Changes
 
 h3. Description
 
