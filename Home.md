@@ -1,5 +1,5 @@
-[Instructions for Using Patched get_iplayer](wiki/instructions)
+[Instructions for Using Patched get_iplayer](https://github.com/dinkypumpkin/get_iplayer/wiki/instructions)
 
-[get_iplayer Tagging](wiki/tagging)
+[get_iplayer Tagging](https://github.com/dinkypumpkin/get_iplayer/wiki/tagging)
 
-[get_iplayer Tag Scheme](wiki/tagscheme)
+[get_iplayer Tag Scheme](https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme)
