@@ -71,7 +71,9 @@ h3. Available Options
 |==--tag-hdvideo==|tag_hdvideo (0/1)|AtomicParsley supports ==--hdvideo== argument for HD video flag|
 |==--tag-longdesc==|tag_longdesc (0/1)|AtomicParsley supports ==--longdesc== argument for long description text|
 |==--tag-longdescription==|tag_longdescription (0/1)|AtomicParsley supports ==--longDescription== argument for long description text|
-|==--tag-podcast==|tag_podcast (0/1)|Tag downloaded radio/tv programmes as iTunes podcasts|
+|==--tag-podcast==|tag_podcast (0/1)|Tag downloaded radio and tv programmes as iTunes podcasts|
+|==--tag-podcast-radio==|tag_podcast_radio (0/1)|Tag only downloaded radio programmes as iTunes podcasts|
+|==--tag-podcast-tv==|tag_podcast_tv (0/1)|Tag only downloaded tv programmes as iTunes podcasts|
 |==--tag-utf8==|tag_utf8 (0/1)|AtomicParsley expects UTF-8 input|
 
 The options related to @AtomicParsley@ are provided to support variations in different versions that emerged after primary development ceased at version 0.9.0.  The version of @AtomicParsley@ supplied with the @get_iplayer@ Windows installer does not support any of these options.
