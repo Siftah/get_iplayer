@@ -18,7 +18,7 @@
     
     **NOTE:** Your browser may save the downloaded file as _get\_iplayer.txt_ or _get\_iplayer.pl.txt_.  Be aware of this when you look for the file to use it as a replacement for the current script (see below).
 
-    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched version of get_iplayer available here.
+    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched version of get_iplayer available in this repository.
 
 2. **Make sure you need the patched version**
 
