@@ -18,7 +18,7 @@
     
     Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  Proceed to Step 4 below.
   
-    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched get_iplayer.
+    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched get_iplayer available here.
 
 2. **Make sure you need the patched version**
 
