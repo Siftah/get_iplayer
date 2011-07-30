@@ -30,7 +30,7 @@
 
     <http://lists.infradead.org/mailman/listinfo/get_iplayer>
 
-3. **Download the new script**
+3. **Download the patched version**
     
     Go to this URL in your web browser:
     
