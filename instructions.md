@@ -6,19 +6,19 @@
 
     <http://git.infradead.org/get_iplayer.git/log>
 
-    If so, use the link below to go to the repository tree view HEAD (latest) version:
+    If so, go to this URL in your web browser:
+    
+    <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer>
 
-    <http://git.infradead.org/get_iplayer.git/tree>
+    You should see the full script in the browser window.
+    
+    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.
+    
+    You can also point curl, wget, etc. at the above URL.
+    
+    **NOTE:** Your browser may save the downloaded file as _get\_iplayer.txt_ or _get\_iplayer.pl.txt_.  Be aware of this when you look for the file to use it as a replacement for the current script (see below).
 
-    Click on **raw** at the far right of the line with _get\_iplayer_.  It will look something like:
-    
-    `-rwxr-xr-x	332549	get_iplayer	blob | history | raw`
-    
-    This will load the latest master version of the get_iplayer script in your browser.
-    
-    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  Proceed to Step 4 below.
-  
-    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched get_iplayer available here.
+    If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched get_iplayer script available here.
 
 2. **Make sure you need the patched version**
 
@@ -35,7 +35,7 @@
     Go to this URL in your web browser:
     
     <https://github.com/dinkypumpkin/get_iplayer/raw/master/get_iplayer>
-    
+
     You should see the full script in the browser window.
     
     Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.
