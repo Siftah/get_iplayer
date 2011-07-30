@@ -2,7 +2,7 @@
 
 1. **Check master repository first**
 
-    You should first check the change log at the master repository to see if the feature or fix you need has been incorporated:
+    The master repository incorporates changes to get_iplayer made since the last formal release. You should first check the change log at the master repository to see if the feature or fix you need has been incorporated:
 
     <http://git.infradead.org/get_iplayer.git/log>
 
