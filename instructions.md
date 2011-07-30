@@ -22,7 +22,7 @@
 
 2. **Make sure you need the patched version**
 
-    The patched version of get_iplayer in this repository may contain patches not yet incorporated into the master version (see above).  Check the change log for the patched version to make sure that the feature or fix you need has been incorporated:
+    The patched version of get_iplayer in this repository may contain patches not yet incorporated into the master repository.  Check the change log for the patched version to make sure that the feature or fix you need has been incorporated:
 
     <https://github.com/dinkypumpkin/get_iplayer/commits/master/>
 
