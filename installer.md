@@ -1,4 +1,6 @@
-## How to Build the get_player Windows installer (VERSION 4.3)
+## How to Build the get_player Windows installer
+
+The instructions below are current for version version 4.3 of the installer.
 
 ### Prerequisites
 
@@ -59,19 +61,27 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 	Location: `C:\work\get_player`
 
-2. **Check Build Configuration**
+2. **Check Build Scripts**
 
-	The files below should be in: `C:\work\get_player\windows`
+	The files below should be in `C:\work\get_player\windows`:
 
 	* `get_iplayer_setup.nsi` - NSIS installer script
 	* `make-init.cmd`         - common initialisation code for other scripts
 	* `make-installer.cmd`    - main installer build script (calls make-perlfiles.cmd)
 	* `make-perlfiles.cmd`    - builds archive of Perl support files for installer
 	* `make-perltgz.cmd`      - converts archive of Perl support files to tarball
+	
+	There may be other files in that directory, but they are primarily of use in developing the installer and are not necessary to perform the default build.
 
-	`make-init.cmd` sets the locations of Strawberry Perl, NSIS, and 7-Zip used for the build.  Edit the relevant values if necessary.
+3. **Check Build Configuration**
 
-3. **Create Build Folder**
+	The script `make-init.cmd` sets the locations of Strawberry Perl, NSIS, and 7-Zip used for the build.  Edit the relevant values if necessary.
+
+4. **Check Installer Version**
+
+	If you are building a new installer to incorporate changes in `get_iplayer` or the installer script, be sure that the installer version number has been incremented.  The installer version number can be found in the `!define VERSION` statement near the top of `get_iplayer_setup.nsi`.
+	
+5. **Create Build Folder**
 
 	Create an empty folder to use for building the installer:
 
@@ -102,7 +112,7 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 #### Notes
 
-* Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be complete rebuilt, add `/makeperl` to the command:
+* Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be completely rebuilt, add `/makeperl` to the command:
 
 	`C:\work\installer>C:\work\get_iplayer\windows\make-installer /makeperl`
 
