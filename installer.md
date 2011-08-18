@@ -141,7 +141,3 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 	`# $HOME/get_iplayer/make-nsis.sh`
 	
 	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
-	
-### Installer Distribution
-
-*TBD*
