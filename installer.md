@@ -126,7 +126,7 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 	
 	The script looks for `perlfiles.zip` in the current directory and copies its contents to `perlfiles.tar.gz`.
 
-* Building the installer on Linux/OSX is similar to building in Windows.  Assuming you have the get_iplayer source in `$HOME/get_iplayer` and are using `$HOME/installer` as your build folder:
+* Building the installer on Linux/OSX is similar to building in Windows.  Assuming you have the `get_iplayer` source in `$HOME/get_iplayer` and are using `$HOME/installer` as your build folder:
 
 	Copy `perlfiles.tar.gz` into the build folder
 
