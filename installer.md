@@ -61,12 +61,13 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 2. **Check Build Configuration**
 
-	Location: `C:\work\get_player\windows`
+	The files below should be in: `C:\work\get_player\windows`
 
 	* `get_iplayer_setup.nsi` - NSIS installer script
 	* `make-init.cmd`         - common initialisation code for other scripts
 	* `make-installer.cmd`    - main installer build script (calls make-perlfiles.cmd)
-	* `make-perlfiles.cmd`    - builds archive of Perl support files for isntaller
+	* `make-perlfiles.cmd`    - builds archive of Perl support files for installer
+	* `make-perltgz.cmd`      - converts archive of Perl support files to tarball
 
 	`make-init.cmd` sets the locations of Strawberry Perl, NSIS, and 7-Zip used for the build.  Edit the relevant values if necessary.
 
@@ -105,7 +106,7 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 	`C:\work\installer>C:\work\get_iplayer\windows\make-installer /makeperl`
 
-* `perlfiles.zip` must be generated in Windows in order for the proper Win32 modules to be included in the archive.  However, the archive may be used to build the installer on Linux/OSX (see `get_iplayer\make-nsis.sh`).  To that end, a separate script (`make-perlfiles.cmd`) may be used to generate only the Perl support archive.  It is also invoked by `make-installer.cmd` to build the archive.
+* `perlfiles.zip` must be generated in Windows in order for the proper Win32 modules to be included in the archive.  However, the archive may be used to build the installer on Linux/OSX (see below).  To that end, a separate script (`make-perlfiles.cmd`) may be used to generate only the Perl support archive.  It is also invoked by `make-installer.cmd` to build the archive.
 
 * Subsequent invocations of `make-perlfiles.cmd` will use an existing `perlpar.exe` if it is found in the current directory.  To force the Perl support archive to be complete rebuilt, add `/makepar` to the command:
 
@@ -115,7 +116,31 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 	
 	In the event of an error, the temporary folder used by the script (`make-perlfiles.tmp`) will remain in the build directory.
 
-* Both `make-installer.cmd` and `make-perlfiles.cmd` respond to a single `/?` paramater with a usage message showing all the parameters that may be passed.  However, those additional parameters are only useful for developing the build scripts and installer.
+* Both `make-installer.cmd` and `make-perlfiles.cmd` respond to a single `/?` parameter with a usage message showing all the parameters that may be passed.  However, the additional parameters are currently only useful for use in development and testing and thus will not be described here.
+	
+#### Linux/OSX
+
+* A shell script (`get_iplayer/make-nsis.sh`) was written to build the `get_iplayer` Windows installer on Linux/OSX.  However, it expects to find the Perl support archive in the form of a tarball (.tar.gz).  Since tarball support is ubiquitous in the Unix realm, this aspect of `make-nsis.sh` has been left as-is.  If you should need to build the installer on another platform, you can create the tarball in Windows and transfer it to the other system.  After building the Perl support archive (see above), execute an additional script:
+
+	`C:\work\installer>C:\work\get_iplayer\windows\make-perltgz`
+	
+	The script looks for `perlfiles.zip` in the current directory and copies its contents to `perlfiles.tar.gz`.
+
+* Building the installer on Linux/OSX is similar to building in Windows.  Assuming you have the get_iplayer source in `$HOME/get_iplayer` and are using `$HOME/installer` as your build folder:
+
+	Copy `perlfiles.tar.gz` into the build folder
+
+	`# cp $WHEREVER/perlfiles.tar.gz $HOME/installer`
+	
+	Make the build folder your current directory:
+	
+	`# cd $HOME/installer`
+	
+	Execute the build script:
+	
+	`# $HOME/get_iplayer/make-nsis.sh`
+	
+	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
 	
 ### Installer Distribution
 
