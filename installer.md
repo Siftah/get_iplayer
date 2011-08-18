@@ -49,7 +49,7 @@
 
 	The installer build scripts use the command-line interface to 7-Zip to compress/expand archive files.  However, it is not necessary to install the separate statically-linked version of the 7-Zip (7za.exe).  The GUI version has its own command-line interface.
 
-### Build Area Setup
+### Build Setup
 
 In the instructions below, replace with `C:\work` with an appropropriate location for your system
 
