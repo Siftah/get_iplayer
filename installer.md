@@ -97,7 +97,9 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 2. Run the installer build script
 
-	`C:\work\installer>C:\work\get_iplayer\windows\make-installer`
+	**IMPORTANT: Until `get_iplayer` is updated to v2.80, add the `/withscripts` parameter in order to embed the main `get_iplayer` scripts in the installer.  The v2.79 scripts that the installer would otherwise download lack many recent improvements.**
+	
+	`C:\work\installer>C:\work\get_iplayer\windows\make-installer /withscripts` 
 
 	The build script creates 4 files in the build directory:
 
