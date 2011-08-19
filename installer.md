@@ -97,13 +97,9 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 2. Run the installer build script
 
-	**IMPORTANT: Until `get_iplayer` is updated to v2.80, add the `/withscripts` parameter in order to embed the main `get_iplayer` scripts in the installer.  The v2.79 scripts that the installer would otherwise download lack many recent improvements.**
-	
-	`C:\work\installer>C:\work\get_iplayer\windows\make-installer /withscripts` 
-
 	The build script creates 4 files in the build directory:
 
-	* `get_iplayer_setup-4.3.exe` - get_player installer application
+	* `get_iplayer_setup_4.3.exe` - get_player installer application
 	* `perlfiles.zip`             - archive of Perl support files included in the installer
 	* `perlpar.exe`               - PAR (Perl ARchive) file used to create perlfiles.zip
 	* `make-installer.log`        - log of output from build script
