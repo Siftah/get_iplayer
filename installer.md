@@ -138,14 +138,14 @@ In the instructions below, replace with `C:\work` with an appropropriate locatio
 
 	Copy `perlfiles.tar.gz` into the build folder
 
-	`# cp $WHEREVER/perlfiles.tar.gz $HOME/installer`
+	`$ cp $WHEREVER/perlfiles.tar.gz $HOME/installer`
 	
 	Make the build folder your current directory:
 	
-	`# cd $HOME/installer`
+	`$ cd $HOME/installer`
 	
 	Execute the build script:
 	
-	`# $HOME/get_iplayer/make-nsis.sh`
+	`$ $HOME/get_iplayer/make-nsis.sh`
 	
 	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
