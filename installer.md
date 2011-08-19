@@ -1,6 +1,6 @@
 ## How to Build the get_player Windows installer
 
-The instructions below are current for version version 4.3 of the installer.
+The instructions below are current for version 4.3 of the installer.
 
 ### Prerequisites
 
