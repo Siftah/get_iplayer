@@ -1,6 +1,8 @@
-## How to Build the get_player Windows installer
+## get_player Windows installer
 
-The instructions below are current for version 4.3 of the installer.
+This document contains instructions for building the `get_iplayer` Windows installer, along with additional notes for installer developers. The information below is current for version 4.3 of the installer.
+
+## Building the Installer
 
 ### Prerequisites
 
@@ -152,7 +154,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 ## Developer Notes
 
-Although the scripts described above may be used to rebuild the installer during development, it is much easier to use the `MakeNSISW` utility.  The discussion below uses the example directory structure described above.
+Although the scripts described above may be used to build the installer during development, it is easier to use the `MakeNSISW` utility.  The notes below provide additional information necessary for developing the installer with `MakeNSISW`.  This discussion uses the example directory structure described above.
 
 ### Preparation
 
