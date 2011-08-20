@@ -158,7 +158,7 @@ Although the scripts described above may be used to rebuild the installer during
 
 The installer script requires an expanded version of the Perl support archive (`perlfiles.zip`) in the build directory.  `make-installer.cmd` creates a temporary expanded archive, but for development work you should create a permanent version.  You can expand it using 7-Zip, or you can use `make-perlfiles`:
 
-    `C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /expand`
+`C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /expand`
     
 In either case, the expanded archive should now be in `C:\installer\build\perlfiles`.
 
