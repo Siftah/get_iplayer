@@ -1,3 +1,4 @@
+
 ## get_player Windows installer
 
 This document contains instructions for building the `get_iplayer` Windows installer, along with additional notes for installer developers. The information below is current for version 4.3 of the installer.
@@ -130,7 +131,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	
 #### Linux/OSX
 
-* A shell script (`get_iplayer/make-nsis.sh`) was written to build the `get_iplayer` Windows installer on Linux/OSX.  However, it expects to find the Perl support archive in the form of a tarball (.tar.gz).  Since tarball support is ubiquitous in the Unix realm, this aspect of `make-nsis.sh` has been left as-is.  If you should need to build the installer on another platform, you can create the tarball in Windows and transfer it to the other system.  After building the Perl support archive (see above), execute an additional script:
+* A shell script (`get_iplayer/make-nsis.sh`) was written to build the `get_iplayer` Windows installer on Linux/OSX.  However, since tarball (.tar.gz) support is the de facto standard for Unix-based systems, the shell script expects to find the Perl support archive in that form.  If you should need to build the installer on Linux/OSX, you can create the tarball in Windows and transfer it to the other system.  After building the Perl support archive (see above), execute an additional script:
 
 	`C:\installer\build>C:\installer\get_iplayer\windows\make-perltgz`
 	
@@ -151,10 +152,10 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
         `$ $HOME/installer/get_iplayer/make-nsis.sh`
 	
 	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
-
+    
 ## Developer Notes
 
-Although the scripts described above may be used to build the installer during development, it is easier to use the `MakeNSISW` utility.  The notes below provide additional information necessary for developing the installer with `MakeNSISW`.  This discussion uses the example directory structure described above.
+The notes below provide additional information relevant to working with the installer as a developer.  This discussion uses the example directory structure described above.
 
 ### Preparation
 
@@ -164,26 +165,27 @@ The installer script requires an expanded version of the Perl support archive (`
     
 In either case, the expanded archive should now be in `C:\installer\build\perlfiles`.
 
-### Configuration
+### MakeNSISW
 
-#### Options
-The compilation of the installer script is controlled by global symbols defined on the `makensis.exe` command line (i.e., `/D` options) or in the `MakeNSISW` settings dialog - see the NSIS documentation.  The most important options are those that determine the location of files used in the build process:
+Although the scripts described above may be used to build the installer during development, it is easier to use the *MakeNSISW* utility.  To launch *MakeNSISW*, Open the "NSIS Menu" application via "NSIS" on the Start menu, then select "Compile NSI Scripts".
+
+#### Configuration
+
+The compilation of the installer script is controlled by global symbols defined on the *makensis.exe* command line (**/D** options) or in the *MakeNSISW* settings dialog - see the NSIS documentation.  The most important options are those that determine the location of files used in the build process:
 
 * `BUILDPATH`  - Location for compiled installer application (`C:\installer\build`)
 * `SOURCEPATH` - Location of `get_iplayer` source distribution (`C:\installer\get_iplayer`)
 * `PERLFILES`  - Location of expanded Perl support archive (default = `${BUILDPATH}\perlfiles`, but may be overridden)
 
-#### MakeNSISW Settings
-
-To launch `MakeNSISW`: Open the "NSIS Menu" application via "NSIS" on the Start menu, then select "Compile NSI Scripts".  When the application opens, invoke the Settings dialog via "Tools->Settings" (Ctrl+S).  Enter the values for `BUILDPATH` and `SOURCEPATH` describe above.  The settings will persist through multiple invocations of `MakeNSISW`.  Note that you can create sets of options that may be saved and reloaded.
+Invoke the *MakeNSISW* Settings dialog via "Tools->Settings" (Ctrl+S).  Enter the values for `BUILDPATH` and `SOURCEPATH` described above.  The settings will persist through multiple invocations of *MakeNSISW*.  Note that you can create sets of options that may be saved and reloaded.
 
 ### Compiling 
 
-You can open `get_iplayer_setup.nsi` via "File->Load Script..." (Ctrl+L).  There is also an option in the Windows Explorer context (right click) menu for `.nsi` files named "Compile NSIS Script", which will open and compile the script in `MakeNSISW`.  Once opened, the installer script can be compiled and tested from within `MakeNSISW` via the commands on the "Script" menu.
+You can open `get_iplayer_setup.nsi` via "File->Load Script..." (Ctrl+L).  There is also an option in the Windows Explorer context (right click) menu for `.nsi` files named "Compile NSIS Script", which will open and compile the script in *MakeNSISW*.  Once opened, the installer script can be compiled and tested from within *MakeNSISW* via the commands on the "Script" menu.
 
 ### Esoterica
 
-#### Other Useful Options
+#### Useful Options
 
 There are a number of options available to compile the installer script in different configurations:
 
@@ -193,13 +195,13 @@ There are a number of options available to compile the installer script in diffe
 
 #### Standalone Build
 
-Additional options are available to create a "standalone" build of the installer.  Standalone builds have all dependencies embedded within the installer and do not download or update them from infradead.org.  These builds are intended to model a unitary installer that could be distributed without the need for external sources of dependencies.  Standalone builds are useful in working with portions of the installer related to the unpacking and configuration of helper applications since they don't incur the overhead of downloading archive files at run-time.
+Additional options are available to create a "standalone" build of the installer.  Standalone builds have all dependencies embedded within the installer and do not download or update them from infradead.org.  These builds are intended to model a unitary installer that could be distributed without the need for external sources of dependencies.  Standalone builds are useful in working with portions of the installer related to the unpacking and configuration of helper applications since they don't incur the overhead of downloading archive files at run-time.  However, the compile time is longer and the resulting installer is much larger due to the inclusion of the helper application archives.
 
 * `STANDALONE`  - This option is a synonym for `WITHSCRIPTS` and `WITHHELPERS` (see below)
 * `WITHHELPERS` - This option will embed archived versions of all `get_iplayer` helper applications into the installer (see below).  
 * `HELPERS`     - Location of helper application archives (default = `${BUILDPATH}\helpers`, but may be overridden).  
 
-#### Helper Applications
+**Helper Applications**
 
 The contents of `${HELPERS}` must be as follows:
 
@@ -210,13 +212,13 @@ The contents of `${HELPERS}` must be as follows:
 * RTMPDump.zip
 * VLC.zip
 
-Note that all files use the short name for the application (without version strings).  Note also that all the archives MUST have ".zip" as the file extension even though, in the case of FFmpeg and VLC, the files are in 7-Zip format.  This scheme follows the way archives are named when downloaded by the installer.  The installer won't necessarily know if a downloaded archive is in PKZIP or 7-ZIP, so ".zip" was adopted for the extension as a convenience in working with the files in Windows Explorer.  The installer doesn't need to know whether an archive is in PKZIP or 7-ZIP format - it will try both.
+Note that all files use the short name for the application (without version strings).  Note also that all the archives MUST have ".zip" as the file extension regardless of whether the file is in PKZIP, 7-Zip, or EXE format.  This scheme follows the way archives are named when downloaded by the installer.  The installer won't necessarily know if a downloaded file is in PKZIP, 7-ZIP, or EXE format, so ".zip" was adopted as the extension most likely to be useful in working with the files in Windows Explorer.  The installer doesn't need to know the file format beforehand - it will try all three.
 
 The `${HELPERS}` folder may be populated using a script:
 
 `C:\installer\build>C:\installer\get_iplayer\windows\make-helpers`
 
-This script will compile and run a small NSIS installer application that allows you to select a target folder and then downloads all the helper application archives into that folder and names them appropriately.  The default location used is `helpers` in the build folder (`C:\installer\build\helpers`).  The source for the NSIS application can be found in `make-helpers.nsi`.
+This script will compile and run a small NSIS installer application that allows you to select a target folder and then downloads all the helper application archives into that folder and names them appropriately.  The default location used is `helpers` in the build folder (`C:\installer\build\helpers`).  The source for the NSIS application can be found in `C:\installer\get_iplayer\windows\make-helpers.nsi`.
 
 #### Build Script Options
 
