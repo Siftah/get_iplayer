@@ -1,4 +1,4 @@
-[Instructions for Using Patched get_iplayer](https://github.com/dinkypumpkin/get_iplayer/wiki/instructions)
+[get_iplayer Patched Version](https://github.com/dinkypumpkin/get_iplayer/wiki/instructions)
 
 [get_iplayer Windows Installer](https://github.com/dinkypumpkin/get_iplayer/wiki/installer)
 
