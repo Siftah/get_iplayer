@@ -1,7 +1,6 @@
-
 ## get_player Windows installer
 
-This document contains instructions for building the `get_iplayer` Windows installer, along with additional notes for installer developers. The information below is current for version 4.3 of the installer.
+This document contains instructions for building the `get_iplayer` Windows installer and provides additional notes for installer developers. The information below is current for version 4.3 of the installer.
 
 ## Building the Installer
 
@@ -37,8 +36,9 @@ This document contains instructions for building the `get_iplayer` Windows insta
 
 	Source: [http://nsis.sourceforge.net/Category:Plugins](http://nsis.sourceforge.net/Category:Plugins)
 
-	The installer requires the following NSIS plugins:
+	The installer requires the following additional NSIS plugins:
 
+	* Inetc
 	* Locate
 	* Nsis7z
 	* ZipDLL
@@ -113,6 +113,8 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 #### Notes
 
+* `perlfiles.zip` will contain the Perl core libraries (as determined by PAR::Packer), plus the additional modules specified above.  However, `make-perlfiles.cmd` strips some large files from the "unicore" package in order to save space.  These files are input and test files for generation of Unicode character tables and are not required for `get_iplayer`.
+ 
 * Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be completely rebuilt, add `/makeperl` to the command:
 
 	`C:\installer\build>C:\installer\get_iplayer\windows\make-installer /makeperl`
@@ -127,7 +129,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	
 	In the event of an error, the temporary folder used by the script (`make-perlfiles.tmp`) will remain in the build directory.
 
-* Both `make-installer.cmd` and `make-perlfiles.cmd` respond to a `/?` parameter with a usage message showing all the parameters that may be specified.  However, the additional parameters are currently only useful for use in development and testing of the installer.  See developer notes below.
+* See the script reference below for a full list of command-line options accepted by `make-installer.cmd` and `make-perlfiles.cmd`.
 	
 #### Linux/OSX
 
@@ -159,19 +161,25 @@ The notes below provide additional information relevant to working with the inst
 
 ### Preparation
 
+#### Expand Perl Support Archive
+
 The installer script requires an expanded version of the Perl support archive (`perlfiles.zip`) in the build directory.  `make-installer.cmd` creates a temporary expanded archive, but for development work you should create a permanent version.  You can expand it using 7-Zip, or you can use `make-perlfiles`:
 
 `C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /expand`
     
 In either case, the expanded archive should now be in `C:\installer\build\perlfiles`.
 
+#### Using Git
+
+Any changes to the installer source or build scripts should ultimately be propagated to the Git repository at infradead.org.  If you are developing on Windows, `msysgit` ([http://code.google.com/p/msysgit/](http://code.google.com/p/msysgit/)) is a good option for Git-based development workflows.  Useful installation instructions can be found here: [Git for Windows Developers](http://lostechies.com/jasonmeridth/2009/06/01/git-for-windows-developers-git-series-part-1/)
+
 ### MakeNSISW
 
-Although the scripts described above may be used to build the installer during development, it is easier to use the *MakeNSISW* utility.  To launch *MakeNSISW*, Open the "NSIS Menu" application via "NSIS" on the Start menu, then select "Compile NSI Scripts".
+Although the scripts described above may be used to build the installer during development, it is easier to use the *MakeNSISW* utility provided with NSIS.  To launch *MakeNSISW*, Open the "NSIS Menu" application via "NSIS" on the Start menu, then select "Compile NSI Scripts".
 
 #### Configuration
 
-The compilation of the installer script is controlled by global symbols defined on the *makensis.exe* command line (**/D** options) or in the *MakeNSISW* settings dialog - see the NSIS documentation.  The most important options are those that determine the location of files used in the build process:
+The compilation of the installer script is controlled by global symbols defined by **/D** options for the *makensis.exe* command line (see script reference below) or in the *MakeNSISW* settings dialog - see the NSIS documentation.  The most important options are those that determine the location of files used in the build process:
 
 * `BUILDPATH`  - Location for compiled installer application (`C:\installer\build`)
 * `SOURCEPATH` - Location of `get_iplayer` source distribution (`C:\installer\get_iplayer`)
@@ -197,7 +205,7 @@ There are a number of options available to compile the installer script in diffe
 
 Additional options are available to create a "standalone" build of the installer.  Standalone builds have all dependencies embedded within the installer and do not download or update them from infradead.org.  These builds are intended to model a unitary installer that could be distributed without the need for external sources of dependencies.  Standalone builds are useful in working with portions of the installer related to the unpacking and configuration of helper applications since they don't incur the overhead of downloading archive files at run-time.  However, the compile time is longer and the resulting installer is much larger due to the inclusion of the helper application archives.
 
-* `STANDALONE`  - This option is a synonym for `WITHSCRIPTS` and `WITHHELPERS` (see below)
+* `STANDALONE`  - This option is a synonym for `WITHSCRIPTS` and `WITHHELPERS`
 * `WITHHELPERS` - This option will embed archived versions of all `get_iplayer` helper applications into the installer (see below).  
 * `HELPERS`     - Location of helper application archives (default = `${BUILDPATH}\helpers`, but may be overridden).  
 
@@ -218,7 +226,7 @@ The `${HELPERS}` folder may be populated using a script:
 
 `C:\installer\build>C:\installer\get_iplayer\windows\make-helpers`
 
-This script will compile and run a small NSIS installer application that allows you to select a target folder and then downloads all the helper application archives into that folder and names them appropriately.  The default location used is `helpers` in the build folder (`C:\installer\build\helpers`).  The source for the NSIS application can be found in `C:\installer\get_iplayer\windows\make-helpers.nsi`.
+This script will compile and run a small NSIS installer application that allows you to select a target folder and then downloads all the helper application archives into that folder and names them appropriately.  The default location used is `helpers` in the build folder (`C:\installer\build\helpers`).  The source for the NSIS application can be found in `C:\installer\get_iplayer\windows\make-helpers.nsi`.  The download URLs are embedded in the source, so they should be updated to match the URLs in `get_iplayer_setup.ini` if required.
 
 #### Build Script Options
 
