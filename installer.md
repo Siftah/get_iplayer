@@ -58,7 +58,7 @@ This document contains instructions for building the `get_iplayer` Windows insta
 
 In the instructions below, replace with `C:\installer` with an appropriate location for your system
 
-1. **Download get_player Source Distribution**
+1. **Download get_player Source**
 
 	This can be a clone of the infradead git repository ([http://git.infradead.org/get_iplayer.git](http://git.infradead.org/get_iplayer.git)) or a downloaded snapshot.
 
@@ -74,7 +74,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	* `make-perlfiles.cmd`    - Builds archive of Perl support files for installer
 	* `make-perltgz.cmd`      - Create archive of Perl support files as tarball
 	
-	There are other files in that directory, but they are primarily of use in development and testing of the installer and are not necessary to perform the default build.  See the developer notes below.
+	There are other files in that directory, but they are primarily of use in development and testing of the installer and are not necessary to perform the default build.  See the developer notes and manifest below.
 
 3. **Check Build Configuration**
 
@@ -154,7 +154,23 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
         `$ $HOME/installer/get_iplayer/make-nsis.sh`
 	
 	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
-    
+
+## Deployment Notes
+
+### Download Location
+
+The installer application is deployed in the `/get_iplayer_win` directory of the infradead.org web site (`/var/www/html/get_iplayer_win` on www.infradead.org).  The following steps are necessary to deploy a new installer at that location:
+
+1. Copy the installer application (e.g., `get_iplayer_setup_4.3.exe`) into the appropriate directory.
+
+2. Update the `get_iplayer_setup_latest.exe` symbolic link to refer to the new installer.
+
+3. Update the contents of the `VERSION-get_iplayer-win-installer` file with the new version (e.g. 4.3)
+
+### CGI Script
+
+The installer requires the assistance of a CGI script to retrieve the download URLs for the various helper applications.  This script is named `get_iplayer_setup.cgi` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the `/cgi-bin` directory of the infradead.org web site (`/var/www/cgi-bin` on www.infradead.org.   Deployment is accomplished by copying a new version of the script in the appropriate directory.  The CGI only needs to be changed when the download URL for a helper application changes.
+
 ## Developer Notes
 
 The notes below provide additional information relevant to working with the installer as a developer.  This discussion uses the example directory structure described above.
@@ -323,3 +339,18 @@ As a reference for available parameters, the help screens for all build scripts 
 
     Parameters:
       /rebuild - force rebuild of installer
+
+
+## Manifest
+
+Below is a complete list of installer-related files located in the **windows** directory of the `get_iplayer` Git repository.
+
+* `INSTALLER.md`          - This document (Markdown format)
+* `get_iplayer_setup.cgi` - CGI script for installer
+* `get_iplayer_setup.nsi` - NSIS installer script
+* `make_helpers.cmd`      - Builds and runs `make_helpers.nsi`
+* `make_helpers.nsi`      - NSIS application to download helper apps for testing
+* `make-init.cmd`         - Common initialisation code for other scripts
+* `make-installer.cmd`    - Main installer build script (calls make-perlfiles.cmd)
+* `make-perlfiles.cmd`    - Builds archive of Perl support files for installer
+* `make-perltgz.cmd`      - Create archive of Perl support files as tarball
