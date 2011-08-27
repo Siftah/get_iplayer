@@ -16,12 +16,12 @@ This document contains instructions for building the `get_iplayer` Windows insta
 
 2. **Perl Modules**
 
-	Additional modules must be installed into the Perl distribution used to build the installer:  
+	Additional modules must be installed into the Perl distribution used to build the installer:
 
 	* MP3::Info (1.13)    - Used in localfiles plugin
 	* MP3::Tag (1.24)     - Used to enhance MP3 tagging
 	* PAR::Packer (1.010) - Used to build installer
-	
+
 	The modules may be installed with the CPAN client provided by Strawberry Perl.
 
 3. **NSIS**
@@ -43,7 +43,7 @@ This document contains instructions for building the `get_iplayer` Windows insta
 	* Nsis7z
 	* ZipDLL
 
-	Information on installing NSIS plugins: 
+	Information on installing NSIS plugins:
 	[http://nsis.sourceforge.net/How\_can\_I\_install\_a\_plugin](http://nsis.sourceforge.net/How\_can\_I\_install\_a\_plugin)
 
 5. **7-Zip**
@@ -73,7 +73,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	* `make-installer.cmd`    - Main installer build script (calls make-perlfiles.cmd)
 	* `make-perlfiles.cmd`    - Builds archive of Perl support files for installer
 	* `make-perltgz.cmd`      - Create archive of Perl support files as tarball
-	
+
 	There are other files in that directory, but they are primarily of use in development and testing of the installer and are not necessary to perform the default build.  See the developer notes and manifest below.
 
 3. **Check Build Configuration**
@@ -83,7 +83,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 4. **Check Installer Version**
 
 	If you are building a new installer to incorporate changes in `get_iplayer` or the installer script, be sure that the installer version number has been incremented.  The installer version number can be found in the `!define VERSION` statement near the top of `get_iplayer_setup.nsi`.
-	
+
 5. **Create Build Folder**
 
 	Create an empty folder to use for building the installer:
@@ -114,7 +114,7 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 #### Notes
 
 * `perlfiles.zip` will contain the Perl core libraries (as determined by PAR::Packer), plus the additional modules specified above.  However, `make-perlfiles.cmd` strips some large files from the "unicore" package in order to save space.  These files are input and test files for generation of Unicode character tables and are not required for `get_iplayer`.
- 
+
 * Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be completely rebuilt, add `/makeperl` to the command:
 
 	`C:\installer\build>C:\installer\get_iplayer\windows\make-installer /makeperl`
@@ -126,17 +126,17 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	`C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /makepar`
 
 	Invoking `make-installer.cmd` with `/makeperl` will have the same effect.
-	
+
 	In the event of an error, the temporary folder used by the script (`make-perlfiles.tmp`) will remain in the build directory.
 
 * See the script reference below for a full list of command-line options accepted by `make-installer.cmd` and `make-perlfiles.cmd`.
-	
+
 #### Linux/OSX
 
 * A shell script (`get_iplayer/make-nsis.sh`) was written to build the `get_iplayer` Windows installer on Linux/OSX.  However, since tarball (.tar.gz) support is the de facto standard for Unix-based systems, the shell script expects to find the Perl support archive in that form.  If you should need to build the installer on Linux/OSX, you can create the tarball in Windows and transfer it to the other system.  After building the Perl support archive (see above), execute an additional script:
 
 	`C:\installer\build>C:\installer\get_iplayer\windows\make-perltgz`
-	
+
 	The script creates `perlfiles.zip` in the current directory (if necessary) and copies its contents to `perlfiles.tar.gz`.
 
 * Building the installer on Linux/OSX is similar to building in Windows.  Assuming that you have the `get_iplayer` source in `$HOME/installer/get_iplayer` and are using `$HOME/installer/build` as your build folder:
@@ -144,22 +144,22 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 	1. Copy `perlfiles.tar.gz` into the build folder
 
         `$ cp /path/to/perlfiles.tar.gz $HOME/installer/build`
-	
+
 	2. Make the build folder your current directory:
-	
+
         `$ cd $HOME/installer/build`
-	
+
 	3. Execute the build script:
-	
+
         `$ $HOME/installer/get_iplayer/make-nsis.sh`
-	
+
 	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
 
 ## Deployment Notes
 
 ### Download Location
 
-The installer application is deployed in the `/get_iplayer_win` directory of the infradead.org web site (`/var/www/html/get_iplayer_win` on www.infradead.org).  The following steps are necessary to deploy a new installer at that location:
+The installer application is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win`.  The following steps are necessary to deploy a new installer:
 
 1. Copy the installer application (e.g., `get_iplayer_setup_4.3.exe`) into the appropriate directory.
 
@@ -167,9 +167,35 @@ The installer application is deployed in the `/get_iplayer_win` directory of the
 
 3. Update the contents of the `VERSION-get_iplayer-win-installer` file with the new version (e.g. 4.3)
 
+### Configuration File
+
+The installer requires the assistance of a configuration file (INI format) to retrieve the download URLs for the various helper applications.  The configuration file is downloaded whenever the installer is invoked in order to look for updates to helper applications, though updates will be infrequent.
+
+The configuration file is named `get_iplayer_setup.ini` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win/`.   Deployment is performed as follows:
+
+1. Back up the existing configuration file
+
+2. Copy the new version of the configuration file into the appropriate directory.
+
+2. Update the `get_iplayer_setup_latest.ini` symbolic link to refer to the new config file.
+
+The configuration file only needs to be changed when the download URL for a helper application changes.  See the Auxiliary Files Reference below.
+
 ### CGI Script
 
-The installer requires the assistance of a CGI script to retrieve the download URLs for the various helper applications.  This script is named `get_iplayer_setup.cgi` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the `/cgi-bin` directory of the infradead.org web site (`/var/www/cgi-bin` on www.infradead.org.   Deployment is accomplished by copying a new version of the script in the appropriate directory.  The CGI only needs to be changed when the download URL for a helper application changes.
+The installer requires the assistance of a CGI script to retrieve the download URLs for the various helper applications.  The script is accessed by the installer for every helper application selected for installation.
+
+The CGI script is named `get_iplayer_setup.cgi` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/cgi-bin/`.  Deployment is performed as follows:
+
+1. Back up the existing configuration file
+
+2. Copy the new version of the configuration file into the appropriate directory.
+
+The CGI script only needs to be changed when the download URL for a helper application changes. See the Auxiliary Files Reference below.
+
+### Configuration File vs. CGI Script
+
+The default installer build will use the configuration file.  However, if the installer is built with the /WITHOUTCONFIG option defined, it will revert to using the CGI script instead.  When using the CGI script, the installer has no version information for the helper applications and thus is not able to signal the user when an update becomes available.  That extra information also enables the installer to keep a local manifest of which `get_iplayer` components are installed on a user's machine.  However, the same helper application files are downloaded with either approach.
 
 ## Developer Notes
 
@@ -182,7 +208,7 @@ The notes below provide additional information relevant to working with the inst
 The installer script requires an expanded version of the Perl support archive (`perlfiles.zip`) in the build directory.  `make-installer.cmd` creates a temporary expanded archive, but for development work you should create a permanent version.  You can expand it using 7-Zip, or you can use `make-perlfiles`:
 
 `C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /expand`
-    
+
 In either case, the expanded archive should now be in `C:\installer\build\perlfiles`.
 
 #### Using Git
@@ -193,7 +219,7 @@ Any changes to the installer source or build scripts should ultimately be propag
 
 Although the scripts described above may be used to build the installer during development, it is easier to use the *MakeNSISW* utility provided with NSIS.  To launch *MakeNSISW*, Open the "NSIS Menu" application via "NSIS" on the Start menu, then select "Compile NSI Scripts".
 
-#### Configuration
+#### Build Configuration
 
 The compilation of the installer script is controlled by global symbols defined by **/D** options for the *makensis.exe* command line (see script reference below) or in the *MakeNSISW* settings dialog - see the NSIS documentation.  The most important options are those that determine the location of files used in the build process:
 
@@ -203,7 +229,7 @@ The compilation of the installer script is controlled by global symbols defined 
 
 Invoke the *MakeNSISW* Settings dialog via "Tools->Settings" (Ctrl+S).  Enter the values for `BUILDPATH` and `SOURCEPATH` described above.  The settings will persist through multiple invocations of *MakeNSISW*.  Note that you can create sets of options that may be saved and reloaded.
 
-### Compiling 
+### Compiling
 
 You can open `get_iplayer_setup.nsi` via "File->Load Script..." (Ctrl+L).  There is also an option in the Windows Explorer context (right click) menu for `.nsi` files named "Compile NSIS Script", which will open and compile the script in *MakeNSISW*.  Once opened, the installer script can be compiled and tested from within *MakeNSISW* via the commands on the "Script" menu.
 
@@ -213,17 +239,19 @@ You can open `get_iplayer_setup.nsi` via "File->Load Script..." (Ctrl+L).  There
 
 There are a number of options available to compile the installer script in different configurations:
 
-* `WITHOUTPERL` - This option omits the Perl support archive from the installer.  If your development machine has a fully-working Perl installation, it isn't necessary to include the Perl support archive in development builds (`get_iplayer` will use the system Perl).
-* `WITHSCRIPTS` - This option will embed `get_iplayer.pl`, `get_iplayer.cgi`, and `plugins` into the installer and will prevent those files from being downloaded or updated from infradead.org.  This is useful for working with updated versions of those scripts that have not yet been released.
-* `NOCHECK` - This option will prevent the online check for a new installer version.  The online check is usually unnecessary during development.
+* `WITHOUTCONFIG` - Reverts to use of CGI script to retrieve helper application download URLs
+* `WITHOUTPERL`   - This option omits the Perl support archive from the installer.  If your development machine has a fully-working Perl installation, it isn't necessary to include the Perl support archive in development builds (`get_iplayer` will use the system Perl).
+* `WITHSCRIPTS`   - This option will embed `get_iplayer.pl`, `get_iplayer.cgi`, and `plugins` into the installer and will prevent those files from being downloaded or updated from infradead.org.  This is useful for working with updated versions of those scripts that have not yet been released.
+* `NOCHECK`       - This option will prevent the online check for a new installer version.  The online check is usually unnecessary during development.
+* `PRERELEASE`    - Configures a warning dialog that pops up when the installer runs telling the user that he is using a pre-release build of the installer.
 
 #### Standalone Build
 
 Additional options are available to create a "standalone" build of the installer.  Standalone builds have all dependencies embedded within the installer and do not download or update them from infradead.org.  These builds are intended to model a unitary installer that could be distributed without the need for external sources of dependencies.  Standalone builds are useful in working with portions of the installer related to the unpacking and configuration of helper applications since they don't incur the overhead of downloading archive files at run-time.  However, the compile time is longer and the resulting installer is much larger due to the inclusion of the helper application archives.
 
 * `STANDALONE`  - This option is a synonym for `WITHSCRIPTS` and `WITHHELPERS`
-* `WITHHELPERS` - This option will embed archived versions of all `get_iplayer` helper applications into the installer (see below).  
-* `HELPERS`     - Location of helper application archives (default = `${BUILDPATH}\helpers`, but may be overridden).  
+* `WITHHELPERS` - This option will embed archived versions of all `get_iplayer` helper applications into the installer (see below).
+* `HELPERS`     - Location of helper application archives (default = `${BUILDPATH}\helpers`, but may be overridden).
 
 **Helper Applications**
 
@@ -279,7 +307,7 @@ As a reference for available parameters, the help screens for all build scripts 
         (override by specifying Perl archive file on command line)
       helpers       - folder with helper app archives (/withhelpers only)
 
-    Output (in current directory): 
+    Output (in current directory):
       get_iplayer_setup_N.N.exe - installer EXE
         (N.N = installer version)
 
@@ -300,7 +328,7 @@ As a reference for available parameters, the help screens for all build scripts 
       perlpar.exe - PAR file [output from pp]
         (override by specifying PAR file on command line)
 
-    Output (in current directory): 
+    Output (in current directory):
       perlfiles.zip - Perl support archive
 
     Required Perl modules (install from CPAN):
@@ -326,11 +354,11 @@ As a reference for available parameters, the help screens for all build scripts 
       perlfiles.zip - Perl support archive file [output from make-perlfiles]
         (override by specifying Perl archive file on command line)
 
-    Output (in current directory): 
+    Output (in current directory):
       perlfiles.tar.gz - Perl support tarball
 
 ### make-helpers
-      
+
     Generate and run NSIS installer to download get_iplayer helper applications
 
     Usage:
@@ -341,12 +369,109 @@ As a reference for available parameters, the help screens for all build scripts 
       /rebuild - force rebuild of installer
 
 
+## Auxiliary Files Reference
+
+### Configuration File
+
+The cofinguration file is an INI-format file with a section defined for each of the `get_iplayer` helper applications, with the short name of the application used as the section name.  Within each section are 3 values
+
+* `Version` - Version string (required)
+* `URL`     - Download URL (required)
+* `Doc`     - Documentation URL (optional)
+
+Version strings must be changed in order for the installer to signal the user that updates are available.
+
+Example of `get_iplayer_setup.ini`:
+
+    [MPlayer]
+    Version=1.0-rc2
+    Url=http://www8.mplayerhq.hu/MPlayer/releases/win32/MPlayer-mingw32-1.0rc2.zip
+    Doc=http://www.mplayerhq.hu/DOCS/HTML/en/index.html
+    [LAME]
+    Version=3.98.4
+    Url=http://www.exe64.com/mirror/rarewares/lame3.98.4.zip
+    Doc=http://lame.sourceforge.net/using.php
+    [FFmpeg]
+    Version=0.8
+    Url=http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-0.8-win32-static.7z
+    Doc=http://ffmpeg.org/ffmpeg-doc.html
+    [VLC]
+    Version=1.1.11
+    Url=http://www.grangefields.co.uk/mirrors/videolan/vlc/1.1.11/win32/vlc-1.1.11-win32.7z
+    Doc=http://wiki.videolan.org/Documentation:Documentation
+    [RTMPDump]
+    Version=2.4
+    Url=http://rtmpdump.mplayerhq.hu/download/rtmpdump-20110723-git-b627335-win32.zip
+    Doc=http://rtmpdump.mplayerhq.hu/
+    [AtomicParsley]
+    Version=0.9.4
+    Url=http://bitbucket.org/jonhedgerows/atomicparsley/downloads/AtomicParsley-0.9.4.zip
+    Doc=http://atomicparsley.sourceforge.net/
+
+### CGI Script
+
+The CGI file is a simple UNIX shell script that responds to a fixed set of query string values by redirecting the requesting application to the download URL for the corresponding helper application.
+
+Example of `get_iplayer_setup.cgi`:
+
+    #!/bin/sh
+
+    # CGI script to support get_iplayer Windows installer
+    # Redirects to download URLs for Win32 helper applications
+    # corresponding to pre-defined keys passed as query string.
+    # This script must be available at:
+    #   http://www.infradead.org/cgi-bin/get_iplayer_setup.cgi
+    # Example:
+    #   Request : http://www.infradead.org/cgi-bin/get_iplayer_setup.cgi?lame
+    #   Redirect: http://www.exe64.com/mirror/rarewares/lame3.98.4.zip
+
+    TARGET=
+
+    case "$QUERY_STRING" in
+        mplayer)
+            TARGET="http://www8.mplayerhq.hu/MPlayer/releases/win32/MPlayer-mingw32-1.0rc2.zip"
+        ;;
+        lame)
+            TARGET="http://www.exe64.com/mirror/rarewares/lame3.98.4.zip"
+        ;;
+        ffmpeg)
+            TARGET="http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-0.8-win32-static.7z"
+        ;;
+        vlc)
+            TARGET="http://www.grangefields.co.uk/mirrors/videolan/vlc/1.1.11/win32/vlc-1.1.11-win32.7z"
+        ;;
+        rtmpdump)
+            TARGET="http://rtmpdump.mplayerhq.hu/download/rtmpdump-20110723-git-b627335-win32.zip"
+        ;;
+        atomicparsley)
+            TARGET="http://bitbucket.org/jonhedgerows/atomicparsley/downloads/AtomicParsley-0.9.4.zip"
+        ;;
+    esac
+
+    if [ "$TARGET" == "" ]; then
+        cat <<EOF
+    Content-Type: text/html
+
+    <HTML><TITLE>Error</TITLE></HEAD>
+    <BODY><H1>Error</H1>
+    You requested '$QUERY_STRING' but that isn't one of the known downloads.
+    EOF
+    fi
+
+    cat <<EOF
+    Location: $TARGET
+    Content-Type: text/plain
+
+    Redirecting to $TARGET
+    EOF
+
 ## Manifest
 
 Below is a complete list of installer-related files located in the **windows** directory of the `get_iplayer` Git repository.
 
 * `INSTALLER.md`          - This document (Markdown format)
 * `get_iplayer_setup.cgi` - CGI script for installer
+* `get_iplayer_setup.ini` - Configuration file for isntaller
 * `get_iplayer_setup.nsi` - NSIS installer script
 * `make_helpers.cmd`      - Builds and runs `make_helpers.nsi`
 * `make_helpers.nsi`      - NSIS application to download helper apps for testing
