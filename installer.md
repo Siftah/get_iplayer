@@ -182,7 +182,7 @@ The configuration file is named `get_iplayer_config.ini` and is found in the **w
 
 2. Update the `get_iplayer_config_latest.ini` symbolic link to refer to the new configuration file.
 
-The configuration file only needs to be changed when the download URL for a helper application changes.  See the [Auxiliary Files Reference](#auxref) below.
+The configuration file only needs to be changed when the release version and/or download URL for a helper application changes.  The user will only receive an update notice in the installer if the version string changes.  See the [Auxiliary Files Reference](#auxref) below.
 
 ### CGI Script
 
@@ -382,7 +382,7 @@ The cofinguration file is in INI format, with a section defined for each of the 
 * `url`     - Download URL (required)
 * `doc`     - Documentation URL (optional)
 
-Version strings must be changed in order for the installer to signal the user that updates are available.
+Version strings must be changed in order for the installer to show an update notice to the user.  Version strings generally should reflect the release numbering used by the developers of the helper applications.  However, the version string can have any value.  So long as it is different from the installed version (or the application is not installed), the user will be notified.  This may be useful if a download file is changed by the developer without changing the associated version number.  For example, AtomicParsley's version string in the configuration might be changed from from "0.9.4" to "0.9.4-reinstall1" to signal the user that it should be re-installed, even though it is still at version 0.9.4.
 
 Example of `get_iplayer_config.ini`:
 
