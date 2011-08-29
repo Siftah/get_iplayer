@@ -162,25 +162,47 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 ### Download Location
 
-The installer application is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win`.  The following steps are necessary to deploy a new installer:
+The installer application is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win`.  The following steps are necessary to deploy a new installer (with placeholders for actual directory paths):
 
-1. Copy the installer application (e.g., `get_iplayer_setup_4.3.exe`) into the appropriate directory. 
+1. Make deployment directory current
 
-2. Update the `get_iplayer_setup_latest.exe` symbolic link to refer to the new installer.
+    `$ cd $WEBROOT/get_iplayer_win`
 
-3. Update the contents of the `VERSION-get_iplayer-win-installer` file with the new version (e.g. 4.3)
+2. Copy the installer application (e.g., `get_iplayer_setup_4.3.exe`) into the directory
 
-**NOTE:** For installers version 4.3 and earlier, the application MUST be named in the form `get_iplayer_setup_N.N.exe` in order that it can be downloaded by those earlier installers.  Later versions will download new installers via the symbolic link.
+    `$ cp $BUILDPATH/get_iplayer_setup_4.3.exe .`
+
+    **NOTE:** For installers version 4.2 and earlier, the application MUST be named in the form `get_iplayer_setup_N.N.exe` in order that it can be downloaded by those earlier installers.  Versions 4.3+ will download new installers via the symbolic link (below)
+
+3. Update the `get_iplayer_setup_latest.exe` symbolic link to refer to the new installer
+
+    `$ ln -sf get_iplayer_setup_4.3.exe get_iplayer_setup_latest.exe`
+
+4. Update the contents of the installer version file with the new version (e.g. 4.3)
+
+    `$ echo -n "4.3" > VERSION-get_iplayer-win-installer`
+   
+    **NOTE:** For installers version 4.2 and earlier, the version file MUST NOT contain a trailing newline character after the version number (thus the `-n` option for `echo`).  A trailing newline character will break the installer update mechanism.  This is fixed in versions 4.3+.
 
 ### Configuration File
 
 By default, the installer employs a configuration file (INI format) to retrieve the download URLs for the various helper applications.  The configuration file is downloaded whenever the installer is executed in order to look for updates.  If the configuration file cannot be retrieved, the version built into the installer will be used (though it may be out of date).
 
-The configuration file is named `get_iplayer_config.ini` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win/`.  Deployment is performed as follows:
+The configuration file is named `get_iplayer_config.ini` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/get_iplayer_win/`.  Deployment is performed as follows (with placeholders for actual directory paths):
 
-1. Copy the new version of the configuration file into the appropriate directory.  Use a file name in the form `get_iplayer_config_YYYYMMDD.ini` to distinguish the new version from previous versions.
+1. Make deployment directory current
 
-2. Update the `get_iplayer_config_latest.ini` symbolic link to refer to the new configuration file.
+    `$ cd $WEBROOT/get_iplayer_win`
+
+2. Copy the latest version of the configuration file into the directory  
+
+    `$ cp $SOURCEPATH/get_iplayer_config.ini get_iplayer_config_20110828.ini`
+
+    **NOTE:** Use a file name in the form `get_iplayer_config_YYYYMMDD.ini` to distinguish the new version from previous versions.
+    
+3. Update the `get_iplayer_config_latest.ini` symbolic link to refer to the new configuration file.
+
+    `$ ln -sf get_iplayer_config_20110828.ini get_iplayer_config_latest.ini`
 
 The configuration file only needs to be changed when the release version and/or download URL for a helper application changes.  The user will only receive an update notice in the installer if the version string changes.  See the [Auxiliary Files Reference](#auxref) below.
 
@@ -188,11 +210,23 @@ The configuration file only needs to be changed when the release version and/or 
 
 Prior to version 4.3, the installer required the assistance of a CGI script to retrieve the download URLs for the various helper applications.  The CGI script would be accessed by the installer for every helper application selected for installation.  The former behaviour can be restored if the installer is built with /NOCONFIG (see [Useful Options](#useful) below). 
 
-The CGI script is named `get_iplayer_setup.cgi` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/cgi-bin/`.  Deployment is performed as follows:
+The CGI script is named `get_iplayer_setup.cgi` and is found in the **windows** directory of the `get_iplayer` Git repository along with the other installer-related files.  The script is deployed in the directory corresponding to `http://www.infradead.org/cgi-bin/`.  Deployment is performed as follows (with placeholders for actual directory paths):
 
-1. Back up the existing CGI script
+1. Make deployment directory current
 
-2. Copy the new version of the CGI script into the appropriate directory.
+    `$ cd $WEBROOT/cgi-bin`
+
+2. Back up the existing CGI script
+
+    `$ cp get_iplayer_setup.cgi get_iplayer_setup_20110828.cgi`
+
+    **NOTE:** Use a file name in the form `get_iplayer_config_YYYYMMDD.ini` to distinguish the backup from previous backups.
+
+3. Copy the latest version of the CGI script into the directory
+
+    `$ cp $SOURCEPATH/get_iplayer_setup.cgi .`
+
+    **NOTE:** Installer version 4.2 and below used a CGI script named `get_iplayer.cgi`.  Versions 4.3+ will expect the script, if deployed, to be named `get_iplayer_setup.cgi`.
 
 The CGI script only needs to be changed when the download URL for a helper application changes.  See the [Auxiliary Files Reference](#auxref) below.
 
@@ -413,7 +447,7 @@ Example of `get_iplayer_config.ini`:
 
 ### CGI Script
 
-The CGI file is a simple UNIX shell script that responds to a fixed set of query string values by redirecting the requesting application to the download URL for the corresponding helper application.
+The CGI file is a UNIX shell script that responds to a fixed set of query string values by redirecting the requesting application to the download URL for the corresponding helper application.
 
 Example of `get_iplayer_setup.cgi`:
 
