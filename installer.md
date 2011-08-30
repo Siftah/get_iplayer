@@ -115,7 +115,26 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
     
 #### Build Notes
 
-* `perlfiles.zip` will contain the Perl core libraries (as determined by PAR::Packer), plus the additional modules specified above.  However, `make-perlfiles.cmd` strips some large files from the "unicore" package in order to save space.  These files are input and test files for generation of Unicode character tables and are not required for `get_iplayer`.
+* `perlfiles.zip` will contain the Perl core libraries (as determined by PAR::Packer), plus the additional modules specified above.  However, `make-perlfiles.cmd` strips some large files from the "unicore" package in order to save space.  These files are input and test files for generation of Unicode character tables and are not required for `get_iplayer`.  
+
+* The Perl XML parser modules listed below are forced into `perlfiles.zip` via the `pp` command line:
+
+    - XML::LibXML::SAX
+    - XML::LibXML::SAX::Parser
+    - XML::SAX::PurePerl
+    - XML::Parser
+
+* The use of the XML parser modules requires that the DLL files listed below (from the Strawberry Perl distribution) must also be included in `perlfiles.zip`:
+
+    - XML::LibXML::SAX
+
+        + %PERLDIST%\c\bin\libiconv*.dll
+        + %PERLDIST%\c\bin\libxml2*.dll 
+        + %PERLDIST%\c\bin\libz*.dll
+
+    - XML::Parser
+
+        + %PERLDIST%\c\bin\libexpat*.dll
 
 * Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be completely rebuilt, add `/makeperl` to the command:
 
