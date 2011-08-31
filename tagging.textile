@@ -15,47 +15,9 @@ The new tagging functionality is encapsulated in the @Tagger@ class that can be 
 
 h2. Installation
 
-h3. Update @get_iplayer@
+**[2011-08-28]:** The changes described here have been incorporated into @get_iplayer@ 2.80.  Windows users should download version 4.4+ of the get_iplayer Windows installer from:
 
-For instructions on replacing an existing version of @get_iplayer@ with my patched version, see:
-
-"https://github.com/dinkypumpkin/get_iplayer/wiki/instructions":https://github.com/dinkypumpkin/get_iplayer/wiki/instructions
-
-h3. Perl Modules
-
-If you wish to take advantage of the enhanced MP3 tagging functionality (e.g. adding artwork), you will need to install the @MP3::Tag@ module.
-
-For Linux/OSX users, and Windows users with their own Perl installations, use your favourite CPAN client to install the module.  For Windows users who only have the version of Perl supplied with the @get_iplayer@ installer, additional steps are necessary, as described below:
-
-h4. Install Full Perl Distribution
-
-The Perl version provided with the @get_iplayer@ installer is a partial distribution tailored for @get_iplayer@.  In order to take advantage of new tagging functionality, a full distribution that can be augmented with additional modules is necessary.
-
-Got to "http://strawberryperl.com/":http://strawberryperl.com/ and download one of the @.msi@ installer packages, version 5.10.0 or above.  After running the installer, log out and back in to Windows to ensure the installer's changes to the system environment are complete.
-
-Select @Strawberry Perl->CPAN Client@ from the Start menu.  A terminal window will open and you will be at a @cpan>@ prompt.  Type: @install MP3::Tag@ to install the @MP3::Tag@ module.  Once the installation is complete, close the terminal window.
-
-h4. Remove Perl Installed by @get_iplayer@ Windows Installer
-
-Back up and delete the following files and folders in @C:\Program Files\get_iplayer@:
-
-* perl.exe
-* perl510.dll
-* perl-license
-* lib
-
-h4. Check Perl Installation
-
-Open @get_iplayer@ from the Start menu.  At the command prompt, type @perl -V@ to show extended information about the current Perl version.  At the end of the listing that appears on your screen should be some lines that look like:
-
-<pre>
-  @INC:
-    C:/strawberry/perl/lib
-    C:/strawberry/perl/site/lib
-    .
-</pre>
-
-The paths may differ slightly, but you should see references to the library directories for the version of Strawberry Perl you just installed.
+"http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe":http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe
 
 h2. Usage
 
