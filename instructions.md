@@ -20,7 +20,9 @@
 
     If the fix for your problem is not in the master repository, proceed to Step 2 below to obtain the patched version of get_iplayer available in this repository.
 
-2. **Make sure you need the patched version**
+2. Make sure you need the patched version
+
+    **[2011-08-28]:**  The owner of this repository now has access to the master repository described above.  It is therefore much less likely that this repository will contain patches that are not committed to the master repository.
 
     The patched version of get_iplayer in this repository may contain patches not yet incorporated into the master repository.  Check the change log for the patched version to make sure that the feature or fix you need has been incorporated:
 
