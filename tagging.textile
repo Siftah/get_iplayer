@@ -56,7 +56,7 @@ The @get_iplayer@ metadata is assumed to be encoded as UTF-8 and is then re-enco
 
 h3. Tagging Differences
 
-Aside from the additional tags available, there are three notable differences from the previous scheme:
+Aside from the additional tags available, there are four notable differences from the previous scheme:
 
 # MP4 tagging differed from MP3 tagging in that it used the full programme title (including series).  To harmonise things, I chose the MP3 style of using the shorter episode title as the default.  The ==--tag-fulltitle== option was added to use the full programme title instead.
 # See the notes regarding @genre@ in the tagging scheme description referenced above.  Rather than using the previous MP4 style of assigning the full list of programme categories as the genre, I've implemented some logic to select a single category as the genre.  Many media managers, including iTunes, cannot work with multi-valued genres.  The full category list is retained in the @grouping@ tag.
