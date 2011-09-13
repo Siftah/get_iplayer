@@ -18,8 +18,8 @@ This document contains instructions for building the `get_iplayer` Windows insta
 
 	Additional modules must be installed into the Perl distribution used to build the installer:
 
-	* MP3::Info (1.13)    - Used in localfiles plugin
-	* MP3::Tag (1.24)     - Used to enhance MP3 tagging
+	* MP3::Info (1.24)    - Used in localfiles plugin
+	* MP3::Tag (1.13)     - Used to enhance MP3 tagging
 	* PAR::Packer (1.010) - Used to build installer
 
 	The modules may be installed with the CPAN client provided by Strawberry Perl.
