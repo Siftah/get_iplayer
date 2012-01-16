@@ -36,7 +36,7 @@ The table below describes the scheme used to convert @get_iplayer@ metadata into
 |                |                   |                            |       |==--==TIME |TIME[17] |                               |
 |                |                   |                            |       |           |TDRL[18] |                               |
 
-fn1. Full list of substitution parameters may be found "here":http://linuxcentre.net/getiplayer/documentation#Substitution%20Parameters
+fn1. Full list of substitution parameters may be found "*here*":http://linuxcentre.net/getiplayer/documentation#Substitution%20Parameters
 
 fn2. _TV Show_ if MP4/M4V, _Movie_ if MP4/M4V and @<categories>@ contains "Film", _Normal_ otherwise
 
