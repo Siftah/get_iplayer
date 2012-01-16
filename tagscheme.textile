@@ -3,69 +3,71 @@ h2. get_iplayer Tag Scheme
 The table below describes the scheme used to convert @get_iplayer@ metadata into tags for downloaded programmes.  The tag names were selected -- not coincidentally -- to match @AtomicParsley@ parameter names.  Each tag is mapped, where possible, to the corresponding @get_iplayer@ param, @AtomicParsley@ param, MP4 atom, @id3v2@ param, and ID3 frame.  The list of iTunes fields indicate where each tag will appear in the iTunes _Get Info_ dialog.  Conversion rules specific to particular fields are indicated in the footnotes.
 
 |_\2.Tag Mapping |_\2.MP4 Tagging |_\2.ID3 Tagging |_.iTunes|
-|_.Tag Name |_.get_iplayer Variable |_.AtomicParsley&#160;Param |_.MP4 atom |_.id3v2 Param |_.ID3 Frame |_.Info Field |
-|stik[1]         |@<ext>@            |==--==stik                  |stik   |           |         |Options:Media&#160;Kind        |
-|advisory[2]     |@<guidance>@       |==--==advisory              |rtng   |           |         |Summary:Advisory               |
-|copyright[3]    |@<dldate>@         |==--==copyright             |cprt   |==--==TCOP |TCOP     |Summary:Copyright              |
-|title           |@<episode>@[4]     |==--==title                 |(C)nam |==--==TIT2 |TIT2     |Info:Name                      |
+|_.Tag Name |_.Substitution&#160;Param[1] |_.AtomicParsley&#160;Param |_.MP4 atom |_.id3v2 Param |_.ID3 Frame |_.Info Field |
+|stik[2]         |@<ext>@            |==--==stik                  |stik   |           |         |Options:Media&#160;Kind        |
+|advisory[3]     |@<guidance>@       |==--==advisory              |rtng   |           |         |Summary:Advisory               |
+|copyright[4]    |@<dldate>@         |==--==copyright             |cprt   |==--==TCOP |TCOP     |Summary:Copyright              |
+|title           |@<episode>@[5]     |==--==title                 |(C)nam |==--==TIT2 |TIT2     |Info:Name                      |
 |artist          |@<channel>@        |==--==artist                |(C)ART |==--==TPE1 |TPE1     |Info:Artist                    |
-|albumArtist     |BBC @<type>@[5]    |==--==albumArtist           |aART   |==--==TPE2 |TPE2     |Info:Album&#160;Artist         |
+|albumArtist     |BBC @<type>@[6]    |==--==albumArtist           |aART   |==--==TPE2 |TPE2     |Info:Album&#160;Artist         |
 |album           |@<name>@           |==--==album                 |(C)alb |==--==TALB |TALB     |Info:Album                     |
 |grouping        |@<categories>@     |==--==grouping              |(C)grp |==--==TIT1 |TIT1     |Info:Grouping                  |
 |composer        |BBC iPlayer        |==--==composer              |(C)wrt |==--==TCOM |TCOM     |Info:Composer                  |
 |comment         |@<descshort>@      |==--==comment               |(C)cmt |==--==COMM |COMM     |Info:Comments                  |
-|genre[6]        |@<categories>@     |==--==genre                 |(C)gen |==--==TCON |TCON     |Info:Genre                     |
-|year            |@<firstbcast>@[7]  |==--==year                  |(C)day |==--==TYER |TYER     |Info:Year                      |
+|genre[7]        |@<categories>@     |==--==genre                 |(C)gen |==--==TCON |TCON     |Info:Genre                     |
+|year            |@<firstbcast>@[8]  |==--==year                  |(C)day |==--==TYER |TYER     |Info:Year                      |
 |tracknum        |@<episodenum>@     |==--==tracknum              |trkn   |==--==TRCK |TRCK     |Info:Track&#160;Number         |
 |disk            |@<seriesnum>@      |==--==disk                  |disk   |==--==TPOS |TPOS     |Info:Disc&#160;Number          |
-|lyrics          |@<desc>@[8]        |==--==lyrics                |(C)lyr |==--==USLT |USLT     |Lyrics                         |
-|description     |@<descshort>@      |==--==description           |desc   |           |TIT3[14] |Video:Description              |
-|longDescription |@<desc>@           |==--==longdesc[9]&#160;_OR_<br/>==--==longDescription[10] |ldes | |TDES[14] |(Hidden):Long&#160;Description |
-|hdvideo[11]     |@<mode>@           |==--==hdvideo[12]           |hdvd   |           |         |(Browser):HD&#160;Icon         |
+|lyrics          |@<desc>@[9]        |==--==lyrics                |(C)lyr |==--==USLT |USLT     |Lyrics                         |
+|description     |@<descshort>@      |==--==description           |desc   |           |TIT3[15] |Video:Description              |
+|longDescription |@<desc>@           |==--==longdesc[10]&#160;_OR_<br/>==--==longDescription[11] |ldes | |TDES[15] |(Hidden):Long&#160;Description |
+|hdvideo[12]     |@<mode>@           |==--==hdvideo[13]           |hdvd   |           |         |(Browser):HD&#160;Icon         |
 |TVShowName      |@<name>@           |==--==TVShowName            |tvsh   |           |         |Video:Show                     |
-|TVEpisode       |@<senum>@ [13]     |==--==TVEpisode             |tven   |           |         |Video:Episode&#160;ID          |
+|TVEpisode       |@<senum>@ [14]     |==--==TVEpisode             |tven   |           |         |Video:Episode&#160;ID          |
 |TVSeasonNum     |@<seriesnum>@      |==--==TVSeasonNum           |tvsh   |           |         |Video:Season&#160;Number       |
 |TVEpisodeNum    |@<episodenum>@     |==--==TVEpisodeNum          |tves   |           |         |Video:Episode&#160;Number      |
 |TVNetwork       |@<channel>@        |==--==TVNetwork             |tvnn   |           |         |(Hidden):TV&#160;Network       |
 |artwork         |@<thumbfile>@      |==--==artwork               |covr   |           |APIC     |Artwork                        |
-|podcastFlag[14] |true               |==--==podcastFlag           |pcst   |           |PCST     |Options:Media&#160;Kind        |
-|category[14]    |@<categories>@[15] |==--==category              |catg   |           |TCAT     |(Hidden):Podcast&#160;Category |
-|keyword[14]     |@<categories>@     |==--==keyword               |keyw   |           |TKWD     |(Hidden):Podcast&#160;Keywords |
-|podcastGUID[14] |@<player>@         |==--==podcastGUID           |egid   |           |TGID     |(Hidden):Podcast&#160;GUID     |
-|                |                   |                            |       |==--==TDAT |TDAT[16] |                               |
-|                |                   |                            |       |==--==TIME |TIME[16] |                               |
-|                |                   |                            |       |           |TDRL[17] |                               |
+|podcastFlag[15] |true               |==--==podcastFlag           |pcst   |           |PCST     |Options:Media&#160;Kind        |
+|category[15]    |@<categories>@[16] |==--==category              |catg   |           |TCAT     |(Hidden):Podcast&#160;Category |
+|keyword[15]     |@<categories>@     |==--==keyword               |keyw   |           |TKWD     |(Hidden):Podcast&#160;Keywords |
+|podcastGUID[15] |@<player>@         |==--==podcastGUID           |egid   |           |TGID     |(Hidden):Podcast&#160;GUID     |
+|                |                   |                            |       |==--==TDAT |TDAT[17] |                               |
+|                |                   |                            |       |==--==TIME |TIME[17] |                               |
+|                |                   |                            |       |           |TDRL[18] |                               |
 
-fn1. _TV Show_ if MP4/M4V, _Movie_ if MP4/M4V and @<categories>@ contains "Film", _Normal_ otherwise
+fn1. Full list of substitution parameters may be found "here":http://linuxcentre.net/getiplayer/documentation#Substitution%20Parameters
 
-fn2. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
+fn2. _TV Show_ if MP4/M4V, _Movie_ if MP4/M4V and @<categories>@ contains "Film", _Normal_ otherwise
 
-fn3. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
+fn3. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
 
-fn4. @<title>@ used if ==--tag-fulltitle== given
+fn4. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
 
-fn5. _BBC TV_, _BBC Radio_, _BBC Podcast_
+fn5. @<title>@ used if ==--tag-fulltitle== given
 
-fn6. First item in @<categories>@ used unless it is one of: ("Films", "Sign Zone", "Audio Described", "Northern Ireland", "Scotland", "Wales", "England"), in which case second item is used.  If @<categories>@ is empty, set to _get_iplayer_
+fn6. _BBC TV_, _BBC Radio_, _BBC Podcast_
 
-fn7. If @<firstbcast>@ is not valid date, current date is used
+fn7. First item in @<categories>@ used unless it is one of: ("Films", "Sign Zone", "Audio Described", "Northern Ireland", "Scotland", "Wales", "England"), in which case second item is used.  If @<categories>@ is empty, set to _get_iplayer_
 
-fn8. @<player>@ and @<web>@ appended if present
+fn8. If @<firstbcast>@ is not valid date, current date is used
 
-fn9. ==--tag-longdesc== required for compatible AtomicParsley version
+fn9. @<player>@ and @<web>@ appended if present
 
-fn10. ==--tag-longdescription== required for compatible AtomicParsley version
+fn10. ==--tag-longdesc== required for compatible AtomicParsley version
 
-fn11. _true_ if @<mode>@ contains "hd", _false_ otherwise
+fn11. ==--tag-longdescription== required for compatible AtomicParsley version
 
-fn12. ==--tag-hdvideo== required for compatible AtomicParsley version
+fn12. _true_ if @<mode>@ contains "hd", _false_ otherwise
 
-fn13. If @<senum>@ empty, @<pid>@ is used
+fn13. ==--tag-hdvideo== required for compatible AtomicParsley version
 
-fn14. ==--tag-podcast== required if @<type>@ != "podcast"
+fn14. If @<senum>@ empty, @<pid>@ is used
 
-fn15. Uses same rules as genre [6]
+fn15. ==--tag-podcast== required if @<type>@ != "podcast"
 
-fn16. Used with TYER to record full date
+fn16. Uses same rules as genre [6]
 
-fn17. Podcast release date for iTunes
+fn17. Used with TYER to record full date
+
+fn18. Podcast release date for iTunes
