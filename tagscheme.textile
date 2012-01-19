@@ -2,8 +2,8 @@ h2. get_iplayer Tag Scheme
 
 The table below describes the scheme used to convert @get_iplayer@ metadata into tags for downloaded programmes.  The tag names were selected -- not coincidentally -- to match @AtomicParsley@ parameter names.  Each tag is mapped, where possible, to the corresponding @get_iplayer@ param, @AtomicParsley@ param, MP4 atom, @id3v2@ param, and ID3 frame.  The list of iTunes fields indicate where each tag will appear in the iTunes _Get Info_ dialog.  Conversion rules specific to particular fields are indicated in the footnotes.
 
-|_\2.Tag Mapping |_\2.MP4 Tagging |_\2.ID3 Tagging |_.iTunes|
-|_.Tag Name |_.Substitution&#160;Param[1] |_.AtomicParsley&#160;Param |_.MP4 atom |_.id3v2 Param |_.ID3 Frame |_.Info Field |
+|_\2. Tag Mapping |_\2. MP4 Tagging |_\2. ID3 Tagging |_. iTunes|
+|_. Tag Name |_. Substitution&#160;Param[1] |_. AtomicParsley&#160;Param |_. MP4 atom |_ .id3v2 Param |_. ID3 Frame |_. Info Field |
 |stik[2]         |@<ext>@            |==--==stik                  |stik   |           |         |Options:Media&#160;Kind        |
 |advisory[3]     |@<guidance>@       |==--==advisory              |rtng   |           |         |Summary:Advisory               |
 |copyright[4]    |@<dldate>@         |==--==copyright             |cprt   |==--==TCOP |TCOP     |Summary:Copyright              |
@@ -44,7 +44,7 @@ fn3. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
 
 fn4. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
 
-fn5. @<title>@ used if ==--tag-fulltitle== given
+fn5. @<title>@ used if ==--==tag-fulltitle given
 
 fn6. _BBC TV_, _BBC Radio_, _BBC Podcast_
 
@@ -54,17 +54,17 @@ fn8. If @<firstbcast>@ is not valid date, current date is used
 
 fn9. @<player>@ and @<web>@ appended if present
 
-fn10. ==--tag-longdesc== required for compatible AtomicParsley version
+fn10. ==--==tag-longdesc required for compatible AtomicParsley version
 
-fn11. ==--tag-longdescription== required for compatible AtomicParsley version
+fn11. ==--==tag-longdescription required for compatible AtomicParsley version
 
 fn12. _true_ if @<mode>@ contains "hd", _false_ otherwise
 
-fn13. ==--tag-hdvideo== required for compatible AtomicParsley version
+fn13. ==--==tag-hdvideo required for compatible AtomicParsley version
 
 fn14. If @<senum>@ empty, @<pid>@ is used
 
-fn15. ==--tag-podcast== required if @<type>@ != "podcast"
+fn15. ==--==tag-podcast required if @<type>@ != "podcast"
 
 fn16. Uses same rules as genre [6]
 
