@@ -1,0 +1,688 @@
+<h2><strong>Command Usage</strong></h2>
+<p>* The full web based man page can be <a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html">viewed here</a>.<br />
+* For basic help run:</p>
+<blockquote>
+<pre>get_iplayer -h</pre>
+</blockquote>
+<p>* For Advanced and extended options run:</p>
+<blockquote>
+<pre>get_iplayer --long-help</pre>
+
+</blockquote>
+<h2><strong>Examples</strong></h2>
+<p><a name="Searching"></a></p>
+<h2>Searching</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAF">Click Here for All Search Options</a></h3>
+<p>* List all tv programmes (either from BBC site or cached):</p>
+<blockquote>
+<pre>get_iplayer</pre>
+</blockquote>
+<p>* List all tv programme names matching "News":</p>
+
+<blockquote>
+<pre>get_iplayer news</pre>
+</blockquote>
+<p>* List all Radio programme names matching "News":</p>
+<blockquote>
+<pre>get_iplayer --type=radio news</pre>
+</blockquote>
+<p>* List all Live TV and Radio channels/programmes:</p>
+<blockquote>
+<pre>get_iplayer --type=livetv,liveradio</pre>
+
+</blockquote>
+<p>* List all tv programmes with long descriptions:</p>
+<blockquote>
+<pre>get_iplayer --long</pre>
+</blockquote>
+<p>* List all tv programmes showing only 'pid', 'name' and 'episode'</p>
+<blockquote>
+<pre>get_iplayer --listformat="<pid>: <name> - <episode>"</pre>
+
+</blockquote>
+<p>* Search all tv programmes for the word 'hello' in the 'episode' and 'channel' fields</p>
+<blockquote>
+<pre>get_iplayer --fields=episode,channel hello</pre>
+</blockquote>
+<p>* List all tv programmes with categories containing the word 'News' and on channel 'BBC One'</p>
+
+<blockquote>
+<pre>get_iplayer --channel="BBC One" --category=News</pre>
+</blockquote>
+<p>* List all tv programmes added to the cache since 24 hours ago:</p>
+<blockquote>
+<pre>get_iplayer --since=24</pre>
+</blockquote>
+<p>* List all available categories for BBC Radio and BBC TV programmes:</p>
+<blockquote>
+<pre>get_iplayer --list=categories --type=tv,radio</pre>
+</blockquote>
+<p>* List all available radio channels:</p>
+
+<blockquote>
+<pre>get_iplayer --list=channel --type=radio</pre>
+</blockquote>
+<p>* List all BBC TV programmes and BBC podcasts</p>
+<blockquote>
+<pre>get_iplayer --type=podcast,tv</pre>
+</blockquote>
+<p>* List all programmes with categories not containing the string 'child' on BBC One:</p>
+<blockquote>
+<pre>get_iplayer --exclude-category=child --channel="bbc one"</pre>
+
+</blockquote>
+<p>* List all programme metadata and available streaming modes for programme with index number 123:</p>
+<blockquote>
+<pre>get_iplayer --info 123</pre>
+</blockquote>
+<p><a name="Recording"></a></p>
+<h2>Recording</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAH">Click Here for All Recording Options</a></h3>
+<p><strong>Essentially, you can just add '--get' to any of the above searches to record the matching programmes.</strong><br />
+
+* Record programme number 123 (see index list):</p>
+<blockquote>
+<pre>get_iplayer --get 123</pre>
+</blockquote>
+<p>* Record Radio programme number 10123 (see index list):</p>
+<blockquote>
+<pre>get_iplayer --get 10123</pre>
+</blockquote>
+<p>* Record programme number 123 and save in '/home/user/tv-files/':</p>
+<blockquote>
+
+<pre>get_iplayer --get 123 --output "/home/user/tv-files/"</pre>
+</blockquote>
+<p>* Record Radio programme number 10123 and tv programme number 324 (see index list):</p>
+<blockquote>
+<pre>get_iplayer --get 10123 324</pre>
+</blockquote>
+<p>* Record Podcasts matching 'Moyles':</p>
+<blockquote>
+<pre>get_iplayer --type=podcast --get "Moyles"</pre>
+</blockquote>
+
+<p>* Record all tv programmes with 'blue peter' in the title/episode:</p>
+<blockquote>
+<pre>get_iplayer --get "blue peter"</pre>
+</blockquote>
+<p>* Record all tv programmes with 'blue peter' in the title/episode, and programme index 123:</p>
+<blockquote>
+<pre>get_iplayer --get "blue peter" 123</pre>
+
+</blockquote>
+<p>* Record all programmes with URL that contains a programme ID (pid) b002a23a (i.e. the URL of the programme page on BBC iplayer):</p>
+<blockquote>
+<pre>get_iplayer "http://blah.blah.blah/b002a23a.shtml"
+get_iplayer --pid b002a23a</pre>
+</blockquote>
+<p>* Record a video from the BBC embedded media player such as <a href="http://www.bbc.co.uk/learningzone/clips/">Learning Zone</a>, <a href="http://www.bbc.co.uk/archive/index.shtml">BBC Archive</a> or the <a href="http://news.bbc.co.uk/1/hi/video_and_audio/default.stm">BBC News site</a> (i.e. the URL of the page that contains the player):</p>
+
+<blockquote>
+<pre>get_iplayer "tv:http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"
+get_iplayer --type=tv "http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"</pre>
+</blockquote>
+<p>* Record all programmes with 'comedy' in the title, episode or long description:</p>
+<blockquote>
+<pre>get_iplayer --long --get comedy</pre>
+</blockquote>
+<p>* Record all programmes with categories containing 'music':</p>
+
+<blockquote>
+<pre>get_iplayer --get --category=music</pre>
+</blockquote>
+<p>* Using flvstreamer tool to get high or normal quality Flash version of a TV programme (--flvstreamer is not required of your options tell get_iplayer where flvstreamer is located)</p>
+<blockquote>
+<pre>get_iplayer --type=tv --get 123 --modes=flashstd
+  --flvstreamer="/path/to/flvstreamer"</pre>
+</blockquote>
+<p>* Record a TV programme trying iphone, flashhigh and flashnormal modes in order until one succeeds. (use the --info option to see what modes are available for a programme).</p>
+<blockquote>
+<pre>get_iplayer --type=tv --get 123 --modes=iphone,flashhigh,flashstd
+ --flvstreamer="/path/to/flvstreamer"</pre>
+</blockquote>
+<p>* Using flvstreamer tool to get high quality Flash version of a BBC Radio programme (--flvstreamer is not required of your options tell get_iplayer where flvstreamer is located). Note: Possible modes are (in order of quality): n95_3g, n95_wifi, flashlow, flashnormal, iphone, flashhigh, flashvhigh, flashhd. <a href="http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table">See this page for more details</a>.</p>
+
+<blockquote>
+<pre>get_iplayer --type=radio --get 12345 --modes=flashaudio
+ --flvstreamer="/path/to/flvstreamer"</pre>
+</blockquote>
+<p>* Record a radio programme trying iphone, flashaudio, flashaac then realaudio modes in order until one succeeds.</p>
+<blockquote>
+<pre>get_iplayer --type=radio --get 12345
+ --modes=iphone,flashaudio,flashaac,realaudio
+ --flvstreamer="/path/to/flvstreamer"</pre>
+</blockquote>
+<p><a name="Live Recording"></a></p>
+<h2>Live Recording</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAF">Click Here for All Search Options</a></h3>
+<p>Note: Please upgrade to flvstreamer 1.8 or later for reliable Live streaming.<br />
+
+* List LiveTV:</p>
+<blockquote>
+<pre>get_iplayer --type=livetv</pre>
+</blockquote>
+<p>* Record a Live BBC iPlayer TV programme (e.g. BBC2):</p>
+<blockquote>
+<pre>get_iplayer --type=livetv --get "BBC Two"
+get_iplayer --type=tv "http://www.bbc.co.uk/iplayer/playlive/bbc_two"
+get_iplayer --type=tv --pid="bbc_two"</pre>
+</blockquote>
+<p>* Record a High Quality Live BBC iPlayer Radio programme (e.g. BBC Radio 1):</p>
+<blockquote>
+<pre>get_iplayer --type=liveradio --get "Radio 1"
+get_iplayer --type=radio "http://www.bbc.co.uk/iplayer/playlive/bbc_radio_one"
+get_iplayer --type=radio --pid=bbc_radio_one</pre>
+
+</blockquote>
+<p><a name="Searching the Future Programme Schedule"></a></p>
+<h2>Searching the Future Programme Schedule</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAF">Click Here for All Search Options</a></h3>
+<p>It is possible to index, search and queue recordings for specific programmes that have not yet been made available. This is currently only available on BBC TV and Radio modes and only searches for up to 13 days in advance. Note that some of the programmes in the BBC schedules are never released on iPlayer and therefore will never get recorded even if you can find them in the search results. Note that the refreshing can take quite a bit longer with --refresh-future specified.<br />
+* Refresh the cache with future schedules (e.g. for tv). You must do this otherwise you will not be able to search for future programmes:</p>
+<blockquote>
+<pre>get_iplayer --type=tv --refresh-future --refresh</pre>
+</blockquote>
+<p>* Save the refreshing of future programmes into your default settings (a good idea if you want the above to be automatic):</p>
+<blockquote>
+
+<pre>get_iplayer --add-prefs --refresh-future</pre>
+</blockquote>
+<p>* To search for a programme additionally in the future just use any of the usual search commands but adding '--future':</p>
+<blockquote>
+<pre>get_iplayer 'Eastenders' --future</pre>
+</blockquote>
+<p>* You cannot record a programme in the future (!) but you can queue it in the PVR for recording when it becomes available (if at all). In this example the Index of the search results for a future episode of eastenders was '123&#8242;:</p>
+<blockquote>
+<pre>get_iplayer --pvrqueue --type=tv 123</pre>
+
+</blockquote>
+<p><a name="Searching the Recording History"></a></p>
+<h2>Searching the Recording History</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAF">Click Here for All Search Options</a></h3>
+<p>The recording history is a text database of the programmes you have recording since you started using get_iplayer. Its primary purpose is to prevent get_iplayer from downloading the same programme more than once. You can search the recordings history much like the normal programme types.<br />
+* Search for "Doctor Who" in the history</p>
+<blockquote>
+<pre>get_iplayer --history "Doctor Who"</pre>
+
+</blockquote>
+<p>* Show detailed programme metadata for all recorded programmes matching "Doctor Who" in the history</p>
+<blockquote>
+<pre>get_iplayer --history "Doctor Who" --info</pre>
+
+</blockquote>
+<p>* Download thumbnails for all recorded programmes matching "Doctor Who" in the history</p>
+<blockquote>
+<pre>get_iplayer --history "Doctor Who" --thumbnailonly</pre>
+
+</blockquote>
+<p>* Download thumbnails for all recorded programmes matching "Doctor Who" in the history and where the media file hasn't been deleted.</p>
+<blockquote>
+<pre>get_iplayer --history "Doctor Who" --thumbnailonly --skipdeleted</pre>
+</blockquote>
+<p><a name="Indexing and Caching Features"></a></p>
+<h2>Indexing and Caching Features</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAK">Click Here for All Config Options</a></h3>
+<p>* Refresh the tv programme cache (this happens after 4hrs automatically - see --expiry option):</p>
+
+<blockquote>
+<pre>get_iplayer --refresh</pre>
+</blockquote>
+<p>* Manually refresh the programme cache for all types:</p>
+<blockquote>
+<pre>get_iplayer --refresh --type=all</pre>
+</blockquote>
+<p>* Manually refresh the radio programme cache:</p>
+<blockquote>
+<pre>get_iplayer --refresh --type=radio</pre>
+</blockquote>
+<p>* Set the expiry of the caches (in seconds):</p>
+
+<blockquote>
+<pre>get_iplayer --add-prefs --expiry=3600</pre>
+</blockquote>
+<p>* Exclude adding matching channels to the programme cache (i.e. these channels won't even be indexed and therefore indexing/refreshing will be faster):</p>
+<blockquote>
+<pre>get_iplayer --refresh-exclude="cbeebies,cbbc" --type=tv --refresh</pre>
+</blockquote>
+<p>* Check for Updates and Download new version of get_iplayer (also creates backup):<br />
+* Include these channels ONLY to the programme cache (i.e. these channels will only be indexed and therefore indexing/refreshing will be faster):</p>
+<blockquote>
+<pre>get_iplayer --refresh-include="bbc" --type=tv --refresh</pre>
+
+</blockquote>
+<p><a name="Updating get_iplayer"></a></p>
+<h2>Updating get_iplayer</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAK">Click Here for All Config Options</a></h3>
+<p><strong>Updating on Linux, OS X, Unix, cygwin, etc</strong><br />
+* If you installed by simply downloading the get_iplayer script then you can just run:</p>
+<blockquote>
+<pre>get_iplayer --update</pre>
+</blockquote>
+<p>* Optionally force updating the script and the plugins:</p>
+<blockquote>
+
+<pre>get_iplayer --update --plugins-update --force</pre>
+</blockquote>
+<blockquote>
+<pre>get_iplayer --update</pre>
+</blockquote>
+<p>* If you installed using a package manager then please see the Install page for further details:<br />
+<strong>Updating on Windows (Installer method)</strong><br />
+* Download the latest Installer and re-run it. You can then uninstall the get_iplayer component and then re-install that component. The same goes for each of the other components if you so wish.</p>
+<p><a name="Streaming"></a></p>
+<h2>Streaming</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAI">Click Here for All Output Options</a></h3>
+
+<p>* Stream a programme in mplayer, or xine while recording it to disk (does not yet work in win32, does not work for flash based streams. Works for iphone, flash, podcast and realaudio modes):</p>
+<blockquote>
+<pre>get_iplayer --stdout --get 123 | mplayer -cache 3072 -
+get_iplayer --stdout --get 123 | xine stdin:/</pre>
+</blockquote>
+<p>* Stream a programme in mplayer/xine/vlc/ffplay while not recording it to disk:</p>
+<blockquote>
+<pre>get_iplayer --stream 123 --player="mplayer -cache 3072 -"
+get_iplayer --stream 123 --player="vlc -"
+get_iplayer --stream 123 --player="ffplay -"
+get_iplayer --stream 123 | mplayer -cache 3072 -</pre>
+</blockquote>
+<p><a name="Live Streaming"></a></p>
+<h2>Live Streaming</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAI">Click Here for All Output Options</a></h3>
+
+<p>Note: Please upgrade to flvstreamer 1.8 or later for reliable Live streaming.<br />
+* Stream a Live BBC iPlayer TV programme to mplayer while not recording it to disk (e.g. BBC 2):</p>
+<blockquote>
+<pre>get_iplayer --stream --type=livetv "BBC Two" --player="mplayer -cache 512 -"
+get_iplayer --stream --type=tv "http://www.bbc.co.uk/iplayer/playlive/bbc_two"
+  --player="mplayer -cache 512 -"
+get_iplayer --stream --type=tv "http://www.bbc.co.uk/iplayer/playlive/bbc_two"
+  | mplayer -cache 512 -
+get_iplayer --stream --type=tv --pid="bbc_two" | mplayer -cache 512 -</pre>
+</blockquote>
+<p>* Stream a High Quality Live BBC iPlayer Radio programme to mplayer while not recording it to disk (e.g. BBC Radio 1):</p>
+<blockquote>
+<pre>get_iplayer --stream --type=liveradio "Radio 1" --player="mplayer -cache 64 -"
+get_iplayer --stream --type=radio
+  "http://www.bbc.co.uk/iplayer/playlive/bbc_radio_one" | mplayer -cache 64 -
+get_iplayer --stream --pid='bbc_radio_one' | mplayer -cache 64 -</pre>
+</blockquote>
+<p><a name="Using a Web Proxy"></a></p>
+<h2>Using a Web Proxy</h2>
+
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAH">Click Here for All Recording Options</a></h3>
+<p>* If you are behind a web proxy you can use the following to specify it:</p>
+<blockquote>
+<pre>get_iplayer --proxy=http://[username:password@]<server>:<port></pre>
+</blockquote>
+<p>* All modes other than iphone or http will not work through a web proxy. To make only the meta-data web requests go through the proxy add the --partial-proxy option. This will only work if your network allows direct access to the streaming port (e.g. port 1935).</p>
+<p><a name="Saving Settings"></a></p>
+<h2>Saving Settings</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAK">Click Here for All Config Options</a></h3>
+
+<p>Default user settings can be added, removed or changed as follows:<br />
+* Save or update proxy settings and verbose mode as user defaults (in ~/.get_iplayer/options or '%USERPROFILE%\.get_iplayer\options' in ActivePerl/Windows):</p>
+<blockquote>
+<pre>get_iplayer --prefs-add --verbose --proxy=http://proxy.domain.com:3128</pre>
+</blockquote>
+<p>* Additionally save programme type settings (this will only update the specified options - existing options will be retained):</p>
+<blockquote>
+<pre>get_iplayer --prefs-add --type=radio,tv</pre>
+</blockquote>
+
+<p>* Remove a specific option from those saved (e.g. --proxy):</p>
+<blockquote>
+<pre>get_iplayer --prefs-del --proxy=http://proxy.domain.com:3128</pre>
+</blockquote>
+<p>* Show *all* saved default options:</p>
+<blockquote>
+<pre>get_iplayer --prefs-show</pre>
+</blockquote>
+<p>* Completely clear *all* saved default options:</p>
+<blockquote>
+<pre>get_iplayer --prefs-clear</pre>
+
+</blockquote>
+<p>* Options can also be saved in '/etc/get_iplayer/options' on *nix/MaxOSX/cygwin platforms and %ALLUSERSPROFILE%\get_iplayer\options in Windows. The format is as follows:</p>
+<blockquote>
+<pre><option key> <option value></pre>
+</blockquote>
+<p><a name="Option Presets and Shortcuts"></a></p>
+<h2>Option Presets and Shortcuts</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAK">Click Here for All Config Options</a></h3>
+
+<p>User defined groups of options can be added, removed or changed. They are referred to by the 'preset name' as follows:<br />
+* Save or update several options (--hide and --since) in the preset named 'my_preset' (in ~/.get_iplayer/presets/my_preset or '%USERPROFILE%\.get_iplayer\presets\my_preset' in ActivePerl/Windows):</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset --prefs-add --hide --since=24</pre>
+</blockquote>
+
+<p>* Additionally save programme type for preset named 'my_preset' (this will only update the specified preset options - existing preset options will be retained):</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset --prefs-add --type=radio,tv</pre>
+</blockquote>
+<p>* Remove a specific option from those saved in the preset named 'my_preset' (e.g. --since=24):</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset --prefs-del --since=24</pre>
+
+</blockquote>
+<p>* Show *all* saved options in preset named 'my_preset':</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset --prefs-show</pre>
+</blockquote>
+<p>* Completely clear *all* saved options in preset named 'my_preset':</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset --prefs-clear</pre>
+</blockquote>
+
+<p>* Use the preset named 'my_preset' to search for items containing the name 'News':</p>
+<blockquote>
+<pre>get_iplayer --preset=my_preset News
+get_iplayer -z my_preset News</pre>
+</blockquote>
+<p>* Here is a more useful example. I would like to have a preset that shows me the BBC iPlayer TV programmes added to my cache in the last 24hrs, hide ones I've already downloaded, exclude some channels and exclude childrens' and wales programme categories. So to add the preset I type:</p>
+<blockquote>
+
+<pre>get_iplayer --prefs-add --preset=last24 --type=tv --since=24
+  --hide --versionlist=default --exclude-category=child,wales
+  --exclude-channel=alba,cbbc,cbeebies,parliament</pre>
+</blockquote>
+<p>* Now, to run the preset at any time I simply type:</p>
+<blockquote>
+<pre>get_iplayer --preset=last24
+or
+get_iplayer -z last24</pre>
+</blockquote>
+<p><a name="Subtitles"></a></p>
+<h2>Subtitles</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAH">Click Here for All Recording Options</a></h3>
+<p>* Record programme number 123 with subtitles (if available) and optionally insert a<br />
+subtitle delay of 5 seconds:</p>
+
+<blockquote>
+<pre>get_iplayer --subtitles --suboffset 5000 --get 123</pre>
+</blockquote>
+<p>* (Re)download subtitles only (if available):</p>
+<blockquote>
+<pre>get_iplayer --subsonly --get 123</pre>
+</blockquote>
+<p><a name="More Programme Information"></a></p>
+<h2>More Programme Information</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAG">Click Here for All Display Options</a></h3>
+<p><strong>Programme Detailed Stream Information</strong><br />
+
+* Display the Various stream URLs for programme index 123:</p>
+<blockquote>
+<pre>./get_iplayer --streaminfo 123</pre>
+</blockquote>
+<p><strong>Full Program Information Display</strong><br />
+* Display the programme metadata for index 123:</p>
+<blockquote>
+<pre>./get_iplayer --info 123</pre>
+</blockquote>
+<p><strong>Metadata Files</strong><br />
+* The programme metadata can be additionally downloaded using the --metadata=[TYPE] option. Where [TYPE] is one of xbmc, xbmc_movie, freevo, generic.<br />
+
+* Save all the metadata after a successful download into an xml file:</p>
+<blockquote>
+<pre>./get_iplayer --metadata=generic --get 123</pre>
+</blockquote>
+<p>* Save all the metadata ONLY for a specific search into an xml file (and don't record the programme). This is useful if you forgot to get the metadata when recording.</p>
+<blockquote>
+<pre>./get_iplayer --metadata-only --metadata=generic 123</pre>
+</blockquote>
+<p><strong>Thumbnails</strong><br />
+* A programme thumbnail can be automatically downloaded using the --thumbnail option.</p>
+
+<blockquote>
+<pre>./get_iplayer --thumbnail --get 123</pre>
+</blockquote>
+<p>* Save all the thumbnail(s) ONLY for a specific search (and don't record the programme). This is useful if you forgot to get the thumbnail when recording.</p>
+<blockquote>
+<pre>./get_iplayer --thumbnail-only 123</pre>
+</blockquote>
+<p><strong>Update Your Entire Recording Collection with Thumbnails, Metadata and Subtitles</strong><br />
+As long as your programmes remain in the directory they were originally recorded into you can retrospecitvely download the thumbnail, metadata or subtitles of the shows in your recordings history.<br />
+* Get all thumbnails for files that still exist (in this case for programmes matching 'Doctor Who'):</p>
+
+<blockquote>
+<pre>./get_iplayer --thumbnail-only --history --skipdeleted "Doctor Who"</pre>
+</blockquote>
+<p>* Get all the metadata files (in generic format) for files that still exist:</p>
+<blockquote>
+<pre>./get_iplayer --metadata-only --metadata=generic --history --skipdeleted</pre>
+</blockquote>
+<p>* Get all subtitles for files that still exist (Note that you can only get subs if the programme is still available on iPlayer):</p>
+<blockquote>
+<pre>./get_iplayer --subs-only --history --skipdeleted</pre>
+</blockquote>
+<p><a name="Filenames and Directories"></a></p>
+
+<h3>Filenames and Directories</h3>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAI">Click Here for All Output Options</a></h3>
+<p><strong>FIlenames</strong><br />
+* Use a user defined filename-prefix format using <a href="#Substitution Parameters">substitution parameters</a>:</p>
+<blockquote>
+<pre>--file-prefix="<name>-<episode>-<longname>-<version>-<pid>"</pre>
+
+</blockquote>
+<p>* Use a filename format using <a href="#Substitution Parameters">substitution parameters</a> suited to XBMC, Boxee and MythTV:</p>
+<blockquote>
+<pre>--file-prefix="<nameshort>-<episodeshort>-<senum>-<pid>"</pre>
+
+</blockquote>
+<p><strong>Valid Characters</strong><br />
+Several options exist for controlling what characters are allowed in filenames.<br />
+* Allow use of spaces in filenames (by default these are converted to '_').</p>
+<blockquote>
+<pre>--whitespace</pre>
+</blockquote>
+<p>* Use only filenames valid for DOS/Windows FAT filesystem.</p>
+<blockquote>
+<pre>--fatfilename</pre>
+
+</blockquote>
+<p><strong>Recording to Specific Directories</strong><br />
+* Use a specific directory for all programmes recorded:</p>
+<blockquote>
+<pre>--output="/home/user/recordings/"</pre>
+</blockquote>
+<p>* Override the above for all radio (or tv) programmes recorded:</p>
+<blockquote>
+<pre>--outputradio="/home/user/recordings-radio/"
+--outputtv="/home/user/recordings-tv/"</pre>
+</blockquote>
+<p><strong>Subdirectories</strong><br />
+
+* Use a subdirectory for each programme name:</p>
+<blockquote>
+<pre>--subdir</pre>
+</blockquote>
+<p>* Use a user-defined subdirectory format using <a href="#Substitution Parameters">substitution parameters</a>:</p>
+<blockquote>
+<pre>--subdir-format="<nameshort>-<seriesnum>"</pre>
+
+</blockquote>
+<p><a name="Custom Commands"></a></p>
+<h3>Custom Commands</h3>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAI">Click Here for All Output Options</a></h3>
+<p>* Run a custom user command after a successful recording using <a href="#Substitution Parameters">substitution parameters</a>:</p>
+<blockquote>
+<pre>get_iplayer --get 123 --command 'echo "<index> <filename> <name>
+
+ <episode> <desc> <available> <longname> <duration>
+ <versions> <version> <thumbnail> <channel> <categories>
+
+ <type> <pid>"'</pre>
+</blockquote>
+<p>* Using the command option to background transcode your recorded video to mp4 format:</p>
+<blockquote>
+<pre>get_iplayer --get 123 --command "mencoder -ovc lavc -lavcopts
+ vcodec=mpeg4 -oac lavc -lavcopts abitrate=128
+ -o <filename>.mp4 <filename> -quiet &"</pre>
+
+</blockquote>
+<p><a name="PVR Usage"></a></p>
+<h2><strong>PVR Usage</strong></h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAJ">Click Here for All PVR Options</a></h3>
+<p>The PVR functionality allows you to record any number of iPlayer programmes<br />
+using any combination of search terms that you would normally run on the<br />
+command line. The PVR searches are saved in ~/.get_iplayer/pvr/.<br />
+You can Add, Delete and List the PVR searches. This feature allows you to<br />
+run multiple batch recordings from a scheduler such as Unix crond (and possibly<br />
+the Windows scheduler). A tutorial is on how to setup and use the PVR is <a href="http://linuxcentre.net/dont-want-to-miss-that-programme-on-iplayer-over-christmas/">here</a>.</p>
+
+<p>* Add a new PVR search for a specific programme (i.e. 'series link'):</p>
+<blockquote>
+<pre>get_iplayer --pvr-add=Top_Gear --type=tv "Top Gear"</pre>
+</blockquote>
+<p>* Add a new PVR search (using more search options):</p>
+<blockquote>
+<pre>get_iplayer --pvr-add=bbc1_comedy_tv_progs --category=comedy --type=tv
+ --output=/path/to/my/pvr/recordings/ --channel="BBC One"</pre>
+</blockquote>
+<p>* Add a new <strong>One-Off recording</strong> PVR search. This will effectively queue the programmes for recording and delete the PVR search after completion:</p>
+
+<blockquote>
+<pre>get_iplayer --pvr-queue --type tv 123 231 32 "Blue Peter"</pre>
+</blockquote>
+<p>* Add a new <strong>One-Off recording</strong> PVR search for a specific PID:</p>
+<blockquote>
+<pre>get_iplayer --pvr-queue --pid=tv:b01a2b3c</pre>
+</blockquote>
+<p>* List the PVR searches already added:</p>
+<blockquote>
+<pre>get_iplayer --pvr-list</pre>
+
+</blockquote>
+<p>* Remove a PVR search:</p>
+<blockquote>
+<pre>get_iplayer --pvr-del=Top_Gear</pre>
+</blockquote>
+<p>* Disable a PVR search:</p>
+<blockquote>
+<pre>get_iplayer --pvr-disable=Top_Gear</pre>
+</blockquote>
+<p>* Re-enable a PVR search:</p>
+<blockquote>
+<pre>get_iplayer --pvr-enable=Top_Gear</pre>
+
+</blockquote>
+<p>* Run the PVR (this really should be added to your scheduler such as cron):</p>
+<blockquote>
+<pre>get_iplayer --pvr</pre>
+</blockquote>
+<h2>Scheduling the PVR</h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAJ">Click Here for All PVR Options</a></h3>
+<h4>Linux / Unix / MacOSX</h4>
+<p>* Add this line to add to user's crontab (use 'crontab -e' to edit) - this will run all of the PVR jobs every hour:</p>
+
+<blockquote>
+<pre>0 * * * * /path/to/get_iplayer --pvr 2>>/tmp/get_iplayer.log</pre>
+</blockquote>
+<p>* Optionally, to notify by email when programme(s) have been recorded, add this to the top of your crontab (this will catch the stdout from the cron job and send to the specified email address):</p>
+<blockquote>
+<pre>MAILTO=me@mydomain.com</pre>
+</blockquote>
+<p>* Or, run the PVR Scheduler from the command line. This will fire off the PVR every hour as long as the command is running:</p>
+<blockquote>
+<pre>get_iplayer --pvrscheduler 3600</pre>
+</blockquote>
+
+<h4>Windows7, Windows XP and Vista</h4>
+<p>* On the latest installer there will be an entry in the Start menu to 'Run PVR Scheduler Now'. This will start a command window which will fire off the PVR every 4 hours.<br />
+* Alternatively if you wish to use the Windows Scheduler see <a href="http://www.beebotron.org/helper_get_iplayer_help.php">this guide</a> for full instructions.</p>
+<p><a name="Substitution Parameters"></a></p>
+<h2>Substitution Parameters</h2>
+<p>* The following substitutions may be available to certain options such as --command and --fileprefix. To see a list of all available parameters for a specific programme use the --info option.</p>
+<pre><index>         => index number
+
+<name>          => programme short name
+<seriesnum>     => Series number
+<nameshort>     => programme name with series number stripped.
+<episode>       => Episode info
+
+<episodenum>    => Episode number
+<episodeshort>  => programme episode with episode number stripped.
+<senum>         => Series and Episode numbers in the s##e## format.
+<desc>          => Long Description
+
+<descshort>     => Short Description
+<descmedium>    => Medium Description
+<versions>      => comma separated list of versions
+<version>       => selected version e.g 'signed'
+
+<thumbnail>     => programme thumbnail url
+<web>           => programme url
+<channel>       => Programme channel
+<categories>    => Categories
+
+<type>          => Type: tv, podcast, or radio
+<mode>          => Mode used to obtain programme
+<filename>      => Filename of recorded file
+<filepart>      => Filename of partially recorded file
+
+<dir>           => Directory of file
+<fileprefix>    => Filename Prefix of file
+<symlink>       => Filename of any symlink file if specified
+<ext>           => Filename Extension of file
+
+<duration>      => duration in HH:MM:SS or seconds
+<available>     => Date/Time made available or remaining
+<dldate>        => Date when the file was obtained in YYYY-MM-DD format
+<dltime>        => Time when the file was obtained in HH:MM:SS format
+
+<timeadded>     => time when programme was added to cache (epoch format)
+<expiry>        => time when programme will expire from web
+<expiryrel>     => relative time when programme will expire from web
+<firstbcast>    => time when programme was first broadcast
+
+<firstbcastrel> => relative time when programme was first broadcast
+<lastbcast>     => time when programme was last broadcast
+<lastbcastrel>  => relative time when programme was last broadcast</pre>
+<p><a name="External Programs"></a></p>
+
+<h2><strong>External Programs:</strong></h2>
+<h3><a href="http://linuxcentre.net/get_iplayer/get_iplayer.1.html#lbAL">Click Here for All External Program Options</a></h3>
+<p>* Several external programs can be used by get_iplayer. The required programs for each mode and type are listed <a href="/getiplayer/download/#External Program Requirements">here</a>. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in the PATH then there is no need to specify them:</p>
+<blockquote>
+<pre>--mplayer
+--flvstreamer
+--atomicparsley
+--vlc
+--id3v2
+--lame
+--ffmpeg</pre>
+</blockquote>
+<p>* e.g. to save the ffmpeg location to your default settings in Windows (you don't need to do this if you use the get_iplayer installer):</p>
+<blockquote>
+<pre>get_iplayer --add-prefs --ffmpeg="C:\Program Files\get_iplayer\ffmpeg\bin\ffmpeg.exe"
+
+</pre>
+</blockquote>
+<p>* e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don't need to do this if the ffmpeg directory is in your $PATH):</p>
+<blockquote>
+<pre>get_iplayer --add-prefs --ffmpeg="/usr/bin/ffmpeg"
+</pre>
+</blockquote>
+<p><a name="Notes"></a></p>
+<h2><strong>Notes:</strong></h2>
+<ul>
+<li>The first time you run the script it will access the BBC website XML feeds and create an index of all programmes currently available.</li>
+<li>Sometimes you will not be able to record a programme listed due to BBC not encoding it yet for H.264 iPhone format (usually happens within 24hrs of airing).</li>
+<li>Also BBC don't seem to create an iPhone H.264 version for some programmes at all. If this is the case look into using the rtmp recording modes.</li>
+<li>Windows/ActiveState Perl does not support fifos/named pipes and therefore any RealAudio radio recording will only be transcoded to mp3 after recording. Also none of the --stdout options will work with RealAudio radio.</li>
+</ul>
+
+<h2>Todo</h2>
+<p>* These still need documenting:</p>
+<pre>--multimode
+--email
+--series
+--tree
+--terse
+--thumbsize[cache]
+--hide
+--force
+--overwrite</pre>
+</div>
