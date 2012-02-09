@@ -1,3 +1,5 @@
+[get_iplayer Documentation](https://github.com/dinkypumpkin/get_iplayer/wiki/documentation)
+
 [get_iplayer Patched Version](https://github.com/dinkypumpkin/get_iplayer/wiki/instructions)
 
 [get_iplayer Windows Installer](https://github.com/dinkypumpkin/get_iplayer/wiki/installer)
