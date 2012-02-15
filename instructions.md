@@ -1,4 +1,4 @@
-## Instructions for using patched get_iplayer script
+## Instructions for installing patched get_iplayer scripts
 
 1. **Download from the Git repository**
 
@@ -64,3 +64,11 @@
     or, if the script is in your PATH:
     
     ``chmod a+x `which get_iplayer` ``
+
+4. **Updating Web PVR Manager**
+
+    Updating the Web PVR Manager is similar to the process described above.  Use this URL: 
+
+    <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
+
+    The script to be replaced is `get_iplayer.cgi`.
