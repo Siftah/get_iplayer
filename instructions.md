@@ -1,4 +1,4 @@
-## Instructions for installing patched get_iplayer scripts
+## Instructions for installing get_iplayer Git version
 
 1. **Download from the Git repository**
 
