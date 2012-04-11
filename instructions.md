@@ -39,8 +39,8 @@
     `C:\Users\<username>\AppData\Local\VirtualStore\Program Files (x86)\get_iplayer`
     
     If that file exists, it is the version currently in use, *NOT* the version of `get_iplayer.pl` in `C:\Program Files\get_iplayer` or `C:\Program Files (x86)\get_iplayer`.  The copy in the VirtualStore directory most likely will have resulted from `get_iplayer.pl` updating itself without the use of the Windows installer.  This triggers the Windows file virtualisation mechanism that redirects access for `get_iplayer.pl` to the virtual store copy.  If this is the case, you may either:
- * Replace the virtual store copy of `get_iplayer.pl` directly.  However, it may be overwritten if `get_iplayer.pl` ever updates itself again without using the Windows installer.
- * Re-install the `get_iplayer` component in the Windows installer.  That will remove the virtual store copy in the process.  You can then replace `C:\Program Files\get_iplayer\get_iplayer.pl` directly, so long as you have admin privileges on your machine. 
+    * Replace the virtual store copy of `get_iplayer.pl` directly.  However, it may be overwritten if `get_iplayer.pl` ever updates itself again without using the Windows installer.
+    * Re-install the `get_iplayer` component in the Windows installer.  That will remove the virtual store copy in the process.  You can then replace `C:\Program Files\get_iplayer\get_iplayer.pl` directly, so long as you have admin privileges on your machine. 
 
     Note that in the Windows installer version, the `get_iplayer.pl` script is invoked from a batch file:
 
