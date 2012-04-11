@@ -8,51 +8,49 @@ This document contains instructions for building the `get_iplayer` Windows insta
 
 1. **Strawberry Perl**
 
-	Source: <http://strawberryperl.com>
+    Source: <http://strawberryperl.com>
 
-	Version: 5.12.3.0
+    Version: 5.12.3.0
 
-	The installer is built with the Strawberry Perl distribution that is in your system path.  If you are using a different version, you may need to uninstall it and temporarily install the appropriate version.  Note that Strawberry Perl 5.12+ provides a mechanism to switch between versions without uninstalling.
+    The installer is built with the Strawberry Perl distribution that is in your system path.  If you are using a different version, you may need to uninstall it and temporarily install the appropriate version.  Note that Strawberry Perl 5.12+ provides a mechanism to switch between versions without uninstalling.
 
 2. **Perl Modules**
 
-	Additional modules must be installed into the Perl distribution used to build the installer:
+    Additional modules must be installed into the Perl distribution used to build the installer:
+    * MP3::Info (1.24)    - Used in localfiles plugin
+    * MP3::Tag (1.13)     - Used to enhance MP3 tagging
+    * PAR::Packer (1.010) - Used to build installer
 
-	* MP3::Info (1.24)    - Used in localfiles plugin
-	* MP3::Tag (1.13)     - Used to enhance MP3 tagging
-	* PAR::Packer (1.010) - Used to build installer
-
-	The modules may be installed with the CPAN client provided by Strawberry Perl.
+    The modules may be installed with the CPAN client provided by Strawberry Perl.
 
 3. **NSIS**
 
-	Source: <http://nsis.sourceforge.net>
+    Source: <http://nsis.sourceforge.net>
 
-	Version: 2.46
+    Version: 2.46
 
-	Select the **Full** installation option to install all components.
+    Select the **Full** installation option to install all components.
 
 4. **NSIS Plugins**
 
-	Source: <http://nsis.sourceforge.net/Category:Plugins>
+    Source: <http://nsis.sourceforge.net/Category:Plugins>
 
-	The installer requires the following additional NSIS plugins:
+    The installer requires the following additional NSIS plugins:
+    * Inetc
+    * Locate
+    * Nsis7z
+    * ZipDLL
 
-	* Inetc
-	* Locate
-	* Nsis7z
-	* ZipDLL
-
-	Information on installing NSIS plugins:
-	<http://nsis.sourceforge.net/How_can_I_install_a_plugin>
+    Information on installing NSIS plugins:
+    <http://nsis.sourceforge.net/How_can_I_install_a_plugin>
 
 5. **7-Zip**
 
-	Source:  <http://www.7-zip.org>
+    Source:  <http://www.7-zip.org>
 
-	Version: 9.20 (select 32-bit .exe installer)
+    Version: 9.20 (select 32-bit .exe installer)
 
-	The installer build scripts use the command-line interface to 7-Zip to compress/expand archive files.  However, it is not necessary to install the separate statically-linked version of the 7-Zip (7za.exe).  The GUI version has its own command-line interface.
+    The installer build scripts use the command-line interface to 7-Zip to compress/expand archive files.  However, it is not necessary to install the separate statically-linked version of the 7-Zip (7za.exe).  The GUI version has its own command-line interface.
 
 ### Build Setup
 
@@ -60,56 +58,54 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 1. **Download get_player Source**
 
-	This can be a clone of the infradead git repository (<http://git.infradead.org/get_iplayer.git>) or a downloaded snapshot.
+    This can be a clone of the infradead git repository (<http://git.infradead.org/get_iplayer.git>) or a downloaded snapshot.
 
-	Location: `C:\installer\get_player`
+    Location: `C:\installer\get_player`
 
 2. **Check Build Scripts**
 
-	The files below should be in `C:\installer\get_player\windows`:
+    The files below should be in `C:\installer\get_player\windows`:
+    * `get_iplayer_setup.nsi` - NSIS installer script
+    * `make-init.cmd`         - Common initialisation code for other scripts
+    * `make-installer.cmd`    - Main installer build script (calls make-perlfiles.cmd)
+    * `make-perlfiles.cmd`    - Builds archive of Perl support files for installer
+    * `make-perltgz.cmd`      - Create archive of Perl support files as tarball
 
-	* `get_iplayer_setup.nsi` - NSIS installer script
-	* `make-init.cmd`         - Common initialisation code for other scripts
-	* `make-installer.cmd`    - Main installer build script (calls make-perlfiles.cmd)
-	* `make-perlfiles.cmd`    - Builds archive of Perl support files for installer
-	* `make-perltgz.cmd`      - Create archive of Perl support files as tarball
-
-	There are other files in that directory, but they are primarily of use in development and testing of the installer and are not necessary to perform the default build.  See the [Developer Notes](#devnotes) and [Manifest](#manifest) below.
+    There are other files in that directory, but they are primarily of use in development and testing of the installer and are not necessary to perform the default build.  See the [Developer Notes](#devnotes) and [Manifest](#manifest) below.
 
 3. **Check Build Configuration**
 
-	The script `make-init.cmd` sets the locations of Strawberry Perl, NSIS, and 7-Zip used for the build.  Edit the relevant values if necessary.
+    The script `make-init.cmd` sets the locations of Strawberry Perl, NSIS, and 7-Zip used for the build.  Edit the relevant values if necessary.
 
 4. **Check Installer Version**
 
-	If you are building a new installer to incorporate changes in `get_iplayer` or the installer script, be sure that the installer version number has been incremented.  The installer version number can be found in the `!define VERSION` statement near the top of `get_iplayer_setup.nsi`.
+    If you are building a new installer to incorporate changes in `get_iplayer` or the installer script, be sure that the installer version number has been incremented.  The installer version number can be found in the `!define VERSION` statement near the top of `get_iplayer_setup.nsi`.
 
 5. **Create Build Folder**
 
-	Create an empty folder to use for building the installer:
+    Create an empty folder to use for building the installer:
 
-	`C:\>MKDIR C:\installer\build`
+    `C:\>MKDIR C:\installer\build`
 
 ### Installer Build
 
 1. Open a command prompt and make the build folder the current directory
 
-	`C:\>CD C:\installer\build`
+    `C:\>CD C:\installer\build`
 
-	The installer may be built in any directory, but the build folder must be the current directory for your command prompt.
+    The installer may be built in any directory, but the build folder must be the current directory for your command prompt.
 
 2. Run the installer build script
 
-	`C:\installer\build>C:\installer\get_iplayer\windows\make-installer`
+    `C:\installer\build>C:\installer\get_iplayer\windows\make-installer`
 
     The build script creates 4 files in the build directory:
+    * `get_iplayer_setup_4.3.exe` - `get_player` installer application
+    * `perlfiles.zip`             - Archive of Perl support files included in the installer
+    * `perlpar.exe`               - PAR (Perl ARchive) file used to create perlfiles.zip
+    * `make-installer.log`        - Log of output from build script
 
-	* `get_iplayer_setup_4.3.exe` - `get_player` installer application
-	* `perlfiles.zip`             - Archive of Perl support files included in the installer
-	* `perlpar.exe`               - PAR (Perl ARchive) file used to create perlfiles.zip
-	* `make-installer.log`        - Log of output from build script
-
-	In the event of an error, the temporary folder used by the script (`make-installer.tmp`) will remain in the build directory.
+    In the event of an error, the temporary folder used by the script (`make-installer.tmp`) will remain in the build directory.
 
 3. There is no step 3.  For deployment information, see [Deployment Notes](#deploy) below.
     
@@ -138,17 +134,17 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 * Subsequent invocations of `make-installer.cmd` will use an existing `perlfiles.zip` if it is found in the current directory.  To force the Perl support archive to be completely rebuilt, add `/makeperl` to the command:
 
-	`C:\installer\build>C:\installer\get_iplayer\windows\make-installer /makeperl`
+    `C:\installer\build>C:\installer\get_iplayer\windows\make-installer /makeperl`
 
 * `perlfiles.zip` must be generated in Windows in order for the proper Win32 modules to be included in the archive.  However, the archive may be used to build the installer on Linux/OSX (see below).  To that end, a separate script (`make-perlfiles.cmd`) may be used to generate only the Perl support archive.  It is also invoked by `make-installer.cmd` to build the archive.
 
 * Subsequent invocations of `make-perlfiles.cmd` will use an existing `perlpar.exe` if it is found in the current directory.  To force the Perl support archive to be complete rebuilt, add `/makepar` to the command:
 
-	`C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /makepar`
+    `C:\installer\build>C:\installer\get_iplayer\windows\make-perlfiles /makepar`
 
-	Invoking `make-installer.cmd` with `/makeperl` will have the same effect.
+    Invoking `make-installer.cmd` with `/makeperl` will have the same effect.
 
-	In the event of an error, the temporary folder used by the script (`make-perlfiles.tmp`) will remain in the build directory.
+    In the event of an error, the temporary folder used by the script (`make-perlfiles.tmp`) will remain in the build directory.
 
 * See the [Script Reference](#scriptref) below for a full list of command-line options accepted by `make-installer.cmd` and `make-perlfiles.cmd`.
 
@@ -156,25 +152,22 @@ In the instructions below, replace with `C:\installer` with an appropriate locat
 
 * A shell script (`get_iplayer/make-nsis.sh`) was written to build the `get_iplayer` Windows installer on Linux/OSX.  However, since tarball (.tar.gz) support is the de facto standard for Unix-based systems, the shell script expects to find the Perl support archive in that form.  If you should need to build the installer on Linux/OSX, you can create the tarball in Windows and transfer it to the other system.  After building the Perl support archive (see above), execute an additional script:
 
-	`C:\installer\build>C:\installer\get_iplayer\windows\make-perltgz`
+    `C:\installer\build>C:\installer\get_iplayer\windows\make-perltgz`
 
-	The script creates `perlfiles.zip` in the current directory (if necessary) and copies its contents to `perlfiles.tar.gz`.
+    The script creates `perlfiles.zip` in the current directory (if necessary) and copies its contents to `perlfiles.tar.gz`.
 
 * Building the installer on Linux/OSX is similar to building in Windows.  Assuming that you have the `get_iplayer` source in `$HOME/installer/get_iplayer` and are using `$HOME/installer/build` as your build folder:
-
-	1. Copy `perlfiles.tar.gz` into the build folder
+    1. Copy `perlfiles.tar.gz` into the build folder
 
         `$ cp /path/to/perlfiles.tar.gz $HOME/installer/build`
-
-	2. Make the build folder your current directory:
+    2. Make the build folder your current directory:
 
         `$ cd $HOME/installer/build`
+    3. Execute the build script:
 
-	3. Execute the build script:
+    `$ $HOME/installer/get_iplayer/make-nsis.sh`
 
-        `$ $HOME/installer/get_iplayer/make-nsis.sh`
-
-	The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
+    The installer application will be copied into the current directory.  As in Windows, the installer may be built in any folder, but the build folder must be the current directory for your shell.
 
 <a id="deploy"/> 
 ## Deployment Notes
