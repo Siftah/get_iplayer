@@ -12,7 +12,7 @@
 
     You should see the full script in the browser window.
     
-    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.
+    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)"
     
     You can also point curl, wget, etc. at the above URL.
     
