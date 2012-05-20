@@ -50,7 +50,7 @@
 
     If you're on Windows and you did not use the get\_iplayer installer (e.g., you're using Cygwin), only you will know where the script is located.  In this case, the file is most likely to be named _get\_iplayer_ (no .pl extension).
 
-    If you're on Linux/OSX, again, only you will know where the script is located.  In this case, the file will almost certainly be named _get\_iplayer_.
+    If you're on Linux/OSX, again, only you will know where the script is located.  In this case, the file will almost certainly be named _get\_iplayer_.  If you installed get_iplayer with your system's package manager, the likely locations are: `/usr/bin` or `/usr/local/bin`.
 
 3. **Replace the current script**
 
