@@ -12,12 +12,12 @@
 
     You should see the full script in the browser window.
     
-    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.
-    
-    You can also point curl, wget, etc. at the above URL.
+    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk. You can also point curl, wget, etc. at the above URL.
     
     **NOTE:** Your browser may save the downloaded file as _get\_iplayer.txt_ or _get\_iplayer.pl.txt_.  Be aware of this when you look for the file to use it as a replacement for the current script (see below).
 
+    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)". Also make sure that the name of the downloaded file is `get_iplayer.txt` (Internet Explorer may do this automatically).  Rename the file to `get_iplayer` or `get_iplayer.pl` (Windows) once it is downloaded. This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.
+    
 2. **Locate the current get\_iplayer script**
    
     If you're on Windows and you used the get\_iplayer installer, the current script will be:
