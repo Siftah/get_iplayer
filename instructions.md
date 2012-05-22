@@ -12,7 +12,7 @@
 
     You should see the full script in the browser window.
     
-    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)"
+    Use **File->Save As** (or equivalent for your browser) to save the script to your local disk.  If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.
     
     You can also point curl, wget, etc. at the above URL.
     
@@ -70,4 +70,4 @@
 
     <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
 
-    The script to be replaced is `get_iplayer.cgi`.
+    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `get_iplayer_cgi.txt` (Internet Explorer may do this automatically).  Rename the file to `get_iplayer.cgi` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.
