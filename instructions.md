@@ -70,4 +70,12 @@
 
     <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
 
-    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `get_iplayer_cgi.txt` (Internet Explorer may do this automatically).  Rename the file to `get_iplayer.cgi` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.
+    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `get_iplayer_cgi.txt` (Internet Explorer may do this automatically).  Rename the file to `get_iplayer.cgi` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.  Back up and replace the old `get_iplayer.cgi` script wherever it is installed on your system.  It will likely be in the same directory as the main `get_iplayer` script (see above).
+
+5. **Updating Podcast Plugin**
+
+    Updating the podcast plugin is similar to the process described above.  Use this URL: 
+
+    <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/plugins/podcast.plugin>
+
+    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `podcast_plugin.txt` (Internet Explorer may do this automatically).  Rename the file to `podcast.plugin` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.  Back up and replace the old plugin in `$HOME/.get_iplayer/plugins` (Linux/OSX) or `%USERPROFILE%\.get_iplayer\plugins` (Windows).
