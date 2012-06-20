@@ -2,7 +2,7 @@
 
 [get_iplayer Man Page](https://github.com/dinkypumpkin/get_iplayer/wiki/manpage)
 
-[get_iplayer Git HEAD Version](https://github.com/dinkypumpkin/get_iplayer/wiki/githead)
+[get_iplayer Git HEAD](https://github.com/dinkypumpkin/get_iplayer/wiki/githead)
 
 [get_iplayer Windows Installer](https://github.com/dinkypumpkin/get_iplayer/wiki/installer)
 
