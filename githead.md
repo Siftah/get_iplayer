@@ -1,4 +1,4 @@
-## Instructions for installing get_iplayer Git HEAD version
+## Instructions for installing get_iplayer Git HEAD
 
 1. **Download from the Git repository**
 
