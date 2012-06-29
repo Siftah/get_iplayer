@@ -60,9 +60,9 @@
 
 3. **Replace the current script**
 
-    Back up the current script that you located above and replace it with the new downloaded script.  Be sure to give the new script file the same name as the current script (Windows:  _get\_iplayer.pl_, Linux/OSX:  _get\_iplayer_ ).
+    Back up the current script that you located above and replace it with the new downloaded script.  Be sure to give the new script file the same name as the current script (Windows:  _get\_iplayer.pl_, Linux/OS X:  _get\_iplayer_ ).
 
-    If you're on Linux/OSX, you may want to ensure the new script is executable by running the following command from a shell prompt:
+    If you're on Linux/OSX, you may need to ensure the new script is executable by running the following command from a shell prompt:
 
     `chmod a+x <insert script location here>`
 
@@ -84,4 +84,4 @@
 
     <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/plugins/podcast.plugin>
 
-    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `podcast_plugin.txt` (Internet Explorer may do this automatically).  Rename the file to `podcast.plugin` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.  Back up and replace the old plugin in `$HOME/.get_iplayer/plugins` (Linux/OSX) or `%USERPROFILE%\.get_iplayer\plugins` (Windows).
+    If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `podcast_plugin.txt` (Internet Explorer may do this automatically).  Rename the file to `podcast.plugin` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.  Back up and replace the old plugin in `$HOME/.get_iplayer/plugins` (Linux/OS X) or `%USERPROFILE%\.get_iplayer\plugins` (Windows).  If you're updating [Get iPlayer Automator](http://code.google.com/p/get-iplayer-automator) on OS X, the location is `$HOME/Library/Application Support/Get iPlayer Automator\plugins`.
