@@ -14,6 +14,8 @@ h3. Available Options
 
 |_. Command&#160;Line|_. Option&#160;File |_. Description|
 |_\3<. Tagging|
+|==--==no-tag|no_tag (0/1)|Do not tag downloaded programmes|
+|==--==tag-cnid|tag_cnid (0/1)|AtomicParsley supports ==--==cnID argument to add catalog ID used for combining HD and SD versions in iTunes|
 |==--==tag-fulltitle|tag_fulltitle (0/1)|Use complete title (including series) instead of shorter episode title|
 |==--==tag-hdvideo|tag_hdvideo (0/1)|AtomicParsley supports ==--==hdvideo argument for HD video flag|
 |==--==tag-longdesc|tag_longdesc (0/1)|AtomicParsley supports ==--==longdesc argument for long description text|
