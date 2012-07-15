@@ -133,21 +133,21 @@ get_iplayer --type=tv "http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"</pre>
 <pre>get_iplayer --type=tv --get 123 --modes=flashstd
   --flvstreamer="/path/to/rtmpdump"</pre>
 </blockquote>
-<p>* Record a TV programme trying iphone, flashhigh and flashnormal modes in order until one succeeds. (use the --info option to see what modes are available for a programme).</p>
+<p>* Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds. (use the --info option to see what modes are available for a programme).</p>
 <blockquote>
-<pre>get_iplayer --type=tv --get 123 --modes=iphone,flashhigh,flashstd
+<pre>get_iplayer --type=tv --get 123 --modes=flashhigh,flash std,flashlow
  --flvstreamer="/path/to/rtmpdump"</pre>
 </blockquote>
-<p>* Using rtmpdump tool to get high quality Flash version of a BBC Radio programme (--flvstreamer is not required if your options tell get_iplayer where rtmpdump is located). Note: Possible modes are (in order of quality): n95_3g, n95_wifi, flashlow, flashnormal, iphone, flashhigh, flashvhigh, flashhd. <a href="http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table">See this page for more details</a>.</p>
+<p>* Using rtmpdump tool to get high quality Flash version of a BBC Radio programme (--flvstreamer is not required if your options tell get_iplayer where rtmpdump is located). Note: Possible modes are (in order of quality): n95_3g, n95_wifi, flashlow, flash std, flashhigh, flashvhigh, flashhd. <a href="http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table">See this page for more details</a>.</p>
 
 <blockquote>
 <pre>get_iplayer --type=radio --get 12345 --modes=flashaudio
  --flvstreamer="/path/to/rtmpdump"</pre>
 </blockquote>
-<p>* Record a radio programme trying iphone, flashaudio, flashaac then realaudio modes in order until one succeeds.</p>
+<p>* Record a radio programme trying flash audio then flashaac modes in order until one succeeds.</p>
 <blockquote>
 <pre>get_iplayer --type=radio --get 12345
- --modes=iphone,flashaudio,flashaac,realaudio
+ --modes=flashaudio,flashaac
  --flvstreamer="/path/to/rtmpdump"</pre>
 </blockquote>
 <p><a name="Live Recording"></a></p>
@@ -265,7 +265,7 @@ get_iplayer --type=radio --pid=bbc_radio_one</pre>
 <p><a name="Streaming"></a></p>
 <h2>Streaming</h2>
 
-<p>* Stream a programme in mplayer, or xine while recording it to disk (does not yet work in win32, does not work for flash based streams. Works for iphone, flash, podcast and realaudio modes):</p>
+<p>* Stream a programme in mplayer, or xine while recording it to disk (does not yet work in win32, does not work for flash based streams. Works for flash, podcast and realaudio modes):</p>
 <blockquote>
 <pre>get_iplayer --stdout --get 123 | mplayer -cache 3072 -
 get_iplayer --stdout --get 123 | xine stdin:/</pre>
@@ -304,7 +304,7 @@ get_iplayer --stream --pid='bbc_radio_one' | mplayer -cache 64 -</pre>
 <blockquote>
 <pre>get_iplayer --proxy=http://[username:password@]<server>:<port></pre>
 </blockquote>
-<p>* All modes other than iphone or http will not work through a web proxy. To make only the meta-data web requests go through the proxy add the --partial-proxy option. This will only work if your network allows direct access to the streaming port (e.g. port 1935).</p>
+<p>* All modes other than http will not work through a web proxy. To make only the meta-data web requests go through the proxy add the --partial-proxy option. This will only work if your network allows direct access to the streaming port (e.g. port 1935).</p>
 <p><a name="Saving Settings"></a></p>
 <h2>Saving Settings</h2>
 
@@ -649,8 +649,6 @@ the Windows scheduler).</p>
 <h2><strong>Notes:</strong></h2>
 <ul>
 <li>The first time you run the script it will access the BBC website XML feeds and create an index of all programmes currently available.</li>
-<li>Sometimes you will not be able to record a programme listed due to BBC not encoding it yet for H.264 iPhone format (usually happens within 24hrs of airing).</li>
-<li>Also BBC don't seem to create an iPhone H.264 version for some programmes at all. If this is the case look into using the rtmp recording modes.</li>
 <li>Windows/ActiveState Perl does not support fifos/named pipes and therefore any RealAudio radio recording will only be transcoded to mp3 after recording. Also none of the --stdout options will work with RealAudio radio.</li>
 </ul>
 
