@@ -46,7 +46,11 @@
 
     `C:\Program Files\get_iplayer\get_iplayer.cmd`
 
-    Only the **.pl** file will be replaced.
+    Check the file in Git:
+
+    <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/windows/get_iplayer/get_iplayer.cmd>
+
+    Replace `C:\Program Files\get_iplayer\get_iplayer.cmd` if the Git version has changed.
 
     If you're on Windows and you did not use the get\_iplayer installer (e.g., you're using Cygwin), only you will know where the script is located.  In this case, the file is most likely to be named _get\_iplayer_ (no .pl extension).
 
@@ -77,6 +81,16 @@
     <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
 
     If you use Internet Explorer, make sure that the "Save as type" setting in the Save dialog is "Text File (*.txt)".  Also make sure that the name of the downloaded file is `get_iplayer_cgi.txt` (Internet Explorer may do this automatically).  Rename the file to `get_iplayer.cgi` once it is downloaded.  This will prevent Internet Explorer from creating a broken script that contains extraneous HTML.  Back up and replace the old `get_iplayer.cgi` script wherever it is installed on your system.  It will likely be in the same directory as the main `get_iplayer` script (see above).
+
+    Note that in the Windows installer version, the `get_iplayer.cgi` script is invoked from a batch file:
+
+    `C:\Program Files\get_iplayer\get_iplayer.cgi.cmd`
+
+    Check the file in Git:
+
+    <http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/windows/get_iplayer/get_iplayer.cgi.cmd>
+
+    Replace `C:\Program Files\get_iplayer\get_iplayer.cgi.cmd` if the Git version has changed.
 
 5. **Updating Podcast Plugin**
 
