@@ -1,9 +1,9 @@
 [[Documentation]]
 
-[[get_iplayer Manual | manpage]]
+[[get_iplayer Manual|manpage]]
 
 [[Installation]]
 
 [[Tagging]]
 
-[[Tag Scheme | tagscheme]]
+[[Tag Scheme|tagscheme]]
