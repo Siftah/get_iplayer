@@ -26,7 +26,7 @@
 
 ## Command Usage
 
-The full get\_iplayer man page listing all available options can be viewed [[here|manpage]]. 
+The full get\_iplayer man page listing all available options can be viewed **[[here|manpage]]**. 
 
 For basic help run:
 
