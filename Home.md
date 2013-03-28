@@ -1,4 +1,4 @@
-[Documentation](https://github.com/dinkypumpkin/get_iplayer/wiki/documentation)
+[[Documentation]]
 
 [Man Page](https://github.com/dinkypumpkin/get_iplayer/wiki/manpage)
 
