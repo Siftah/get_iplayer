@@ -7,7 +7,7 @@ h3. Available Options
 |_. Command&#160;Line|_. Option&#160;File |_. Description|
 |==--==no-artwork|noartwork (0/1)|Do not embed thumbnail image in output file.  All other metadata values will be written.|
 |==--==no-tag|notag (0/1)|Do not tag downloaded programmes|
-|==--==tag-cnid|tag_cnid (0/1)|Use AtomicParsley ==--==cnID option (if supported) to add catalog ID<br>used for combining HD and SD versions in iTunes|
+|==--==tag-cnid|tag_cnid (0/1)|Use AtomicParsley ==--==cnID option (if supported) to add catalog ID used for combining HD and SD versions in iTunes|
 |==--==tag-fulltitle|tag_fulltitle (0/1)|Use complete title (including series) instead of shorter episode title|
 |==--==tag-hdvideo|tag_hdvideo (0/1)|AtomicParsley accepts ==--==hdvideo option for HD video flag|
 |==--==tag-longdesc|tag_longdesc (0/1)|AtomicParsley accepts ==--==longdesc option for long description text|
