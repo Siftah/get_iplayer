@@ -2,10 +2,8 @@
 
 [[get_iplayer Manual | manpage]]
 
-[Git HEAD](https://github.com/dinkypumpkin/get_iplayer/wiki/githead)
+[[Installation]]
 
-[Windows Installer](https://github.com/dinkypumpkin/get_iplayer/wiki/installer)
+[[Tagging]]
 
-[Tagging](https://github.com/dinkypumpkin/get_iplayer/wiki/tagging)
-
-[Tag Scheme](https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme)
+[[Tag Scheme | tagscheme]]
