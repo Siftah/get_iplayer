@@ -1,9 +1,11 @@
 [[Documentation]]
 
-[[Man Page|manpage]]
+[[Manual Page|manpage]]
+
+[[Metadata Tagging]]
+
+[[Tag Scheme|tagscheme]]
 
 [[Installation]]
 
-[[Tagging]]
-
-[[Tag Scheme|tagscheme]]
+[[Using the PVR with `cron`|pvrcron]

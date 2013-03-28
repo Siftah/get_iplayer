@@ -1,5 +1,5 @@
 <H1>
-Man Page
+Manual Page
 </H1>
 <H1>
 Table of Contents
