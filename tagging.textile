@@ -1,4 +1,4 @@
-h2. get_iplayer Tagging
+h1. get_iplayer Tagging
 
 h2. Installation
 
