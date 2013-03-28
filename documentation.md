@@ -1,4 +1,4 @@
-# [Documentation](documentation.html "Permanent Link to Documentation")
+# Documentation
 
 ## Table of Contents
 
