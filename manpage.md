@@ -1,5 +1,5 @@
 <H1>
-get_iplayer Manual
+Man Page
 </H1>
 <H1>
 Table of Contents

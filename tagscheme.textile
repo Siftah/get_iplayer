@@ -1,4 +1,4 @@
-h1. get_iplayer Tag Scheme
+h1. Tag Scheme
 
 The table below describes the scheme used to convert get_iplayer metadata into tags for downloaded programmes.  The tag names were selected to match AtomicParsley parameter names.  Each tag is mapped, where possible, to the corresponding get_iplayer param, AtomicParsley param, MP4 atom, id3v2 param, and ID3 frame.  The list of iTunes fields indicate where each tag will appear in the iTunes _Get Info_ dialog.  Conversion rules specific to particular fields are indicated in the footnotes.
 

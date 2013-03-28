@@ -655,15 +655,13 @@ The following substitutions may be available to certain options such as –comma
 
 **[[Click Here for All External Program Options|manpage#External-Program-Options]]**
 
-Several external programs can be used by get\_iplayer. The required programs for each mode and type are listed [here](download.html/#External%20Program%20Requirements). The following options are used to specify the exact path so that get\_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
+Several external programs can be used by get\_iplayer. The required programs for each mode and type are listed [[here|installation#External%20Program%20Requirements]]. The following options are used to specify the exact path so that get\_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
 
-    --mplayer
     --rtmpdump
-    --atomicparsley
-    --vlc
-    --id3v2
-    --lame
     --ffmpeg
+    --mplayer
+    --atomicparsley
+    --id3v2
 
 e.g. to save the ffmpeg location to your default settings in Windows (you don’t need to do this if you use the get\_iplayer installer):
 
@@ -678,7 +676,7 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 
 **[[Click Here for All Tagging Options|manpage#Tagging-Options]]**
 
-get\_iplayer adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**
+get\_iplayer adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
 
 <a name="Notes"></a>
 ### Notes

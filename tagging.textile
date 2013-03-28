@@ -1,4 +1,4 @@
-h1. get_iplayer Tagging
+h1. Metadata Tagging
 
 h2. Usage
 
@@ -27,6 +27,6 @@ The get_iplayer metadata is assumed to be encoded as UTF-8 and is then re-encode
 
 h2. Tag Scheme
 
-The tag scheme is described **[[here|tagscheme]]**
+The tag scheme is described **[[here|tagscheme]]**.
 
 If you wish to experiment with variations, the conversion of get_iplayer metadata to tag values is encapsulated in the _Tagger::tags_from_metadata_ subroutine.
