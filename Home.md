@@ -2,7 +2,7 @@
 
 [[Manual Page|manpage]]
 
-[[Metadata Tagging]]
+[[Metadata Tagging|tagging]]
 
 [[Tag Scheme|tagscheme]]
 
