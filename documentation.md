@@ -547,7 +547,7 @@ Using the command option to background transcode your recorded video to mp4 form
 
 The PVR functionality allows you to record any number of iPlayer programmes using any combination of search terms that you would normally run on the command line. The PVR searches are saved in `~/.get_iplayer/pvr/` or `%USERPROFILE%\.get_iplayer\pvr\` in Windows.
 
-You can add, delete and list the PVR searches. This feature allows you to run multiple batch recordings from a scheduler such as Unix crond (and possibly the Windows scheduler). A tutorial is on how to set up and use the PVR with crond is [here](dont-want-to-miss-that-programme-on-iplayer-over-christmas.html).
+You can add, delete and list the PVR searches. This feature allows you to run multiple batch recordings from a scheduler such as Unix cron (and possibly the Windows scheduler). A tutorial is on how to set up and use the PVR with cron is **[[here|pvrcron]]**.
 
 Add a new PVR search for a specific programme (i.e. ‘series link’):
 
