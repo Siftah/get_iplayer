@@ -1,6 +1,6 @@
 [[Documentation]]
 
-[[get_iplayer Manual|manpage]]
+[[Man Page|manpage]]
 
 [[Installation]]
 
