@@ -1,22 +1,13 @@
 h1. get_iplayer Tagging
 
-h2. Installation
-
-The changes described here have been incorporated into get_iplayer 2.80+.  Windows users should download version 4.4+ of the get_iplayer Windows installer "*here*":http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe
-
 h2. Usage
-
-h3. Invocation
-
-There is no change in the invocation of get_iplayer.  If the MP3::Tag module is installed, it will automatically be utilised.  If not, get_iplayer  will fall back to using id3v2 for MP3 tagging, if available.  AtomicParsley is still used for MP4 tagging.
 
 h3. Available Options
 
 |_. Command&#160;Line|_. Option&#160;File |_. Description|
-|_\3<. Tagging|
 |==--==no-artwork|noartwork (0/1)|Do not embed thumbnail image in output file.  All other metadata values will be written.|
 |==--==no-tag|notag (0/1)|Do not tag downloaded programmes|
-|==--==tag-cnid|tag_cnid (0/1)|Use AtomicParsley ==--==cnID option (if supported) to add catalog ID used for combining HD and SD versions in iTunes|
+|==--==tag-cnid|tag_cnid (0/1)|Use AtomicParsley ==--==cnID option (if supported) to add catalog ID<br>used for combining HD and SD versions in iTunes|
 |==--==tag-fulltitle|tag_fulltitle (0/1)|Use complete title (including series) instead of shorter episode title|
 |==--==tag-hdvideo|tag_hdvideo (0/1)|AtomicParsley accepts ==--==hdvideo option for HD video flag|
 |==--==tag-longdesc|tag_longdesc (0/1)|AtomicParsley accepts ==--==longdesc option for long description text|
@@ -26,25 +17,16 @@ h3. Available Options
 |==--==tag-podcast-tv|tag_podcast_tv (0/1)|Tag only downloaded tv programmes as iTunes podcasts|
 |==--==tag-utf8|tag_utf8 (0/1)|AtomicParsley accepts UTF-8 input|
 
+h3. AtomicParsley Versions
+
 The options related to AtomicParsley are provided to support variations in different versions that emerged after primary development ceased at version 0.9.0.
-
-h2. Tagging
-
-h3. Tag Scheme
-
-The tag scheme is described "*here*":https://github.com/dinkypumpkin/get_iplayer/wiki/tagscheme
-
-If you wish to experiment with variations, the conversion of get_iplayer metadata to tag values is encapsulated in the _Tagger::tags_from_metadata_ subroutine.
 
 h3. Tag Encodings
 
 The get_iplayer metadata is assumed to be encoded as UTF-8 and is then re-encoded as necessary for the different tagging applications.  This doesn't always hold true, so substitution characters may sometimes appear in the tags, particularly _lyrics_ or _longDescription_.
 
-h3. Tagging Differences
+h2. Tag Scheme
 
-Aside from the additional tags available, there are four notable differences from the previous scheme:
+The tag scheme is described **[[here|tagscheme]]**
 
-# MP4 tagging differed from MP3 tagging in that it used the full programme title (including series).  To harmonise things, I chose the MP3 style of using the shorter episode title as the default.  The ==--==tag-fulltitle option was added to use the full programme title instead.
-# See the notes regarding _genre_ in the tagging scheme description referenced above.  Rather than using the previous MP4 style of assigning the full list of programme categories as the genre, I've implemented some logic to select a single category as the genre.  Many media managers, including iTunes, cannot work with multi-valued genres.  The full category list is retained in the _grouping_ tag.
-# The album artist is now set based on the programme @<type>@ (radio, tv, podcast).  This more generic value was chosen because @<channel>@ is already recorded for the programme artist and a higher-level classification will offer additional flexibility in formulating playlists and searches.
-# A copyright notice is included in deference to our licence fee overlords. There is usually a copyright notice embedded in the source media.  The tag value in effect preserves it.
+If you wish to experiment with variations, the conversion of get_iplayer metadata to tag values is encapsulated in the _Tagger::tags_from_metadata_ subroutine.
