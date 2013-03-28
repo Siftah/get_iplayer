@@ -1,6 +1,6 @@
 [[Documentation]]
 
-[[manpage | get_iplayer Manual]]
+[[get_iplayer Manual | manpage]]
 
 [Git HEAD](https://github.com/dinkypumpkin/get_iplayer/wiki/githead)
 
