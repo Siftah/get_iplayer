@@ -16,15 +16,15 @@ h3. Available Options
 |_\3<. Tagging|
 |==--==no-artwork|noartwork (0/1)|Do not embed thumbnail image in output file.  All other metadata values will be written.|
 |==--==no-tag|notag (0/1)|Do not tag downloaded programmes|
-|==--==tag-cnid|tag_cnid (0/1)|AtomicParsley supports ==--==cnID argument to add catalog ID used for combining HD and SD versions in iTunes|
+|==--==tag-cnid|tag_cnid (0/1)|Use AtomicParsley ==--==cnID option (if supported) to add catalog ID used for combining HD and SD versions in iTunes|
 |==--==tag-fulltitle|tag_fulltitle (0/1)|Use complete title (including series) instead of shorter episode title|
-|==--==tag-hdvideo|tag_hdvideo (0/1)|AtomicParsley supports ==--==hdvideo argument for HD video flag|
-|==--==tag-longdesc|tag_longdesc (0/1)|AtomicParsley supports ==--==longdesc argument for long description text|
-|==--==tag-longdescription|tag_longdescription (0/1)|AtomicParsley supports ==--==longDescription argument for long description text|
+|==--==tag-hdvideo|tag_hdvideo (0/1)|AtomicParsley accepts ==--==hdvideo option for HD video flag|
+|==--==tag-longdesc|tag_longdesc (0/1)|AtomicParsley accepts ==--==longdesc option for long description text|
+|==--==tag-longdescription|tag_longdescription (0/1)|AtomicParsley accepts ==--==longDescription option for long description text|
 |==--==tag-podcast|tag_podcast (0/1)|Tag downloaded radio and tv programmes as iTunes podcasts|
 |==--==tag-podcast-radio|tag_podcast_radio (0/1)|Tag only downloaded radio programmes as iTunes podcasts|
 |==--==tag-podcast-tv|tag_podcast_tv (0/1)|Tag only downloaded tv programmes as iTunes podcasts|
-|==--==tag-utf8|tag_utf8 (0/1)|AtomicParsley expects UTF-8 input|
+|==--==tag-utf8|tag_utf8 (0/1)|AtomicParsley accepts UTF-8 input|
 
 The options related to AtomicParsley are provided to support variations in different versions that emerged after primary development ceased at version 0.9.0.
 
