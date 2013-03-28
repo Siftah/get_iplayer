@@ -8,4 +8,4 @@
 
 [[Installation]]
 
-[[Using the PVR with `cron`|pvrcron]]
+[[Using the PVR with cron|pvrcron]]
