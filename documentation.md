@@ -678,7 +678,7 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 
 **[[Click Here for All Tagging Options|manpage#Tagging-Options]]**
 
-get\_iplayer adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found [here](tagging.html)
+get\_iplayer adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**
 
 <a name="Notes"></a>
 ### Notes
