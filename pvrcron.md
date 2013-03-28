@@ -52,7 +52,7 @@ There is one more thing you need to do to get the downloads to happen automatica
 In Unix/Linux/OSX systems this can simply be achieved by adding the following lines to your crontab (run 'crontab -e'). Also, if you have local email delivery capability then you will also receive an email when a programme is downloaded (set MAILTO below accordingly):
 
     MAILTO=”myemail@mydomain.com”
-    0 \* \* \* \* /path/to/get_iplayer --pvr  2\>/dev/null
+    0 * * * * /path/to/get_iplayer --pvr  2\>/dev/null
 
 This will ensure that the PVR checks for new matching programmes every hour, on the hour.
 
