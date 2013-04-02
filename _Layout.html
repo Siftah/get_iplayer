@@ -9,28 +9,16 @@
   </head>
 
   <body>
-    <div id="main">
-      <div class="site">
-        <div id="guides">
-          <div class="guide">
-            <div class="main">
-              <div class="actions">
-                <div>
-                  <a href="{{ wiki.base_path }}Home.html">Home</a>
-                </div>
-              </div>
-              <div class="content wikistyle gollum {{ page.format }}">
-                {{ page.content }}
-              </div>
-            </div>
-          </div>
-          <div class="admin">
-            <div style="float: left;">
-              <small>Last edited by <b>{{ page.author }}</b>, {{ page.date }}</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
+			<div>
+				<a href="{{ wiki.base_path }}Home.html">Home</a>
+			</div>
+			<div class="{{ page.format }}">
+				{{ page.content }}
+			</div>
+			<div style="float: left;">
+				<small>Last edited by <b>{{ page.author }}</b>, {{ page.date }}</small>
+			</div>
+		</div>
   </body>
 </html>
