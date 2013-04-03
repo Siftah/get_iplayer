@@ -1,4 +1,4 @@
-[[getiplayer.jpg|alt=getiplayer]] lives! This project is the continuation of
+![getiplayer](getiplayer.jpg) lives! This project is the continuation of
 Phil Lewis's excellent work on `get_iplayer`.
 
 ## About `get_iplayer`
