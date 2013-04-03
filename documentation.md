@@ -1,4 +1,4 @@
-# Documentation
+# Usage and Examples
 
 ## Table of Contents
 
@@ -8,7 +8,7 @@
 * [Searching the Future Programme Schedule](#Searching%20the%20Future%20Programme%20Schedule)
 * [Searching the Recording History](#Searching%20the%20Recording%20History)
 * [Indexing and Caching Features](#Indexing%20and%20Caching%20Features)
-* [Updating get\_iplayer](#Updating%20get_iplayer)
+* [Updating `get_iplayer`](#Updating%20get_iplayer)
 * [Streaming](#Streaming)
 * [Live Streaming](#Live%20Streaming)
 * [Saving Settings](#Saving%20Settings)
@@ -26,7 +26,7 @@
 
 ## Command Usage
 
-The full get\_iplayer man page listing all available options can be viewed **[[here|manpage]]**. 
+The full `get_iplayer` manual page listing all available options can be viewed **[[here|manpage]]**. 
 
 For basic help run:
 
@@ -153,13 +153,13 @@ Record all programmes with categories containing ‘music’:
     get_iplayer --get --category=music
 
 
-Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--rtmpdump` is not required if your options tell get\_iplayer where rtmpdump is located). 
+Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--rtmpdump` is not required if your options tell `get_iplayer` where rtmpdump is located). 
 
     get_iplayer --type=tv --get 123 --modes=flashhigh,flashstd,flashlow --rtmpdump="/path/to/rtmpdump"
 
 **Note:** Possible modes are (in increasing order of quality): flashlow, flashnormal, flashstd, flashhigh, flashvhigh, flashhd. See [this page] (http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for more details. Use the `--info` option to see what modes are available for a programme.
 
-Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--rtmpdump` is not required if your options tell get\_iplayer where rtmpdump is located). 
+Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--rtmpdump` is not required if your options tell `get_iplayer` where rtmpdump is located). 
 
     get_iplayer --type=radio --get 12345 --modes=flashaudio,flashaac --rtmpdump="/path/to/rtmpdump"
 
@@ -217,7 +217,7 @@ You cannot record a programme in the future but you can queue it in the PVR for 
 
 **[[Click Here for All Search Options|manpage#Search-Options]]**
 
-The recording history is a text database of the programmes you have recording since you started using get\_iplayer. It’s primary purpose is to prevent get\_iplayer from downloading the same programme more than once. You can search the recordings history much like the normal programme types.
+The recording history is a text database of the programmes you have recording since you started using `get_iplayer`. It’s primary purpose is to prevent `get_iplayer` from downloading the same programme more than once. You can search the recordings history much like the normal programme types.
 
 Search for ""Doctor Who" in the history
 
@@ -265,13 +265,13 @@ Include  ONLY these channels in the programme cache (i.e. only these channels wi
     get_iplayer --refresh-include="bbc" --type=tv --refresh
 
 <a name="Updating get_iplayer"></a>
-### Updating get\_iplayer
+### Updating `get_iplayer`
 
 **[[Click Here for All Config Options|manpage#Config-Options]]**
 
 #### Updating on Linux, OS X, Unix, cygwin, etc
 
-If you installed by simply downloading the get\_iplayer script then you can just run:
+If you installed by simply downloading the `get_iplayer` script then you can just run:
 
     get_iplayer --update
 
@@ -283,7 +283,7 @@ If you installed using a package manager then please see the Install page for fu
 
 #### Updating on Windows (Installer method)
 
-Download the latest Installer and re-run it. You can then uninstall the get\_iplayer component and then re-install that component. The same goes for each of the other components if you so wish.
+Download the latest Installer and re-run it. You can then uninstall the `get_iplayer` component and then re-install that component. The same goes for each of the other components if you so wish.
 
 <a name="Streaming"></a>
 ### Streaming
@@ -655,7 +655,7 @@ The following substitutions may be available to certain options such as –comma
 
 **[[Click Here for All External Program Options|manpage#External-Program-Options]]**
 
-Several external programs can be used by get\_iplayer. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that get\_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
+Several external programs can be used by `get_iplayer`. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that `get_iplayer` knows where they are. If they are already in $PATH then there is no need to specify them:
 
     --rtmpdump
     --ffmpeg
@@ -663,7 +663,7 @@ Several external programs can be used by get\_iplayer. The required programs for
     --atomicparsley
     --id3v2
 
-e.g. to save the ffmpeg location to your default settings in Windows (you don’t need to do this if you use the get\_iplayer installer):
+e.g. to save the ffmpeg location to your default settings in Windows (you don’t need to do this if you use the `get_iplayer` installer):
 
     get_iplayer --add-prefs --ffmpeg="C:\Program Files\get_iplayer\ffmpeg\bin\ffmpeg.exe"
 
@@ -676,7 +676,7 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 
 **[[Click Here for All Metadata Tagging Options|manpage#Tagging-Options]]**
 
-get\_iplayer adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
+`get_iplayer` adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
 
 <a name="Notes"></a>
 ### Notes
