@@ -1,10 +1,9 @@
 ![getiplayer](getiplayer.jpg) lives! This project is the continuation of
 Phil Lewis's excellent work on `get_iplayer`.
 
-## About `get_iplayer`
+## Overview
 
-`get_iplayer` allows you to
-search, index and record/stream:
+`get_iplayer` allows you to search, index and record/stream:
 
 -   **[BBC iPlayer TV](http://www.bbc.co.uk/iplayer/tv)** - up to 3200 kbps HD 720p H.264 / MP4
 -   **[BBC Live TV](http://www.bbc.co.uk/iplayer/tv)** - up to 1500 kbps H.264 / MP4
@@ -32,7 +31,14 @@ Flash Player - even if you don’t have adequate broadband speeds or if
 your broadband streams too slowly at peak hours when you want to watch a
 programme.
 
-## Obtaining `get_iplayer`
+## Installation
+
+We have created a Windows installer for `get_iplayer` which will attempt to download
+and install the various requirements. This can be obtained from:
+
+<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
+
+Linux/Unix/OSX users can find more installation information **[[here|installation]]**.
 
 Full source code for released versions of `get_iplayer` can be downloaded from
 [ftp://ftp.infradead.org/pub/get_iplayer/](ftp://ftp.infradead.org/pub/get_iplayer/).
@@ -41,13 +47,6 @@ The latest version is v2.82.
 The latest changes can be found in the [Git](http://git-scm.com/)
 version control repository, at `git://git.infradead.org/get_iplayer.git`
 ([browse](http://git.infradead.org/get_iplayer.git)).
-
-We have created a Windows installer for `get_iplayer` which will attempt to download
-and install the various requirements. This can be obtained from:
-
-[http://www.infradead.org/get\_iplayer\_win/get\_iplayer\_setup\_latest.exe](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe)
-
-Linux/Unix/OSX users can find more information **[[here|installation]]**.
 
 ## Help
 
