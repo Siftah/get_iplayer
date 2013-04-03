@@ -41,11 +41,10 @@ and install the various requirements. This can be obtained from:
 Linux/Unix/OSX users can find more installation information **[[here|installation]]**.
 
 Full source code for released versions of `get_iplayer` can be downloaded from
-[ftp://ftp.infradead.org/pub/get_iplayer/](ftp://ftp.infradead.org/pub/get_iplayer/).
-The latest version is v2.82.
+<ftp://ftp.infradead.org/pub/get_iplayer/>. The latest version is v2.82.
 
 The latest changes can be found in the [Git](http://git-scm.com/)
-version control repository, at `git://git.infradead.org/get_iplayer.git`
+version control repository at `git://git.infradead.org/get_iplayer.git`
 ([browse](http://git.infradead.org/get_iplayer.git)).
 
 ## Help
