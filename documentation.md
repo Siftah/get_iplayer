@@ -8,7 +8,7 @@
 * [Searching the Future Programme Schedule](#Searching%20the%20Future%20Programme%20Schedule)
 * [Searching the Recording History](#Searching%20the%20Recording%20History)
 * [Indexing and Caching Features](#Indexing%20and%20Caching%20Features)
-* [Updating `get_iplayer`](#Updating%20get_iplayer)
+* [Updating get_iplayer](#Updating%20get_iplayer)
 * [Streaming](#Streaming)
 * [Live Streaming](#Live%20Streaming)
 * [Saving Settings](#Saving%20Settings)
@@ -26,7 +26,7 @@
 
 ## Command Usage
 
-The full `get_iplayer` manual page listing all available options can be viewed **[[here|manpage]]**. 
+The full get_iplayer manual page listing all available options can be viewed **[[here|manpage]]**. 
 
 For basic help run:
 
@@ -63,15 +63,15 @@ List all tv programmes with long descriptions:
 
     get_iplayer --long
 
-List all tv programmes showing only ‘pid’, 'name’ and ‘episode'
+List all tv programmes showing only 'pid', 'name' and 'episode'
 
     get_iplayer --listformat="<pid>: <name>-<episode>"
 
-Search all tv programmes for the word ‘hello' in the 'episode' and ‘channel' fields
+Search all tv programmes for the word 'hello' in the 'episode' and 'channel' fields
 
     get_iplayer --fields=episode,channel hello
 
-List all tv programmes with categories containing the word ‘News’ and on channel ‘BBC One’
+List all tv programmes with categories containing the word 'News' and on channel 'BBC One'
 
     get_iplayer --channel="BBC One" --category=News
 
@@ -91,7 +91,7 @@ List all BBC TV programmes and BBC podcasts
 
     get_iplayer --type=podcast,tv
 
-List all programmes with categories not containing the string ‘child’ on BBC One:
+List all programmes with categories not containing the string 'child' on BBC One:
 
     get_iplayer --exclude-category=child --channel="bbc one"
 
@@ -114,7 +114,7 @@ Record Radio programme number 10123 (see index list):
 
     get_iplayer --get 10123
 
-Record programme number 123 and save in ‘/home/user/tv-files/’:
+Record programme number 123 and save in '/home/user/tv-files/':
 
     get_iplayer --get 123 --output "/home/user/tv-files/"
 
@@ -122,15 +122,15 @@ Record Radio programme number 10123 and tv programme number 324 (see index list)
 
     get_iplayer --get 10123 324
 
-Record Podcasts matching ‘Moyles’:
+Record Podcasts matching 'Moyles':
 
     get_iplayer --type=podcast --get "Moyles"
 
-Record all tv programmes with ‘blue peter’ in the title/episode:
+Record all tv programmes with 'blue peter' in the title/episode:
 
     get_iplayer --get "blue peter"
 
-Record all tv programmes with ‘blue peter’ in the title/episode, and programme index 123:
+Record all tv programmes with 'blue peter' in the title/episode, and programme index 123:
 
     get_iplayer --get "blue peter" 123
 
@@ -144,22 +144,22 @@ Record a video from the BBC embedded media player such as [Learning Zone](http:/
     get_iplayer "tv:http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"
     get_iplayer --type=tv "http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"
 
-Record all programmes with ‘comedy’ in the title, episode or long description:
+Record all programmes with 'comedy' in the title, episode or long description:
 
     get_iplayer --long --get comedy
 
-Record all programmes with categories containing ‘music’:
+Record all programmes with categories containing 'music':
 
     get_iplayer --get --category=music
 
 
-Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--rtmpdump` is not required if your options tell `get_iplayer` where rtmpdump is located). 
+Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--rtmpdump` is not required if your options tell get_iplayer where rtmpdump is located). 
 
     get_iplayer --type=tv --get 123 --modes=flashhigh,flashstd,flashlow --rtmpdump="/path/to/rtmpdump"
 
 **Note:** Possible modes are (in increasing order of quality): flashlow, flashnormal, flashstd, flashhigh, flashvhigh, flashhd. See [this page] (http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for more details. Use the `--info` option to see what modes are available for a programme.
 
-Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--rtmpdump` is not required if your options tell `get_iplayer` where rtmpdump is located). 
+Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--rtmpdump` is not required if your options tell get_iplayer where rtmpdump is located). 
 
     get_iplayer --type=radio --get 12345 --modes=flashaudio,flashaac --rtmpdump="/path/to/rtmpdump"
 
@@ -208,7 +208,7 @@ To search for a programme additionally in the future just use any of the usual s
 
     get_iplayer 'Eastenders' --future
 
-You cannot record a programme in the future but you can queue it in the PVR for recording when it becomes available (if at all). In this example the index of the search results for a future episode of eastenders was ’123′:
+You cannot record a programme in the future but you can queue it in the PVR for recording when it becomes available (if at all). In this example the index of the search results for a future episode of eastenders was '123′:
 
     get_iplayer --pvrqueue --type=tv 123
 
@@ -217,7 +217,7 @@ You cannot record a programme in the future but you can queue it in the PVR for 
 
 **[[Click Here for All Search Options|manpage#Search-Options]]**
 
-The recording history is a text database of the programmes you have recording since you started using `get_iplayer`. It’s primary purpose is to prevent `get_iplayer` from downloading the same programme more than once. You can search the recordings history much like the normal programme types.
+The recording history is a text database of the programmes you have recording since you started using get_iplayer. It's primary purpose is to prevent get_iplayer from downloading the same programme more than once. You can search the recordings history much like the normal programme types.
 
 Search for ""Doctor Who" in the history
 
@@ -231,7 +231,7 @@ Download thumbnails for all recorded programmes matching “Doctor Who” in the
 
     get_iplayer --history "Doctor Who" --thumbnailonly
 
-Download thumbnails for all recorded programmes matching “Doctor Who” in the history and where the media file hasn’t been deleted.
+Download thumbnails for all recorded programmes matching “Doctor Who” in the history and where the media file hasn't been deleted.
 
     get_iplayer --history "Doctor Who" --thumbnailonly --skipdeleted
 
@@ -256,7 +256,7 @@ Set the expiry of the caches (in seconds):
 
     get_iplayer --add-prefs --expiry=3600
 
-Exclude adding matching channels to the programme cache (i.e. these channels won’t be indexed and therefore indexing/refreshing will be faster):
+Exclude adding matching channels to the programme cache (i.e. these channels won't be indexed and therefore indexing/refreshing will be faster):
 
     get_iplayer --refresh-exclude="cbeebies,cbbc" --type=tv --refresh
 
@@ -265,13 +265,13 @@ Include  ONLY these channels in the programme cache (i.e. only these channels wi
     get_iplayer --refresh-include="bbc" --type=tv --refresh
 
 <a name="Updating get_iplayer"></a>
-### Updating `get_iplayer`
+### Updating get_iplayer
 
 **[[Click Here for All Config Options|manpage#Config-Options]]**
 
 #### Updating on Linux, OS X, Unix, cygwin, etc
 
-If you installed by simply downloading the `get_iplayer` script then you can just run:
+If you installed by simply downloading the get_iplayer script then you can just run:
 
     get_iplayer --update
 
@@ -283,7 +283,7 @@ If you installed using a package manager then please see the Install page for fu
 
 #### Updating on Windows (Installer method)
 
-Download the latest Installer and re-run it. You can then uninstall the `get_iplayer` component and then re-install that component. The same goes for each of the other components if you so wish.
+Download the latest Installer and re-run it. You can then uninstall the get_iplayer component and then re-install that component. The same goes for each of the other components if you so wish.
 
 <a name="Streaming"></a>
 ### Streaming
@@ -375,33 +375,33 @@ The option key is the option name with hyphens removed.  For example, `--file-pr
 
 **[[Click Here for All Config Options|manpage#Config-Options]]**
 
-User defined groups of options can be added, removed or changed. They are referred to by the ‘preset name’ as follows:
+User defined groups of options can be added, removed or changed. They are referred to by the 'preset name' as follows:
 
-Save or update several options (–hide and –since) in the preset named ‘my\_preset’ (in `~/.get_iplayer/presets/my_preset` or `%USERPROFILE%\.get_iplayer\presets\my_preset` in Windows):
+Save or update several options (–hide and –since) in the preset named 'my\_preset' (in `~/.get_iplayer/presets/my_preset` or `%USERPROFILE%\.get_iplayer\presets\my_preset` in Windows):
 
     get_iplayer --preset=my_preset --prefs-add --hide --since=24
 
-Additionally save programme type for preset named ‘my\_preset’ (this will only update the specified preset options – existing preset options will be retained):
+Additionally save programme type for preset named 'my\_preset' (this will only update the specified preset options – existing preset options will be retained):
 
     get_iplayer --preset=my_preset --prefs-add --type=radio,tv
 
-Remove a specific option from those saved in the preset named ‘my\_preset’ (e.g. `--since=24`):
+Remove a specific option from those saved in the preset named 'my\_preset' (e.g. `--since=24`):
 
     get_iplayer --preset=my_preset --prefs-del --since=24
 
-Show \*allsaved options in preset named ‘my\_preset’:
+Show \*allsaved options in preset named 'my\_preset':
 
     get_iplayer --preset=my_preset --prefs-show
 
-Completely clear all saved options in preset named ‘my\_preset’:
+Completely clear all saved options in preset named 'my\_preset':
 
     get_iplayer --preset=my_preset --prefs-clear
 
-Use the preset named ‘my\_preset’ to search for items with names containing the word ‘News’:
+Use the preset named 'my\_preset' to search for items with names containing the word 'News':
 
     get_iplayer --preset=my_preset News
 
-Here is a more useful example. I would like to have a preset that shows me the BBC iPlayer TV programmes added to my cache in the last 24hrs, hide ones I’ve already downloaded, exclude some channels and exclude childrens’ and wales programme categories. So to add the preset I type:
+Here is a more useful example. I would like to have a preset that shows me the BBC iPlayer TV programmes added to my cache in the last 24hrs, hide ones I've already downloaded, exclude some channels and exclude childrens' and wales programme categories. So to add the preset I type:
 
     get_iplayer --prefs-add --preset=last24 --type=tv --since=24 --hide --versionlist=default --exclude-category=child,wales --exclude-channel=alba,cbbc,cbeebies,parliament
 
@@ -447,7 +447,7 @@ Save all the metadata after a successful download into an xml file:
 
     get_iplayer --metadata=generic --get 123
 
-Save ONLY the metadata for a specific search into an xml file (and don’t record the programme). This is useful if you forgot to get the metadata when recording.
+Save **only** the metadata for a specific search into an xml file (and don't record the programme). This is useful if you forgot to get the metadata when recording.
 
     get_iplayer --metadata-only --metadata=generic 123
 
@@ -457,7 +457,7 @@ Save ONLY the metadata for a specific search into an xml file (and don’t recor
 
     get_iplayer --thumbnail --get 123
 
-Save all the thumbnail(s) ONLY for a specific search (and don’t record the programme). This is useful if you forgot to get the thumbnail when recording.
+Save **only** the thumbnail(s) for a specific search (and don't record the programme). This is useful if you forgot to get the thumbnail when recording.
 
     get_iplayer --thumbnail-only 123
 
@@ -465,7 +465,7 @@ Save all the thumbnail(s) ONLY for a specific search (and don’t record the pro
 
 As long as your programmes remain in the directory they were originally recorded into you can retrospecitvely download the thumbnail, metadata or subtitles of the shows in your recordings history.
 
-Get all thumbnails for files that still exist (in this case for programmes matching ‘Doctor Who’):
+Get all thumbnails for files that still exist (in this case for programmes matching 'Doctor Who'):
 
     get_iplayer --thumbnail-only --history --skipdeleted "Doctor Who"
 
@@ -498,7 +498,7 @@ Use a filename prefix format with [substitution parameters](#Substitution-Parame
 
 Several options exist for controlling what characters are allowed in filenames.
 
-Allow use of spaces in filenames (by default these are converted to ‘\_’).
+Allow use of spaces in filenames (by default these are converted to '\_').
 
     --whitespace
 
@@ -536,9 +536,13 @@ Run a custom user command after a successful recording using [substitution param
 
     get_iplayer --get 123 --command 'echo "<index>,<filename>,<name>,<episode>,<desc>,<available>,<longname>,<duration>,<versions>,<version>,<thumbnail>,<channel>,<categories>,<type>,<pid>"'
 
-Using the command option to background transcode your recorded video to mp4 format:
+Using the --command option to extract the audio from a TV programme and transcode to MP3 format:
 
-    get_iplayer --get 123 --command "mencoder -ovc lavc -lavcopts vcodec=mpeg4 -oac lavc -lavcopts abitrate=128 -o <filename>.mp4 <filename> -quiet &"
+	get_iplayer --get 123 --command 'ffmpeg -i "<filename>" -vn -acodec libmp3lame "<filename>.mp3"'
+
+Using the --command option to background transcode your recorded video to MPEG-TS format:
+	
+	get_iplayer --get 123 --raw --command 'ffmpeg -v quiet -i "<filename>" -vcodec copy -acodec mp2 -vbsf h264_mp4toannexb "<dir>/<fileprefix>.ts" &'
 
 <a name="PVR Usage"></a>
 ### PVR Usage
@@ -549,7 +553,7 @@ The PVR functionality allows you to record any number of iPlayer programmes usin
 
 You can add, delete and list the PVR searches. This feature allows you to run multiple batch recordings from a scheduler such as Unix cron (and possibly the Windows scheduler). A tutorial is on how to set up and use the PVR with cron is **[[here|pvrcron]]**.
 
-Add a new PVR search for a specific programme (i.e. ‘series link’):
+Add a new PVR search for a specific programme (i.e. 'series link'):
 
     get_iplayer --pvr-add=Top_Gear --type=tv "Top Gear"
 
@@ -592,11 +596,11 @@ Run the PVR (this really should be added to your scheduler such as cron):
 
 #### Linux / Unix / MacOSX
 
-Add this line to add to user’s crontab (use ‘crontab -e’ to edit) – this will run all of the PVR jobs every hour:
+Add this line to add to user's crontab (use `crontab -e` to edit) – this will run all of the PVR jobs every hour:
 
     0 * * * * /path/to/get_iplayer --pvr 2>> /tmp/get_iplayer.log
 
-Optionally, to notify by email when programmes have been recorded, add this to the top of your crontab (this will catch the stdout from the cron job and send to the specified email address):
+Optionally, to notify by email when programmes have been recorded, add this to the top of your crontab (this will take the stdout from the cron job and send it to the specified email address):
 
     MAILTO=me@mydomain.com
 
@@ -606,12 +610,12 @@ Or, run the PVR Scheduler from the command line. This will fire off the PVR ever
 
 #### Windows
 
-With the latest installer there will be an entry in the Start menu to ‘Run PVR Scheduler Now’. This will start a command window which will fire off the PVR every 4 hours. Alternatively if, you wish to use the Windows Scheduler see [this guide](http://www.beebotron.org/helper_get_iplayer_help.php) for full instructions.
+With the latest installer there will be an entry in the Start menu to 'Run PVR Scheduler Now'. This will start a command window which will fire off the PVR every 4 hours. Alternatively if, you wish to use the Windows Scheduler see [this guide](http://www.beebotron.org/helper_get_iplayer_help.php) for full instructions.
 
 <a name="Substitution Parameters"></a>
 ### Substitution Parameters
 
-The following substitutions may be available to certain options such as –command and –fileprefix. To see a list of all available parameters for a specific programme use the –info option.
+The following substitutions may be available to certain options such as --command and --fileprefix. To see a list of all available parameters for a specific programme use the --info option.
 
     <index>         = Index number
     <name>          = Programme short name
@@ -655,7 +659,7 @@ The following substitutions may be available to certain options such as –comma
 
 **[[Click Here for All External Program Options|manpage#External-Program-Options]]**
 
-Several external programs can be used by `get_iplayer`. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that `get_iplayer` knows where they are. If they are already in $PATH then there is no need to specify them:
+Several external programs can be used by get_iplayer. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
 
     --rtmpdump
     --ffmpeg
@@ -663,11 +667,11 @@ Several external programs can be used by `get_iplayer`. The required programs fo
     --atomicparsley
     --id3v2
 
-e.g. to save the ffmpeg location to your default settings in Windows (you don’t need to do this if you use the `get_iplayer` installer):
+e.g. to save the ffmpeg location to your default settings in Windows (you don't need to do this if you use the get_iplayer installer):
 
     get_iplayer --add-prefs --ffmpeg="C:\Program Files\get_iplayer\ffmpeg\bin\ffmpeg.exe"
 
-e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don’t need to do this if the ffmpeg directory is in $PATH):
+e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don't need to do this if ffmpeg is in $PATH):
 
     get_iplayer --add-prefs --ffmpeg="/usr/bin/ffmpeg"
 
@@ -676,7 +680,7 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 
 **[[Click Here for All Metadata Tagging Options|manpage#Tagging-Options]]**
 
-`get_iplayer` adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
+get_iplayer optionally adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
 
 <a name="Notes"></a>
 ### Notes
