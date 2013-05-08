@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-* [Searching](documentation#Searching)
+* [Searching](#Searching)
 * [Recording](#Recording)
 * [Live Recording](#Live%20Recording)
 * [Searching the Future Programme Schedule](#Searching%20the%20Future%20Programme%20Schedule)

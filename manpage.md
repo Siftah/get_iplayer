@@ -26,7 +26,7 @@ OPTIONS
 </A>
 <UL>
 <LI>
-<A HREF="manpage#Search-Options">
+<A HREF="#Search-Options">
 Search Options
 </A>
 </LI>
