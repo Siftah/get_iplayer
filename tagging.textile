@@ -2,7 +2,7 @@ h1. Metadata Tagging
 
 h2. Usage
 
-h3. Available Options
+h3. Options
 
 |_. Command&#160;Line|_. Option&#160;File |_. Description|
 |==--==no-artwork|noartwork (0/1)|Do not embed thumbnail image in output file.  All other metadata values will be written.|
@@ -17,16 +17,86 @@ h3. Available Options
 |==--==tag-podcast-tv|tag_podcast_tv (0/1)|Tag only downloaded tv programmes as iTunes podcasts|
 |==--==tag-utf8|tag_utf8 (0/1)|AtomicParsley accepts UTF-8 input|
 
-h3. AtomicParsley Versions
+h4. AtomicParsley Variants
 
 The options related to AtomicParsley are provided to support variations in different versions that emerged after primary development ceased at version 0.9.0.
 
-h3. Tag Encodings
+h4. Content Encoding
 
 The get_iplayer metadata is assumed to be encoded as UTF-8 and is then re-encoded as necessary for the different tagging applications.  This doesn't always hold true, so substitution characters may sometimes appear in the tags, particularly _lyrics_ or _longDescription_.
 
 h2. Tag Scheme
 
-The tag scheme is described **[[here|tagscheme]]**.
+The table below describes the scheme used to convert get_iplayer metadata into tags for downloaded programmes.  The tag names were selected to match AtomicParsley parameter names.  Each tag is mapped, where possible, to the corresponding get_iplayer substitution parameter, AtomicParsley arg, MP4 atom, id3v2 param, and ID3 frame.  The list of iTunes fields indicate where each tag will appear in the iTunes _Get Info_ dialog.  Conversion rules specific to particular fields are indicated in the footnotes.  If you wish to experiment with variations, the conversion of get_iplayer metadata to tag values is encapsulated in the _Tagger::tags_from_metadata_ subroutine.
 
-If you wish to experiment with variations, the conversion of get_iplayer metadata to tag values is encapsulated in the _Tagger::tags_from_metadata_ subroutine.
+
+|_\2. Tag Mapping |_\2. MP4 Tagging |_\2. ID3 Tagging |_. iTunes|
+|_. Tag Name |_. Substitution&#160;Param[1] |_. AtomicParsley&#160;arg |_. MP4 atom |_. id3v2 Param |_. ID3 Frame |_. Info Field |
+|stik[2]         |@<ext>@            |==--==stik                  |stik   |           |         |Options:Media&#160;Kind        |
+|advisory[3]     |@<guidance>@       |==--==advisory              |rtng   |           |         |Summary:Advisory               |
+|copyright[4]    |@<dldate>@         |==--==copyright             |cprt   |==--==TCOP |TCOP     |Summary:Copyright              |
+|title           |@<episode>@[5]     |==--==title                 |(C)nam |==--==TIT2 |TIT2     |Info:Name                      |
+|artist          |@<channel>@        |==--==artist                |(C)ART |==--==TPE1 |TPE1     |Info:Artist                    |
+|albumArtist     |BBC @<type>@[6]    |==--==albumArtist           |aART   |==--==TPE2 |TPE2     |Info:Album&#160;Artist         |
+|album           |@<name>@           |==--==album                 |(C)alb |==--==TALB |TALB     |Info:Album                     |
+|grouping        |@<categories>@     |==--==grouping              |(C)grp |==--==TIT1 |TIT1     |Info:Grouping                  |
+|composer        |BBC iPlayer        |==--==composer              |(C)wrt |==--==TCOM |TCOM     |Info:Composer                  |
+|comment         |@<descshort>@      |==--==comment               |(C)cmt |==--==COMM |COMM     |Info:Comments                  |
+|genre[7]        |@<categories>@     |==--==genre                 |(C)gen |==--==TCON |TCON     |Info:Genre                     |
+|year            |@<firstbcast>@[8]  |==--==year                  |(C)day |==--==TYER |TYER     |Info:Year                      |
+|tracknum        |@<episodenum>@     |==--==tracknum              |trkn   |==--==TRCK |TRCK     |Info:Track&#160;Number         |
+|disk            |@<seriesnum>@      |==--==disk                  |disk   |==--==TPOS |TPOS     |Info:Disc&#160;Number          |
+|lyrics          |@<desc>@[9]        |==--==lyrics                |(C)lyr |==--==USLT |USLT     |Lyrics                         |
+|description     |@<descshort>@      |==--==description           |desc   |           |TIT3[15] |Video:Description              |
+|longDescription |@<desc>@           |==--==longdesc[10]&#160;_OR_<br/>==--==longDescription[11] |ldes | |TDES[15] |(Hidden):Long&#160;Description |
+|hdvideo[12]     |@<mode>@           |==--==hdvideo[13]           |hdvd   |           |         |(Browser):HD&#160;Icon         |
+|TVShowName      |@<name>@           |==--==TVShowName            |tvsh   |           |         |Video:Show                     |
+|TVEpisode       |@<senum>@ [14]     |==--==TVEpisode             |tven   |           |         |Video:Episode&#160;ID          |
+|TVSeasonNum     |@<seriesnum>@      |==--==TVSeasonNum           |tvsh   |           |         |Video:Season&#160;Number       |
+|TVEpisodeNum    |@<episodenum>@     |==--==TVEpisodeNum          |tves   |           |         |Video:Episode&#160;Number      |
+|TVNetwork       |@<channel>@        |==--==TVNetwork             |tvnn   |           |         |(Hidden):TV&#160;Network       |
+|artwork         |@<thumbfile>@      |==--==artwork               |covr   |           |APIC     |Artwork                        |
+|podcastFlag[15] |true               |==--==podcastFlag           |pcst   |           |PCST     |Options:Media&#160;Kind        |
+|category[15]    |@<categories>@[16] |==--==category              |catg   |           |TCAT     |(Hidden):Podcast&#160;Category |
+|keyword[15]     |@<categories>@     |==--==keyword               |keyw   |           |TKWD     |(Hidden):Podcast&#160;Keywords |
+|podcastGUID[15] |@<player>@         |==--==podcastGUID           |egid   |           |TGID     |(Hidden):Podcast&#160;GUID     |
+|                |                   |                            |       |==--==TDAT |TDAT[17] |                               |
+|                |                   |                            |       |==--==TIME |TIME[17] |                               |
+|                |                   |                            |       |           |TDRL[18] |                               |
+
+fn1. Full list of substitution parameters may be found *[[here|documentation#Substitution%20Parameters]]*.
+
+fn2. _TV Show_ if MP4/M4V, _Movie_ if MP4/M4V and @<categories>@ contains "Film", _Normal_ otherwise
+
+fn3. _explicit_ if @<guidance>@ non-empty, _remove_ otherwise
+
+fn4. Year taken from @<dldate>@, e.g.: (C) 2011 British Broadcasting Corporation, all rights reserved
+
+fn5. @<title>@ used if ==--==tag-fulltitle given
+
+fn6. _BBC TV_, _BBC Radio_, _BBC Podcast_
+
+fn7. First item in @<categories>@ used unless it is one of: ("Films", "Sign Zone", "Audio Described", "Northern Ireland", "Scotland", "Wales", "England"), in which case second item is used.  If @<categories>@ is empty, set to _get_iplayer_
+
+fn8. If @<firstbcast>@ is not valid date, current date is used
+
+fn9. @<player>@ and @<web>@ appended if present
+
+fn10. ==--==tag-longdesc required for compatible AtomicParsley version
+
+fn11. ==--==tag-longdescription required for compatible AtomicParsley version
+
+fn12. _true_ if @<mode>@ contains "hd", _false_ otherwise
+
+fn13. ==--==tag-hdvideo required for compatible AtomicParsley version
+
+fn14. If @<senum>@ empty, @<pid>@ is used
+
+fn15. ==--==tag-podcast required if @<type>@ != "podcast"
+
+fn16. Uses same rules as genre [6]
+
+fn17. Used with TYER to record full date
+
+fn18. Podcast release date for iTunes
+
