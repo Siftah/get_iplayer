@@ -1,95 +1,91 @@
 <H1>
-Manual Page
-</H1>
-<H1>
 Table of Contents
 </H1>
 <UL>
 <LI>
-<A HREF="#NAME">
+<A HREF="#wiki-name">
 NAME
 </A>
 </LI>
 <LI>
-<A HREF="#SYNOPSIS">
+<A HREF="#wiki-synopsis">
 SYNOPSIS
 </A>
 </LI>
 <LI>
-<A HREF="#DESCRIPTION">
+<A HREF="#wiki-description">
 DESCRIPTION
 </A>
 </LI>
 <LI>
-<A HREF="#OPTIONS">
+<A HREF="#wiki-options">
 OPTIONS
 </A>
 <UL>
 <LI>
-<A HREF="#Search-Options">
+<A HREF="#wiki-search-options">
 Search Options
 </A>
 </LI>
 <LI>
-<A HREF="#Display-Options">
+<A HREF="#wiki-display-options">
 Display Options
 </A>
 </LI>
 <LI>
-<A HREF="#Recording-Options">
+<A HREF="#wiki-recording-options">
 Recording Options
 </A>
 </LI>
 <LI>
-<A HREF="#Output-Options">
+<A HREF="#wiki-output-options">
 Output Options
 </A>
 </LI>
 <LI>
-<A HREF="#PVR-Options">
+<A HREF="#wiki-pvr-options">
 PVR Options
 </A>
 </LI>
 <LI>
-<A HREF="#Config-Options">
+<A HREF="#wiki-config-options">
 Config Options
 </A>
 </LI>
 <LI>
-<A HREF="#External-Program-Options">
+<A HREF="#wiki-external-program-options">
 External Program Options
 </A>
 </LI>
 <LI>
-<A HREF="#Tagging-Options">
+<A HREF="#wiki-tagging-options">
 Tagging Options
 </A>
 </LI>
 </UL>
 </LI>
 <LI>
-<A HREF="#AUTHOR">
+<A HREF="#wiki-author">
 AUTHOR
 </A>
 </LI>
 <LI>
-<A HREF="#COPYRIGHT-NOTICE">
+<A HREF="#wiki-copyright-notice">
 COPYRIGHT NOTICE
 </A>
 </LI>
 </UL>
 <HR>
+
+<A NAME="wiki-name"></A>
 <H1>
-<A NAME="NAME">
 NAME
-</A>
 </H1>
 get_iplayer - Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more
 <HR>
+<A NAME="wiki-synopsis"></A>
 <H1>
-<A NAME="SYNOPSIS">
 SYNOPSIS
-</A>
 </H1>
 <STRONG>get_iplayer</STRONG> [&lt;options&gt;] [&lt;regex|index&gt; ...]
 
@@ -115,10 +111,9 @@ SYNOPSIS
 <STRONG>get_iplayer</STRONG> <STRONG>--refresh</STRONG>
 
 <HR>
+<A NAME="wiki-description"></A>
 <H1>
-<A NAME="DESCRIPTION">
 DESCRIPTION
-</A>
 </H1>
 <STRONG>get_iplayer</STRONG> lists, searches and records BBC iPlayer TV/Radio, BBC Podcast programmes. Other 3rd-Party plugins may be available.
 
@@ -136,15 +131,13 @@ Each available programme has a numerical identifier, <STRONG>pid</STRONG>.
 In PVR mode, <STRONG>get_iplayer</STRONG> can be called from cron to record programmes to a schedule.
 
 <HR>
+<A NAME="wiki-options"></A>
 <H1>
-<A NAME="OPTIONS">
 OPTIONS
-</A>
 </H1>
+<A NAME="wiki-search-options"></A>
 <H2>
-<A NAME="Search-Options">
 Search Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -246,10 +239,9 @@ Only search in these types of programmes: livetv,tv,liveradio,radio,all (tv is d
 Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: '--versions signed,audiodescribed,default' will prefer signed and audiodescribed programmes if available.  Default: 'default'
 </DD>
 </DL>
+<A NAME="wiki-display-options"></A>
 <H2>
-<A NAME="Display-Options">
 Display Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -449,10 +441,9 @@ Displays warranty section of GPLv3
 Show get_iplayer version and exit.
 </DD>
 </DL>
+<A NAME="wiki-recording-options"></A>
 <H2>
-<A NAME="Recording-Options">
 Recording Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -722,10 +713,9 @@ Record the embedded media player in the specified URL. Use with --type=&lt;type&
 In radio realaudio mode output as wav and don't transcode to mp3
 </DD>
 </DL>
+<A NAME="wiki-output-options"></A>
 <H2>
-<A NAME="Output-Options">
 Output Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -988,10 +978,9 @@ Create freevo/Mythtv menu of channels -&gt; programme names -&gt; episodes
 Create freevo/Mythtv menu of programme names -&gt; episodes
 </DD>
 </DL>
+<A NAME="wiki-pvr-options"></A>
 <H2>
-<A NAME="PVR-Options">
 PVR Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -1072,10 +1061,9 @@ Runs the PVR using all saved PVR searches every &lt;seconds&gt;. Synonyms: --pvr
 Runs a named PVR search. Synonyms: --pvrsingle
 </DD>
 </DL>
+<A NAME="wiki-config-options"></A>
 <H2>
-<A NAME="Config-Options">
 Config Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -1219,10 +1207,9 @@ Update get_iplayer if a newer one exists
 Specify all options as a urlencoded string of &quot;name=val&amp;name=val&amp;...&quot;
 </DD>
 </DL>
+<A NAME="wiki-external-program-options"></A>
 <H2>
-<A NAME="External-Program-Options">
 External Program Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -1275,10 +1262,9 @@ Location of rtmpdump binary. Synonyms: --flvstreamer
 Location of vlc or cvlc binary
 </DD>
 </DL>
+<A NAME="wiki-tagging-options"></A>
 <H2>
-<A NAME="Tagging-Options">
 Tagging Options
-</A>
 </H2>
 <DL>
 <DT>
@@ -1360,21 +1346,22 @@ AtomicParsley accepts UTF-8 input
 </DD>
 </DL>
 <HR>
+<A NAME="wiki-author"></A>
 <H1>
-<A NAME="AUTHOR">
 AUTHOR
-</A>
 </H1>
 get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt; and is now maintained by the contributors at <A HREF="http://www.infradead.org/get_iplayer/html/get_iplayer.html">http://www.infradead.org/get_iplayer/html/get_iplayer.html</A>
 <P>
 This manual page was originally written by Jonathan Wiltshire &lt;jmw (at sign) debian.org&gt; for the Debian project (but may be used by others).
 <HR>
+<A NAME="wiki-copyright-notice"></A>
 <H1>
-<A NAME="COPYRIGHT-NOTICE">
 COPYRIGHT NOTICE
-</A>
 </H1>
 get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis
   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
   This is free software, and you are welcome to redistribute it under certain
   conditions; use --conditions for details.
+
+
+
