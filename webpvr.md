@@ -1,8 +1,8 @@
-# [Web PVR Manager](get_iplayer-pvr-manager.html "Permanent Link to Web PVR Manager")
+# Web PVR Manager
 
 ## About
 
-This is a powerful Web-based search front-end to get\_iplayer which
+This is a Web-based search front-end to get\_iplayer which
 allows you, through a web browser, to manage the get\_iplayer PVR and
 start recordings. You are able to search all of the programmes indexed
 by get\_iplayer. It also has a built-in streaming proxy server so you
@@ -12,14 +12,14 @@ programme type so that media players can use the streams.
 
 **THIS IS BETA CODE!!! DO NOT RUN THIS ON AN UNTRUSTED NETWORK**
 
-## Platforms:
+## Platforms
 
 I am only testing this on Linux and Windows. However it is reported to work on OS X and Cygwin. I’ve only tested with Firefox 3.5. Ensure you have any ‘NoScript’ type plug-ins disabled).
 
-## Requirements:
+## Requirements
 
 - The software requires Perl and a number of fairly standard perl modules.
-- For Windows you should install the latest [get\_iplayer installer](http://www.infradead.org/get_iplayer/windows/get_iplayer_setup_latest.exe) which will install everything you need.
+- For Windows you should install the latest [get\_iplayer installer](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe) which will install everything you need.
 - For the other platforms you must have a recent [get\_iplayer](http://www.infradead.org/get_iplayer/get_iplayer)
 installed and working.
 - [ffmpeg](http://linuxcentre.net/getiplayer/download/) and [rtmpdump](http://savannah.nongnu.org/projects/flvstreamer) are also required if you want to do streaming or recording of flash streams. 
@@ -27,19 +27,19 @@ installed and working.
 
 ## Download
 
-You can download the Web PVR Manager []here](http://www.infradead.org/get_iplayer/get_iplayer.cgi).
+You can download the latest release version of Web PVR Manager [here](http://www.infradead.org/get_iplayer/latest/get_iplayer.cgi).
 
 The README file with latest usage and instructions for installation are [here](http://www.infradead.org/get_iplayer/README-get_iplayer.cgi.txt).
 
-The change log for both get_iplayer and Web PVR Manager is [here](http://www.infradead.org/get_iplayer/CHANGELOG-get_iplayer)
+The change log for both get\_iplayer and Web PVR Manager is [here](http://www.infradead.org/get_iplayer/CHANGELOG-get_iplayer)
 
 ## Starting the Web PVR Manager service
 
 You need to run the Web PVR Manager service (unless you plan to install under Apache web server). This service contains its own embedded web server which can run on any free TCP port above 1024.
 
-On Linux/Unix/MacOSX start it using:
+On Linux/Unix/OSX start it using:
 
-	perl get_iplayer.cgi –port=1935 –getiplayer=/path/to/get_iplayer
+	perl get_iplayer.cgi --port=1935 --getiplayer=/path/to/get_iplayer
 
 Then you point your web browser at [http://127.0.0.1:1935/](http://127.0.0.1:1935/)
 

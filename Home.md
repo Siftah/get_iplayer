@@ -2,7 +2,7 @@
 
 [[Overview|get_iplayer]]
 
-[[Installation]]
+[[Installation|installation]]
 
 [[Usage and Examples|documentation]]
 
@@ -11,3 +11,5 @@
 [[Metadata Tagging|tagging]]
 
 [[Using the PVR with cron|pvrcron]]
+
+[[Web PVR Manager Help|webpvr]]
