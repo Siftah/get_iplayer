@@ -4,24 +4,24 @@
 
 * [Searching](#Searching)
 * [Recording](#Recording)
-* [Live Recording](#Live%20Recording)
-* [Searching the Future Programme Schedule](#Searching%20the%20Future%20Programme%20Schedule)
-* [Searching the Recording History](#Searching%20the%20Recording%20History)
-* [Indexing and Caching Features](#Indexing%20and%20Caching%20Features)
-* [Updating get_iplayer](#Updating%20get_iplayer)
+* [Live Recording](#Live Recording)
+* [Searching the Future Programme Schedule](#Searching the Future Programme Schedule)
+* [Searching the Recording History](#Searching the Recording History)
+* [Indexing and Caching Features](#Indexing and Caching Features)
+* [Updating get_iplayer](#Updating get_iplayer)
 * [Streaming](#Streaming)
-* [Live Streaming](#Live%20Streaming)
-* [Saving Settings](#Saving%20Settings)
-* [Using a Web Proxy](#Using%20a%200Web%20Proxy)
-* [Option Presets and Shortcuts](#Option%20Presets%20and%20Shortcuts)
+* [Live Streaming](#Live Streaming)
+* [Saving Settings](#Saving Settings)
+* [Using a Web Proxy](#Using a 0Web Proxy)
+* [Option Presets and Shortcuts](#Option Presets and Shortcuts)
 * [Subtitles](#Subtitles)
-* [More Programme Information](#More%20Programme%20Information)
-* [Filenames and Directories](#Filenames%20and%20Directories)
-* [Custom Commands](#Custom%20Commands)
-* [PVR Usage](#PVR%20Usage)
-* [Substitution Parameters](#Substitution%20Parameters)
-* [External Programs](#External%20Programs)
-* [Metadata Tagging](#Metadata%20Tagging)
+* [More Programme Information](#More Programme Information)
+* [Filenames and Directories](#Filenames and Directories)
+* [Custom Commands](#Custom Commands)
+* [PVR Usage](#PVR Usage)
+* [Substitution Parameters](#Substitution Parameters)
+* [External Programs](#External Programs)
+* [Metadata Tagging](#Metadata Tagging)
 * [Notes](#Notes)
 
 ## Command Usage
@@ -41,7 +41,7 @@ For advanced and extended options run:
 <a name="Searching"></a>
 ### Searching
 
-**[[Click Here for All Search Options|manpage#Search-Options]]**
+**[[Click Here for All Search Options|manpage#search-options]]**
 
 List all tv programmes (either from BBC site or cached):
 
@@ -102,7 +102,7 @@ List all programme metadata and available streaming modes for programme with ind
 <a name="Recording"></a>
 ### Recording
 
-**[[Click Here for All Recording Options|manpage#Recording-Options]]**
+**[[Click Here for All Recording Options|manpage#recording-options]]**
 
 Essentially, you can just add `--get` to any of the above searches to record the matching programmes.
 
@@ -169,7 +169,7 @@ Record a radio programme trying flashaudio then flashaac modes in order until on
 <a name="Live Recording"></a>
 ### Live Recording
 
-**[[Click Here for All Recording Options|manpage#Recording-Options]]**
+**[[Click Here for All Recording Options|manpage#recording-options]]**
 
 *Note: Please upgrade to rtmpdump 2.3 or later for reliable live streaming.*
 
@@ -192,7 +192,7 @@ Record a High Quality Live BBC iPlayer Radio programme (e.g. BBC Radio 1):
 <a name="Searching the Future Programme Schedule"></a>
 ### Searching the Future Programme Schedule
 
-**[[Click Here for All Search Options|manpage#Search-Options]]**
+**[[Click Here for All Search Options|manpage#search-options]]**
 
 It is possible to index, search and queue recordings for specific programmes that have not yet been made available. This is currently only available on BBC TV and Radio modes and only searches for up to 13 days in advance. Note that some of the programmes in the BBC schedules are never released on iPlayer and therefore will never get recorded even if you can find them in the search results. Note that the refreshing can take quite a bit longer with `--refresh-future` specified.
 
@@ -215,7 +215,7 @@ You cannot record a programme in the future but you can queue it in the PVR for 
 <a name="Searching the Recording History"></a>
 ### Searching the Recording History
 
-**[[Click Here for All Search Options|manpage#Search-Options]]**
+**[[Click Here for All Search Options|manpage#search-options]]**
 
 The recording history is a text database of the programmes you have recording since you started using get_iplayer. It's primary purpose is to prevent get_iplayer from downloading the same programme more than once. You can search the recordings history much like the normal programme types.
 
@@ -238,7 +238,7 @@ Download thumbnails for all recorded programmes matching “Doctor Who” in the
 <a name="Indexing and Caching Features"></a>
 ### Indexing and Caching Features
 
-**[[Click Here for All Config Options|manpage#Config-Options]]**
+**[[Click Here for All Config Options|manpage#config-options]]**
 
 Refresh the tv programme cache (this happens after 4hrs automatically - see --expiry option):
 
@@ -267,7 +267,7 @@ Include  ONLY these channels in the programme cache (i.e. only these channels wi
 <a name="Updating get_iplayer"></a>
 ### Updating get_iplayer
 
-**[[Click Here for All Config Options|manpage#Config-Options]]**
+**[[Click Here for All Config Options|manpage#config-options]]**
 
 #### Updating on Linux, OS X, Unix, cygwin, etc
 
@@ -288,7 +288,7 @@ Download the latest Installer and re-run it. You can then uninstall the get_ipla
 <a name="Streaming"></a>
 ### Streaming
 
-**[[Click Here for All Output Options|manpage#Output-Options]]**
+**[[Click Here for All Output Options|manpage#output-options]]**
 
 Stream a programme in mplayer or xine while recording it to disk (does not yet work in win32). Works for flash modes and podcasts):
 
@@ -305,7 +305,7 @@ Stream a programme in mplayer/vlc/ffplay while not recording it to disk:
 <a name="Live Streaming"></a>
 ### Live Streaming
 
-**[[Click Here for All Output Options|manpage#Output-Options]]**
+**[[Click Here for All Output Options|manpage#output-options]]**
 
 *Note: Please upgrade to rtmpdump 2.3 or later for reliable live streaming.*
 
@@ -325,7 +325,7 @@ Stream a live BBC iPlayer radio programme to mplayer while not recording it to d
 <a name="Using a Web Proxy"></a>
 ### Using a Web Proxy
 
-**[[Click Here for All Recording Options|manpage#Recording-Options]]**
+**[[Click Here for All Recording Options|manpage#recording-options]]**
 
 If you are behind a web proxy you can use the following to specify it:
 
@@ -336,7 +336,7 @@ All modes other than http will not work through a web proxy. To make only the me
 <a name="Saving Settings"></a>
 ### Saving Settings
 
-**[[Click Here for All Config Options|manpage#Config-Options]]**
+**[[Click Here for All Config Options|manpage#config-options]]**
 
 Default user settings can be added, removed or changed as follows:
 
@@ -373,7 +373,7 @@ The option key is the option name with hyphens removed.  For example, `--file-pr
 <a name="Option Presets and Shortcuts"></a>
 ### Option Presets and Shortcuts
 
-**[[Click Here for All Config Options|manpage#Config-Options]]**
+**[[Click Here for All Config Options|manpage#config-options]]**
 
 User defined groups of options can be added, removed or changed. They are referred to by the 'preset name' as follows:
 
@@ -412,7 +412,7 @@ Now, to run the preset at any time I simply type:
 <a name="Subtitles"></a>
 ### Subtitles
 
-**[[Click Here for All Recording Options|manpage#Recording-Options]]**
+**[[Click Here for All Recording Options|manpage#recording-options]]**
 
 Record programme number 123 with subtitles (if available) and optionally insert a subtitle delay of 5 seconds:
 
@@ -425,7 +425,7 @@ Record programme number 123 with subtitles (if available) and optionally insert 
 <a name="More Programme Information"></a>
 ### More Programme Information
 
-**[[Click Here for All Display Options|manpage#Display-Options]]**
+**[[Click Here for All Display Options|manpage#display-options]]**
 
 #### Programme Detailed Stream Information
 
@@ -480,7 +480,7 @@ Get all subtitles for files that still exist (Note that you can only get subs if
 <a name="Filenames and Directories"></a>
 ### Filenames and Directories
 
-**[[Click Here for All Output Options|manpage#Output-Options]]**
+**[[Click Here for All Output Options|manpage#output-options]]**
 
 #### Filenames
 
@@ -530,7 +530,7 @@ Use a subdirectory format with [substitution parameters](#Substitution-Parameter
 <a name="Custom Commands"></a>
 ### Custom Commands
 
-**[[Click Here for All Output Options|manpage#Output-Options]]**
+**[[Click Here for All Output Options|manpage#output-options]]**
 
 Run a custom user command after a successful recording using [substitution parameters](#Substitution-Parameters):
 
@@ -547,7 +547,7 @@ Using the --command option to background transcode your recorded video to MPEG-T
 <a name="PVR Usage"></a>
 ### PVR Usage
 
-**[[Click Here for All PVR Options|manpage#PVR-Options]]**
+**[[Click Here for All PVR Options|manpage#pvr-options]]**
 
 The PVR functionality allows you to record any number of iPlayer programmes using any combination of search terms that you would normally run on the command line. The PVR searches are saved in `~/.get_iplayer/pvr/` or `%USERPROFILE%\.get_iplayer\pvr\` in Windows.
 
@@ -592,7 +592,7 @@ Run the PVR (this really should be added to your scheduler such as cron):
 <a name="Scheduling the PVR"></a>
 ### Scheduling the PVR
 
-**[[Click Here for All PVR Options|manpage#PVR-Options]]**
+**[[Click Here for All PVR Options|manpage#pvr-options]]**
 
 #### Linux / Unix / MacOSX
 
@@ -657,7 +657,7 @@ The following substitutions may be available to certain options such as --comman
 <a name="External Programs"></a>
 ### External Programs
 
-**[[Click Here for All External Program Options|manpage#External-Program-Options]]**
+**[[Click Here for All External Program Options|manpage#external-program-options]]**
 
 Several external programs can be used by get_iplayer. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
 
@@ -678,7 +678,7 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 <a name="Metadata Tagging"></a>
 ### Metadata Tagging
 
-**[[Click Here for All Metadata Tagging Options|manpage#Tagging-Options]]**
+**[[Click Here for All Metadata Tagging Options|manpage#tagging-options]]**
 
 get_iplayer optionally adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[[here|tagging]]**.
 

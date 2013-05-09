@@ -23,42 +23,42 @@ OPTIONS
 </A>
 <UL>
 <LI>
-<A HREF="#Search-Options">
+<A HREF="#Search Options">
 Search Options
 </A>
 </LI>
 <LI>
-<A HREF="#Display-Options">
+<A HREF="#Display Options">
 Display Options
 </A>
 </LI>
 <LI>
-<A HREF="#Recording-Options">
+<A HREF="#Recording Options">
 Recording Options
 </A>
 </LI>
 <LI>
-<A HREF="#Output-Options">
+<A HREF="#Output Options">
 Output Options
 </A>
 </LI>
 <LI>
-<A HREF="#PVR-Options">
+<A HREF="#PVR Options">
 PVR Options
 </A>
 </LI>
 <LI>
-<A HREF="#Config-Options">
+<A HREF="#Config Options">
 Config Options
 </A>
 </LI>
 <LI>
-<A HREF="#External-Program-Options">
+<A HREF="#External Program Options">
 External Program Options
 </A>
 </LI>
 <LI>
-<A HREF="#Tagging-Options">
+<A HREF="#Tagging Options">
 Tagging Options
 </A>
 </LI>
@@ -70,7 +70,7 @@ AUTHOR
 </A>
 </LI>
 <LI>
-<A HREF="#COPYRIGHT-NOTICE">
+<A HREF="#COPYRIGHT NOTICE">
 COPYRIGHT NOTICE
 </A>
 </LI>
@@ -135,7 +135,7 @@ In PVR mode, <STRONG>get_iplayer</STRONG> can be called from cron to record prog
 <H1>
 OPTIONS
 </H1>
-<A NAME="Search-Options"></A>
+<A NAME="Search Options"></A>
 <H2>
 Search Options
 </H2>
@@ -239,7 +239,7 @@ Only search in these types of programmes: livetv,tv,liveradio,radio,all (tv is d
 Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: '--versions signed,audiodescribed,default' will prefer signed and audiodescribed programmes if available.  Default: 'default'
 </DD>
 </DL>
-<A NAME="Display-Options"></A>
+<A NAME="Display Options"></A>
 <H2>
 Display Options
 </H2>
@@ -441,7 +441,7 @@ Displays warranty section of GPLv3
 Show get_iplayer version and exit.
 </DD>
 </DL>
-<A NAME="Recording-Options"></A>
+<A NAME="Recording Options"></A>
 <H2>
 Recording Options
 </H2>
@@ -713,7 +713,7 @@ Record the embedded media player in the specified URL. Use with --type=&lt;type&
 In radio realaudio mode output as wav and don't transcode to mp3
 </DD>
 </DL>
-<A NAME="Output-Options"></A>
+<A NAME="Output Options"></A>
 <H2>
 Output Options
 </H2>
@@ -978,7 +978,7 @@ Create freevo/Mythtv menu of channels -&gt; programme names -&gt; episodes
 Create freevo/Mythtv menu of programme names -&gt; episodes
 </DD>
 </DL>
-<A NAME="PVR-Options"></A>
+<A NAME="PVR Options"></A>
 <H2>
 PVR Options
 </H2>
@@ -1061,7 +1061,7 @@ Runs the PVR using all saved PVR searches every &lt;seconds&gt;. Synonyms: --pvr
 Runs a named PVR search. Synonyms: --pvrsingle
 </DD>
 </DL>
-<A NAME="Config-Options"></A>
+<A NAME="Config Options"></A>
 <H2>
 Config Options
 </H2>
@@ -1207,7 +1207,7 @@ Update get_iplayer if a newer one exists
 Specify all options as a urlencoded string of &quot;name=val&amp;name=val&amp;...&quot;
 </DD>
 </DL>
-<A NAME="External-Program-Options"></A>
+<A NAME="External Program Options"></A>
 <H2>
 External Program Options
 </H2>
@@ -1262,7 +1262,7 @@ Location of rtmpdump binary. Synonyms: --flvstreamer
 Location of vlc or cvlc binary
 </DD>
 </DL>
-<A NAME="Tagging-Options"></A>
+<A NAME="Tagging Options"></A>
 <H2>
 Tagging Options
 </H2>
@@ -1354,7 +1354,7 @@ get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt;
 <P>
 This manual page was originally written by Jonathan Wiltshire &lt;jmw (at sign) debian.org&gt; for the Debian project (but may be used by others).
 <HR>
-<A NAME="COPYRIGHT-NOTICE"></A>
+<A NAME="COPYRIGHT NOTICE"></A>
 <H1>
 COPYRIGHT NOTICE
 </H1>
