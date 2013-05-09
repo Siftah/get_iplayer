@@ -10,6 +10,4 @@
 
 [[Metadata Tagging|tagging]]
 
-[[Tag Scheme|tagscheme]]
-
 [[Using the PVR with cron|pvrcron]]
