@@ -32,7 +32,7 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
 Install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo mv ./get_iplayer /usr/local/bin
+    $ sudo install ./get_iplayer /usr/local/bin
 
 #### Support Applications
 
@@ -79,7 +79,7 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
 Install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo mv ./get_iplayer /usr/local/bin
+    $ sudo install ./get_iplayer /usr/local/bin
 
 #### Support Applications
 
@@ -122,7 +122,7 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
 Install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo mv ./get_iplayer /usr/local/bin
+    $ sudo install ./get_iplayer /usr/local/bin
 
 
 <a name="External Program Requirements"></a>
