@@ -1,2 +1,4 @@
 .rbenv*
+.ruby*
 _site
+
