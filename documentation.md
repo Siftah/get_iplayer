@@ -12,7 +12,7 @@
 * [Streaming](#Streaming)
 * [Live Streaming](#Live Streaming)
 * [Saving Settings](#Saving Settings)
-* [Using a Web Proxy](#Using a 0Web Proxy)
+* [Using a Web Proxy](#Using a Web Proxy)
 * [Option Presets and Shortcuts](#Option Presets and Shortcuts)
 * [Subtitles](#Subtitles)
 * [More Programme Information](#More Programme Information)
