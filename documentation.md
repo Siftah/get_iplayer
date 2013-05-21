@@ -488,12 +488,6 @@ Use a filename prefix format with [substitution parameters](#Substitution-Parame
 
     --file-prefix="<name>-<episode>-<longname>-<version>-<pid>"
 
-Use a filename prefix format with [substitution parameters](#Substitution-Parameters) suited to XBMC, Boxee and MythTV:
-
-    --file-prefix="<nameshort><-senum><-episodeshort>"
-
-**NOTE:** Hyphens *inside* the angle brackets will only be used if the associate substitution parameter has a non-empty value.
-
 #### Valid Characters
 
 Several options exist for controlling what characters are allowed in filenames.
