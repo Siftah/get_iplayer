@@ -1,4 +1,4 @@
-<h1>get_iplayer</h1>
+# get_iplayer Documentation
 
 [[Overview|get_iplayer]]
 
@@ -12,4 +12,9 @@
 
 [[Using the PVR with cron|pvrcron]]
 
-[[Web PVR Manager Help|webpvr]]
+[[Web PVR Manager|webpvr]]
+
+### Tutorials
+
+* <http://squarepenguin.co.uk/get_iplayer-guide-for-beginners/>
+* <http://www.christopherdowning.co.uk/2012/01/11/a-basic-get_iplayer-tutorial/>

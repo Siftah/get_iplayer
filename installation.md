@@ -11,12 +11,15 @@ get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP
 -   For BBC regional and local radio you will need [mplayer](http://www.mplayerhq.hu) to convert flv files to mp3 format
 -   For WMA audio you will need [mplayer](http://www.mplayerhq.hu) to save downloads to wma files
 
-More information about external program requirements can be found [below](#External%20Program%20Requirements).
+More information about external program requirements can be found [below](#External Program Requirements).
 
-<a name="Linux"></a>
+<a name="Linux/Unix"></a>
 ## Linux/Unix
 
+<a name="Linux/Unix Manual"></a>
 ### Manual Installation
+
+#### Main Script
 
 Download the latest release version:
 
@@ -30,9 +33,14 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
     $ ./get_iplayer
 
-Install the script somewhere in $PATH (e.g., /usr/local/bin):
+Optionally install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install ./get_iplayer /usr/local/bin
+    $ sudo install 755 ./get_iplayer /usr/local/bin
+
+
+#### Web PVR
+
+WIP
 
 #### Support Applications
 
@@ -65,6 +73,8 @@ WIP
 
 #### Manual Installation
 
+#### Main Script
+
 Download the latest release version:
 
     $ curl -O https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
@@ -77,9 +87,13 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
     $ ./get_iplayer
 
-Install the script somewhere in $PATH (e.g., /usr/local/bin):
+Optionally install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install ./get_iplayer /usr/local/bin
+    $ sudo install 755 ./get_iplayer /usr/local/bin
+
+#### Web PVR
+
+WIP
 
 #### Support Applications
 
@@ -92,7 +106,7 @@ WIP
 <a name="Windows"></a>
 ## Windows
 
-<a name="Windows-Installer"></a>
+<a name="Windows Installer"></a>
 ### Installer
 
 Download the latest Windows installer from:
@@ -103,7 +117,7 @@ Start the installer and follow the wizard in the usual manner. The installer wil
 
 To use get_iplayer go to the Start menu and select **Get_iPlayer** from the **get_iplayer** submenu. Alternatively, start the [[Web PVR Manager|webpvr]] from the start menu. Recorded programmes, by default, can be found in the **iPlayer Recordings** folder on your Windows desktop.
 
-<a name="Windows-Cygwin"></a>
+<a name="Windows Cygwin"></a>
 ### Cygwin
 
 Download and install [Cygwin](http://cygwin.com/setup.exe).  Make sure you install libwww-perl (LWP) along with the default packages.  Then, in Cygwin shell:
