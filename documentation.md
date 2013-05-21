@@ -153,15 +153,15 @@ Record all programmes with categories containing 'music':
     get_iplayer --get --category=music
 
 
-Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--rtmpdump` is not required if your options tell get_iplayer where rtmpdump is located). 
+Record a TV programme trying flashhigh, flashstd and flashlow modes in order until one succeeds (`--flvstreamer` is not required if your options tell get_iplayer where rtmpdump is located). 
 
-    get_iplayer --type=tv --get 123 --modes=flashhigh,flashstd,flashlow --rtmpdump="/path/to/rtmpdump"
+    get_iplayer --type=tv --get 123 --modes=flashhigh,flashstd,flashlow --flvstreamer="/path/to/rtmpdump"
 
 **Note:** Possible modes are (in increasing order of quality): flashlow, flashnormal, flashstd, flashhigh, flashvhigh, flashhd. See [this page] (http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for more details. Use the `--info` option to see what modes are available for a programme.
 
-Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--rtmpdump` is not required if your options tell get_iplayer where rtmpdump is located). 
+Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--flvstreamer` is not required if your options tell get_iplayer where rtmpdump is located). 
 
-    get_iplayer --type=radio --get 12345 --modes=flashaudio,flashaac --rtmpdump="/path/to/rtmpdump"
+    get_iplayer --type=radio --get 12345 --modes=flashaudio,flashaac --flvstreamer="/path/to/rtmpdump"
 
 **Note:** Possible modes are (in increasing order of quality): flashaaclow, flashaudio, flashaacstd, flashaachigh. Use the `-–info` option to see what modes are available for a programme.
 
@@ -661,7 +661,7 @@ The following substitutions may be available to certain options such as --comman
 
 Several external programs can be used by get_iplayer. The required programs for each mode and type are listed **[[here|installation#External%20Program%20Requirements]]**. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
 
-    --rtmpdump
+    --flvstreamer
     --ffmpeg
     --mplayer
     --atomicparsley

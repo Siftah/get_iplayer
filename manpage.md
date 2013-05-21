@@ -1,4 +1,7 @@
 <H1>
+get_iplayer Manual
+</H1>
+<H1>
 Table of Contents
 </H1>
 <UL>
@@ -591,28 +594,28 @@ Don't transcode or change the recording/stream in any way (i.e. radio/realaudio,
 </STRONG>
 </DT>
 <DD>
-Add custom options to rtmpdump for liveradio
+Add custom options to flvstreamer for liveradio
 </DD>
 <DT>
 <STRONG>--rtmp-livetv-opts &lt;options&gt;
 </STRONG>
 </DT>
 <DD>
-Add custom options to rtmpdump for livetv
+Add custom options to flvstreamer for livetv
 </DD>
 <DT>
 <STRONG>--rtmp-radio-opts &lt;options&gt;
 </STRONG>
 </DT>
 <DD>
-Add custom options to rtmpdump for radio
+Add custom options to flvstreamer for radio
 </DD>
 <DT>
 <STRONG>--rtmp-tv-opts &lt;options&gt;
 </STRONG>
 </DT>
 <DD>
-Add custom options to rtmpdump for tv
+Add custom options to flvstreamer for tv
 </DD>
 <DT>
 <STRONG>--rtmpport &lt;port&gt;
@@ -622,14 +625,14 @@ Add custom options to rtmpdump for tv
 Override the RTMP port (e.g. 443)
 </DD>
 <DT>
-<STRONG>--start &lt;secs|hh:mm:ss&gt;
+<STRONG>--start &lt;secs&gt;
 </STRONG>
 </DT>
 <DD>
 Recording/streaming start offset (rtmp and realaudio only)
 </DD>
 <DT>
-<STRONG>--stop &lt;secs|hh:mm:ss&gt;
+<STRONG>--stop &lt;secs&gt;
 </STRONG>
 </DT>
 <DD>
@@ -733,27 +736,6 @@ Run user command after successful recording using args such as &lt;pid&gt;, &lt;
 Email HTML index of matching programmes to specified address
 </DD>
 <DT>
-<STRONG>--email-password &lt;password&gt;
-</STRONG>
-</DT>
-<DD>
-Email password
-</DD>
-<DT>
-<STRONG>--email-port &lt;port number&gt;
-</STRONG>
-</DT>
-<DD>
-Email port number (default: appropriate port for --email-security)
-</DD>
-<DT>
-<STRONG>--email-security &lt;TLS|SSL&gt;
-</STRONG>
-</DT>
-<DD>
-Email security TLS, SSL (default: none)
-</DD>
-<DT>
 <STRONG>--email-sender &lt;address&gt;
 </STRONG>
 </DT>
@@ -766,13 +748,6 @@ Optional email sender address
 </DT>
 <DD>
 SMTP server IP address to use to send email (default: localhost)
-</DD>
-<DT>
-<STRONG>--email-user &lt;username&gt;
-</STRONG>
-</DT>
-<DD>
-Email username
 </DD>
 <DT>
 <STRONG>--fatfilename
@@ -1227,6 +1202,13 @@ Location of AtomicParsley tagger binary
 Location of ffmpeg binary
 </DD>
 <DT>
+<STRONG>--flvstreamer &lt;path&gt;
+</STRONG>
+</DT>
+<DD>
+Location of flvstreamer binary
+</DD>
+<DT>
 <STRONG>--id3v2 &lt;path&gt;
 </STRONG>
 </DT>
@@ -1248,13 +1230,6 @@ Location of lame binary
 Location of mplayer binary
 </DD>
 <DT>
-<STRONG>--rtmpdump &lt;path&gt;
-</STRONG>
-</DT>
-<DD>
-Location of rtmpdump binary. Synonyms: --flvstreamer
-</DD>
-<DT>
 <STRONG>--vlc &lt;path&gt;
 </STRONG>
 </DT>
@@ -1267,13 +1242,6 @@ Location of vlc or cvlc binary
 Tagging Options
 </H2>
 <DL>
-<DT>
-<STRONG>--no-artwork
-</STRONG>
-</DT>
-<DD>
-Do not embed thumbnail image in output file.  All other metadata values will be written.
-</DD>
 <DT>
 <STRONG>--no-tag
 </STRONG>
