@@ -18,13 +18,13 @@ More information about external program requirements can be found [below](#Exter
 
 ### Manual Installation
 
-Download the current release version:
+Download the latest release version:
 
-    $ wget http://www.infradead.org/get_iplayer/latest/get_iplayer
+    $ wget https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
 
 Ensure the script is executable:
 
-    $ chmod 755 get_iplayer
+    $ chmod 755 ./get_iplayer
 
 Execute the script once to initialise the config directory ($HOME/.get_iplayer) and download plugins:
 
@@ -65,13 +65,13 @@ WIP
 
 #### Manual Installation
 
-Download the current release version:
+Download the latest release version:
 
-    $ curl -O http://www.infradead.org/get_iplayer/latest/get_iplayer
+    $ curl -O https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
 
 Ensure the script is executable:
 
-    $ chmod 755 get_iplayer
+    $ chmod 755 ./get_iplayer
 
 Execute the script once to initialise the config directory ($HOME/.get_iplayer) and download plugins:
 
@@ -108,22 +108,7 @@ To use get_iplayer go to the Start menu and select **Get_iPlayer** from the **ge
 
 Download and install [Cygwin](http://cygwin.com/setup.exe).  Make sure you install libwww-perl (LWP) along with the default packages.  Then, in Cygwin shell:
 
-Download the current release version:
-
-    $ wget http://www.infradead.org/get_iplayer/latest/get_iplayer
-
-Ensure the script is executable:
-
-    $ chmod 755 get_iplayer
-
-Execute the script once to initialise the config directory ($HOME/.get_iplayer) and download plugins:
-
-    $ ./get_iplayer
-
-Install the script somewhere in $PATH (e.g., /usr/local/bin):
-
-    $ sudo install ./get_iplayer /usr/local/bin
-
+WIP
 
 <a name="External Program Requirements"></a>
 ## External Program Requirements
