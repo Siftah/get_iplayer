@@ -35,7 +35,7 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
 Optionally install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install 755 ./get_iplayer /usr/local/bin
+    $ sudo install ./get_iplayer /usr/local/bin
 
 
 #### Web PVR
@@ -89,7 +89,7 @@ Execute the script once to initialise the config directory ($HOME/.get_iplayer) 
 
 Optionally install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install 755 ./get_iplayer /usr/local/bin
+    $ sudo install ./get_iplayer /usr/local/bin
 
 #### Web PVR
 
