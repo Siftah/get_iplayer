@@ -111,7 +111,7 @@ WIP
 <a name="OSX Manual"></a>
 ### Manual Installation
 
-### Support Applications
+#### Support Applications
 
 WIP
 
