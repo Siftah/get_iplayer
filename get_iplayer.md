@@ -5,23 +5,20 @@
 
 get_iplayer allows you to search, index and record/stream:
 
--   **[BBC iPlayer TV](http://www.bbc.co.uk/iplayer/tv)** - up to 3200 kbps HD 720p H.264 / MP4
--   **[BBC Live TV](http://www.bbc.co.uk/iplayer/tv)** - up to 1500 kbps H.264 / MP4
--   **[BBC iPlayer Radio](http://www.bbc.co.uk/iplayer/radio)** - up to 320 kbps MP3 / AAC
+-   **[BBC iPlayer TV](http://www.bbc.co.uk/iplayer/tv)** - up to 2800 kbps HD 720p H.264 + AAC
+-   **[BBC Live TV](http://www.bbc.co.uk/iplayer/tv)** - up to 1500 kbps H.264 + AAC
+-   **[BBC iPlayer Radio](http://www.bbc.co.uk/iplayer/radio)** - up to 320 kbps MP3 / AAC / WMA
 -   **[BBC Live Radio](http://www.bbc.co.uk/iplayer/radio)** - up to 320 kbps MP3 / AAC / WMA
 -   **[BBC Podcasts](http://www.bbc.co.uk/podcasts)** - up to 192 kbps MP3 / AAC
--   **[BBC iPlayer TV subtitles](http://www.bbc.co.uk/iplayer/tv)** - SubRip / srt
+-   **[BBC iPlayer TV subtitles](http://www.bbc.co.uk/iplayer/tv)** - SubRip (srt)
 
-get_iplayer does the recording, indexing and searching of the iPlayer TV/Radio
-programmes and podcasts available. It can even stream the iPlayer TV programmes
+get_iplayer indexes, searches and records/streams the iPlayer TV/Radio
+programmes and podcasts available. It can also stream iPlayer TV/Radio programmes
 while recording them to mplayer, vlc or xine, etc.  
 
 get_iplayer can access feeds from the BBC that are higher quality than those
-used in the Flash iPlayer (normal quality). See the [beebhack wiki]
-(http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for a
-comparison. get_iplayer also allows recording of the high-quality
-(HD 720p) Flash-based TV content using [rtmpdump](http://rtmpdump.mplayerhq.hu/).
-None of the above content is 'protected' by DRM. get_iplayer cannot remove DRM.
+used in the iPlayer web site Flash player. See the [beebhack wiki](http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for a comparison. get_iplayer also supports recording of the high-quality (HD 720p) Flash-based TV content using 
+[rtmpdump](http://rtmpdump.mplayerhq.hu/). None of the above content is "protected" by DRM. get_iplayer cannot remove DRM.
 
 get_iplayer also has PVR-like capabilities (like
 Sky+ / TiVo / Series-Link). You can save lists of programme searches
@@ -30,6 +27,7 @@ can watch them when you choose and on devices that cannot run Adobe
 Flash Player - even if you don’t have adequate broadband speeds or if
 your broadband streams too slowly at peak hours when you want to watch a
 programme.
+
 ## Features
 
 -   Recording/Streaming of TV, Radio and Podcasts from BBC sites
@@ -38,7 +36,7 @@ programme.
 -   PVR functionality allows predefined searches to be recorded from a scheduler such as cron or Windows scheduler
 -   Queuing of programmes for batched recording or for recording off-peak
 -   Resume recordings of partially recorded content
--   Stream iPlayer or podcast content via mplayer or xine while recording it
+-   Stream iPlayer or podcast content via mplayer, vlc or xine while recording it
 -   Allow multiple programmes to be recorded in one command
 -   Indexing of all available programmes
 -   Advanced Searching on programme name, episode, description, channel or category, etc
@@ -51,12 +49,12 @@ programme.
 
 get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP/Vista/7/8).
 
-We have created a Windows installer for get_iplayer which will download
-and install the necessary dependencies. The installer can be obtained from:
+There is a Windows installer for get_iplayer which will download
+and install necessary dependencies. The installer can be found at:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
-Linux/Unix/OSX users can find more installation information **[[here|installation]]**.
+Linux/Unix/OS X users can find more installation information **[[here|installation]]**.
 
 ## Help
 
@@ -71,25 +69,15 @@ When using this (or any) mailing list, please observe standard rules of
 '[Netiquette](http://david.woodhou.se/email.html)' — no HTML, no
 top-posting, no excessive quotations, etc.
 
-Links to some documentation can be found **[[here|Home]]**.
-
 ## Development
 
 get_iplayer can be found on GitHub:
 
 <https://github.com/dinkypumpkin/get_iplayer>
 
-Feel free to fork the repository and submit pull requests.  Source code archives for release versions of get_iplayer can be downloaded from:
+Please feel free to fork the repository and submit pull requests.  Source code archives for release versions of get_iplayer can be downloaded from:
 
 <https://github.com/dinkypumpkin/get_iplayer/tags>
-
-
-The get_iplayer code can also be found in the [Git](http://git-scm.com/) version control repository at `git://git.infradead.org/get_iplayer.git` ([browse](http://git.infradead.org/get_iplayer.git)).  You may submit patches to the mailing list.
-
-If you submit patches for get_iplayer, make sure they
-apply cleanly to the current git tree, and that they're not mangled by
-your email software. Sending the patch to yourself first, then checking
-that you can save it to a file and apply it, is a useful technique.
 
 ## Uses
 
