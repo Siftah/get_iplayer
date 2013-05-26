@@ -1,4 +1,6 @@
-# Installation
+# get_iplayer Installation
+
+[[_TOC_]]
 
 <a name="Requirements"></a>
 ## Requirements
