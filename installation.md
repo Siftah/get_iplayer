@@ -1,6 +1,6 @@
 # get_iplayer Installation
 
-# Table of Contents
+## Table of Contents
 
 * [Requirements](#requirements)
 * [Linux/Unix](#linux-unix)
