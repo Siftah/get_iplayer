@@ -1,4 +1,34 @@
-[[_TOC_]]
+# get_iplayer Manual
+
+# Table of Contents
+
+* [NAME](#name)
+
+* [SYNOPSIS](#synopsis)
+
+* [DESCRIPTION](#description)
+
+* [OPTIONS](#options)
+
+    * [Search Options](#search-options)
+
+    * [Display Options](#display-options)
+
+    * [Recording Options](#recording-options)
+
+    * [Output Options](#output-options)
+
+    * [PVR Options](#pvr-options)
+
+    * [Config Options](#config-options)
+
+    * [External Program Options](#external-program-options)
+
+    * [Tagging Options](#tagging-options)
+
+* [AUTHOR](#author)
+
+* [COPYRIGHT NOTICE](#copyright-notice)
 
 <a id="name"></a>
 
