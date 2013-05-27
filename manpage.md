@@ -1,7 +1,6 @@
 # get_iplayer Manual
 
 # Table of Contents
-
 * [NAME](#name)
 
 * [SYNOPSIS](#synopsis)
@@ -30,11 +29,13 @@
 
 * [COPYRIGHT NOTICE](#copyright-notice)
 
+
 <a id="name"></a>
 
 # NAME
 
 get_iplayer - Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more
+
 <a id="synopsis"></a>
 
 # SYNOPSIS
@@ -54,6 +55,7 @@ get_iplayer --stream [&lt;options&gt;] --type=&lt;type&gt; &lt;pid|url&gt; | mpl
 get_iplayer --stream [&lt;options&gt;] --type=livetv,liveradio &lt;regex|index&gt; --player=&quot;mplayer -cache 128 -&quot;
 
 get_iplayer --refresh
+
 <a id="description"></a>
 
 # DESCRIPTION
@@ -69,13 +71,16 @@ Each available programme has a numerical identifier, pid.
 get_iplayer utilises the rtmpdump tool to record BBC iPlayer programmes from RTMP flash streams at various qualities.
 
 In PVR mode, get_iplayer can be called from cron to record programmes to a schedule.
+
 <a id="options"></a>
 
 # OPTIONS
 
+
 <a id="search-options"></a>
 
 ## Search Options
+
 
 **--before**
 : Limit search to programmes added to the cache before N hours ago
@@ -122,6 +127,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 <a id="display-options"></a>
 
 ## Display Options
+
 
 **--conditions**
 : Shows GPLv3 conditions
@@ -211,8 +217,9 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 ## Recording Options
 
+
 **--aactomp3**
-: Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified)
+: Transcode AAC audio to MP3 with ffmpeg (CBR 128k unless --mp3vbr is specified)
 
 **--attempts &lt;number&gt;**
 : Number of attempts to make or resume a failed connection
@@ -272,24 +279,24 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Don&#39;t transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)
 
 **--rtmp-liveradio-opts &lt;options&gt;**
-: Add custom options to rtmpdump for liveradio
+: Add custom options to flvstreamer for liveradio
 
 **--rtmp-livetv-opts &lt;options&gt;**
-: Add custom options to rtmpdump for livetv
+: Add custom options to flvstreamer for livetv
 
 **--rtmp-radio-opts &lt;options&gt;**
-: Add custom options to rtmpdump for radio
+: Add custom options to flvstreamer for radio
 
 **--rtmp-tv-opts &lt;options&gt;**
-: Add custom options to rtmpdump for tv
+: Add custom options to flvstreamer for tv
 
 **--rtmpport &lt;port&gt;**
 : Override the RTMP port (e.g. 443)
 
-**--start &lt;secs|hh:mm:ss&gt;**
+**--start &lt;secs&gt;**
 : Recording/streaming start offset (rtmp and realaudio only)
 
-**--stop &lt;secs|hh:mm:ss&gt;**
+**--stop &lt;secs&gt;**
 : Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only
 
 **--suboffset &lt;offset&gt;**
@@ -329,29 +336,18 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 ## Output Options
 
+
 **--command, -c &lt;command&gt;**
 : Run user command after successful recording using args such as &lt;pid&gt;, &lt;name&gt; etc
 
 **--email &lt;address&gt;**
 : Email HTML index of matching programmes to specified address
 
-**--email-password &lt;password&gt;**
-: Email password
-
-**--email-port &lt;port number&gt;**
-: Email port number (default: appropriate port for --email-security)
-
-**--email-security &lt;TLS|SSL&gt;**
-: Email security TLS, SSL (default: none)
-
 **--email-sender &lt;address&gt;**
 : Optional email sender address
 
 **--email-smtp &lt;hostname&gt;**
 : SMTP server IP address to use to send email (default: localhost)
-
-**--email-user &lt;username&gt;**
-: Email username
 
 **--fatfilename**
 : Omit characters forbidden by FAT filesystems from filenames but keep whitespace
@@ -444,6 +440,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 ## PVR Options
 
+
 **--comment &lt;string&gt;**
 : Adds a comment to a PVR search
 
@@ -480,6 +477,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 <a id="config-options"></a>
 
 ## Config Options
+
 
 **--expiry, -e &lt;secs&gt;**
 : Cache expiry in seconds (default 4hrs)
@@ -545,11 +543,15 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 ## External Program Options
 
+
 **--atomicparsley &lt;path&gt;**
 : Location of AtomicParsley tagger binary
 
 **--ffmpeg &lt;path&gt;**
-: Location of ffmpeg or avconv binary. Synonyms: --avconv
+: Location of ffmpeg binary
+
+**--flvstreamer &lt;path&gt;**
+: Location of flvstreamer binary
 
 **--id3v2 &lt;path&gt;**
 : Location of id3v2 or id3tag binary
@@ -560,9 +562,6 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--mplayer &lt;path&gt;**
 : Location of mplayer binary
 
-**--rtmpdump &lt;path&gt;**
-: Location of rtmpdump binary. Synonyms: --flvstreamer
-
 **--vlc &lt;path&gt;**
 : Location of vlc or cvlc binary
 
@@ -570,8 +569,6 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 ## Tagging Options
 
-**--no-artwork**
-: Do not embed thumbnail image in output file.  All other metadata values will be written.
 
 **--no-tag**
 : Do not tag downloaded programmes
@@ -610,6 +607,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt; and is now maintained by the contributors at http://www.infradead.org/get_iplayer/html/get_iplayer.html
 
 This manual page was originally written by Jonathan Wiltshire &lt;jmw@debian.org&gt; for the Debian project (but may be used by others).
+
 <a id="copyright-notice"></a>
 
 # COPYRIGHT NOTICE
@@ -618,4 +616,3 @@ get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis
   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
   This is free software, and you are welcome to redistribute it under certain
   conditions; use --conditions for details.
-  
