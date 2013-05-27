@@ -1,5 +1,23 @@
 # get_iplayer Installation
 
+# Table of Contents
+
+* [Requirements](#requirements)
+* [Linux/Unix](#linux-unix)
+	* [Manual Installation](#linux-unix-manual)
+	* [Package Manager Installation](#linux-unix-package)
+		* [Debian](#linux-unix-package-debian)
+		* [Ubuntu](#linux-unix-package-ubuntu)
+		* [openSUSE](#linux-unix-package-opensuse)
+		* [OpenBSD](#linux-unix-package-openbsd)
+* [OS X](#osx)
+	* [Manual Installation](#osx-manual)
+	* [Homebrew Installation](#osx-homebrew)
+* [Windows](#windows)
+	* [Installer](#windows-installer)
+	* [Cygwin](#windows-cygwin)
+* [External Program Requirements](#external-program-requirements)
+
 <a name="requirements"></a>
 ## Requirements
 
@@ -30,13 +48,7 @@ Optional Perl modules may be installed for added functionality:
 * Net::SMTP::TLS::ButMaintained or Net::SMTP::TLS - TLS secure email (e.g., GMail)
 * XML::Simple - Parsing of [BBC RDF metadata](http://www.bbc.co.uk/ontologies/programmes/2009-09-07.shtml) for extraction of media links from BBC brand pages and programme microsites. Supports --pid-recursive option.
 
-**Linux/Unix/OS X**: All the optional Perl modules may not be available via the package manager for your system.  It is generally unwise to employ superuser access to force additional modules into your system's Perl intallation. As an alternative, you can create a personal library containing just the additional Perl modules you need.  There are several ways to accomplish this, but a fairly simple method is described here:
-
-<http://stackoverflow.com/questions/2980297/how-can-i-use-cpan-as-a-non-root-user>
-
-**OS X**: Users should replace `wget -O-` with `curl -L -o -` in the instructions.  Also note that XML::Simple is installed with the system Perl on OS X.
-
-**Windows**: The get_iplayer Windows installer includes all optional Perl modules.  No extra installation steps are necessary.
+More information about installing optional Perl modules can be found [below](#optional-perl-modules).
 
 <a name="linux-unix"></a>
 ## Linux/Unix
@@ -105,7 +117,7 @@ Some Linux/Unix distributions maintain get_iplayer packages in their software re
 
 Instructions Linux/Unix distributions known to have up-to-date get_iplayer packages are given below.  If get_iplayer is not packaged for your system, use the manual installation instructions above.
 
-<a name="Debian"></a>
+<a name="linux-unix-package-debian"></a>
 #### Debian
 
 ##### Command-line Interface (CLI)
@@ -184,7 +196,7 @@ As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along wit
 
 3. Stop the WPM by typing Ctrl-C.
 
-<a name="Ubuntu"></a>
+<a name="linux-unix-package-ubuntu"></a>
 #### Ubuntu
 
 ##### Command-line Interface (CLI)
@@ -232,7 +244,7 @@ As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along wit
 
 3. Stop the WPM by typing Ctrl-C.
 
-<a name="openSUSE"></a>
+<a name="linux-unix-package-opensuse"></a>
 #### openSUSE
 
 ##### Command-line Interface (CLI)
@@ -295,7 +307,7 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
 
 4. Stop the WPM by typing Ctrl-C in the xterm where it is running.
 
-<a name="OpenBSD"></a>
+<a name="linux-unix-package-openbsd"></a>
 #### OpenBSD
 
 1. Install get_iplayer package and dependencies:
@@ -411,6 +423,17 @@ If you use the OS X system Perl, note that XML::Simple is already installed.
 Download and install [Cygwin](http://cygwin.com/setup.exe).  Make sure you install libwww-perl (LWP) along with the default packages.  Then, in Cygwin shell:
 
 TODO
+
+<a name="optional-perl-modules"></a>
+## Installing Optional Perl Modules
+
+**Linux/Unix/OS X**: All the optional Perl modules may not be available via the package manager for your system.  It is generally unwise to employ superuser access to force additional modules into your system's Perl intallation. As an alternative, you can create a personal library containing just the additional Perl modules you need.  There are several ways to accomplish this, but a fairly simple method is described here:
+
+<http://stackoverflow.com/questions/2980297/how-can-i-use-cpan-as-a-non-root-user>
+
+**OS X**: Users should replace `wget -O-` with `curl -L -o -` in the instructions.  Also note that XML::Simple is installed with the system Perl on OS X.
+
+**Windows**: The get_iplayer Windows installer includes all optional Perl modules.  No extra installation steps are necessary.
 
 <a name="external-program-requirements"></a>
 ## External Program Requirements
