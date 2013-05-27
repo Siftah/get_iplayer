@@ -1,6 +1,7 @@
 # get_iplayer Manual
 
 # Table of Contents
+
 * [NAME](#name)
 
 * [SYNOPSIS](#synopsis)
@@ -28,7 +29,6 @@
 * [AUTHOR](#author)
 
 * [COPYRIGHT NOTICE](#copyright-notice)
-
 
 <a id="name"></a>
 
