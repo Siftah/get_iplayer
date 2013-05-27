@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 <a id="name"></a>
 
 # NAME
