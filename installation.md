@@ -2,41 +2,46 @@
 
 ## Table of Contents
 
-* [Requirements](#requirements)
-* [Linux/Unix](#linux-unix)
-	* [Manual Installation](#linux-unix-manual)
-	* [Package Manager Installation](#linux-unix-package)
-		* [Debian](#linux-unix-package-debian)
-		* [Ubuntu](#linux-unix-package-ubuntu)
-		* [openSUSE](#linux-unix-package-opensuse)
-		* [OpenBSD](#linux-unix-package-openbsd)
-* [OS X](#osx)
-	* [Manual Installation](#osx-manual)
-	* [Homebrew Installation](#osx-homebrew)
+- [Requirements](#requirements)
+- [Linux/Unix](#linux)
+	- [Manual Installation](#linux-manual)
+	- [Package Manager Installation](#linux-package)
+		- [Debian](#linux-package-debian)
+		- [Ubuntu](#linux-package-ubuntu)
+		- [openSUSE](#linux-package-opensuse)
+		- [OpenBSD](#linux-package-openbsd)
+- [OS X](#osx)
+	- [Manual Installation](#osx-manual)
+	- [Package Manager Installation](#osx-package)
+		- [Homebrew](#osx-homebrew)
+		- [MacPorts](#osx-macports)
 * [Windows](#windows)
 	* [Installer](#windows-installer)
 	* [Cygwin](#windows-cygwin)
-* [External Program Requirements](#external-program-requirements)
+* [Perlbrew](#perlbrew)
+* [External Programs](#external-programs)
+* [Optional Perl Modules](#perl-modules)
 
 <a name="requirements"></a>
 ## Requirements
 
 ### Platform
 
-get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP/Vista/7/8).
-
-- Perl with LWP module is required.  
+- Linux/Unix (numerous flavours supported), OS X (10.5+) or Windows (XP/Vista/7/8).
+- Perl 5.8.8+
+- LWP module
 
 ### External Programs
 
-- For Flash audio/video you will need [rtmpdump](http://rtmpdump.mplayerhq.hu/) to save downloads to FLV files.
-- For WMA audio you will need [mplayer](http://www.mplayerhq.hu) to save downloads to WMA files.
-- For BBC TV and national radio you will need [ffmpeg](http://ffmpeg.org) to convert FLV files to MP4, M4A, MP3, or AVI format.
-- For BBC regional and local radio you will need [mplayer](http://www.mplayerhq.hu) to convert FLV files to MP3 format.
-- For metadata tagging of MP4 and M4A files you will need [AtomicParsley](http://atomicparsley.sourceforge.net).
-- For metadata tagging of MP3 files you may use [id3v2](http://id3v2.sourceforge.net).  However, the optional MP3::Tag Perl module is preferred since it supports more complete ID3 tagging.
+get_iplayer employs external programs to download streams and manipulate media files:
 
-More information about external program requirements can be found [below](#external-program-requirements).
+- [rtmpdump](http://rtmpdump.mplayerhq.hu/) - Saves Flash audio/video streams to FLV files. Required.
+- [ffmpeg](http://ffmpeg.org) - Converts FLV files to MP4, M4A, MP3, or AVI format (for BBC TV, BBC national radio and BBC webcams).
+- [mplayer](http://www.mplayerhq.hu) - Converts FLV files to MP3 format (for BBC regional and local radio). Also saves Windows Media audio streams to WMA files (for BBC radio).
+- [AtomicParsley](http://atomicparsley.sourceforge.net) - Metadata tagging for MP4 and M4A files.
+- [id3v2](http://id3v2.sourceforge.net) - Metadata tagging for MP3 files. However, the MP3::Tag Perl module is preferred because it supports more complete ID3 tagging.
+
+More information about external program usage can be found [below](#external-programs).
 
 ### Optional Perl Modules
 
@@ -44,16 +49,16 @@ Optional Perl modules may be installed for added functionality:
 
 * MP3::Info - Required for *localfiles* plugin
 * MP3::Tag - Full ID3 tagging of MP3 files
-* Net::SMTP::SSL and Authen::SASL - SSL secure email (e.g. Yahoo Mail)
-* Net::SMTP::TLS::ButMaintained or Net::SMTP::TLS - TLS secure email (e.g., GMail)
-* XML::Simple - Parsing of [BBC RDF metadata](http://www.bbc.co.uk/ontologies/programmes/2009-09-07.shtml) for extraction of media links from BBC brand pages and programme microsites. Supports --pid-recursive option.
+* Net::SMTP::SSL and Authen::SASL - Send search results via SSL secure email (e.g. Yahoo Mail)
+* Net::SMTP::TLS::ButMaintained or Net::SMTP::TLS - Send search results via TLS secure email (e.g., GMail)
+* XML::Simple - Parse [BBC RDF metadata](http://www.bbc.co.uk/ontologies/programmes/2009-09-07.shtml) for extraction of media links from BBC brand pages and programme microsites. Supports --pid-recursive option.
 
 More information about installing optional Perl modules can be found [below](#optional-perl-modules).
 
-<a name="linux-unix"></a>
+<a name="linux"></a>
 ## Linux/Unix
 
-<a name="linux-unix-manual"></a>
+<a name="linux-manual"></a>
 ### Manual Installation
 
 #### External Programs
@@ -64,45 +69,45 @@ TODO
 
 1. Download the latest release version to working directory:
 
-    $ wget --no-check-certificate https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
+    `$ wget --no-check-certificate https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer`
 
 2. Ensure the script is executable:
 
-    $ chmod 755 ./get_iplayer
+    `$ chmod 755 ./get_iplayer`
 
 3. Execute the script once to initialise the config directory ($HOME/.get_iplayer) and download plugins:
 
-    $ ./get_iplayer
+    `$ ./get_iplayer`
 
 4. Optionally install get_iplayer somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install -m 755 ./get_iplayer /usr/local/bin
+    `$ sudo install -m 755 ./get_iplayer /usr/local/bin`
 
 5. Run CLI (assumed installed in $PATH):
 
-	$ get_iplayer […]
+	`$ get_iplayer […]`
 
 #### Web PVR Manager (WPM)
 
 1. Download the latest release version:
 
-    $ wget --no-check-certificate https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi
+    `$ wget --no-check-certificate https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi`
 
 2. Ensure the script is executable:
 
-    $ chmod 755 ./get_iplayer.cgi
+    `$ chmod 755 ./get_iplayer.cgi`
 
 3. Optionally install get_iplayer.cgi somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install -m 755 ./get_iplayer.cgi /usr/local/bin
+    `$ sudo install -m 755 ./get_iplayer.cgi /usr/local/bin`
 
 4. Launch WPM (assumed installed in $PATH):
 
-	$ get_iplayer.cgi --listen 127.0.0.1 --port 1935
+	`$ get_iplayer.cgi --listen 127.0.0.1 --port 1935`
 
 5. If CLI is not in $PATH, its location must be explicitly set:
 
-	$ get_iplayer.cgi --listen 127.0.0.1 --port 1935 --getiplayer /path/to/get_iplayer
+	`$ get_iplayer.cgi --listen 127.0.0.1 --port 1935 --getiplayer /path/to/get_iplayer`
 
 6. Once the WPM is running, connect to it by opening this URL in your browser:
 
@@ -110,14 +115,14 @@ TODO
 
 7. Stop the WPM by typing Ctrl-C.
 
-<a name="linux-unix-package"></a>
+<a name="linux-package"></a>
 ### Package Manager Installation
 
 Some Linux/Unix distributions maintain get_iplayer packages in their software repositories.  These packages are installed using the package manager provided with your Linux/Unix distribution.  Installing a packaged version of get_iplayer will automatically install other required applications and libraries.  Optional support applications may also be installed separately using the package manager.
 
-Instructions Linux/Unix distributions known to have up-to-date get_iplayer packages are given below.  If get_iplayer is not packaged for your system, use the manual installation instructions above.
+Instructions for Linux/Unix distributions known to have up-to-date get_iplayer packages are given below.  If get_iplayer is not packaged for your system, use the manual installation instructions above.
 
-<a name="linux-unix-package-debian"></a>
+<a name="linux-package-debian"></a>
 #### Debian
 
 ##### Command-line Interface (CLI)
@@ -126,15 +131,15 @@ Instructions Linux/Unix distributions known to have up-to-date get_iplayer packa
 
 1. Install get_iplayer package (note that package name contains hyphen, not underscore):
 
-	$ sudo apt-get install get-iplayer
+	`$ sudo apt-get install get-iplayer`
 
 2. Install suggested packages for MP4/M4A/MP3 output and full MP3 tagging:
 
-	$ sudo apt-get install ffmpeg mplayer libmp3-tag-perl
+	`$ sudo apt-get install ffmpeg mplayer libmp3-tag-perl`
 
 3. Optionally install packages for secure email support:
 
-	$ suto apt-get libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl
+	`$ sudo apt-get libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl`
 
 If you should ever need or want to update to a newer get-iplayer package from Debian testing, you can download and install the package directly.  Although installing packages from testing on a stable system is generally discouraged, it is currently safe to do so with the get-iplayer package.
 
@@ -144,7 +149,7 @@ If you should ever need or want to update to a newer get-iplayer package from De
 
 2. Install the downloaded DEB file (version 2.83-1 in this example):
 
-	$ sudo gdebi get-iplayer_2.83-1_all.deb
+	`$ sudo gdebi get-iplayer_2.83-1_all.deb`
 
 ###### Debian 6 (oldstable, squeeze)
 
@@ -156,7 +161,7 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
 2. Ensure package database is updated:
 
-	$ sudo apt-get update
+	`$ sudo apt-get update`
 
 3. Download the get-iplayer package for Debian testing from your preferred mirror:
 
@@ -164,31 +169,31 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
 4. Install the downloaded DEB file (version 2.82-2 in this example):
 
-	$ sudo gdebi get-iplayer_2.82-2_all.deb
+	`$ sudo gdebi get-iplayer_2.82-2_all.deb`
 	
 	Required dependencies will also be installed.
 
 5. Install recommended packages (normally installed with get-iplayer package on Debian stable):
 
-	$ sudo apt-get install atomicparsley id3v2 libmp3-info-perl
+	`$ sudo apt-get install atomicparsley id3v2 libmp3-info-perl`
 
 6. Install suggested packages for MP4/M4A/MP3 output and full MP3 tagging:
 
-	$ sudo apt-get -t squeeze-backports install ffmpeg mplayer libmp3-tag-perl
+	`$ sudo apt-get -t squeeze-backports install ffmpeg mplayer libmp3-tag-perl`
 	
 	If you already have ffmpeg and mplayer packages installed, they will be upgraded.
 
 7. Optionally install packages for secure email support:
 
-	$ sudo apt-get libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-perl
+	`$ sudo apt-get libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-perl`
 
 ##### Web PVR Manager (WPM)
 
-As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along with the CLI.
+As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along with the get-iplayer package.
 
 1. Launch the WPM in with this command:
 
-	$ get_iplayer_web_pvr
+	`$ get_iplayer_web_pvr`
 
 2. Once the WPM is running, connect to it by opening this URL in your browser:
 
@@ -196,47 +201,42 @@ As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along wit
 
 3. Stop the WPM by typing Ctrl-C.
 
-<a name="linux-unix-package-ubuntu"></a>
+<a name="linux-package-ubuntu"></a>
 #### Ubuntu
 
 ##### Command-line Interface (CLI)
 
-###### Ubuntu Repositories
-
-The Debian get-iplayer package is incorporated downstream in Ubuntu package repositories, so the above instructions for Debian stable may also be used with Ubuntu.  However, Ubuntu LTS ( Long Term Support) releases or Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) will very likely have obsolete get-iplayer packages.  Ubuntu users are recommended to install from the PPA (Personal Package Archive) maintained by Jon Davies.
-
-###### PPA Packages
+The Debian get-iplayer package is incorporated downstream in Ubuntu repositories, so the above instructions for Debian stable may also be used with Ubuntu.  However, Ubuntu LTS (Long Term Support) releases or Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) will very likely have obsolete get-iplayer packages.  Ubuntu users are recommended to install from the [get-iplayer   PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) (Personal Package Archive) maintained by Jon Davies.
 
 1. Add the PPA repository:
 
-	$ sudo apt-add-repository ppa:jon-hedgerows/get-iplayer
+	`$ sudo apt-add-repository ppa:jon-hedgerows/get-iplayer`
 
 2. Ensure package database is current:
 
-	$ sudo apt-get update
+	`$ sudo apt-get update`
 
 3. Install get_iplayer and all dependencies:
 
-	$ sudo apt-get install get-iplayer
+	`$ sudo apt-get install get-iplayer`
 	
-	You may install over a get-iplayer installation from the Ubuntu repositories.  Existing dependencies will be updated if necessary.
+	You may install from the PPA over a get_iplayer installation from the Ubuntu repositories.  Existing dependencies will be updated if necessary.
 
 4. Run CLI (assumed installed in $PATH):
 
-	$ get_iplayer […]
+	`$ get_iplayer […]`
 
-5. If you wish to remove the PPA packages and roll back any updates:
+If you wish to remove the PPA packages and roll back any updates:
 
-	$ sudo ppa-purge ppa:jon-hedgerows/get-iplayer
-
+`$ sudo ppa-purge ppa:jon-hedgerows/get-iplayer`
 
 ##### Web PVR Manager (WPM)
 
-As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along with the CLI.  This also applies to the PPA installation.
+As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along with the get-iplayer package.
 
 1. Launch the WPM in with this command:
 
-	$ get_iplayer_web_pvr
+	`$ get_iplayer_web_pvr`
 
 2. Once the WPM is running, connect to it by opening this URL in your browser:
 
@@ -244,14 +244,16 @@ As of version 2.82-2 (released with Debian 7.0) - the WPM is installed along wit
 
 3. Stop the WPM by typing Ctrl-C.
 
-<a name="linux-unix-package-opensuse"></a>
+<a name="linux-package-opensuse"></a>
+
+
 #### openSUSE
 
 ##### Command-line Interface (CLI)
 
 The CLI package for openSUSE is maintained in the [Packman](http://packman.links2linux.org/) repository.
 
-1. Install restricted format supports according the instructions for your system:
+1. Install restricted formats support according to the instructions for your openSUSE release:
 
 	<http://opensuse-community.org/Restricted_formats>
 	
@@ -259,19 +261,19 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 
 2. Update package database:
 
-	$ sudo zypper update
+	`$ sudo zypper update`
 
 3. Install get_iplayer package and dependencies:
 
-	$ sudo zypper install get_iplayer
+	`$ sudo zypper install get_iplayer`
 
 4. Install suggested package for full MP3 tagging:
 
-	$ sudo zypper install perl-MP3-Tag
+	`$ sudo zypper install perl-MP3-Tag`
 
 5. Optionally install packages for secure email (SSL only)
 
-	$ sudo zypper install perl-Net-SMTP-SSL perl-Authen-SASL
+	`$ sudo zypper install perl-Net-SMTP-SSL perl-Authen-SASL`
 
 6. The official openSUSE repositories do not provide packages for AtomicParsley, nor do they provide packaged Perl modules to support TLS secure email.  You can find third-party packages supplied through the openSUSE Build Service: 
 
@@ -279,11 +281,13 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 	
 	<http://software.opensuse.org/package/perl-Net-SMTP-TLS>
 
-	Although labelled as unstable, these packages don't have dependents and should be safe to install. You may opt for one-click installation, or you may download the RPM files and install them manually (choose the correct AtomicParsley RPM for your system architecture):
+	Although labelled as unstable, these packages should be safe to install. You may opt for one-click installation, or you may download the RPM files and install them manually:
 
-	$ sudo zypper install AtomicParsley-0.9.2+svn110-3.1.i586.rpm
+	`$ sudo zypper install AtomicParsley-0.9.2+svn110-3.1.i586.rpm`
 
-	$ sudo zypper install perl-Net-SMTP-TLS-0.12-6.1.noarch.rpm
+	NOTE: Choose the correct AtomicParsley RPM for your system architecture
+
+	`$ sudo zypper install perl-Net-SMTP-TLS-0.12-6.1.noarch.rpm`
 
 	If you opt for one-click installation, the initial "Additional Software Repositories" screen will display an option to "Remain subscribed to these repositories after installation".  Since these are one-off installations, you should uncheck that option.
 
@@ -295,11 +299,11 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
 
 2. Install WPM package and dependencies:
 
-	$ sudo zypper install get_iplayer-pvr
+	`$ sudo zypper install get_iplayer-pvr`
 
-3. Launch the WPM with this command:
+3. Launch the WPM with:
 
-	$ get_iplayer_pvr
+	`$ get_iplayer_pvr`
 	
 	The WPM will open in a new xterm and your default browser will open to this URL:
 	
@@ -307,16 +311,26 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
 
 4. Stop the WPM by typing Ctrl-C in the xterm where it is running.
 
-<a name="linux-unix-package-openbsd"></a>
+<a name="linux-package-openbsd"></a>
 #### OpenBSD
+
+##### Command-line Interface (CLI)
 
 1. Install get_iplayer package and dependencies:
 
-	$ pkg_add get_iplayer
+	`$ sudo pkg_add get_iplayer`
 	
 2. Install suggested packages for MP4/M4A/MP3 output:
 
-	$ pkg_add ffmpeg mplayer
+	`$ sudo pkg_add ffmpeg mplayer`
+
+3. Optionally install Perl Modules for secure email:
+
+	`$ sudo pkg_add p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained`
+
+##### Web PVR Manager (WPM) #####
+
+The WPM is not installed with the get_iplayer package.  Use the [manual installation](#linux-manual) procedure.
 
 <a name="osx"></a>
 ## OS X
@@ -324,66 +338,67 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
 <a name="osx-manual"></a>
 ### Manual Installation
 
-#### External Programs
-
-TODO
-
 #### Command-line Interface (CLI)
 
 1. Download the latest release version:
 
-    $ curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
+    `$ curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer`
 
 2. Ensure the script is executable:
 
-    $ chmod 755 ./get_iplayer
+    `$ chmod 755 ./get_iplayer`
 
 3. Execute the script once with no arguments to initialise the config directory ($HOME/.get_iplayer) and download plugins:
 
-    $ ./get_iplayer
+    `$ ./get_iplayer`
 
 4. Optionally install the script somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install 755 ./get_iplayer /usr/local/bin
+    `$ sudo install 755 ./get_iplayer /usr/local/bin`
 
 5. Run script (assumed installed in $PATH):
 
-	$ get_iplayer [...]
+	`$ get_iplayer [...]`
 
 #### Web PVR Manager (WPM)
 
 1. Download the latest release version:
 
-    $ curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi
+    `$ curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi`
 
 2. Ensure the script is executable:
 
-    $ chmod 755 ./get_iplayer.cgi
+    `$ chmod 755 ./get_iplayer.cgi`
 
 3. Optionally install somewhere in $PATH (e.g., /usr/local/bin):
 
-    $ sudo install 755 ./get_iplayer.cgi /usr/local/bin
+    `$ sudo install -m 755 ./get_iplayer.cgi /usr/local/bin`
 
 4. Launch WPM (assumed installed in $PATH):
 
-	$ get_iplayer.cgi --listen 127.0.0.1 --port 1935
+	`$ get_iplayer.cgi --listen 127.0.0.1 --port 1935`
 
 5. If CLI is not in $PATH, location must be explicitly set:
 
-	$ get_iplayer.cgi --listen 127.0.0.1 --port 1935 --get /path/to/get_iplayer
+	`$ get_iplayer.cgi --listen 127.0.0.1 --port 1935 --get /path/to/get_iplayer`
 
 6. Once Web PVR Manager is running, connect to it by opening this URL in your browser:
 
 	<http://127.0.0.1:1935>
 
+<a name="osx-package"></a>
+### Package Manager Installation
+
 <a name="osx-homebrew"></a>
-### Homebrew
+#### Homebrew
 
 Full information on installing get_iplayer with [Homebrew](http://mxcl.github.com/homebrew/) can be found at:
 
 <https://github.com/dinkypumpkin/homebrew-get_iplayer/wiki>
 
-If you already use Homebrew, you can install get_iplayer and its dependencies with:
+Note that Homebrew requires you to install Xcode and its Command Line Developer Tool.
+
+If you already use Homebrew, you can install get_iplayer and related external programs with:
 
 ```
 $ brew tap dinkypumpkin/get_iplayer
@@ -391,9 +406,45 @@ $ brew update
 $ brew install --with-deps get_iplayer
 ```
 
-Information re: installing optional Perl modules can be found
-[here](https://github.com/dinkypumpkin/homebrew-get_iplayer/wiki#2-enhanced-metadata-tagging-for-mp3-files).
-If you use the OS X system Perl, note that XML::Simple is already installed.
+Homebrew installation assumes you will be using the system Perl installed with OS X, which already has the LWP module installed. Information re: installing optional Perl modules can be found
+[here](https://github.com/dinkypumpkin/homebrew-get_iplayer/wiki#2-enhanced-metadata-tagging-for-mp3-files). Note that XML::Simple is also already installed with OS X system Perl.
+
+<a name="osx-macports"></a>
+#### MacPorts
+
+get_iplayer is not packaged in [MacPorts](http://www.macports.org). However, MacPorts provides a means to set up the dependencies required for get_iplayer.
+
+1. Install MacPorts using the instructions [here](http://www.macports.org/install.php).  You can use the "pkg" installer for your system. Note that MacPorts requires you to install Xcode and its Command Line Developer Tool.
+
+2. Because MacPorts is a self-contained package system, you must install  MacPorts build of Perl:
+ 
+	`$ sudo port install perl5 +perl5_16`
+
+	This example installs Perl 5.16 (perl5_16 variant).  If you wish to install the default version (5.12), omit "+perl5_16".
+
+3. Install required LWP module:
+
+	`$ sudo port install p5-libwww-perl`
+
+4. Install external programs (except ffmpeg):
+
+	`$ sudo port install rtmpdump mplayer atomicparsley id3v2`
+
+5. Install ffmpeg:
+
+	`$ sudo port install ffmpeg +no_x11`
+
+	This example installs the "no_x11" variant, which slims down the installation by not pulling in X11, Python and other dependencies of libsdl (a ffmpeg dependency).  If you want a full installation of libsdl with ffmpeg, omit "+no_X11".
+
+6. Install suggested Perl modules:
+
+	`$ sudo port install p5-xml-simple p5-mp3-tag p5-mp3-info`
+
+7. The optional Perl modules to support secure email are not packaged in  MacPorts.  However, they can be installed with the [CPAN](http://www.cpan.org) client into the MacPorts Perl library.
+
+	`$ sudo cpan Net::SMTP::SSL Authen::SASL Net::SMTP::TLS::ButMaintained`
+
+Once you have completed the above steps, use the [manual installation](#osx-manual) instructions to install get_iplayer.
 
 <a name="windows"></a>
 ## Windows
@@ -413,9 +464,9 @@ If you use the OS X system Perl, note that XML::Simple is already installed.
 
 	<http://127.0.0.1:1935>
 
-5. **NOTE**: The installer sets the location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the user who ran the installer.  If you have multiple users running get_iplayer on one Windows system, the other users will need to configure their own output folders.
+5. **NOTE**: The installer sets the default location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the user who ran the installer.  If you have multiple users running get_iplayer on one Windows system, the other users will need to configure their own output folders.
 
-	$ get_iplayer --prefs-add --output "%USERPROFILE%/Desktop/iPlayer Recordings"
+	`$ get_iplayer --prefs-add --output "%USERPROFILE%/Desktop/iPlayer Recordings"`
 
 <a name="windows-cygwin"></a>
 ### Cygwin
@@ -424,21 +475,15 @@ Download and install [Cygwin](http://cygwin.com/setup.exe).  Make sure you insta
 
 TODO
 
-<a name="optional-perl-modules"></a>
-## Installing Optional Perl Modules
+<a name="perlbrew"></a>
+## Perlbrew
 
-**Linux/Unix/OS X**: All the optional Perl modules may not be available via the package manager for your system.  It is generally unwise to employ superuser access to force additional modules into your system's Perl intallation. As an alternative, you can create a personal library containing just the additional Perl modules you need.  There are several ways to accomplish this, but a fairly simple method is described here:
+As of version 2.83, get_iplayer is compatible with [Perlbrew](http://perlbrew.pl).
 
-<http://stackoverflow.com/questions/2980297/how-can-i-use-cpan-as-a-non-root-user>
+<a name="external-programs"></a>
+## External Programs
 
-**OS X**: Users should replace `wget -O-` with `curl -L -o -` in the instructions.  Also note that XML::Simple is installed with the system Perl on OS X.
-
-**Windows**: The get_iplayer Windows installer includes all optional Perl modules.  No extra installation steps are necessary.
-
-<a name="external-program-requirements"></a>
-## External Program Requirements
-
-### Download Modes, Output Formats and External Programs Required
+### Download Modes, Output Formats and External Programs Used
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
 
@@ -454,3 +499,36 @@ The table below shows the external programmes required to download and - if appl
 |Radio|flashaachigh<br/>flashaacstd<br/>flashaaclow<br/>(with --aactomp3)|mp3|X|X|||X|
 |Radio|wma|wma|||X|||
 |Podcast|podcast|mp3||||||
+
+<a name="perl-modules"></a>
+## Installing Perl Modules
+
+### Linux/Unix
+
+All the optional Perl modules may not be available via the package manager for your system.  It is generally unwise to employ superuser access to force additional modules into your system's Perl intallation. As an alternative, you can create a personal library containing just the additional Perl modules you need.  There are several ways to accomplish this, but a fairly simple method is described here.
+
+The recommended method is to create a Perl module library in your home directory and use [cpanminus](http://search.cpan.org/~miyagawa/App-cpanminus/) to install the module there.  The instructions below are taken from:
+
+<http://stackoverflow.com/questions/2980297/how-can-i-use-cpan-as-a-non-root-user>
+
+Please read that page fully before undertaking the installation.
+
+Install cpanminus and set up Perl local library:
+
+```
+$ curl -L -o - "http://cpanmin.us" | perl - -l ~/perl5 App::cpanminus local::lib
+$ eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+$ echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' >> ~/.profile
+```
+
+This assumes your profile is stored in ~/.profile. You may wish to change that to ~/.bash_profile or ~/.bashrc (for non-login shells). After that you can install modules by running `cpanm MODULE::NAME`, so to install the MP3::Tag module for get_iplayer:
+
+`$ cpanm MP3::Tag` 
+
+### OS X
+
+Use the Linux/Unix instructions, but replace `wget -O-` with `curl -L -o -` in the instructions.  Also note that XML::Simple is installed with the system Perl on OS X.
+
+### Windows
+
+The get_iplayer Windows installer includes all optional Perl modules.  No extra installation steps are necessary.
