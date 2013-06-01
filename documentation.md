@@ -484,7 +484,7 @@ Get all subtitles for files that still exist (Note that you can only get subs if
 
 #### Filenames
 
-Use a filename prefix format with [substitution parameters](#Substitution-Parameters):
+Use a filename prefix format with [substitution parameters](#Substitution Parameters):
 
     --file-prefix="<name>-<episode>-<longname>-<version>-<pid>"
 
@@ -517,7 +517,7 @@ Use a subdirectory for each programme name:
 
     --subdir
 
-Use a subdirectory format with [substitution parameters](#Substitution-Parameters):
+Use a subdirectory format with [substitution parameters](#Substitution Parameters):
 
     --subdir-format="<nameshort>-<seriesnum>"
 
@@ -526,7 +526,7 @@ Use a subdirectory format with [substitution parameters](#Substitution-Parameter
 
 **[[Click Here for All Output Options|manpage#output-options]]**
 
-Run a custom user command after a successful recording using [substitution parameters](#Substitution-Parameters):
+Run a custom user command after a successful recording using [substitution parameters](#Substitution Parameters):
 
     get_iplayer --get 123 --command 'echo "<index>,<filename>,<name>,<episode>,<desc>,<available>,<longname>,<duration>,<versions>,<version>,<thumbnail>,<channel>,<categories>,<type>,<pid>"'
 
