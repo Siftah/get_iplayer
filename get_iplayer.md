@@ -69,16 +69,6 @@ When using this (or any) mailing list, please observe standard rules of
 '[Netiquette](http://david.woodhou.se/email.html)' — no HTML, no
 top-posting, no excessive quotations, etc.
 
-## Development
-
-get_iplayer can be found on GitHub:
-
-<https://github.com/dinkypumpkin/get_iplayer>
-
-Please feel free to fork the repository and submit pull requests.  Source code archives for release versions of get_iplayer can be downloaded from:
-
-<https://github.com/dinkypumpkin/get_iplayer/tags>
-
 ## Uses
 
 The script is primarily intended for use for recording and playing back
