@@ -273,7 +273,7 @@ Ubuntu LTS (Long Term Support) releases or Ubuntu editions that have [reached en
 
 4. Install components not installed with get-iplayer package:
 
-    `$ sudo apt-get install libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-but-maintained-perl`
+    `$ sudo apt-get install libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl`
 
 5. Run CLI:
 
