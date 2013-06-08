@@ -1,6 +1,6 @@
 ## When SWF Verification Attacks
 
-BBC Flash media servers use SWF verification, which means they verify that you are accessing media streams with an approved SWF (Flash player) file. get_iplayer contains such a SWF player URL, which it passes to rtmpdump to use in the verification process. Very occasionally, BBC servers will stop accepting the SWF player URL used by get_iplayer and you will be unable to download programmes.  This usually manifests as a series of rtmpdump errors in the get_iplayer output log:
+BBC Flash media servers use SWF verification, which means they verify that you are accessing media streams with an approved SWF (Flash player) file. get_iplayer contains such a SWF player URL, which it passes to rtmpdump to use in the verification process. Very occasionally, BBC servers will stop accepting the SWF player URL used by get_iplayer and you will be unable to download programmes.  This usually manifests as a series of rtmpdump errors in the get_iplayer output log similar to:
 
 ``` text
 ERROR: WriteN, RTMP send error 10054 (42 bytes)
@@ -12,7 +12,15 @@ You can override the default URL with a working value until get_iplayer has been
 
 ### get_iplayer
 
-Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done at a command prompt with the get_iplayer CLI ( *Start -> get_iplayer -> get_iplayer* in Windows ). For example, to override the SWF player URL used for TV programmes:
+Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done at a command prompt with the get_iplayer CLI. For example, to override the SWF player URL used for TV programmes:
+
+1. Get thee to a command prompt
+    * Linux/Unix: Open a window with your favourite terminal emulator
+    * OSX: Open Terminal from /Applications/Utilities in Finder
+    * Windows XP/Vista/7: Open *All Programs -> get_iplayer -> Get_iPlayer* from Start Menu
+    * Windows 8 Metro stylee: Click *Get_iPlayer* tile
+
+2. Copy the command below and paste it at the command prompt, then press Return to execute:
 
 ``` bash
 get_iplayer --prefs-add --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" 
@@ -37,10 +45,10 @@ Override the default SWF player URL for each programme type by setting a prefere
 
 1. Open Terminal from /Applications/Utilities in Finder
 
-2. Copy the command below and paste it at the command prompt (cursor location) in Terminal, then press Return to execute:
+2. Copy the command below and paste it at the command prompt (cursor location in Terminal), then press Return to execute:
 
 ``` bash
-/usr/bin/perl "/Applications/Get iPlayer Automator.app/Contents/Resources/get_iplayer.pl"  --prefs-add  --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" --profile-dir "$HOME/Library/Application Support/Get iPlayer Automator"
+/usr/bin/perl "/Applications/Get iPlayer Automator.app/Contents/Resources/get_iplayer.pl" --prefs-add  --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" --profile-dir "$HOME/Library/Application Support/Get iPlayer Automator"
 ```
 The command must be entered (or pasted) at a command prompt exactly as shown, all on one line. The output should look like:
 
