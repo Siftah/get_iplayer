@@ -35,7 +35,7 @@ INFO: Options file /home/<username>/.get_iplayer/options updated
 
 The command above applies the new preference to TV programmes.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, run the command above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
 
-When you wish to remove the preference(s), run the command(s) above changing `--prefs-add` to `--prefs-del`.
+When you obtain an updated get_iplayer with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
 
 In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows.
 
@@ -60,7 +60,7 @@ INFO: Options file /Users/<username>/Library/Application Support/Get iPlayer Aut
 
 The command above applies the new preference to TV programmes.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, run the command above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
 
-When you wish to remove the preference(s), run the command(s) above changing `--prefs-add` to `--prefs-del`.
+When you obtain an updated GiA with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
 
 In case you need to find your user options file, it is located at `/Users/<username>/Library/Application Support/Get iPlayer Automator/options` for GiA.
 
