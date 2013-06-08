@@ -50,6 +50,8 @@ Override the default SWF player URL for each programme type by setting a prefere
 ``` bash
 /usr/bin/perl "/Applications/Get iPlayer Automator.app/Contents/Resources/get_iplayer.pl" --prefs-add  --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" --profile-dir "$HOME/Library/Application Support/Get iPlayer Automator"
 ```
+**NOTE:** If you do not have GiA installed in /Applications, adjust the path to get_iplayer.pl accordingly.
+
 The command must be entered (or pasted) at a command prompt exactly as shown, all on one line. The output should look like:
 
 ``` text
