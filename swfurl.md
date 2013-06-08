@@ -12,8 +12,6 @@ You can override the default URL with a working value until get_iplayer has been
 
 **NOTE:** This procedure has been tested with get_iplayer 2.82.  If you have an older version, please update before proceeding. 
 
-### get_iplayer
-
 Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done at a command prompt with the get_iplayer CLI. For example, to override the SWF player URL used for TV programmes:
 
 1. Get thee to a command prompt
@@ -40,49 +38,3 @@ The command above applies the new preference to TV programmes.  If you find that
 When you obtain an updated get_iplayer with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
 
 In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows. There is normally no user options file when get_iplayer is first installed, but the `--prefs add` command will create one.
-
-### Get iPlayer Automator
-
-#### Before You Begin
-
-* If you have just installed GiA, make sure you run it at least once before attempting the procedure below.  This so GiA can create its application support directory, which is where the get_iplayer user options file resides
-
-* If you are using OSX 10.6 and GiA 1.3.7.1 or OSX 10.5 and GiA 1.1.7, make sure you have updated the embedded version of get_iplayer as described in the GiA wiki:
-
-    <http://code.google.com/p/get-iplayer-automator/wiki/SnowLeopardNotes>
-
-
-#### Now You May Begin
-
-Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done with the get_iplayer CLI.  However, because the get_iplayer CLI is: a) embedded in the GiA application bundle; b) uses a non-default profile location in GiA, the override command is different from that shown above. For example, to override the SWF player URL used for TV programmes:
-
-1. Open Terminal from /Applications/Utilities in Finder
-
-2. Copy the command below and paste it at the command prompt (cursor location in Terminal), then press Return to execute:
-
-``` bash
-/usr/bin/perl "/Applications/Get iPlayer Automator.app/Contents/Resources/get_iplayer.pl" --prefs-add  --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" --profile-dir "$HOME/Library/Application Support/Get iPlayer Automator"
-```
-**NOTE:** If you do not have GiA installed in /Applications, adjust the path to get_iplayer.pl accordingly.
-
-The command must be entered (or pasted) at a command prompt exactly as shown, all on one line. The output should look like:
-
-``` text
-INFO: Added option 'profiledir' = '/Users/<username>/Library/Application Support/Get iPlayer Automator/'
-INFO: Added option 'rtmptvopts' = '--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf'
-INFO: Options file /Users/<username>/Library/Application Support/Get iPlayer Automator/options updated
-```
-
-The command above applies the new preference to TV programmes.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, run the command above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
-
-When you obtain an updated GiA with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
-
-In case you need to find your user options file, it is located at `/Users/<username>/Library/Application Support/Get iPlayer Automator/options` for GiA.  There is normally no user options file for get_iplayer in GiA, but the `--prefs add` command will create one.
-
-##### Esoterica Corner
-
-The `profiledir` preference setting will have not have any effect on GiA.  It is just a by-product of how the command above is formulated.  To set just the `rmtmptvopts` preference would require the slightly more convoluted:
-
-``` bash
-(export GETIPLAYERUSERPREFS="$HOME/Library/Application Support/Get iPlayer Automator" GETIPLAYERSYSPREFS="$HOME/Library/Application Support/Get iPlayer Automator" && /usr/bin/perl "/Applications/Get iPlayer Automator.app/Contents/Resources/get_iplayer.pl" --prefs-add --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf")
-```
