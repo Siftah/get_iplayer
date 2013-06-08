@@ -10,6 +10,8 @@ INFO: Command exit code 1 (raw code = 256)
 
 You can override the default URL with a working value until get_iplayer has been updated, as described below.  When the need arises, new SWF player URLs will be disseminated via the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer) and this page will be updated.  The URL values below are current as of date of publication.
 
+**NOTE:** This procedure has been tested with get_iplayer 2.82.  If you have an older version, please update before proceeding. 
+
 ### get_iplayer
 
 Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done at a command prompt with the get_iplayer CLI. For example, to override the SWF player URL used for TV programmes:
