@@ -43,6 +43,17 @@ In case you need to find your user options file, it is located at `$HOME/.get_ip
 
 ### Get iPlayer Automator
 
+#### Before You Begin
+
+* If you have just installed GiA, make sure you run it at least once before attempting the procedure below.  This so GiA can create its application support directory, which is where the get_iplayer user options file resides
+
+* If you are using OSX 10.6 and GiA 1.3.7.1 or OSX 10.5 and GiA 1.1.7, make sure you have updated the embedded version of get_iplayer as described here:
+
+    <http://code.google.com/p/get-iplayer-automator/wiki/SnowLeopardNotes>
+
+
+#### Now You May Begin
+
 Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done with the get_iplayer CLI.  However, because the get_iplayer CLI is: a) embedded in the GiA application bundle; b) uses a non-default profile location in GiA, the override command is different from that shown above. For example, to override the SWF player URL used for TV programmes:
 
 1. Open Terminal from /Applications/Utilities in Finder
