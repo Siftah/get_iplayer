@@ -28,7 +28,7 @@
 
     **Windows 64-bit**:
 
-    `C:\Program Files (x86)\get_iplayer`
+    `C:\Program Files (x86)\get_iplayer\get_iplayer.pl`
 
     **Windows 7 / Vista**: First look for the `get_iplayer.pl` file in:
 
