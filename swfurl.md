@@ -62,7 +62,7 @@ The command above applies the new preference to TV programmes.  If you find that
 
 When you obtain an updated GiA with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
 
-In case you need to find your user options file, it is located at `/Users/<username>/Library/Application Support/Get iPlayer Automator/options` for GiA.
+In case you need to find your user options file, it is located at `/Users/<username>/Library/Application Support/Get iPlayer Automator/options` for GiA.  There is normally no user options file for get_iplayer in GiA, but the `--prefs add` command will create one.
 
 ##### Esoterica Corner
 
