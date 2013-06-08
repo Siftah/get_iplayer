@@ -17,7 +17,7 @@ Override the default SWF player URL for each programme type by setting a prefere
 1. Get thee to a command prompt
     * Linux/Unix: Open a window with your favourite terminal emulator
     * OSX: Open Terminal from /Applications/Utilities in Finder
-    * Windows XP/Vista/7: Open *All Programs -> get_iplayer -> Get_iPlayer* from Start Menu
+    * Windows XP/Vista/7: Open *All Programs -> get_iplayer -> Get_iPlayer* from Start menu
     * Windows 8 Metro stylee: Click *Get_iPlayer* tile
 
 2. Copy the command below and paste it at the command prompt, then press Return to execute:
