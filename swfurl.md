@@ -47,7 +47,7 @@ In case you need to find your user options file, it is located at `$HOME/.get_ip
 
 * If you have just installed GiA, make sure you run it at least once before attempting the procedure below.  This so GiA can create its application support directory, which is where the get_iplayer user options file resides
 
-* If you are using OSX 10.6 and GiA 1.3.7.1 or OSX 10.5 and GiA 1.1.7, make sure you have updated the embedded version of get_iplayer as described here:
+* If you are using OSX 10.6 and GiA 1.3.7.1 or OSX 10.5 and GiA 1.1.7, make sure you have updated the embedded version of get_iplayer as described in the GiA wiki:
 
     <http://code.google.com/p/get-iplayer-automator/wiki/SnowLeopardNotes>
 
