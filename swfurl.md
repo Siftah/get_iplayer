@@ -37,7 +37,7 @@ The command above applies the new preference to TV programmes.  If you find that
 
 When you obtain an updated get_iplayer with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
 
-In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows.
+In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows. There is normally no user options file when get_iplayer is first installed, but the `--prefs add` command will create one.
 
 ### Get iPlayer Automator
 
