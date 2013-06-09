@@ -102,6 +102,8 @@ $ eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
 $ echo 'eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`' >> ~/.profile
 ```
 
+**NOTE**: If your system does not have `wget` try `curl`.  Replace `wget -O-` with `curl -L`.
+
 This example is for the bash shell and assumes that your profile is loaded from ~/.profile, but you may prefer to use ~/.bash_profile.  You may also prefer to initialise your environment in ~/.bashrc and load that file from ~/.profile or ~/.bash_profile. The equivalent locations are different for different shells, e.g., ~/.login and ~/.cshrc for csh or ~/.login and ~/.tcshrc for tcsh.  The "eval" statement initialises environment variables necessary for local::lib to function, so place it in whichever file you use to set up your shell environment.
 
 After your local library is set up, you can install modules with `cpanm Module::Name [Module::Name …]`. For example, to install the Perl modules for get_iplayer:
@@ -117,7 +119,9 @@ The external programs used by get_iplayer should be available in the package rep
 
 `$ sudo apt-get install rtmpdump ffmpeg mplayer atomicparsley id3v2`
 
-A few distributions that do not provide all the necessary external programs in their official repositories.  For example, openSUSE and Fedora do not provide a packaged version of AtomicParsley.
+A few distros that do not provide all the necessary external programs in their official repositories.  For example, openSUSE and Fedora do not provide a packaged version of AtomicParsley.
+
+TODO
 
 <a name="linux-manual-cli"></a>
 #### Command-line Interface (CLI)
@@ -253,7 +257,7 @@ These instructions are for Ubuntu 12.04 (Precise Pangolin).
 
 ##### Command-line Interface (CLI)
 
-The Debian get-iplayer package is incorporated in Ubuntu repositories, so the above instructions for Debian may also be used with Ubuntu. However, use the instructions below for adding compnents not installed with the get-iplayer package.
+The Debian get-iplayer package is incorporated in Ubuntu repositories, so the above instructions for Debian may also be used with Ubuntu. However, use the instructions below for adding components not installed with the get-iplayer package.
 
 Ubuntu LTS (Long Term Support) releases or Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) will have obsolete get-iplayer packages.  You may download and install a get-iplayer package from a later Ubuntu release, similar to the [procedure  described above](#linux-package-debian7-testing) for Debian.  However, Ubuntu users are encouraged to install from the [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) (Personal Package Archive) maintained by Jon Davies.  PPA packages with up-to-date versions of get_iplayer and dependencies are available for all Ubuntu releases from 10.04 onwards.
 
@@ -367,36 +371,10 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
 
 4. Stop the WPM by typing Ctrl-C in the xterm where it is running.
 
-<a name="linux-package-openbsd"></a>
-#### OpenBSD
-
-These instructions are for OpenBSD 5.3.
-
-##### Command-line Interface (CLI)
-
-1. Install get_iplayer package and dependencies:
-
-    `$ sudo pkg_add get_iplayer`
-    
-2. Install components not installed with get_iplayer package:
-
-    `$ sudo pkg_add ffmpeg mplayer p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained`
-
-3. Run CLI:
-
-    `$ get_iplayer […]`
-
-NOTE: If you use SSL email, you may see a deprecation warning about the use of SSL_verify_mode, a parameter used by the IO::Socket::SSL module.  However, your emails should still be transmitted successfully.
-
-
-##### Web PVR Manager (WPM)
-
-The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](#linux-manual-wpm).
-
 <a name="linux-package-arch"></a>
 #### Arch Linux
 
-These instructions were tested with Arch Linux 3.9.4
+These instructions are for Arch Linux 3.9.4
 
 ##### Command-line Interface (CLI)
 
@@ -414,7 +392,7 @@ These instructions were tested with Arch Linux 3.9.4
 
 	```
 	$ cd ~/packages
-	$ curl -kO https://aur.archlinux.org/packages/ge/get_iplayer/get_iplayer.tar.gz
+	$ curl -kLO https://aur.archlinux.org/packages/ge/get_iplayer/get_iplayer.tar.gz
 	$ tar xzf get_iplayer.tar.gz
 	$ cd get_iplayer
 	$ makepkg -s
@@ -442,7 +420,7 @@ These instructions were tested with Arch Linux 3.9.4
 	$ sudo pacman -U perl-net-smtp-tls-butmaintained*.tar.xz
 	```
 
-	As of `perl-net-smtp-tls-butmaintained` version 0.21 (2013-06-01), makepkg fails for with the message "ERROR: Failure while downloading Net-SMTP-TLS-ButMaintained-0.21.tar.gz".  That error indicates the upstream source code was removed.  If that happens you can try this procedure:
+	As of (2013-06-01) and `perl-net-smtp-tls-butmaintained` version 0.21, makepkg fails for with the message "ERROR: Failure while downloading Net-SMTP-TLS-ButMaintained-0.21.tar.gz".  That error indicates the upstream source code was removed.  If that happens you can try this procedure:
 	
 	```
 	Hack PKGBUILD to download source from a different location:
@@ -462,6 +440,50 @@ NOTE: If you use SSL email, you may see a deprecation warning about the use of S
 
 The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](#linux-manual-wpm).
 
+<a name="linux-package-puppy"></a>
+#### Puppy Linux
+
+TODO
+
+##### Command-line Interface (CLI)
+
+##### Web PVR Manager (WPM)
+
+<a name="linux-package-openbsd"></a>
+#### OpenBSD
+
+These instructions are for OpenBSD 5.3.
+
+##### Command-line Interface (CLI)
+
+1. Install get_iplayer package and dependencies:
+
+    `$ sudo pkg_add get_iplayer`
+    
+2. Install components not installed with get_iplayer package:
+
+    `$ sudo pkg_add ffmpeg mplayer p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained`
+
+3. Run CLI:
+
+    `$ get_iplayer […]`
+
+NOTE: If you use SSL email, you may see a deprecation warning about the use of SSL_verify_mode, a parameter used by the IO::Socket::SSL module.  However, your emails should still be transmitted successfully.
+
+##### Web PVR Manager (WPM)
+
+The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](#linux-manual-wpm).
+
+<a name="linux-package-freebsd"></a>
+#### FreeBSD
+
+TODO
+
+##### Command-line Interface (CLI)
+
+##### Web PVR Manager (WPM)
+
+
 <a name="osx"></a>
 ## OS X
 
@@ -476,8 +498,6 @@ Additional Perl modules may be installed using the [local::lib method](#linux-ma
 
 <a name="osx-manual-programs"></a>
 #### External Programs
-
-FFmpeg binaries for OS X can be found at: <http://ffmpegmac.net>
 
 TODO
 
@@ -627,23 +647,15 @@ The WPM is installed along with the CLI.
 <a name="windows-cygwin"></a>
 ### Cygwin
 
-#### Perl Support
-
 TODO
+
+#### Perl Support
 
 #### External Programs
 
-TODO
+#### Command-line Interface (CLI)
 
-#### CLI
-
-1. Download and install Cygwin from
-
-	<http://cygwin.com/setup.exe>
-  
-	Make sure you install libwww-perl (LWP) along with the default packages.
-
-TODO
+#### Web PVR Manager (WPM)
 
 <a name="perlbrew"></a>
 ## Perlbrew
