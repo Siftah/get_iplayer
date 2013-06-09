@@ -8,7 +8,7 @@ ERROR: RTMP_ReadPacket, failed to read RTMP packet header
 INFO: Command exit code 1 (raw code = 256)
 ```
 
-With verbose logging on (--verbose) you may also see and explicit verification failure:
+With verbose logging on (--verbose) you may also see an explicit verification failure:
 
 ``` text
 DEBUG: (object begin)
