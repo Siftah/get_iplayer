@@ -8,6 +8,17 @@ ERROR: RTMP_ReadPacket, failed to read RTMP packet header
 INFO: Command exit code 1 (raw code = 256)
 ```
 
+With verbose logging on (--verbose) you may also see and explicit verification failure:
+
+``` text
+DEBUG: (object begin)
+DEBUG: Property: <Name:              level, STRING:     error>
+DEBUG: Property: <Name:               code, STRING:     NetConnection.Connect.Rejected>
+DEBUG: Property: <Name:        description, STRING:     Connection failed.>
+DEBUG: Property: <Name:        description, STRING:     [ Client.SWFVerificiation.Rejected ] : status code 433>
+DEBUG: (object end)
+```
+
 You can override the default URL with a working value until get_iplayer has been updated, as described below.  When the need arises, new SWF player URLs will be disseminated via the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer) and this page will be updated.  The URL values below are current as of date of publication.
 
 **NOTE:** This procedure has been tested with get_iplayer 2.82.  If you have an older version, please update before proceeding. 
