@@ -6,7 +6,7 @@
 
 [[Usage and Examples|documentation]]
 
-[[Manual Page|manpage]] (lists all options)
+[[Unix Manual Page|manpage]]
 
 [[Metadata Tagging|tagging]]
 
