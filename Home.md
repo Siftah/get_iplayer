@@ -10,6 +10,8 @@
 
 [[Unix Manual Page|manpage]]
 
+[[Full Options List|options]]
+
 [[Metadata Tagging|tagging]]
 
 [[Using the PVR with cron|pvrcron]]

@@ -1,4 +1,4 @@
-# get_iplayer Manual
+# get_iplayer Unix Manual Page
 
 # Table of Contents
 
@@ -219,13 +219,25 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 
 **--aactomp3**
-: Transcode AAC audio to MP3 with ffmpeg (CBR 128k unless --mp3vbr is specified)
+: Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified)
 
 **--attempts &lt;number&gt;**
 : Number of attempts to make or resume a failed connection
 
 **--bandwidth**
 : In radio realaudio mode specify the link bandwidth in bps for rtsp streaming (default 512000)
+
+**--ffmpeg-liveradio-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for liveradio
+
+**--ffmpeg-livetv-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for livetv
+
+**--ffmpeg-radio-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for radio
+
+**--ffmpeg-tv-opts &lt;options&gt;**
+: Add custom options to ffmpeg re-muxing for tv
 
 **--force**
 : Ignore programme history (unsets --hide option also). Forces a script update if used with -u
@@ -237,10 +249,10 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Show recording progress as hashes
 
 **--liveradiomode &lt;mode&gt;,&lt;mode&gt;,..**
-: Live Radio Recording modes: flashaac,realaudio,wma. Use --liveradiomode=best to automatically select highest quality available.
+: Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow,wma)
 
 **--livetvmode &lt;mode&gt;,&lt;mode&gt;,...**
-: Live TV Recoding modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal (default: flashhd,flashvhigh,flashhigh,flashstd,flashnormal). Use --livetvmode=best to automatically select highest quality available.
+: Live TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)
 
 **--metadata-only**
 : Create specified metadata info file without any recording or streaming (can also be used with thumbnail option).
@@ -249,7 +261,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Disable parallel threaded recording for mms
 
 **--modes &lt;mode&gt;,&lt;mode&gt;,...**
-: Recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,n95_wifi,flashaac,flashaachigh,flashaacstd,flashaaclow,flashaudio,realaudio,wma.  Use --modes=best to automatically select highest quality available.
+: Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).
 
 **--mp3vbr**
 : Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3)
@@ -273,30 +285,30 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Web proxy URL e.g. &#39;http://USERNAME:PASSWORD@SERVER:PORT&#39; or &#39;http://SERVER:PORT&#39;
 
 **--radiomode &lt;mode&gt;,&lt;mode&gt;,...**
-: Radio Recording mode(s): flashaac,flashaachigh,flashaacstd,flashaaclow,flashaudio,realaudio,wma (default: flashaachigh,flashaacstd,flashaudio,realaudio,flashaaclow). Use --radiomode=best to automatically select highest quality available.
+: Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow,wma)
 
 **--raw**
 : Don&#39;t transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)
 
 **--rtmp-liveradio-opts &lt;options&gt;**
-: Add custom options to flvstreamer for liveradio
+: Add custom options to rtmpdump for liveradio
 
 **--rtmp-livetv-opts &lt;options&gt;**
-: Add custom options to flvstreamer for livetv
+: Add custom options to rtmpdump for livetv
 
 **--rtmp-radio-opts &lt;options&gt;**
-: Add custom options to flvstreamer for radio
+: Add custom options to rtmpdump for radio
 
 **--rtmp-tv-opts &lt;options&gt;**
-: Add custom options to flvstreamer for tv
+: Add custom options to rtmpdump for tv
 
 **--rtmpport &lt;port&gt;**
 : Override the RTMP port (e.g. 443)
 
-**--start &lt;secs&gt;**
+**--start &lt;secs|hh:mm:ss&gt;**
 : Recording/streaming start offset (rtmp and realaudio only)
 
-**--stop &lt;secs&gt;**
+**--stop &lt;secs|hh:mm:ss&gt;**
 : Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only
 
 **--suboffset &lt;offset&gt;**
@@ -324,7 +336,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Only Download Thumbnail image if available, not the programme
 
 **--tvmode &lt;mode&gt;,&lt;mode&gt;,...**
-: TV Recoding modes: rtmp,flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,n95_wifi (default: flashhigh,flashstd,flashnormal). Use --tvmode=best to automatically select highest quality available.
+: TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (Use &#39;best&#39; for HD TV. &#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)
 
 **--url &quot;&lt;url&gt;&quot;**
 : Record the embedded media player in the specified URL. Use with --type=&lt;type&gt;.
@@ -343,11 +355,23 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--email &lt;address&gt;**
 : Email HTML index of matching programmes to specified address
 
+**--email-password &lt;password&gt;**
+: Email password
+
+**--email-port &lt;port number&gt;**
+: Email port number (default: appropriate port for --email-security)
+
+**--email-security &lt;TLS|SSL&gt;**
+: Email security TLS, SSL (default: none)
+
 **--email-sender &lt;address&gt;**
 : Optional email sender address
 
 **--email-smtp &lt;hostname&gt;**
 : SMTP server IP address to use to send email (default: localhost)
+
+**--email-user &lt;username&gt;**
+: Email username
 
 **--fatfilename**
 : Omit characters forbidden by FAT filesystems from filenames but keep whitespace
@@ -548,10 +572,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Location of AtomicParsley tagger binary
 
 **--ffmpeg &lt;path&gt;**
-: Location of ffmpeg binary
-
-**--flvstreamer &lt;path&gt;**
-: Location of flvstreamer binary
+: Location of ffmpeg or avconv binary. Synonyms: --avconv
 
 **--id3v2 &lt;path&gt;**
 : Location of id3v2 or id3tag binary
@@ -562,6 +583,9 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--mplayer &lt;path&gt;**
 : Location of mplayer binary
 
+**--rtmpdump &lt;path&gt;**
+: Location of rtmpdump binary. Synonyms: --flvstreamer
+
 **--vlc &lt;path&gt;**
 : Location of vlc or cvlc binary
 
@@ -570,11 +594,14 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 ## Tagging Options
 
 
+**--no-artwork**
+: Do not embed thumbnail image in output file.  All other metadata values will be written.
+
 **--no-tag**
 : Do not tag downloaded programmes
 
 **--tag-cnid**
-: AtomicParsley supports --cnID argument to add catalog ID used for combining HD and SD versions in iTunes
+: Use AtomicParsley --cnID argument (if supported) to add catalog ID used for combining HD and SD versions in iTunes
 
 **--tag-fulltitle**
 : Use complete title (including series) instead of shorter episode title
