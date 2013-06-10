@@ -234,7 +234,7 @@
 |------------|------------|-----------|
 |noartwork|--no-artwork|Do not embed thumbnail image in output file.  All other metadata values will be written.|
 |notag|--no-tag|Do not tag downloaded programmes|
-|tag_cnid|--tag-cnid|AtomicParsley supports --cnID argument to add catalog ID used for combining HD and SD versions in iTunes|
+|tag_cnid|--tag-cnid|Use AtomicParsley --cnID argument (if supported) to add catalog ID used for combining HD and SD versions in iTunes|
 |tag_fulltitle|--tag-fulltitle|Use complete title (including series) instead of shorter episode title|
 |tag_hdvideo|--tag-hdvideo|AtomicParsley supports --hdvideo argument for HD video flag|
 |tag_longdesc|--tag-longdesc|AtomicParsley supports --longdesc argument for long description text|
