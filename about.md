@@ -54,7 +54,7 @@ and install necessary dependencies. The installer can be found at:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
-Linux/Unix/OS X users can find more installation information **[[here|installation]]**.
+More installation information can be found **[[here|installation]]**.
 
 ## Help
 
