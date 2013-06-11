@@ -2,7 +2,7 @@
 
 get_iplayer can provide brief usage examples and descriptions of available options.  Because there are quite a few options, help listings are available at three levels of detail:
 
-```
+``` bash
 get_iplayer --help
 get_iplayer --basic-help
 get_iplayer --long-help
