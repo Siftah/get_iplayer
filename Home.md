@@ -18,4 +18,4 @@
 
 [[Using the PVR with cron|pvrcron]]
 
-[[Web PVR Manager|webpvr]]
+[[Web PVR Manager Help|webpvr]]
