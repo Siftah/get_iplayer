@@ -12,6 +12,8 @@
 
 [[Full Options List|options]]
 
+[[Getting Help|help]]
+
 [[Metadata Tagging|tagging]]
 
 [[Using the PVR with cron|pvrcron]]
