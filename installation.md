@@ -110,7 +110,7 @@ This example is for the bash shell and assumes that your profile is loaded from 
 
 After your local library is set up, you can install modules with `cpanm Module::Name [Module::Name …]`. For example, to install the Perl modules for get_iplayer:
 
-```
+``` bash
 $ cpanm LWP MP3::Info MP3::Tag Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
 ```
 
@@ -392,7 +392,7 @@ These instructions are for Arch Linux 3.9.4
 
 	Then download, build and install each package in turn:
 
-	```
+	``` bash
 	$ cd ~/packages
 	$ curl -kLO https://aur.archlinux.org/packages/ge/get_iplayer/get_iplayer.tar.gz
 	$ tar xzf get_iplayer.tar.gz
@@ -424,7 +424,7 @@ These instructions are for Arch Linux 3.9.4
 
 	As of (2013-06-01) and `perl-net-smtp-tls-butmaintained` version 0.21, makepkg fails for with the message "ERROR: Failure while downloading Net-SMTP-TLS-ButMaintained-0.21.tar.gz".  That error indicates the upstream source code was removed.  If that happens you can try this procedure:
 	
-	```
+	``` bash
 	Hack PKGBUILD to download source from a different location:
 	$ cp PKGBUILD PKGBUILD.orig
 	$ sed -e "s|search.cpan.org/CPAN|cpan.metacpan.org|g"  PKGBUILD.orig > PKGBUILD
@@ -485,7 +485,6 @@ TODO
 
 ##### Web PVR Manager (WPM)
 
-
 <a name="osx"></a>
 ## OS X
 
@@ -535,7 +534,7 @@ Homebrew is designed to work with the system Perl installed with OS X, so no add
 
 All external programs can be installed with the get_iplayer package, as noted below.  They may also be installed separately:
 
-```
+``` bash
 $ brew update
 $ brew install rtmpdump ffmpeg mplayer atomicparsley id3v2
 ```
@@ -544,7 +543,7 @@ $ brew install rtmpdump ffmpeg mplayer atomicparsley id3v2
 
 Install get_iplayer and all related external programs with:
 
-```
+``` bash
 $ brew tap dinkypumpkin/get_iplayer
 $ brew update
 $ brew install --with-deps get_iplayer
