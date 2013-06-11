@@ -2,7 +2,7 @@
 
 ## Don't Want to Miss that Programme on iPlayer over Christmas?
 
-You know how it gets over the Christmas period; busy visiting relatives and friends, drinking and partying. The last thing you remember to do is to watch that crucial episode on iPlayer within the minute window of seven days the BBC has kindly granted you. Now is the time to set up get\_iplayer to act as a PVR (you know Sky+, TiVo, series-link, etc, etc)! [get\_iplayer](http://www.infradead.org/get_iplayer/htom/get_iplayer.html) can be easily configured to automatically download your favourite BBC TV programmes just like any other PVR except that there are no limits on how many programmes you can 'record' simultaneously (OK, except your broadband speed maybe). You even get seven days grace when you've forgotten to set up the PVR.
+You know how it gets over the Christmas period; busy visiting relatives and friends, drinking and partying. The last thing you remember to do is to watch that crucial episode on iPlayer within the minute window of seven days the BBC has kindly granted you. Now is the time to set up get\_iplayer to act as a PVR (you know Sky+, TiVo, series-link, etc, etc)! get_iplayer can be easily configured to automatically download your favourite BBC TV programmes just like any other PVR except that there are no limits on how many programmes you can 'record' simultaneously (OK, except your broadband speed maybe). You even get seven days grace when you've forgotten to set up the PVR.
 
 Here is a quick guide to setting it up. I'm assuming you have downloaded and installed get\_iplayer as described **[[here|installation]]**.
 
@@ -58,6 +58,6 @@ This will ensure that the PVR checks for new matching programmes every hour, on 
 
 It might also be prudent to add these options as defaults on your system so that you don't get the Audio Described or Sign Language versions by mistake and also so that you know where the downloaded files will be saved:
 
-    get_iplayer --output='/home/jbloggs/videos/' --version-list=default --add-prefs
+    get_iplayer --output='/home/jbloggs/videos/' --version-list=default --prefs-add
 
 And finally, remember that this will only work when your computer is booted up and connected to the Internet!
