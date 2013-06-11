@@ -47,27 +47,11 @@ programme.
 
 ## Installation
 
-get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP/Vista/7/8).
+get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP/Vista/7/8).  Full installation information can be found **[[here|installation]]**.
 
-There is a Windows installer for get_iplayer which will download
-and install necessary dependencies. The installer can be found at:
+There is a Windows installer for get_iplayer which will download and install necessary dependencies. The installer can be found at:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
-
-More installation information can be found **[[here|installation]]**.
-
-## Help
-
-For help using get_iplayer, and to submit or suggest improvements,
-there is a [mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer),
-with a browsable archive **[here](http://lists.infradead.org/pipermail/get_iplayer/)**
-and a searchable archive **[here](http://www.mail-archive.com/get_iplayer@lists.infradead.org/)**.
-Check a mailing list archive so you can see if your question has already been
-answered before you post it.
-
-When using this (or any) mailing list, please observe standard rules of
-'[Netiquette](http://david.woodhou.se/email.html)' — no HTML, no
-top-posting, no excessive quotations, etc.
 
 ## Uses
 
