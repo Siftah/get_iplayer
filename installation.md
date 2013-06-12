@@ -671,24 +671,6 @@ TODO
 <a name="et-cetera"></a>
 ## Et Cetera
 
-<a name="external-program-usage"></a>
-### External Program Usage
-
-The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
-
-|Type|Mode|Format|rtmpdump|ffmpeg|mplayer|atomicparsley|id3v2/MP3::Tag|
-|----|----|------|--------|------|-------|-------------|--------------|
-|TV|flashhd<br/>flashvhigh<br/>flashhigh<br/>flashstd<br/>flashnormal<br/>flashlow<br/>&#160;|mp4<br/>mp4<br/>mp4<br/>mp4<br/>avi<br/>mp4<br/>(h264/aac)|X|X||X||
-|TV|flashhd<br/>flashvhigh<br/>flashhigh<br/>flashstd<br/>flashnormal<br/>flashlow<br/>(with --raw)|flv<br/>(h264/aac)|X|||||
-|TV|flashhd<br/>flashvhigh<br/>flashhigh<br/>flashstd<br/>flashnormal<br/>flashlow<br/>(with --mkv)|mkv<br/>(h264/aac)|X|X||||
-|Radio|flashaudio|mp3|X||X||X|
-|Radio|flashaudio<br/>(with --raw)|flv<br/>(mp3)|X|||||
-|Radio|flashaachigh<br/>flashaacstd<br/>flashaaclow|m4a<br/>(aac)|X|X||X||
-|Radio|flashaachigh<br/>flashaacstd<br/>flashaaclow<br/>(with --raw)|flv<br/>(aac)|X|||||
-|Radio|flashaachigh<br/>flashaacstd<br/>flashaaclow<br/>(with --aactomp3)|mp3|X|X|||X|
-|Radio|wma|wma|||X|||
-|Podcast|podcast|mp3||||||
-
 <a name="obsolete-systems"></a>
 ### Obsolete Systems
 
