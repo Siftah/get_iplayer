@@ -261,7 +261,7 @@ These instructions are for Ubuntu 12.04 (Precise Pangolin).
 
 The Debian get-iplayer package is incorporated in Ubuntu repositories, so the above instructions for Debian may also be used with Ubuntu. However, use the instructions below for adding components not installed with the get-iplayer package.
 
-Ubuntu LTS (Long Term Support) releases or Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) will have obsolete get-iplayer packages.  You may download and install a get-iplayer package from a later Ubuntu release, similar to the [procedure  described above](#linux-package-debian7-testing) for Debian.  However, Ubuntu users are encouraged to install from the [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) (Personal Package Archive) maintained by Jon Davies.  PPA packages with up-to-date versions of get_iplayer and dependencies are available for all Ubuntu releases from 10.04 onwards.
+Ubuntu LTS (Long Term Support) releases or Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) will have obsolete get-iplayer packages.  You may download and install a get-iplayer package from a later Ubuntu release, similar to the [procedure  described above](#linux-package-debian7-testing) for Debian.  However, Ubuntu users are encouraged to install from the [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer) (Personal Package Archive) maintained by Jon Davies.  PPA packages with up-to-date versions of get_iplayer and dependencies are available for supported Ubuntu releases from 10.04 onwards.
 
 1. Add the PPA repository:
 
