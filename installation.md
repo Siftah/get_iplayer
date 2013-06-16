@@ -60,7 +60,7 @@ get_iplayer employs external programs to download streams and manipulate media f
 - [AtomicParsley](http://atomicparsley.sourceforge.net) - Metadata tagging for MP4 and M4A files.
 - [id3v2](http://id3v2.sourceforge.net) - Metadata tagging for MP3 files. However, the MP3::Tag Perl module is preferred because it supports more complete ID3 tagging.
 
-Details of how external programs are used can be found [below](#external-program-usage).
+Details of how external programs are used can be found [here](modes#external-programs).
 
 <a name="linux"></a>
 ## Linux/Unix
