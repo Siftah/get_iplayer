@@ -1,4 +1,6 @@
-![getiplayer](getiplayer.jpg) lives! This project is the continuation of
+## About get_iplayer
+
+[[getiplayer.jpg|height=134px|width=238px]] lives! This project is the continuation of
 [Phil Lewis](http://linuxcentre.net/getiplayer)'s excellent work on get_iplayer.
 
 ## Introduction
