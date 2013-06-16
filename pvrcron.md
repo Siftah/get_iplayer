@@ -61,3 +61,5 @@ It might also be prudent to add these options as defaults on your system so that
     get_iplayer --output='/home/jbloggs/videos/' --version-list=default --prefs-add
 
 And finally, remember that this will only work when your computer is booted up and connected to the Internet!
+
+*Source: linuxcentre.net*
