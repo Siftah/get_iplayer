@@ -8,11 +8,11 @@
 
 [[Usage and Examples|documentation]]
 
+[[Getting Help|help]]
+
 [[Unix Manual Page|manpage]]
 
 [[Full Options List|options]]
-
-[[Getting Help|help]]
 
 [[Metadata Tagging|tagging]]
 
