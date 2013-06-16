@@ -1,6 +1,6 @@
-# get_iplayer Options
+## get_iplayer Options
 
-# Table of Contents
+## Table of Contents
 
 * [Search Options](#search-options)
 
