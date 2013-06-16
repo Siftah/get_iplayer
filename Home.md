@@ -10,6 +10,8 @@
 
 [[Getting Help|help]]
 
+[[Tutorials|tutorials]]
+
 [[Unix Manual Page|manpage]]
 
 [[Full Options List|options]]
