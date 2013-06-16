@@ -1,4 +1,4 @@
-## Getting Help
+## Getting Help for get_iplayer
 
 get_iplayer itself can provide brief usage examples and descriptions of available options.  Because there are quite a few options, help listings are available at three levels of detail:
 
