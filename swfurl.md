@@ -86,4 +86,4 @@ When you obtain an updated version get_iplayer with working SWF player URL, you 
 
     The output should not contain a line with `rtmptvopts` as the option name.
 
-3. If you changed preferences for `rtmpradioopts`, `rtmplivetvopts` or `rtmpliveradio-opts`, revert thos changes by repeating the command in #1 changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
+3. If you changed preferences for `rtmpradioopts`, `rtmplivetvopts` or `rtmpliveradio-opts`, revert those changes by repeating the command in #1 changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
