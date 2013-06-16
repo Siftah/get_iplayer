@@ -12,21 +12,11 @@ get_iplayer allows you to search, index and record/stream:
 -   **[BBC Podcasts](http://www.bbc.co.uk/podcasts)** - up to 192 kbps MP3 / AAC
 -   **[BBC iPlayer TV subtitles](http://www.bbc.co.uk/iplayer/tv)** - SubRip (srt)
 
-get_iplayer indexes, searches and records/streams the iPlayer TV/Radio
-programmes and podcasts available. It can also stream iPlayer TV/Radio programmes
-while recording them to mplayer, vlc or xine, etc.  
+get_iplayer indexes, searches and records/streams most of the iPlayer TV/Radio programmes and podcasts available. It can also stream iPlayer TV/Radio programmes while recording them to media players such as mplayer, vlc or xine, etc.  
 
-get_iplayer can access feeds from the BBC that are higher quality than those
-used in the iPlayer web site Flash player. See the [beebhack wiki](http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for a comparison. get_iplayer also supports recording of the high-quality (HD 720p) Flash-based TV content using 
-[rtmpdump](http://rtmpdump.mplayerhq.hu/). None of the above content is "protected" by DRM. get_iplayer cannot remove DRM.
+get_iplayer can access feeds from the BBC that are higher quality than those used in the iPlayer web site Flash player. get_iplayer also supports recording of the high-quality (HD 720p) Flash-based TV content. None of the above content is "protected" by DRM. get_iplayer cannot remove DRM.
 
-get_iplayer also has PVR-like capabilities (like
-Sky+ / TiVo / Series-Link). You can save lists of programme searches
-which are automatically recorded when they become available so that you
-can watch them when you choose and on devices that cannot run Adobe
-Flash Player - even if you don’t have adequate broadband speeds or if
-your broadband streams too slowly at peak hours when you want to watch a
-programme.
+get_iplayer also has PVR-like capabilities (like Sky+ / TiVo / Series-Link). You can save lists of programme searches which are automatically recorded when they become available so that you can watch them when you choose and on devices that cannot run Adobe Flash Player - even if you don’t have adequate broadband speeds or if your broadband streams too slowly at peak hours when you want to watch a programme.
 
 ## Features
 
@@ -43,15 +33,6 @@ programme.
 -   Limit search by programmes made available after a specific number of hours
 -   Removal of recorded content which is more than 30 days old
 -   Metadata tagging of recorded iPlayer MP4, M4A and MP3 files for importing into iTunes
--   Plug-in based architecture to allow new channels and sites to be added by 3rd-parties
-
-## Installation
-
-get_iplayer runs on Linux/Unix (numerous flavours), OS X (10.5+) and Windows (XP/Vista/7/8).  Full installation information can be found **[[here|installation]]**.
-
-There is a Windows installer for get_iplayer which will download and install necessary dependencies. The installer can be found at:
-
-<http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
 ## Uses
 
