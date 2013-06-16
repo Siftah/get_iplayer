@@ -1,4 +1,4 @@
-h1. get_iplayer Metadata Tagging
+h2. get_iplayer Metadata Tagging
 
 h2. Usage
 
