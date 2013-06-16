@@ -44,6 +44,17 @@ INFO: Added option 'rtmptvopts' = '--swfVfy=http://www.bbc.co.uk/emp/releases/ip
 INFO: Options file /home/<username>/.get_iplayer/options updated
 ```
 
+Make sure your preferences were updated correctly by running:
+
+``` bash
+get_iplayer --show-options
+```
+
+The output should contain a line that looks like:
+
+``` text
+rtmptvopts = --swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf
+```
 The command above applies the new preference to TV programmes.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, run the command above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
 
 In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows. There is normally no user options file when get_iplayer is first installed, but the `--prefs-add` command will create one.
