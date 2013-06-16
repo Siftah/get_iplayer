@@ -1,4 +1,4 @@
-# get_iplayer Unix Manual Page
+## get_iplayer Unix Manual Page
 
 # Table of Contents
 
