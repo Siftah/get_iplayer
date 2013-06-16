@@ -21,8 +21,8 @@ The BBC iPlayer service makes programmes available in different levels of video 
 |wma|RTMP streaming|H.264|640 x 360|672 kbps|Below VHS|MP3 44kHz CBR|128 kbps|835 kbps|  
 |flashlow|RTMP streaming|H.264|512 x 288|300 kbps|Below VHS|AAC|62 kbps|368 kbps|  
 
-<a name="external-program-usage"></a>
-### External Programs and Recording Modes
+<a name="external-programs"></a>
+### External Programs
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
 
