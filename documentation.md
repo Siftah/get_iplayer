@@ -686,12 +686,14 @@ The first time you run the script it will access the BBC website XML feeds and c
 
 These still need documenting:
 
-	--multimode
-	–-email
-	–-series
-	–-tree
-	–-terse
-	–-thumbsize[cache]
-	–-hide
-	–-force
-	–-overwrite
+    --multimode
+    –-email
+    –-series
+    –-tree
+    –-terse
+    –-thumbsize[cache]
+    –-hide
+    –-force
+    –-overwrite
+
+*Source: linuxcentre.net*
