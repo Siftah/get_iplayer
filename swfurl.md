@@ -21,6 +21,8 @@ DEBUG: (object end)
 
 You can override the default URL with a working value until get_iplayer has been updated, as described below.  When the need arises, new SWF player URLs will be disseminated via the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer) and this page will be updated.  The URL values below are current as of date of publication.
 
+### Update get_iplayer Preferences
+
 **NOTE:** This procedure has been tested with get_iplayer 2.82.  If you have an older version, please update before proceeding. 
 
 Override the default SWF player URL for each programme type by setting a preference in your user options file.  This must be done at a command prompt with the get_iplayer CLI. For example, to override the SWF player URL used for TV programmes:
@@ -31,36 +33,57 @@ Override the default SWF player URL for each programme type by setting a prefere
     * Windows XP/Vista/7: Open *All Programs -> get_iplayer -> Get_iPlayer* from Start menu
     * Windows 8 Metro stylee: Click *Get_iPlayer* tile
 
-2. Copy the command below and paste it at the command prompt, then press Return to execute:
+    A new command window should open.
 
-``` bash
-get_iplayer --prefs-add --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" 
-```
+2. Select the entire text of the command below and copy it to the clipboard (Right Click -> Copy on all systems or: Ctrl-C on Windows/Linux, Cmd-C on OSX).
 
-The command must be entered (or pasted) at a command prompt exactly as shown, all on one line.  The output should look like:
+    ``` bash
+    get_iplayer --prefs-add --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" 
+    ```
 
-``` text
-INFO: Added option 'rtmptvopts' = '--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf'
-INFO: Options file /home/<username>/.get_iplayer/options updated
-```
+3. Click the window opened in #1 to make it active.
 
-Make sure your preferences were updated correctly by running:
+4. Paste the command text at the prompt, i.e., the cursor location in the window (Right Click -> Paste for all systems or: Ctrl-Shift-V on Linux, Cmd-V on OSX, or the sequence Alt+Space, e, p on Windows). The command text must be exactly as shown, all on one line.  
 
-``` bash
-get_iplayer --show-options
-```
+5. Press Return to execute the command. The output should look like:
 
-The output should contain a line that looks like:
+    ``` text
+    INFO: Added option 'rtmptvopts' = '--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf'
+    INFO: Options file /home/<username>/.get_iplayer/options updated
+    ```
 
-``` text
-rtmptvopts = --swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf
-```
-The command above applies the new preference to TV programmes.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, run the command above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
+6. Double check that your preferences were updated correctly by running this command:
 
-In case you need to find your user options file, it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows. There is normally no user options file when get_iplayer is first installed, but the `--prefs-add` command will create one.
+    ``` bash
+    get_iplayer --show-options
+    ```
 
-When you obtain an updated get_iplayer with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.
+    The output should contain a line that looks like:
 
-``` bash
-get_iplayer --prefs-del --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" 
-```
+    ``` text
+    rtmptvopts = --swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf
+    ```
+
+The sequence above applies a new preference to TV programmes only.  If you find that you are unable to download other programme types because the default SWF player URL is rejected for verification, repeat the sequence above changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
+
+Although it is not advised, if you want to edit your user options file directly it is located at `$HOME/.get_iplayer/options` for Linux/Unix/OSX or `%USERPROFILE%\.get_iplayer\options` for Windows. There is normally no user options file when get_iplayer is first installed, but the `--prefs-add` command will create one.
+
+### Reverting Your Changes
+
+When you obtain an updated version get_iplayer with working SWF player URL, you should remove the preference(s) by running the command(s) above, changing `--prefs-add` to `--prefs-del`.  
+
+1. Repeat the sequence above replacing the command text with:
+
+    ``` bash
+    get_iplayer --prefs-del --rtmp-tv-opts="--swfVfy=http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf" 
+    ```
+
+2. Double check that your preferences were reverted correctly by running this command:
+
+    ``` bash
+    get_iplayer --show-options
+    ```
+
+    The output should not contain a line with `rtmptvopts` as the option name.
+
+3. If you changed preferences for `rtmpradioopts`, `rtmplivetvopts` or `rtmpliveradio-opts`, revert thos changes by repeating the command in #1 changing `--rtmp-tv-opts` to `--rtmp-radio-opts`, `--rtmp-livetv-opts` or `--rtmp-liveradio-opts` as necessary.
