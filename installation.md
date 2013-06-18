@@ -508,7 +508,7 @@ cd /usr/ports/net/get_iplayer
 #### Perl Support
 Perl is part of the OS X base system, so no installation is necessary.
 
-Additional Perl modules may be installed using the [local::lib method](#linux-manual-perl-local) described above for Linux/Unix, with one change: replace `wget -O-` with `curl -kL -o -` in the instructions.  Also note that the LWP and XML::Simple modules are already installed with the system Perl on OS X.
+Additional Perl modules may be installed using the [local::lib method](#linux-manual-perl-local) described above for Linux/Unix.  Note that the LWP and XML::Simple modules are already installed with the system Perl on OS X.
 
 <a name="osx-manual-programs"></a>
 #### External Programs
