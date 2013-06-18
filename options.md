@@ -43,7 +43,7 @@
 
 ## Display Options
 
-|Options file|Command line|Description|
+|Options file|Command-line|Description|
 |------------|------------|-----------|
 |conditions|--conditions|Shows GPLv3 conditions|
 |debug|--debug|Debug output|
@@ -78,7 +78,7 @@
 
 ## Recording Options
 
-|Options file|Command line|Description|
+|Options file|Command-line|Description|
 |------------|------------|-----------|
 |aactomp3|--aactomp3|Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified)|
 |attempts|--attempts &lt;number&gt;|Number of attempts to make or resume a failed connection|
