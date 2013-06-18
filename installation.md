@@ -20,6 +20,7 @@
 - [OS X](#osx)
     - [Manual Installation](#osx-manual)
     - [Package Manager Installation](#osx-package)
+        - [Package Installer](#osx-installer)
         - [Homebrew](#osx-homebrew)
         - [MacPorts](#osx-macports)
 * [Windows](#windows)
