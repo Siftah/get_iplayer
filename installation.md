@@ -488,14 +488,6 @@ The WPM is not installed with the get_iplayer package.  Use the [manual installa
 
 ##### Command-line Interface (CLI)
 
-1. 
-pkg_add -r perl
-pkg_add -r p5-MP3-Tag p5-MP3-Info p5-XML-Simple p5-Net-SMTP-SSL p5-Net-SMTP-TLS
-pkg_add -r rtmpdump AtomicParsley id3v2 mplayer
-pkg_add -r ffmpeg1 OR ffmpeg
-
-cd /usr/ports/net/get_iplayer
-
 ##### Web PVR Manager (WPM)
 
 <a name="osx"></a>
