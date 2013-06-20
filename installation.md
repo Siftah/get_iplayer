@@ -706,11 +706,11 @@ There may be occasions when you wish to upgrade to the Git HEAD version of get_i
 
 	The get_iplayer code will now be in a sub directory named `get_iplayer`, so use `cd get_iplayer` to navigate to that location.
 
-2. You may run both the CLI and WPM directly from the cloned repository. You may also wish to update an existing installation:
+2. You may run both the CLI and WPM directly from the cloned repository. If you wish to update your existing installation:
 
 	- **Linux/Unix/OS X:** Proceed from step #2 in the [CLI manual installation procedure](#linux-manual-cli) or [WPM manual installation procedure](#linux-manual-wpm) as appropriate.    
 
-	- **Windows:** See the instructions below.
+	- **Windows:** See the instructions [below](#git-head-windows).
 
 
 <a name="git-head-linux"></a>
@@ -739,7 +739,7 @@ There may be occasions when you wish to upgrade to the Git HEAD version of get_i
 <a name="git-head-windows"></a>
 ### Windows
 
-Windows lacks a built-in command line downloader, but you may install either [curl](http://www.paehl.com/open_source/?download=curl_730_0_ssl.zip) or [wget](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe) yourself and use the download instructions for Linux/Unix/OS X above.  The only difference that you should rename the CLI script from "get_iplayer" to "get_iplayer.pl" after downloading.  The instructions below describe an alternative method to download the files with your web browser.
+Windows lacks a built-in command line downloader, but you may install either [curl](http://www.paehl.com/open_source/?download=curl_730_0_ssl.zip) or [wget](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe) yourself and use the download instructions for Linux/Unix/OS X above.  The only difference is that you should rename the CLI script from "get_iplayer" to "get_iplayer.pl" after downloading.  The instructions below describe an alternative method to download the files with your web browser.
 
 Updating an existing Windows installation is different from updating a Linux/Unix/OS X installation.  Regardless of how you download the Git HEAD scripts, use the update instructions below.
 
@@ -748,7 +748,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 1. Download the development version to working directory
 
-	Click link below and type Ctrl-S to save after file loads:
+	Click link below to open file in your browser, then type Ctrl-S to save after file loads:
 
 	<https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer>
 
@@ -756,14 +756,18 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 2. Replace the existing CLI
 
+	TODO
+
 #### Web PVR Manager (WPM)
 
 1. Download the development version to working directory
 
-	Click link below and type Ctrl-S to save after file loads:
+	Click link below to open file in your browser, then type Ctrl-S to save after file loads:
 
 	<https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer.cgi>
 
 	**NOTE:** Make sure the file is saved as a plain text file (Text Document).  Your web browser may prompt you save the file as "get_iplayer.txt" or "get_iplayer.cgi.txt".  Change the file name to "get_iplayer.cgi".  You may also rename the file after downloading.
 
 2. Replace the existing CLI
+
+	TODO
