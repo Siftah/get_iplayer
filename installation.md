@@ -322,7 +322,7 @@ These instructions are for openSUSE 12.3.
 
 ##### Command-line Interface (CLI)
 
-The CLI package for openSUSE is maintained in the [Packman](http://packman.links2linux.org/) repository.
+The CLI package for openSUSE is maintained in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository.
 
 1. Install restricted formats support according to the instructions here:
 
@@ -367,7 +367,7 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 
 ##### Web PVR Manager (WPM)
 
-The WPM is maintained in a separate package in the [Packman](http://packman.links2linux.org/) repository. 
+The WPM is maintained in a separate package in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository. 
 
 1. Install CLI as described above
 
