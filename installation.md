@@ -192,7 +192,7 @@ Some Linux/Unix distributions have get_iplayer packages in their software reposi
 
 Installing a packaged version of get_iplayer will automatically install other required applications and libraries, including Perl modules and external programs.  get_iplayer is packaged differently for different systems, so some components may require separate installation using your package manager.  The instructions below attempt to cover installation of all required and optional components.
 
-**NOTE:** The instructions below were collated on 2013-06-20 for Linux/Unix distributions known to have working get_iplayer 2.82 packages.  If the installation process for any of these Linux/Unix distributions has changed, please post corrections to the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer).  
+**NOTE:** The instructions below cover Linux/Unix distributions known to have working get_iplayer 2.82 packages at the time get_iplayer 2.83 was released..  If the installation process for any of these Linux/Unix distributions has changed, please either edit this wiki page or post corrections to the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer).  
 
 <a name="linux-package-debian"></a>
 #### Debian
