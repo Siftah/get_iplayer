@@ -708,9 +708,9 @@ There may be occasions when you wish to upgrade to the Git HEAD version of get_i
 
 2. You may run both the CLI and WPM directly from the cloned repository. If you wish to update your existing installation:
 
-	- **Linux/Unix/OS X:** Proceed from step #2 in the [CLI manual installation procedure](#linux-manual-cli) or [WPM manual installation procedure](#linux-manual-wpm) as appropriate.    
+	**Linux/Unix/OS X:** Proceed from step #2 in the [CLI manual installation procedure](#linux-manual-cli) or [WPM manual installation procedure](#linux-manual-wpm) as appropriate.    
 
-	- **Windows:** See the instructions [below](#git-head-windows).
+	**Windows:** See the instructions [below](#git-head-windows).
 
 
 <a name="git-head-linux"></a>
