@@ -27,4 +27,4 @@ to see if your question has already been asked and answered.
 
 When using this (or any) mailing list, please observe standard rules of '[Netiquette](http://david.woodhou.se/email.html)' — no HTML, no top-posting, no excessive quotations, etc.
 
-Do **NOT** use the issue tracker associated this GitHub repository.  It is for the use of contributors working on get_iplayer itself.
+Do **NOT** use the issue tracker associated this GitHub repository.  It is for the use of contributors working on get_iplayer itself.  Any problems using get_iplayer should be reported to the mailing list.
