@@ -1,6 +1,6 @@
 ## get_iplayer Documentation
 
-**2013-06-09: [[How to Restore BBC TV Downloads|swfurl]]**
+**2013-06-06: [[How to Restore BBC TV Downloads|swfurl]]**
 
 [[About|about]]
 
@@ -10,14 +10,14 @@
 
 [[Getting Help|help]]
 
-[[Tutorials|tutorials]]
-
 [[Unix Manual Page|manpage]]
 
-[[Full Options List|options]]
+[[Complete Options List|options]]
 
 [[Metadata Tagging|tagging]]
 
 [[Using the PVR with cron|pvrcron]]
 
 [[Web PVR Manager Help|webpvr]]
+
+[[Tutorials|tutorials]]
