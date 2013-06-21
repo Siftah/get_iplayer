@@ -107,7 +107,7 @@ A few examples:
 |livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|Live TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)|
 |liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow,wma)|
 
-
+<a name="tv-modes">
 ### TV Modes
 
 Below are representative values for recordings made with each of the TV recording modes.
@@ -123,6 +123,7 @@ Below are representative values for recordings made with each of the TV recordin
 
 *(Source: Beebhack)*
 
+<a name="radio-modes">
 ### Radio Modes
 
 Below are representative values for recordings made with each of the radio recording modes.
@@ -135,6 +136,7 @@ Below are representative values for recordings made with each of the radio recor
 |**flashaudio**|RTMP streaming|MP3|128 kbps|-|
 |**wma**|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
 
+<a name="shortcut-expansions">
 ### Shortcut Expansions
 
 The tables below detail how recording mode shortcuts are expanded into lists of mode values.
@@ -169,6 +171,7 @@ Same as TV Shortcuts
 
 Same as Radio Shortcuts
 
+<a name="external-programs">
 ## External Programs
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.

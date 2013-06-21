@@ -14,6 +14,8 @@
 
 [[Complete Options List|options]]
 
+[[Recording Modes|modes]]
+
 [[Metadata Tagging|tagging]]
 
 [[Using the PVR with cron|pvrcron]]
