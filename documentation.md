@@ -157,7 +157,7 @@ Record a TV programme trying flashhigh, flashstd and flashlow modes in order unt
 
     get_iplayer --type=tv --get 123 --modes=flashhigh,flashstd,flashlow --flvstreamer="/path/to/rtmpdump"
 
-**Note:** Possible modes are (in increasing order of quality): flashlow, flashnormal, flashstd, flashhigh, flashvhigh, flashhd. See [this page] (http://beebhack.wikia.com/wiki/IPlayer_TV#Comparison_Table) for more details. Use the `--info` option to see what modes are available for a programme.
+**Note:** Possible modes are (in increasing order of quality): flashlow, flashnormal, flashstd, flashhigh, flashvhigh, flashhd. See [][this page|modes]] for more details. Use the `--info` option to see what modes are available for a programme.
 
 Record a radio programme trying flashaudio then flashaac modes in order until one succeeds (`--flvstreamer` is not required if your options tell get_iplayer where rtmpdump is located). 
 
