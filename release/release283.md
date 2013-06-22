@@ -4,7 +4,7 @@
 
 Installation information for all platforms may be found here:
 
-<https://github.com/dinkypumpkin/get_iplayer/wiki>
+<https://github.com/dinkypumpkin/get_iplayer/wiki/installation>
 
 Please note that it may take some time for get_iplayer 2.83 to be packaged for your particular system.
 
