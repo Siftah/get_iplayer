@@ -23,3 +23,7 @@
 [[Web PVR Manager Help|webpvr]]
 
 [[Tutorials|tutorials]]
+
+[[Contribute|contribute]]
+
+[[Release Notes|releasenotes]]
