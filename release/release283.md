@@ -75,6 +75,7 @@ An example:
 - Added `noartwork` option to prevent thumbnail image being written in media file metadata
 - Added `rtmpdump` option as a synonym for `flvstreamer`
 - Updated channel schedule URLs (for `refreshfuture`)
+- get_iplayer is now compatible with Perlbrew
 
 ## Changelog
 
