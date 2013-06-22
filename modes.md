@@ -34,7 +34,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	NOTE: It is not necessary to set this preference for the CLI  since it is, well, the default.
 
-	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Save as Default**
+	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Save As Default**
 
 	NOTE: **Recording Modes** may not be left blank.
 
@@ -50,7 +50,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	CLI: `get_iplayer --prefs-add --modes=best`
 
-	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Save as Default**
+	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Save As Default**
 
 	NOTE: Best available SD video will be downloaded if HD video not available.
 	
@@ -64,7 +64,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	CLI: `get_iplayer --prefs-add --modes=good`
 	 
-	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Save as Default**
+	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Save As Default**
 
 #### What About Radio?
 
