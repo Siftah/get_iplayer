@@ -6,11 +6,20 @@ Download and installation information for all platforms may be found here:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki>
 
+### Windows Installer
+
 A new version of the get_iplayer Windows installer is available:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
-All Windows users should use this installer to upgrade to get_iplayer 2.83.  The installer will also upgrade all dependences (RTMPDump, FFmpeg, MPlayer, LAME, VLC) to new versions.
+All Windows users should use this installer to upgrade to get_iplayer 2.83.  The installer will also upgrade dependencies to the following versions:
+
+- RTMPDump 2.4-git-010913
+- FFmpeg 1.2
+- MPlayer svn-36348
+- AtomicParsley 0.9.4-hg103.396d3bd13c73
+- LAME 3.99.5
+- VLC 2.0.6
 
 ## Changes in get_iplayer 2.83
 
@@ -22,13 +31,13 @@ If you used the workaround described here:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki/swfurl>
 
-you should remove the workaround when you upgrade to 2.83.  Revisit that page and read the section on reverting your changes.  For experienced users:
+you should remove the associated changes to your preferences when you upgrade to 2.83.  Revisit that page and read the section on reverting your changes.  For experienced users:
 
 	get_iplayer --prefs-del --rtmp-tv-opts="X" --rtmp-radio-opts="X"  --rtmp-livetv-opts="X" --rtmp-liveradio-opts="X"
 
 Yes, that is a single "X" for each option. Any non-empty value will suffice when deleting those preferences.
 
-**Windows Users:** The new installer will attempt to clean up those preference settings.  However, you should also run the command above to make sure that your settings have been restored.
+**Windows Users:** The new installer will attempt to clean up those preference settings.  However, you should also run the command above to make sure that your settings have been cleaned.
 
 ### New Documentation Wiki
 
@@ -36,11 +45,11 @@ All get_iplayer documentation has been moved to the project wiki:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki>
 
-The old linuxcentre.net site has been dead for three years and cannot be updated, so this move is long overdue.  The wiki is a work in progress, but it should still be useful.  The wiki may be edited by any registered GitHub user, so please feel free to make additions and corrections.
+The old linuxcentre.net site has been dead for three years and cannot be updated, so this move is long overdue.  The wiki is a work in progress, but it still contains useful information.  The wiki may be edited by any registered GitHub user, so please feel free to make additions and corrections.
 
 ### Recording Mode Changes
 
-Recording modes have changed slightly in 2.83. The built-in mode for TV programmes has changed so that the best SD quality TV will now be downloaded by default.  Additional mode shortcuts have also been introduced which should simplify the configuration of recording modes for most users. Read the **Shortcuts** section in this document for an explanation of the changes:
+Recording modes have changed slightly in 2.83. The built-in mode for TV programmes has changed so that the best SD quality TV will now be downloaded by default.  Additional mode shortcuts have also been introduced which should simplify the configuration of recording modes for most users. Read the **Shortcuts** section in the document below for an explanation of the changes:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki/modes>
 
@@ -48,9 +57,9 @@ One thing to emphasise here in case you decide to ignore the documentation: If y
 
 ### avconv Used in Preference to ffmpeg Where Available
 
-If get_iplayer detects that avconv is installed, it will use it in preference to ffmpeg.  No more scary messages about ffmpeg being deprecated.  This change will typically only affect Debian-based Linus distributions, where the Libav fork of FFmpeg is installed by default, but will apply to any system with avconv installed.  If you wish to switch back to ffmpeg, you can override this default with the `ffmpeg` option.  Also, the `avconv` option has been added as a synonym for `ffmpeg`.
+If get_iplayer detects that avconv is installed, it will use it in preference to ffmpeg by default.  No more scary messages about ffmpeg being deprecated.  This change will typically only affect Debian-based Linux distributions, where the Libav fork of FFmpeg is installed by default, but will apply to any system with avconv installed.  If you wish to switch back to ffmpeg, you can override this default with the `ffmpeg` option.  Also, an `avconv` option has been added as a synonym for `ffmpeg`.
 
-### Something for XBMC Users
+### XBMC File Naming
 
 The syntax for substitution parameters has been extended slightly.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  You should now be able to use a single `fileprefix` setting that will make XBMC happy (most of the time).  Details here:  
 
@@ -58,7 +67,7 @@ The syntax for substitution parameters has been extended slightly.  It is now po
 
 ### Support for Secure Email
 
-get_iplayer can send HTML-formatted search results via email.  This feature will now work with email providers that require secure connections (TLS or SSL), such as GMail.  Additional Perl modules are required to support secure email - see [[installation]] for details.  The Windows installer will install the necessary Perl modules.
+get_iplayer can send HTML-formatted search results via email.  This feature will now work with email providers that require secure connections (TLS or SSL), such as GMail.  Additional Perl modules are required to support secure email - see the [[installation instructions|installation]] for details.  The Windows installer will install the necessary Perl modules.
 
 An example:
 
