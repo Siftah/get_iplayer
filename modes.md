@@ -24,7 +24,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	NOTE: `--modes=default` can be omitted for the CLI since it is, well, the default.
 
-	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Apply Setting**, then record programme.
+	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
 
 	NOTE: **Recording Modes** may not be left blank.
 	
@@ -34,7 +34,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	NOTE: It is not necessary to set this preference for the CLI  since it is, well, the default.
 
-	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Set as Default**
+	WPM: Enter "default" (without quotes) in **Recording Modes** field and click **Save as Default**
 
 	NOTE: **Recording Modes** may not be left blank.
 
@@ -42,7 +42,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	CLI: `get_iplayer --modes=best […]`
 
-	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Apply Setting**, then record programme.
+	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
 
 	NOTE: Best available SD video will be downloaded if HD video not available.
 
@@ -50,7 +50,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	CLI: `get_iplayer --prefs-add --modes=best`
 
-	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Set as Default**
+	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Save as Default**
 
 	NOTE: Best available SD video will be downloaded if HD video not available.
 	
@@ -58,13 +58,13 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 	CLI: `get_iplayer --modes=good […]`
 
-	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Apply Setting**, then record programme.
+	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
 
 - Do you *always* want to revert to pre-2.83 default behaviour and download lower-quality video for all TV programmes?
 
 	CLI: `get_iplayer --prefs-add --modes=good`
 	 
-	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Set as Default**
+	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Save as Default**
 
 #### What About Radio?
 
@@ -86,15 +86,15 @@ A few examples:
 
 - Record a single TV programme at the lowest quality available:
 
-	`get_iplayer --get 123 --tvmode=flashlow,flashstd,flashigh`
+		get_iplayer --get 123 --tvmode=flashlow,flashstd,flashigh
 
 - Make a live radio recording in WMA format, with fallback to AAC format:
 
-	`get_iplayer --type liveradio --liveradiomode wma,flashaac "Radio 3"`
+		get_iplayer --type liveradio --liveradiomode wma,flashaac "Radio 3"
 
 - Set a preference to *only* record the highest-quality (HD and SD) TV programmes, with no fallback to lower-quality video:
 
-	`get_iplayer --prefs-add --tvmode=flashhd,flashvhigh`
+		get_iplayer --prefs-add --tvmode=flashhd,flashvhigh
 
 
 #### Mode Options
