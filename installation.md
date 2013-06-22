@@ -200,7 +200,7 @@ These instructions cover Linux/Unix distributions known to have working get_ipla
 <a name="linux-package-debian"></a>
 #### Debian
 
-These instructions are for Debian 7 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [[here|debian6]].
+These instructions are for Debian 7 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [[here|install-debian6]].
 
 ##### Command-line Interface (CLI)
 
