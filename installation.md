@@ -814,8 +814,8 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 2. Back up and replace existing CLI (requires admin privileges)
 
-		copy C:\Program Files\get_iplayer\get_iplayer.pl get_iplayer.pl.bak
-		copy get_iplayer.pl C:\Program Files\get_iplayer\get_iplayer.pl
+		copy "C:\Program Files\get_iplayer\get_iplayer.pl" get_iplayer.pl.bak
+		copy get_iplayer.pl "C:\Program Files\get_iplayer\get_iplayer.pl"
 
 	NOTE: Replace `C:\Program Files` with `C:\Program Files (x86)` for 64-bit Windows.
 
@@ -831,7 +831,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 2. Back up and replace existing WPM (requires admin privileges)
 
-		copy C:\Program Files\get_iplayer\get_iplayer.cgi get_iplayer.cgi.bak
-		copy get_iplayer.cgi C:\Program Files\get_iplayer\get_iplayer.cgi
+		copy "C:\Program Files\get_iplayer\get_iplayer.cgi" get_iplayer.cgi.bak
+		copy get_iplayer.cgi "C:\Program Files\get_iplayer\get_iplayer.cgi"
 
 	NOTE: Replace `C:\Program Files` with `C:\Program Files (x86)` for 64-bit Windows.
