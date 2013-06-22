@@ -126,7 +126,7 @@ The external programs used by get_iplayer should be available in the package rep
 
 Replace `sudo apt-get install` with `sudo zypper install` (openSUSE), `sudo pacman -S` (Arch Linux), `sudo pkg_add` (OpenBSD) or `sudo pkg_add -r` (FreeBSD).
 
-A few distros do not provide all the necessary external programs in their official repositories.  You may need to acquire external programs from other repositories or - in rare instances - be required to build your own.
+A few distros do not provide all the necessary external programs in their official repositories.  You may need to acquire external programs from other repositories or - in rare instances - be required to build your own.  Please check your distribution's repositories before installing.
 
 <a name="linux-manual-cli"></a>
 #### Command-line Interface (CLI)
