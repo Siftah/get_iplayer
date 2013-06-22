@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download and installation information may be found here:
+Download and installation information for all platforms may be found here:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki>
 
