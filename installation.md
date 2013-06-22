@@ -706,7 +706,9 @@ The installer will download and install all the required Windows support program
 
 2. To start the CLI go to **All Programs -> get_iplayer -> Get_iPlayer** on the Start menu.  In the Windows 8 Start screen, click the **Get_iPlayer** tile.   The CLI will launch in a console window.  The working directory of the console window will be the get_iplayer installation directory, typically `C:\Program Files\get_iplayer` or `C:\Program Files (x86)\get_iplayer` on 64-bit Windows.  The CLI expects to operate in that directory, so do not change to another location.
 
-3. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows system, the other users will need to configure their own output folders with the CLI:
+3. The first time MPlayer runs (i.e., the first time you download a regional or local radio programme) after a fresh installation, it will scan the available fonts on your system and will produce a large volume of extra output in your console window.  This will not affect the programme download.
+
+4. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows system, the other users will need to configure their own output folders with the CLI:
 
 		get_iplayer --prefs-add --output "%USERPROFILE%/Desktop/iPlayer Recordings"
 
