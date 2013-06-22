@@ -504,13 +504,15 @@ The WPM is not installed with the get_iplayer package.  Use the [manual installa
 <a name="linux-package-puppy"></a>
 #### Puppy Linux
 
-TODO: Awaiting Update
+These instructions are for Precise Puppy 5.6.1.
+
+TODO
 
 ##### Command-line Interface (CLI)
 
 ##### Web PVR Manager (WPM)
 
-<a name="linux-package-openbsd"></a>
+<a name="unix-package-openbsd"></a>
 #### OpenBSD
 
 These instructions are for OpenBSD 5.3.
@@ -535,22 +537,23 @@ NOTE: If you use SSL email, you may see a deprecation warning about the use of S
 
 The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](#linux-manual-wpm).
 
-<a name="linux-package-freebsd"></a>
+<a name="unix-package-freebsd"></a>
 #### FreeBSD
 
-TODO: Awaiting Update
-
 These instructions are for FreeBSD 9.1.
+
+TODO
 
 ##### Command-line Interface (CLI)
 
 ##### Web PVR Manager (WPM)
 
+<a name="unix-package-pcbsd"></a>
 #### PC-BSD
 
-TODO: Awaiting Update
-
 These instructions are for PC-BSD 9.1.
+
+TODO
 
 ##### Command-line Interface (CLI)
 
