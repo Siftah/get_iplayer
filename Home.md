@@ -18,6 +18,8 @@
 
 [[Metadata Tagging|tagging]]
 
+[[XBMC File Naming|fileprefix]]
+
 [[Using the PVR with cron|pvrcron]]
 
 [[Web PVR Manager Help|webpvr]]
