@@ -6,7 +6,7 @@ Download and installation information for all platforms may be found here:
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki>
 
-### Windows Installer
+#### Windows Installer
 
 A new version of the get_iplayer Windows installer is available:
 
