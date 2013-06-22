@@ -14,6 +14,7 @@ A new version of the get_iplayer Windows installer is available:
 
 All Windows users should use this installer to upgrade to get_iplayer 2.83.  The installer will also upgrade dependencies to the following versions:
 
+- Strawberry Perl 5.16.2
 - RTMPDump 2.4-git-010913
 - FFmpeg 1.2
 - MPlayer svn-36348
