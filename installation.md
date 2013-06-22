@@ -701,7 +701,7 @@ Use the [manual installation procedure](#osx-manual-wpm) described above.
 <a name="windows-installer"></a>
 ### Installer
 
-Windows users are strongly recommended to use the provided installer.  Download the latest Windows installer from:
+Windows users should use the provided installer.  Download the latest version from:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
