@@ -135,7 +135,11 @@ A few distros do not provide all the necessary external programs in their offici
 
 	    curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer
 
-	**NOTE**: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
+	Alternate location:
+
+	    curl -kLO http://git.infradead.org/get_iplayer.git/blob_plain/latest:/get_iplayer
+
+	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
 2. Ensure the script is executable
 
@@ -158,9 +162,13 @@ A few distros do not provide all the necessary external programs in their offici
 
 1. Download the latest release to working directory
 
-    	curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi
+		curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/latest/get_iplayer.cgi
 
-	**NOTE**: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
+	Alternate location:
+
+		curl -kLO http://git.infradead.org/get_iplayer.git/blob_plain/latest:/get_iplayer.cgi
+
+	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
 2. Ensure the script is executable
 
@@ -183,6 +191,16 @@ A few distros do not provide all the necessary external programs in their offici
     <http://127.0.0.1:1935>
 
 7. Stop the WPM by typing Ctrl-C.
+
+#### Release Archives
+
+If you would prefer to download an archive of any get_iplayer release, you can find them here:
+
+<https://github.com/dinkypumpkin/get_iplayer/tags>
+
+Alternate location:
+
+<ftp://ftp.infradead.org/pub/get_iplayer/>
 
 <a name="linux-package"></a>
 ### Package Manager Installation
@@ -754,6 +772,10 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 		git clone git://github.com/dinkypumpkin/get_iplayer
 
+	Alternate repository:
+
+		git://git.infradead.org/get_iplayer.git
+
 	The get_iplayer code will now be in a sub directory named `get_iplayer`, so use `cd get_iplayer` to navigate to that location.
 
 2. Back up and replace existing CLI/WPM
@@ -774,6 +796,10 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 	    curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer
 
+	Alternate location:
+
+		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer
+
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
 2. Back up and replace existing CLI
@@ -786,8 +812,12 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 1. Download the Git HEAD version to working directory
 
-    	curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer.cgi
+		curl -kLO https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer.cgi
 
+	Alternate location:
+
+		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi
+		
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
 2. Back up and replace existing WPM
@@ -812,6 +842,10 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 	<https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer>
 
+	Alternate location:
+
+	<http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer>
+	
 	**NOTE:** Make sure the file is saved as a plain text file (Text Document). Your web browser may prompt you save the file as "get_iplayer.txt".  Change the file name to "get_iplayer.pl".  You may also rename the file after downloading.
 
 2. Back up and replace existing CLI (requires admin privileges)
@@ -828,6 +862,10 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 	Click link below to open file in your browser, then type Ctrl-S to save after file loads:
 
 	<https://raw.github.com/dinkypumpkin/get_iplayer/master/get_iplayer.cgi>
+
+	Alternate location:
+
+	<http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
 
 	**NOTE:** Make sure the file is saved as a plain text file (Text Document).  Your web browser may prompt you save the file as "get_iplayer.txt" or "get_iplayer.cgi.txt".  Change the file name to "get_iplayer.cgi".  You may also rename the file after downloading.
 

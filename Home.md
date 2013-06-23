@@ -2,7 +2,7 @@
 
 **2013-06-06: [[How to Restore BBC TV Downloads|swfurl]]**
 
-[[About|about]]
+About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 
 [[Installation|installation]]
 
@@ -29,3 +29,5 @@
 [[Contribute|contribute]]
 
 [[Release Notes|releasenotes]]
+
+*Some material in this wiki was scraped from the old get_iplayer site at linuxcentre.net*
