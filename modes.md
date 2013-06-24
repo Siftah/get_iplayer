@@ -2,7 +2,7 @@
 
 BBC iPlayer makes programmes available a different levels of video and audio quality.  get_iplayer represents each video/audio quality level with an alphanumeric code, referred to as a "mode".  You may have seen references to these: "flashvhigh", "flashaudio". etc.  Each mode corresponds to a set of media streams available from the BBC.  You can find details of recording modes later in this document.  
 
-get_iplayer 2.83 and higher use a simplified system of recording mode shortcuts that should be sufficient for most users.  You are encouraged to use the mode shortcuts unless you have specific requirements that prevent their use.  You may still specify your own custom mode settings if you wish.
+get_iplayer 2.83 and higher use a simplified system of recording mode shortcuts that should be sufficient for most users.  You are encouraged to use the mode shortcuts if at all possible.  You may still specify your own custom mode settings if you wish.
 
 ## Shortcuts 
 
