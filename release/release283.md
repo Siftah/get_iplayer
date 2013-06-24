@@ -56,7 +56,7 @@ Recording modes have changed slightly in 2.83. The built-in mode for TV programm
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki/modes>
 
-One thing to emphasise here in case you decide to ignore the documentation: If you normally run get_iplayer without specifying a recording mode, your TV downloads will be nearly twice as large and may take up to twice as long as with 2.83.  Read the documentation for instructions on how to revert to pre-2.83 behaviour.
+One thing to emphasise here in case you decide to ignore the documentation: If you normally run get_iplayer without specifying a recording mode, your TV downloads will be nearly twice as large and may take up to twice as long as with 2.83.  Read the modes documentation referenced above for instructions on how to revert to pre-2.83 behaviour.
 
 ### avconv Used in Preference to ffmpeg Where Available
 
