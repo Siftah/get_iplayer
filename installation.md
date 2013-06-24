@@ -757,6 +757,8 @@ TODO
 <a name="windows-manual"></a>
 ### Manual Installation
 
+Windows users are strongly recommended to use the provided installer described above.  However if you must use your own Perl distribution and your own versions of rtmpdump, ffmpeg, etc., it is possible to do a manual installation on Windows.  The instruction below describes one way to perform a manual installation, but you may find a different method works better on your system.
+
 #### Perl Support
 
 It is recommended that you install [Strawberry Perl](http://strawberryperl.com/).  That is the only distribution of Perl for Windows used to test get_iplayer.  However, other Perl distributions are likely to work.
@@ -793,6 +795,8 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 		rem main script must have .pl extension added
 		copy get_iplayer C:\bin\get_iplayer\get_iplayer.pl
 		copy windows\get_iplayer\get_iplayer.cmd C:\bin\get_iplayer
+
+	You are not required to use the batch file wrapper, but it should prove convenient.
 
 5. Go to installation directory
 	
@@ -846,6 +850,8 @@ Ensure the CLI has been installed as described above.
 		copy get_iplayer.cgi C:\bin\get_iplayer
 		copy windows\get_iplayer\get_iplayer.cgi.cmd C:\bin\get_iplayer
 
+	You are not required to use the batch file wrapper, but it should prove convenient.
+	
 2. Go to installation directory
 	
 		cd C:\bin\get_iplayer
