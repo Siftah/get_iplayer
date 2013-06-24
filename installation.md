@@ -811,7 +811,7 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 	to
 		
 		@echo off
-		perl.exe %~dp0\get_iplayer.pl %*
+		perl.exe "%~dp0\get_iplayer.pl" %*
 
 	and save the file.
 	
@@ -864,7 +864,7 @@ Ensure the CLI has been installed as described above.
 	to
 		
 		@echo off
-		perl.exe %~dp0\get_iplayer.cgi --port 1935 --listen=127.0.0.1 --getiplayer %~dp0\get_iplayer.cmd
+		perl.exe "%~dp0\get_iplayer.cgi" --port 1935 --listen=127.0.0.1 --getiplayer "%~dp0\get_iplayer.cmd"
 
 	and save the file.
 
