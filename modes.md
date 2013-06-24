@@ -10,7 +10,7 @@ Recording mode shortcuts use a simple system with four possible values: "good", 
 
 ### You Need to Know This
 
-If you are upgrading from get_iplayer 2.82 or earlier, be aware that the *default* recording mode - the mode used if you do not supply a value - has changed.  Beginning with get_iplayer 2.83, the default recording mode is set to download the best available SD video for TV programmes (flashvhigh).  get_iplayer 2.82 and earlier download lower-quality video (flashhigh) by default.  In practical terms, that means that after you upgrade from 2.82 or earlier your downloads will take nearly twice as long (given constant bandwidth) with the default mode setting.  See the next section for instructions on restoring the pre-2.83 behaviour.
+If you are upgrading from get_iplayer 2.82 or earlier, be aware that the *default* recording mode - the mode used if you do not supply a value - has changed.  Beginning with get_iplayer 2.83, the default recording mode is set to download the best available SD video for TV programmes (flashvhigh).  get_iplayer 2.82 and earlier download lower-quality video (flashhigh) by default.  In practical terms, that means that after you upgrade from 2.82 or earlier your downloads will be nearly twice as large and take nearly twice as long (given constant bandwidth) as with the default mode setting.  See the next section for instructions on restoring the pre-2.83 behaviour.
 
 WPM users:  If you saved a previous value of the **Recording Modes** field as your default it will still be honoured after upgrade.  However, after you upgrade to WPM 2.83 or higher you are strongly encouraged to set the **Recording Modes** field to one of the mode shortcuts as described in the next section and set the new value as your default.
 
