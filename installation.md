@@ -818,24 +818,24 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.	
 7. Execute get_iplayer once to initialise the config directory (`%USERPROFILE%\.get_iplayer`) and download plugins
 
-    	get_iplayer.cmd
+    	get_iplayer
 
 8. Configure external programs
 
 	If the external programs needed by get_iplayer are not installed in PATH, you must explicitly configure their locations in your get_iplayer preferences.  For example:
 
-		get_iplayer.cmd --prefs-add --rtmpdump="C:\path\to\rtmpdump.exe" --ffmpeg="C:\path\to\ffmpeg.exe" --mplayer="C:\path\to\mplayer.exe" --atomicparsley="C:\path\to\atomicparsley.exe"
+		get_iplayer --prefs-add --rtmpdump="C:\path\to\rtmpdump.exe" --ffmpeg="C:\path\to\ffmpeg.exe" --mplayer="C:\path\to\mplayer.exe" --atomicparsley="C:\path\to\atomicparsley.exe"
 
 9. Configure output directory
 
 	Programmes will be downloaded to the working directory by default, so you will probably want to configure a permanent output directory.  The example below is the configuration used by the Windows installer version, but you may configure any directory of your choice.
 
 		mkdir "%USERPROFILE%\Desktop\iPlayer Recordings"
-		get_iplayer.cmd --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
+		get_iplayer --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
 
 10. Run CLI with:
 
-    	get_iplayer.cmd […]
+    	get_iplayer […]
     	
 
 #### Web PVR Manager (WPM)
