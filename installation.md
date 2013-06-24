@@ -199,7 +199,7 @@ If you would prefer to download an archive of any get_iplayer release, you can f
 
 <https://github.com/dinkypumpkin/get_iplayer/tags>
 
-Alternate location (tar balls only):
+Alternate location (tarballs only):
 
 <ftp://ftp.infradead.org/pub/get_iplayer/>
 
