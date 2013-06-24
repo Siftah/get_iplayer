@@ -28,6 +28,7 @@
 * [Windows](#windows)
     * [Installer](#windows-installer)
     * [Cygwin](#windows-cygwin)
+    * [Manual Installation](#windows-manual)
 * [Perlbrew](#perlbrew)
 * [Git HEAD](#git-head)
     * [Using Git](#git-head-git)
@@ -198,7 +199,7 @@ If you would prefer to download an archive of any get_iplayer release, you can f
 
 <https://github.com/dinkypumpkin/get_iplayer/tags>
 
-Alternate location:
+Alternate location (tar balls only):
 
 <ftp://ftp.infradead.org/pub/get_iplayer/>
 
@@ -728,7 +729,7 @@ The installer will download and install all the required Windows support program
 
 4. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows system, the other users will need to configure their own output folders with the CLI:
 
-		get_iplayer --prefs-add --output "%USERPROFILE%/Desktop/iPlayer Recordings"
+		get_iplayer --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
 
 #### Web PVR Manager (WPM)
 
@@ -753,12 +754,130 @@ TODO
 
 #### Web PVR Manager (WPM)
 
-<a name="perlbrew"></a>
-## Perlbrew
+<a name="windows-manual"></a>
+### Manual Installation
 
-get_iplayer 2.83 or higher is compatible with [Perlbrew](http://perlbrew.pl) on Linux/Unix/OS X.  Once you have activated the Perl installation you intend to use for get_iplayer, use cpan or cpanm to install the necessary modules:
+#### Perl Support
 
-	cpanm LWP MP3::Info MP3::Tag XML::Simple Net::SMTP::SSL Authen::SASL Net::SMTP::TLS::ButMaintained
+It is recommended that you install [Strawberry Perl](http://strawberryperl.com/).  That is the only distribution of Perl for Windows used to test get_iplayer.  However, other Perl distributions are likely to work.
+
+Use the CPAN client from your Perl distribution to install additional modules for get_iplayer (some modules may already be part of the base install):
+
+	cpan LWP MP3::Info MP3::Tag Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
+
+#### External Programs
+
+You will need to locate or build the external programs yourself.  You can see the versions used by the get_iplayer Windows installer if you download this file:
+
+<http://www.infradead.org/get_iplayer_win/get_iplayer_config_latest.ini>
+
+The file is in INI format.  The "url" value in each section contains the  download URL for that program.  Extract the downloaded archives and install the binaries to your location of choice.
+
+#### Command-line Interface (CLI)
+
+1. Download an archive of the latest get_iplayer release from:
+
+	<https://github.com/dinkypumpkin/get_iplayer/tags>
+
+	Alternate location (tarballs only):
+
+	<ftp://ftp.infradead.org/pub/get_iplayer/>
+
+2. After downloading, extract the archive.  These instructions assume the archive has been extracted to `C:\tmp\get_iplayer-2.83`.
+
+3. Create an installation directory for the get_iplayer scripts.  These instructions assume you are using `C:\bin\get_iplayer`.
+
+4. Copy the scripts to the installation directory.  You need both the get_iplayer script and its batch file wrapper:
+
+		cd C:\tmp\get_iplayer-2.83
+		rem main script must have .pl extension added
+		copy get_iplayer C:\bin\get_iplayer\get_iplayer.pl
+		copy windows\get_iplayer\get_iplayer.cmd C:\bin\get_iplayer
+
+5. Go to installation directory
+	
+		cd C:\bin\get_iplayer
+
+6. Fix batch file wrapper (`get_iplayer.cmd`) for standalone use
+
+	The batch file is coded so that it expects get_iplayer.pl to be in the user's working directory (this is how the installer version works).  The batch file should be changed to look for get_iplayer.pl in the installation directory, regardless of the user's working directory.  This means you can install the CLI somewhere in PATH and use it from any location.
+
+	Open the batch file in a text editor and change the path to get_iplayer.pl.  Change:
+
+		@echo off
+		perl.exe get_iplayer.pl %*
+	to
+		
+		@echo off
+		perl.exe %~dp0\get_iplayer.pl %*
+
+	and save the file.
+	
+	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.	
+7. Execute get_iplayer once to initialise the config directory (`%USERPROFILE%\.get_iplayer`) and download plugins
+
+    	get_iplayer.cmd
+
+8. Configure external programs
+
+	If the external programs needed by get_iplayer are not installed in PATH, you must explicitly configure their locations in your get_iplayer preferences.  For example:
+
+		get_iplayer.cmd --prefs-add --rtmpdump="C:\path\to\rtmpdump.exe" --ffmpeg="C:\path\to\ffmpeg.exe" --mplayer="C:\path\to\mplayer.exe" --atomicparsley="C:\path\to\atomicparsley.exe"
+
+9. Configure output directory
+
+	Programmes will be downloaded to the working directory by default, so you will probably want to configure a permanent output directory.  The example below is the configuration used by the Windows installer version, but you may configure any directory of your choice.
+
+		mkdir "%USERPROFILE%\Desktop\iPlayer Recordings"
+		get_iplayer.cmd --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
+
+10. Run CLI with:
+
+    	get_iplayer.cmd […]
+    	
+
+#### Web PVR Manager (WPM)
+
+Ensure the CLI has been installed as described above.
+
+1. Copy the scripts to installation directory.   You need both the get_iplayer.cgi script and its batch file wrapper:
+
+		cd C:\tmp\get_iplayer-2.83
+		copy get_iplayer.cgi C:\bin\get_iplayer
+		copy windows\get_iplayer\get_iplayer.cgi.cmd C:\bin\get_iplayer
+
+2. Go to installation directory
+	
+		cd C:\bin\get_iplayer
+
+3. Fix batch file wrapper (`get_iplayer.cgi.cmd`) for standalone use
+
+	The batch file is coded so that it expects get_iplayer.cgi and get_iplayer.cmd to be in the user's working directory (this is how the installer version works).  The batch file should be changed to look for those files in the installation directory, regardless of the user's working directory.  This means you can install the WPM somewhere in PATH and use it from any location.
+
+	Open the batch file in a text editor and change the path to get_iplayer.cmd. Change:
+
+		@echo off
+		perl.exe get_iplayer.cgi --port 1935 --listen=127.0.0.1 --getiplayer .\get_iplayer.cmd
+
+	to
+		
+		@echo off
+		perl.exe %~dp0\get_iplayer.cgi --port 1935 --listen=127.0.0.1 --getiplayer %~dp0\get_iplayer.cmd
+
+	and save the file.
+
+	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.
+
+4. Launch WPM:
+
+    	get_iplayer.cgi.cmd
+
+5. Once the WPM is running, connect to it by opening this URL in your browser:
+
+    <http://127.0.0.1:1935>
+
+6. Stop the WPM by typing Ctrl-Break.
+
 
 <a name="git-head"></a>
 ## Git HEAD
@@ -774,7 +893,7 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 	Alternate repository:
 
-		git://git.infradead.org/get_iplayer.git
+		git clone git://git.infradead.org/get_iplayer.git
 
 	The get_iplayer code will now be in a sub directory named `get_iplayer`, so use `cd get_iplayer` to navigate to that location.
 
