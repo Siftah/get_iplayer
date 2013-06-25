@@ -18,7 +18,7 @@ About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 
 [[Metadata Tagging|tagging]]
 
-[[XBMC File Naming|fileprefix]]
+[[Output File Naming|fileprefix]] (XBMC users - read this)
 
 [[Using the PVR with cron|pvrcron]]
 
