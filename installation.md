@@ -890,7 +890,7 @@ get_iplayer 2.83 or higher is compatible with [Perlbrew](http://perlbrew.pl) on 
 <a name="git-head"></a>
 ## Git HEAD
 
-Git HEAD is the latest development version (HEAD) of get_iplayer from the Git repository. There may be occasions when you wish to use the Git HEAD version of get_iplayer in order to test bug fixes or new features.  
+"Git HEAD" is the latest development version of get_iplayer from the Git repository. There may be occasions when you wish to use the Git HEAD version of get_iplayer in order to test bug fixes or new features.
 
 <a name="git-head-git"></a>
 ### Using Git (all platforms)
@@ -903,9 +903,15 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 		git clone git://git.infradead.org/get_iplayer.git
 
-	The get_iplayer code will now be in a sub directory named `get_iplayer`, so use `cd get_iplayer` to navigate to that location.
+2. The get_iplayer code will now be in a sub directory named `get_iplayer`:
 
-2. Back up and replace existing CLI/WPM
+        cd get_iplayer
+
+3. Ensure you are working on the master branch
+
+        git checkout master
+
+4. Back up and replace existing CLI/WPM
 
 	You may run both the CLI and WPM directly from the cloned repository. If you wish to update your existing installation:
 
@@ -925,7 +931,7 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 	Alternate location:
 
-		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer
+		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer
 
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
@@ -943,7 +949,7 @@ Git HEAD is the latest development version (HEAD) of get_iplayer from the Git re
 
 	Alternate location:
 
-		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi
+		curl -KLO http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer.cgi
 		
 	NOTE: If your system does not have `curl` try `wget`.  Replace `curl -kLO` with `wget --no-check-certificate`.
 
@@ -971,7 +977,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 	Alternate location:
 
-	<http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer>
+	<http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer>
 	
 	**NOTE:** Make sure the file is saved as a plain text file (Text Document). Your web browser may prompt you save the file as "get_iplayer.txt".  Change the file name to "get_iplayer.pl".  You may also rename the file after downloading.
 
@@ -992,7 +998,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 	Alternate location:
 
-	<http://git.infradead.org/get_iplayer.git/blob_plain/HEAD:/get_iplayer.cgi>
+	<http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer.cgi>
 
 	**NOTE:** Make sure the file is saved as a plain text file (Text Document).  Your web browser may prompt you save the file as "get_iplayer.txt" or "get_iplayer.cgi.txt".  Change the file name to "get_iplayer.cgi".  You may also rename the file after downloading.
 
