@@ -18,6 +18,14 @@ Follow a few basic guidelines for pull requests:
 
 GitHub pull requests are strongly preferred.  However, you may also submit patches to the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer).  Make sure your patches apply cleanly to the current git tree, and that they're not mangled by your email software. Sending the patch to yourself first, then checking that you can save it to a file and apply it, is a useful technique.
 
+**Alternate Repository**
+
+get_iplayer's GitHub repository is mirrored with the Git repository at:
+
+<http://git.infradead.org/get_iplayer.git/>
+
+If you would like access to that repository, post a request to the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer).
+
 ### Documentation
 
 If you would like to contribute new documentation or correct errors in existing documentation, you can edit the project wiki.  Register with GitHub if necessary, then sign in and access the wiki at:
