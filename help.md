@@ -16,7 +16,11 @@ Windows users can go to **get_iplayer -> Help -> get_iplayer Example Commands** 
 
 ### Mailing List
 
-For questions about get_iplayer or to suggest improvements, there is a [mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer).  Before posting to the mailing list search the archive here:
+For questions about get_iplayer or to suggest improvements, there is a mailing list:
+
+<http://lists.infradead.org/mailman/listinfo/get_iplayer>  
+
+Before posting to the mailing list search the archive here:
 
 <http://www.mail-archive.com/get_iplayer@lists.infradead.org/>
 
