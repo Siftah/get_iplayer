@@ -24,7 +24,7 @@
 
 |Options file|Command line|Description|
 |------------|------------|-----------|
-|before|--before <n>|Limit search to programmes added to the cache before N hours ago|
+|before|--before &lt;n&gt;|Limit search to programmes added to the cache before N hours ago|
 |category|--category &lt;string&gt;|Narrow search to matched categories (regex or comma separated values)|
 |channel|--channel &lt;string&gt;|Narrow search to matched channel(s) (regex or comma separated values)|
 |exclude|--exclude &lt;string&gt;|Narrow search to exclude matched programme names (regex or comma separated values)|
@@ -35,7 +35,7 @@
 |history|--history|Search/show recordings history|
 |long|--long, -l|Additionally search in programme descriptions and episode names (same as --fields=name,episode,desc )|
 |search|--search &lt;search term&gt;|GetOpt compliant way of specifying search args|
-|since|--since <n>|Limit search to programmes added to the cache in the last N hours|
+|since|--since &lt;n&gt;|Limit search to programmes added to the cache in the last N hours|
 |type|--type &lt;type&gt;|Only search in these types of programmes: livetv,tv,liveradio,radio,all (tv is default)|
 |versionlist|--versions &lt;versions&gt;|Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: &#39;--versions signed,audiodescribed,default&#39; will prefer signed and audiodescribed programmes if available.  Default: &#39;default&#39;|
 
