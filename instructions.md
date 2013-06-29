@@ -1,1 +1,0 @@
-See: [get_iplayer Git HEAD Version](https://github.com/dinkypumpkin/get_iplayer/wiki/githead)
