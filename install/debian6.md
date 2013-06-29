@@ -1,9 +1,8 @@
-<a name="linux-package-debian6"></a>
-#### Debian 6
+## Debian 6
 
 These instructions are for Debian 6 (squeeze) only.
 
-##### Command-line Interface (CLI)
+### Command-line Interface (CLI)
 
 The get-iplayer package available in the squeeze repository is obsolete and should not be installed.  The procedure below is one way to install the get-iplayer package from Debian testing (jessie) on Debian squeeze without adding the Debian testing repository to your system.  However, you may wish to add the Debian testing repository or perhaps use some other method. Although installing packages from Debian testing on a stable system is often discouraged, it is currently safe to do so with the get-iplayer package.
 
@@ -39,7 +38,7 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
     `get_iplayer […]`
 
-##### Web PVR Manager (WPM)
+### Web PVR Manager (WPM)
 
 The WPM is installed along with the CLI.
 
