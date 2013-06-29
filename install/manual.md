@@ -51,6 +51,7 @@ After your local library is set up, you can install modules with `cpanm Module::
 
 	cpanm LWP MP3::Info MP3::Tag Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
 
+<a name="manual-external-programs"></a>
 ### External Programs
 
 The external programs used by get_iplayer should be available in the package repositories for your system.  The package name will almost always be the same as the program itself.  For example, to install the utilities for get_iplayer in Debian: 
