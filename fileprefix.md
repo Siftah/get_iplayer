@@ -1,8 +1,10 @@
 ## get_iplayer File Prefix Configuration
 
-get_iplayer 2.83 introduced a slightly extended syntax for [substitution parameters](documentation#substitution-parameters) used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC users since XBMC expects particular formats for names of files to be automatically imported.
+get_iplayer 2.83 introduced a slightly extended syntax for [substitution parameters](documentation#substitution-parameters) used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC users since XBMC expects particular formats for names of files to be automatically imported.  
 
-From [this mailing list post](http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg03745.html):
+See general information about file and directory naming [here](documentation#filenames-and-directories).
+
+An example from [this mailing list post](http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg03745.html):
 
 >A rather trivial question, but hopefully someone can come up with a solution:
 >
@@ -47,7 +49,7 @@ Below are some examples showing how the output file prefix is altered by the cha
 		OLD: Dancing_on_the_Edge-Episode_1-s00e01
 		NEW: Dancing_on_the_Edge-Episode_1-s01e01
 
-	TV series that are one-offs or have yet to be recommissioned don't have a series number, so it is forced to 1. This should keep XBMC happy.
+	TV series that are one-offs or have yet to be recommissioned don't have a series number, so it is forced to 1. This should prevent XBMC from identifying them as one-off specials.
 
 4. Silent Witness (non-film, episode number undefined)
 
