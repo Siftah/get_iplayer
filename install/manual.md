@@ -56,7 +56,7 @@ After your local library is set up, you can install modules with `cpanm Module::
 
 The external programs used by get_iplayer should be available in the package repositories for your system.  The package name will almost always be the same as the program itself.  For example, to install the utilities for get_iplayer in Debian: 
 
-`sudo apt-get install rtmpdump ffmpeg mplayer atomicparsley id3v2`
+	sudo apt-get install rtmpdump ffmpeg mplayer atomicparsley id3v2
 
 Replace `sudo apt-get install` with `sudo zypper install` (openSUSE), `sudo pacman -S` (Arch Linux), `sudo pkg_add` (OpenBSD) or `sudo pkg_add -r` (FreeBSD).
 

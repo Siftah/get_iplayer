@@ -1,1 +1,1 @@
-See: [[installation instructions|installation]].
+See: [installation instructions](installation).

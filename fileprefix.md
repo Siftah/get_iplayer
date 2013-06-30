@@ -1,6 +1,6 @@
 ## get_iplayer File Prefix Configuration
 
-get_iplayer 2.83 introduced a slightly extended syntax for [[substitution parameters|documentation#substitution-parameters]] used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC users since XBMC expects particular formats for names of files to be automatically imported.
+get_iplayer 2.83 introduced a slightly extended syntax for [substitution parameters](documentation#substitution-parameters) used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC users since XBMC expects particular formats for names of files to be automatically imported.
 
 From [this mailing list post](http://www.mail-archive.com/get_iplayer@lists.infradead.org/msg03745.html):
 

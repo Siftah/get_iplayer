@@ -8,7 +8,7 @@ Because MacPorts is a self-contained system, you must install the MacPorts build
 
 1. Install Perl
  
-    	sudo port install perl5
+		sudo port install perl5
 
     This installs the default Perl version (currently 5.12). If you wish to install a newer version such as 5.16, add the necessary variant flag:
 
@@ -16,31 +16,31 @@ Because MacPorts is a self-contained system, you must install the MacPorts build
 
 2. Install Perl modules
 
-    	sudo port install p5-libwww-perl p5-xml-simple p5-mp3-tag p5-mp3-info
+		sudo port install p5-libwww-perl p5-xml-simple p5-mp3-tag p5-mp3-info
 
 3. The Perl modules to support secure email are not packaged in  MacPorts.  However, they can be installed with a [CPAN](http://www.cpan.org) client into the MacPorts Perl library:
 
-    	sudo cpan Net::SMTP::SSL Authen::SASL Net::SMTP::TLS::ButMaintained
+		sudo cpan Net::SMTP::SSL Authen::SASL Net::SMTP::TLS::ButMaintained
 
 
 ### External Programs
 
 1. Install external programs (except ffmpeg)
 
-    	sudo port install rtmpdump mplayer atomicparsley id3v2
+		sudo port install rtmpdump mplayer atomicparsley id3v2
 
 2. Install ffmpeg
 
-    	sudo port install ffmpeg
+		sudo port install ffmpeg
 
     This example pulls in X11, Python and other dependencies you may not want or need.  If you want a slimmed-down installation of ffmpeg, use the "no_X11" variant:
 
-    	sudo port install ffmpeg +no_x11
+		sudo port install ffmpeg +no_x11
     
 ### Command-line Interface (CLI)
 
-Use the CLI [[manual installation procedure|manual]] described for Linux/Unix.
+Use the CLI [manual installation procedure](manual) described for Linux/Unix.
 
 ### Web PVR Manager (WPM)
 
-Use the WPM [[manual installation procedure|manual]] described for Linux/Unix.
+Use the WPM [manual installation procedure](manual) described for Linux/Unix.

@@ -70,7 +70,7 @@ The syntax for substitution parameters has been extended slightly.  It is now po
 
 ### Support for Secure Email
 
-get_iplayer can send HTML-formatted search results via email.  This feature will now work with email providers that require secure connections (TLS or SSL), such as GMail.  Additional Perl modules are required to support secure email - see the [[installation instructions|installation]] for details.  The Windows installer will install the necessary Perl modules.
+get_iplayer can send HTML-formatted search results via email.  This feature will now work with email providers that require secure connections (TLS or SSL), such as GMail.  Additional Perl modules are required to support secure email - see the [installation instructions](installation) for details.  The Windows installer will install the necessary Perl modules.
 
 An example:
 

@@ -2,7 +2,7 @@
 
 ### Oh-So-Important Note:
 
-**If the version of get_iplayer you are about to install was released before 2013-06-06, please do not install it.  It is broken due to changes by the BBC. All releases of get_iplayer 2.83 or higher are fixed, and most package versions of get_iplayer 2.82 have been fixed.  Check the information for your release.  If you must continue using get_iplayer 2.82 released before 2013-06-06, see [[this page|swfurl]] for instructions on how to adjust your get_iplayer settings to restore downloads.**
+**If the version of get_iplayer you are about to install was released before 2013-06-06, please do not install it.  It is broken due to changes by the BBC. All releases of get_iplayer 2.83 or higher are fixed, and most package versions of get_iplayer 2.82 have been fixed.  Check the information for your release.  If you must continue using get_iplayer 2.82 released before 2013-06-06, see [this page](swfurl) for instructions on how to adjust your get_iplayer settings to restore downloads.**
 
 ## Table of Contents
 
@@ -10,28 +10,28 @@
 	- [Perl Support](#requirements-perl)
 	- [External Programs](#requirements-programs)
 - Linux/Unix
-    - [[Manual Installation|manual]]
+    - [Manual Installation](manual)
     - Package Installation
-        - [[Debian]]
-        - [[Ubuntu]]
-        - [[Raspbian / Raspberry Pi|raspbian]]
-        - [[openSUSE]]
-        - [[Arch Linux|arch]]
-        - [[OpenBSD]]
-        - [[FreeBSD / PC-BSD|freebsd]]
+        - [Debian](debian)
+        - [Ubuntu](ubuntu)
+        - [Raspbian / Raspberry Pi](raspbian)
+        - [openSUSE](opensuse)
+        - [Arch Linux](arch)
+        - [OpenBSD](openbsd)
+        - [FreeBSD / PC-BSD](freebsd)
 - OS X
-    * [[Homebrew|osxhomebrew]]
-    * [[MacPorts|osxmacports]]
-    * [[Manual Installation|osxmanual]]
+    * [Homebrew](osxhomebrew)
+    * [MacPorts](osxmacports)
+    * [Manual Installation](osxmanual)
 - Windows
-    * [[Installer|winsetup]]
-    * [[Manual Installation|winmanual]]
+    * [Installer](winsetup)
+    * [Manual Installation](winmanual)
 - Git HEAD
-    - [[Using Git (all platforms)|githeadgit]]
-    - [[Linux/Unix/OS X|githeadunix]]
-    - [[Windows|githeadwin]]
+    - [Using Git (all platforms)](githeadgit)
+    - [Linux/Unix/OS X](githeadunix)
+    - [Windows](githeadwin)
 - Miscellaneous
-	- [[Perlbrew]]
+	- [Perlbrew](perlbrew)
 
 <a name="requirements"></a>
 ## Requirements
@@ -66,4 +66,4 @@ get_iplayer employs external programs to download streams and manipulate media f
 - [AtomicParsley](http://atomicparsley.sourceforge.net) - Metadata tagging for MP4 and M4A files.
 - [id3v2](http://id3v2.sourceforge.net) - Metadata tagging for MP3 files. However, the MP3::Tag Perl module is preferred because it supports more complete ID3 tagging.
 
-Details of how external programs are used can be found [[here|modes#external-programs]].
+Details of how external programs are used can be found [here](modes#external-programs).

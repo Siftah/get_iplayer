@@ -1,33 +1,33 @@
 ## get_iplayer Documentation
 
-**2013-06-06: [[How to Restore BBC TV Downloads|swfurl]]**
+**2013-06-06: [How to Restore BBC TV Downloads](swfurl)**
 
 About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 
-[[Installation|installation]]
+[Installation](installation)
 
-[[Usage and Examples|documentation]]
+[Usage and Examples](documentation)
 
-[[Getting Help|help]]
+[Getting Help](help)
 
-[[Unix Manual Page|manpage]]
+[Unix Manual Page](manpage)
 
-[[Complete Options List|options]]
+[Complete Options List](options)
 
-[[Recording Modes|modes]]
+[Recording Modes](modes)
 
-[[Metadata Tagging|tagging]]
+[Metadata Tagging](tagging)
 
-[[Output File Naming|fileprefix]] (XBMC users - read this)
+[Output File Naming](fileprefix) (XBMC users - read this)
 
-[[Using the PVR with cron|pvrcron]]
+[Using the PVR with cron](pvrcron)
 
-[[Web PVR Manager Help|webpvr]]
+[Web PVR Manager Help](webpvr)
 
-[[Tutorials|tutorials]]
+[Tutorials](tutorials)
 
-[[Contribute|contribute]]
+[Contribute](contribute)
 
-[[Release Notes|releasenotes]]
+[Release Notes](releasenotes)
 
-*Some material in this wiki was scraped from the old get_iplayer site at linuxcentre.net*
+*Some material in this wiki was taken from the old get_iplayer site at linuxcentre.net*

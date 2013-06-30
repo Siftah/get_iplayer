@@ -4,7 +4,7 @@
 
 You know how it gets over the Christmas period; busy visiting relatives and friends, drinking and partying. The last thing you remember to do is to watch that crucial episode on iPlayer within the minute window of seven days the BBC has kindly granted you. Now is the time to set up get\_iplayer to act as a PVR (you know Sky+, TiVo, series-link, etc, etc)! get_iplayer can be easily configured to automatically download your favourite BBC TV programmes just like any other PVR except that there are no limits on how many programmes you can 'record' simultaneously (OK, except your broadband speed maybe). You even get seven days grace when you've forgotten to set up the PVR.
 
-Here is a quick guide to setting it up. I'm assuming you have downloaded and installed get\_iplayer as described **[[here|installation]]**.
+Here is a quick guide to setting it up. I'm assuming you have downloaded and installed get\_iplayer as described **[here](installation)**.
 
 ### Setting up a PVR Search
 
@@ -41,7 +41,7 @@ If you want to list all the searches that you have saved just run:
 
     get_iplayer --pvrlist
 
-If you want to do some more advanced searches you might want to read [[this guide|documentation]] for examples.
+If you want to do some more advanced searches you might want to read [this guide](documentation) for examples.
 
 ### Getting the PVR to run Automatically
 
