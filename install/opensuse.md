@@ -2,7 +2,7 @@
 
 These instructions are for openSUSE 12.3.
 
-### 2013-06-23: openSUSE package for get_iplayer has not yet been updated with a new SWF URL to fix the TV download problems caused by BBC changes in early June 2013.  Until the port is updated, please see [[this page|swfurl]] for instructions on configuring get_iplayer to restore the TV downloads.
+#### 2013-06-23: openSUSE package for get_iplayer has not yet been updated with a new SWF URL to fix the TV download problems caused by BBC changes in early June 2013.  Until the port is updated, please see [[this page|swfurl]] for instructions on configuring get_iplayer to restore the TV downloads.
 
 ### Command-line Interface (CLI)
 
