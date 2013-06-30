@@ -33,10 +33,6 @@ If you install the PBI package, you may skip step #1.
 		cd /usr/ports/net/get_iplayer
 		make install clean
 
-	Remove flvstreamer (not needed):
-
-		pkg_delete flvstreamer
-
 2. Install Perl modules
 
 		pkg_add -r p5-MP3-Tag p5-MP3-Info p5-XML-Simple p5-Net-SMTP-SSL p5-Net-SMTP-TLS
