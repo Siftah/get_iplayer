@@ -28,7 +28,7 @@ The installer will download and install all the required Windows support program
 
 The WPM is installed along with the CLI.
     
-1. To start the WPM go to **All Programs -> get_iplayer -> Web PVR Manager** on the Start menu.  In the Windows 8 Start screen, click the **Web PVR Manager** tile.  
+1. To start the WPM go to `All Programs -> get_iplayer -> Web PVR Manager` on the Start menu.  In the Windows 8 Start screen, click the `Web PVR Manager` tile.  
 
 2. The WPM will launch in a console window and your default browser will be opened to this URL:
 
