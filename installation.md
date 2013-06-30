@@ -18,6 +18,7 @@
         - [[openSUSE]]
         - [[Arch Linux|arch]]
         - [[OpenBSD]]
+        - [[FreeBSD / PC-BSD|freebsd]]
 - OS X
     * [[Homebrew|osxhomebrew]]
     * [[MacPorts|osxmacports]]
