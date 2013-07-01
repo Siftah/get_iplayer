@@ -32,14 +32,14 @@ Below are some examples showing how the output file prefix is altered by the cha
 
 1. The Painted Veil (film, series/episode numbers undefined)
 
-		OLD: The_Painted_Veil---
+		OLD: The_Painted_Veil--
 		NEW: The_Painted_Veil
 
 	Films don't have `<episodeshort>` or `<senum>` defined.
 
 2. Turner's Thames (non-film, series/episode numbers undefined)
 
-		OLD: Turners_Thames---
+		OLD: Turners_Thames--
 		NEW: Turners_Thames.s01e01
 
 	Non-film programmes that are one-offs (e.g., standalone documentaries) don't have `<episodeshort>` or `<senum>` defined. Series and episode numbers are forced to 1 in order to distinguish them from films.
