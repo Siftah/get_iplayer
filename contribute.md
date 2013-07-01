@@ -34,4 +34,4 @@ If you would like to contribute new documentation or correct errors in existing 
 
 <https://github.com/dinkypumpkin/get_iplayer/wiki>
 
-Markdown or Textile content is preferred.
+Markdown content is preferred.
