@@ -49,7 +49,10 @@ There are several different action buttons along the top and bottom of the searc
 
 - **Refresh Cache** – You must regularly refresh the programme cache to see new programmes. Clicking this opens another tab that refreshes the list of programmes from the online feeds of the selected programme type web sites. If you leave it open it will auto-refresh every 4 hours unless you override the settings.
 
-	**NOTE:** It may take a while to reload page when refreshing caches.
+    **NOTE:** It may take a while to reload page when refreshing caches.
+
+>**HEY! OVER HERE!** - Like the man says: Don't forget to refresh your cache before doing a search.
+
 
 - **Quick URL** - To record or play a BBC iPlayer audio or video URL, paste the URL into the *Quick URL* box and click **Play** or **Record**
 
