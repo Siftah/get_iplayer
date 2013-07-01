@@ -95,7 +95,7 @@
 |metadataonly|--metadata-only|Create specified metadata info file without any recording or streaming (can also be used with thumbnail option).|
 |mmsnothread|--mmsnothread|Disable parallel threaded recording for mms|
 |modes|--modes &lt;mode&gt;,&lt;mode&gt;,...|Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).|
-|mp3vbr|--mp3vbr|Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3)|
+|mp3vbr|--mp3vbr &lt;N&gt;|Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3)|
 |multimode|--multimode|Allow the recording of more than one mode for the same programme - WARNING: will record all specified/default modes!!|
 |overwrite|--overwrite|Overwrite recordings if they already exist|
 |partialproxy|--partial-proxy|Only uses web proxy where absolutely required (try this extra option if your proxy fails)|
