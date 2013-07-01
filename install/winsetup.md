@@ -4,6 +4,8 @@ Windows users should install get_iplayer with the provided installer.  Download 
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
+**NOTE:** You must have administrator privileges to install get_iplayer.  If you are the only user on your PC you should already have administrator privileges.
+
 ### Perl Support
 
 The installer will install a private customised version of [Strawberry Perl](http://strawberryperl.com/) that includes all necessary Perl modules.  It will not interfere with any other Perl distribution you may already have installed.
