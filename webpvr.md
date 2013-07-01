@@ -10,7 +10,7 @@ The Web PVR Manager (WPM) is a Web-based search front-end to get_iplayer which a
 
 See the [get_iplayer installation page](installation) for instructions on how to install and run WPM.  Bear in mind that WPM is a front end for the get_iplayer command-line interface (CLI), so you must install the CLI, its related Perl modules and the necessary external applications along with WPM.  In particular, note that [ffmpeg](http://ffmpeg.org) and [rtmpdump](http://rtmpdump.mplayerhq.hu/) are required for streaming or recording of the Flash streams that comprise the bulk of BBC iPlayer content.
 
-Windows users should download and run the latest [get_iplayer installer](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe), which will set up everything you need.  You can launch WPM from *get_iplayer -> Web PVR Manager* on the Start menu or the *Web PVR Manager* tile in Windows 8.
+Windows users should download and run the latest [get_iplayer installer](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe), which will set up everything you need.  You can launch WPM from `All Programs -> get_iplayer -> Web PVR Manager` on the Start menu or the `Web PVR Manager` tile in Windows 8.
 
 It is also recommended to install [VLC Media Player](http://www.videolan.org/vlc/) to use with the **Play** links (see below).
 
