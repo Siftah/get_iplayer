@@ -6,7 +6,7 @@ get_iplayer 2.83 introduced a slightly extended syntax for [substitution paramet
 
 Consider this example:
 
-	fileprefix <nameshort>.<episodeshort>.<senum>
+	fileprefix <nameshort>.<senum>.<episodeshort>
 
 Each substitution parameter can now have the separator defined as a prefix inside the left angle bracket:
 
