@@ -2,6 +2,8 @@
 
 These instructions are for FreeBSD / PC-BSD 9.1.
 
+**2013-06-23: The FreeBSD / PC-BSD port of get_iplayer has not yet been updated with a new SWF URL to fix the TV download problems caused by BBC changes in early June 2013.  Until the port is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
+
 ### Command-line Interface (CLI)
 
 **FreeBSD Only** 
