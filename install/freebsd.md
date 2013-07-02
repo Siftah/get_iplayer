@@ -68,4 +68,4 @@ If you install the PBI package, you may skip steps #1 and #2.
 
 ### Web PVR Manager (WPM)
 
-The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](manual).
+Use the [manual installation procedure](manual).
