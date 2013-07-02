@@ -16,7 +16,7 @@ Perl is not part of the base system install, so install it first with:
 
 	pbi_add -r get_iplayer
 
-If you install the PBI package, you may skip step #1.
+If you install the PBI package, skip step #1.
 
 1. Install get_iplayer port
 
