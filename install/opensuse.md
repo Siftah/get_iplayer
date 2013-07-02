@@ -2,7 +2,7 @@
 
 These instructions are for openSUSE 12.3.
 
-**2013-06-23: openSUSE package for get_iplayer has not yet been updated with a new SWF URL to fix the TV download problems caused by BBC changes in early June 2013.  Until the port is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
+**2013-06-23: The openSUSE get_iplayer package has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the package is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
 
 ### Command-line Interface (CLI)
 
@@ -68,4 +68,3 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
     <http://127.0.0.1:1935>
 
 4. Stop the WPM by typing Ctrl-C in the xterm where it is running.
-
