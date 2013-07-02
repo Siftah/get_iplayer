@@ -2,8 +2,6 @@
 
 These instructions are for FreeBSD / PC-BSD 9.1.
 
-**2013-06-23: The FreeBSD / PC-BSD port of get_iplayer has not yet been updated with a new SWF URL to fix the TV download problems caused by BBC changes in early June 2013.  Until the port is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
-
 ### Command-line Interface (CLI)
 
 **FreeBSD Only** 
@@ -14,7 +12,9 @@ Perl is not part of the base system install, so install it first with:
 
 **PC-BSD Only** 
 
- PC-BSD offers get_iplayer packaged in PBI format, which you can install with AppCafe or with:
+**2013-06-23: The PBI version of get_iplayer has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the PBI version is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
+
+PC-BSD offers get_iplayer packaged in PBI format, which you can install with AppCafe or with:
 
 	pbi_add -r get_iplayer
 
@@ -58,4 +58,3 @@ If you install the PBI package, skip step #1.
 ### Web PVR Manager (WPM)
 
 The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](manual).
-
