@@ -12,7 +12,7 @@ Perl is not part of the base system install, so install it first with:
 
 **PC-BSD Only** 
 
-**2013-06-23: The PBI version of get_iplayer has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the PBI version is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
+**2013-06-23: The PBI version of get_iplayer has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the PBI version is updated, build the get_iplayer port as described in step #1.  Alternatively, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
 
 PC-BSD offers get_iplayer packaged in PBI format, which you can install with AppCafe or with:
 
