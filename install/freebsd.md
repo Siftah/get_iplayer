@@ -16,7 +16,7 @@ If you install the PBI package, you may skip steps #1 and #2.
 
 1. Install Perl
 
-	pkg_add -r perl
+		pkg_add -r perl
 
     NOTE: Perl may already be installed if you installed a desktop environment.
 
