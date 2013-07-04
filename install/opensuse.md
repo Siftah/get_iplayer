@@ -67,4 +67,6 @@ The WPM is maintained in a separate package in the [Packman](http://packman.link
     
     <http://127.0.0.1:1935>
 
-4. Stop the WPM by typing Ctrl-C in the xterm where it is running.
+4. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
+
+5. Stop the WPM by typing Ctrl-C in the xterm where it is running.
