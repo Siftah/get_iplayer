@@ -10,7 +10,7 @@ These instructions are for Arch Linux 3.9
 
 2. Install remaining packages from Arch User Repository (AUR)
 
-	Although not covered here, you may also be able to install the AUR packages with [yaourt](https://wiki.archlinux.org/index.php/Yaourt).
+	Although not covered here, you may also be able to install the AUR packages with [Yaourt](https://wiki.archlinux.org/index.php/Yaourt).
 
 	First, make a base directory for the package builds:
 
@@ -18,19 +18,43 @@ These instructions are for Arch Linux 3.9
 
 	Then download, build and install each package in turn:
 
+	get_iplayer: There are 2 AUR packages for get_iplayer.  The *get_iplayer* package is obsolete (v2.82) but has been patched to continue working.  The *get_iplayer-git* package installs the latest development version of get_iplayer, so it will contain new features or changes not incorporated in the current release version.
+
 		cd ~/packages
 		curl -kLO https://aur.archlinux.org/packages/ge/get_iplayer/get_iplayer.tar.gz
 		tar xzf get_iplayer.tar.gz
 		cd get_iplayer
 		makepkg -s
 		sudo pacman -U get_iplayer*.tar.xz
-	
+
+	OR
+
+		cd ~/packages
+		curl -kLO https://aur.archlinux.org/packages/ge/get_iplayer-git/get_iplayer-git.tar.gz
+		tar xzf get_iplayer-git.tar.gz
+		cd get_iplayer-git
+		makepkg -s
+		sudo pacman -U get_iplayer-git*.tar.xz
+
+	AtomicParsley: There are 2 AUR packages for AtomicParsley.  The *atomicparsley* package is quite old but will still work with get_iplayer.  The *atomicparsley-largefiles* package installs the latest development version of AtomicParsley, so it will contain new features or changes not incorporated in the current release version.
+
 		cd ~/packages
 		curl -kLO https://aur.archlinux.org/packages/at/atomicparsley/atomicparsley.tar.gz
 		tar xzf atomicparsley.tar.gz
 		cd atomicparsley
 		makepkg -s
 		sudo pacman -U atomicparsley*.tar.xz
+
+	OR
+
+		cd ~/packages
+		curl -kLO https://aur.archlinux.org/packages/at/atomicparsley-largefiles/atomicparsley-largefiles.tar.gz
+		tar xzf atomicparsley-largefiles.tar.gz
+		cd atomicparsley-largefiles
+		makepkg -s
+		sudo pacman -U atomicparsley-largefiles*.tar.xz
+
+	Perl modules:
 	
 		cd ~/packages
 		curl -kLO https://aur.archlinux.org/packages/pe/perl-mp3-tag/perl-mp3-tag.tar.gz
