@@ -85,7 +85,7 @@ The WPM is installed as a system service, but it requires additional configurati
 
 	The rtmpdump utility requires that the HOME environment variable point to a writeable location in order to store the `.swfinfo` file used for SWF verification.  get_iplayer also uses HOME to locate preferences and caches.  The WPM service runs as the *get_iplayer* user, but HOME is set for the *root* user and cannot be written by the WPM.  The effect is that no caches can be saved and thus no programmes appear in the WPM search results.  SWF verification also will fail.
 
-	Open the WPM service script (`/usr/local/etc/rc.d/get_iplayer`) in an editor.  The last line of the script should be:
+	Open the WPM service script (`/usr/local/etc/rc.d/get_iplayer`) in a text editor.  The last line of the script should be:
 
 		run_rc_command "$1"
 
