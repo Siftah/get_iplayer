@@ -33,7 +33,9 @@ The WPM is installed along with the CLI.
 
     <http://127.0.0.1:1935>
 
-3. Stop the WPM by typing Ctrl-C.
+3. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
+
+4. Stop the WPM by typing Ctrl-C.
 
 <a name="linux-package-debian-testing"></a>
 ### Update to Debian Testing/Unstable Version
@@ -61,4 +63,3 @@ If you should ever need to update to a get-iplayer package that is newer than th
     	sudo dpkg -i get-iplayer_2.83-1_all.deb
 
 	Only the get-iplayer package will be updated, so this method assumes that dependencies have not changed in the newer package.
-
