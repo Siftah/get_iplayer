@@ -111,11 +111,8 @@ The WPM is installed as a system service, but it requires additional configurati
 		get_iplayer_bind_port="1935"
 
 	These settings:
-
 	* Enable the WPM service.  It will now start at boot time.
-
 	* Set the WPM working directory.  This is where downloads will be saved by default.
-
 	* Set the port where the WPM listens for connections.  The default value in the FreeBSD port is 9370, but has been reset here to 1935, the value typically used on other platforms. Port 1935 is used to support RTMP streaming from the WPM.  If you don't require that functionality, you can omit the `get_iplayer_bind_port` setting and keep the default port.
 	
 4. Start the WPM service
@@ -131,4 +128,3 @@ The WPM is installed as a system service, but it requires additional configurati
 	<http://127.0.0.1:9370>
 
 	if you kept the default FreeBSD port setting.
-
