@@ -124,7 +124,9 @@ A few distros do not provide all the necessary external programs in their offici
 
     <http://127.0.0.1:1935>
 
-7. Stop the WPM by typing Ctrl-C.
+7. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
+
+8. Stop the WPM by typing Ctrl-C.
 
 <a name="manual-archives"></a>
 ### Release Archives
@@ -136,4 +138,3 @@ If you would prefer to download an archive of any get_iplayer release, you can f
 Alternate location (tarballs only):
 
 <ftp://ftp.infradead.org/pub/get_iplayer/>
-
