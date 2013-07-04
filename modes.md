@@ -132,8 +132,8 @@ Below are representative values for recordings made with each of the radio recor
 |--------------|-------------|-----------|-------------|-----|
 |**flashaachigh**|RTMP streaming|AAC|320 kbps|Radio 3 live only| 
 |**flashaacstd**|RTMP streaming|AAC|128 kbps|320 kbps (Radio 3 only)|
-|**flashaaclow**|RTMP streaming|AAC|48 kbps|-|
-|**flashaudio**|RTMP streaming|MP3|128 kbps|-|
+|**flashaaclow**|RTMP streaming|AAC|48 kbps||
+|**flashaudio**|RTMP streaming|MP3|128 kbps||
 |**wma**|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
 
 <a name="shortcut-expansions">
