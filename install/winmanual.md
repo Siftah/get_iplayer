@@ -8,7 +8,7 @@ It is recommended that you install [Strawberry Perl](http://strawberryperl.com/)
 
 Use the CPAN client from your Perl distribution to install additional modules for get_iplayer (some modules may already be part of the base install):
 
-	cpan LWP MP3::Info MP3::Tag Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
+	cpan LWP MP3::Info MP3::Tag Net::SMTP::SSL Authen::SASL Net::SMTP::TLS::ButMaintained XML::Simple
 
 ### External Programs
 
