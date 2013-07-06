@@ -134,10 +134,13 @@ Record all tv programmes with 'blue peter' in the title/episode, and programme i
 
     get_iplayer --get "blue peter" 123
 
-Record all programmes with URL that contains a programme ID (pid) b002a23a (i.e. the URL of the programme page on BBC iPlayer):
+Record all programmes with URL that contains an episode programme ID (PID) b01sc0wf (i.e. the URL of the programme page on BBC iPlayer):
 
-    get_iplayer --pid b002a23a
-    get_iplayer "http://www.bbc.co.uk/iplayer/episode/b002a23a"
+    get_iplayer "http://www.bbc.co.uk/iplayer/episode/b01sc0wf/Doctors_Series_15_Perfect/"
+
+Or simply extract the PID from the URL:
+
+    get_iplayer --pid b01sc0wf
 
 Record a video from the BBC embedded media player such as [Learning Zone](http://www.bbc.co.uk/learningzone/clips/), [BBC Archive](http://www.bbc.co.uk/archive/index.shtml) or the [BBC News site](http://news.bbc.co.uk/1/hi/video_and_audio/default.stm) (i.e. the URL of the page that contains the player):
 
