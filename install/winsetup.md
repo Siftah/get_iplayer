@@ -22,7 +22,7 @@ The installer will download and install all the required Windows support program
 
 3. The first time MPlayer runs (i.e., the first time you download a regional or local radio programme) after a fresh installation, it will scan the available fonts on your system and will produce a large volume of extra output in your console window.  This will not affect the programme download.
 
-4. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on your Windows desktop.  This setting only applies to the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows PC, the other users will need to configure their own output folders with the CLI:
+4. **NOTE**: Unless you opt to change the default value, the installer sets the location for recorded programmes to `iPlayer Recordings` on the Windows desktop of the administrator user who ran the installer.  If you have multiple users running get_iplayer on one Windows PC, the other users will need to configure their own output folders with the CLI:
 
 		get_iplayer --prefs-add --output "%USERPROFILE%\Desktop\iPlayer Recordings"
 
