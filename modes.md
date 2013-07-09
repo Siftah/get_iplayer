@@ -128,13 +128,13 @@ Below are representative values for recordings made with each of the TV recordin
 
 Below are representative values for recordings made with each of the radio recording modes.
 
-|Recording Mode|Access Method|Audio Codec|Audio Bitrate|Notes|
-|--------------|-------------|-----------|-------------|-----|
-|**flashaachigh**|RTMP streaming|AAC|320 kbps|Radio 3 live only| 
-|**flashaacstd**|RTMP streaming|AAC|128 kbps|320 kbps (Radio 3 only)|
-|**flashaaclow**|RTMP streaming|AAC|48 kbps||
-|**flashaudio**|RTMP streaming|MP3|128 kbps||
-|**wma**|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
+|Recording Mode|Source|Access Method|Audio Codec|Audio Bitrate|Notes|
+|--------------|------|-------------|-----------|-------------|-----|
+|**flashaachigh**|Radio 3|RTMP streaming|AAC|320 kbps|Radio 3 live only| 
+|**flashaacstd**|National Radio|RTMP streaming|AAC|128 kbps|320 kbps (Radio 3 only)|
+|**flashaaclow**|National Radio|RTMP streaming|AAC|48 kbps||
+|**flashaudio**|Regional and Local Radio|RTMP streaming|MP3|128 kbps||
+|**wma**|National, Regional and Local Radio|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
 
 <a name="shortcut-expansions">
 ### Shortcut Expansions
