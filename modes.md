@@ -90,7 +90,11 @@ A few examples:
 
 - Make a live radio recording in WMA format, with fallback to AAC format:
 
-		get_iplayer --type liveradio --liveradiomode wma,flashaac "Radio 3"
+		get_iplayer --type=liveradio --liveradiomode=wma,flashaac "Radio 3"
+
+- Record at a lower bit rate for speech radio programmes:
+
+		get_iplayer --get 123 --type=radio --radiomode=flashaaclow
 
 - Set a preference to *only* record the highest-quality (HD and SD) TV programmes, with no fallback to lower-quality video:
 
