@@ -80,13 +80,17 @@ The characteristics for all recording modes are shown below for reference: [TV](
 
 The recording quality for programmes is set by one of the mode options shown in the following table.  Note that you can set separate modes for each get_iplayer programme type. If no type-specific mode is defined, the **modes** option (if supplied) will be used.  If you use the **modes** option, take care to supply recording modes appropriate to the  type(s) of programmes you are downloading.  For example, using `--modes=flashhd` in a command to download a radio programme will prevent the download from succeeding.
 
-Mode values are supplied as a comma-separated list of values which get_iplayer process from the left to right.  The first mode found that matches an available media stream will be used for the download.  If the  download for the first mode fails, subsequent modes will be used.
+Mode values are supplied as a comma-separated list of values which get_iplayer processes from the left to right.  The first mode found that matches an available media stream will be used for the download.  If the  download for the first mode fails, subsequent modes will be used.
 
 A few examples:
 
+- Set all recording modes (TV and Radio) explicitly to download best quality available:
+
+		get_iplayer --get 123 --modes=flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow,flashaachigh,flashaacstd,flashaudio,flashaaclow,wma
+
 - Record a single TV programme at the lowest quality available:
 
-		get_iplayer --get 123 --tvmode=flashlow,flashstd,flashigh
+		get_iplayer --get 123 --tvmode=flashlow,flashstd,flashhigh,flashvhigh,flashhd
 
 - Make a live radio recording in WMA format, with fallback to AAC format:
 
@@ -111,7 +115,7 @@ A few examples:
 |livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|Live TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)|
 |liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow,wma)|
 
-<a name="tv-modes">
+<a name="tv-modes"></a>
 ### TV Modes
 
 Below are representative values for recordings made with each of the TV recording modes.
@@ -127,7 +131,7 @@ Below are representative values for recordings made with each of the TV recordin
 
 *(Source: Beebhack)*
 
-<a name="radio-modes">
+<a name="radio-modes"></a>
 ### Radio Modes
 
 Below are representative values for recordings made with each of the radio recording modes.
@@ -140,7 +144,7 @@ Below are representative values for recordings made with each of the radio recor
 |**flashaudio**|Regional and Local Radio|RTMP streaming|MP3|128 kbps||
 |**wma**|National, Regional and Local Radio|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
 
-<a name="shortcut-expansions">
+<a name="shortcut-expansions"></a>
 ### Shortcut Expansions
 
 The tables below detail how recording mode shortcuts are expanded into lists of mode values.
@@ -175,7 +179,26 @@ Same as TV Shortcuts
 
 Same as Radio Shortcuts
 
-<a name="external-programs">
+## Content Distribution Networks
+
+BBC iPlayer programmes may be available from more than one content distribution network (CDN).  A CDN is an external provider of media streaming services and infrastructure.  get_iplayer internally differentiates between available CDNs with a number appended to recording modes.  The metadata for a TV programme might show the following:
+
+	modes:    default: flashhd1,flashhd2,flashhigh1,flashhigh2,flashlow1,flashlow2,flashstd1,flashstd2,flashvhigh1,flashvhigh2,subtitles1
+
+This indicates that the flash* streams are available from two CDNs. Radio programmes are only available from a single CDN:
+
+	modes:    default: flashaaclow1,flashaacstd1,wma1
+
+The CDNs that correspond to the "1" and "2" may be different for each invocation of get_iplayer.  It is not possible to predict which CDN will be be used for a given recording.  In general it is not necessary to specifically designate a CDN when recording a programme.  If, for example, get_iplayer cannot download the flashhd1 stream, it will roll over to the flashhd2 stream and retry the download.  
+
+**NOTE:** get_iplayer does not roll over to another CDN when recording live streams.
+
+There may be times when the #1 CDN is not responding properly or rejecting connections.  You can force the use of the #2 CDN by explicitly setting your recording modes with the "2" appended.  An example:
+
+	get_iplayer --get 123 --tvmode=flashhd2,flashvhigh2
+
+Be aware that the #2 CDN in your second attempt may correspond to the problematic #1 CDN from the previous download attempt, so a few retries may be required to get a connection to the working CDN.
+
 ## External Programs
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
