@@ -1,4 +1,3 @@
-
 ## Git HEAD - Windows
 
 "Git HEAD" is the latest development version of get_iplayer from the Git repository. There may be occasions when you wish to use the Git HEAD version of get_iplayer in order to test bug fixes or new features.
@@ -23,7 +22,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 2. Back up and replace existing CLI (requires admin privileges)
 
-		copy "C:\Program Files\get_iplayer\get_iplayer.pl" get_iplayer.pl.Bak
+		copy "C:\Program Files\get_iplayer\get_iplayer.pl" get_iplayer.pl.bak
 		copy get_iplayer.pl "C:\Program Files\get_iplayer\get_iplayer.pl"
 
 	NOTE: Replace `C:\Program Files` with `C:\Program Files (x86)` for 64-bit Windows.
