@@ -179,7 +179,7 @@ Same as TV Shortcuts
 
 Same as Radio Shortcuts
 
-## Modes and Content Distribution Networks
+## Modes and CDNs
 
 BBC iPlayer programmes may be available from more than one content distribution network (CDN).  A CDN is an external provider of media streaming services and infrastructure.  get_iplayer internally differentiates between available CDNs with a number appended to recording modes.  The metadata for a TV programme might show the following:
 
