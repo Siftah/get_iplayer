@@ -639,7 +639,7 @@ This manual page was originally written by Jonathan Wiltshire &lt;jmw@debian.org
 
 # COPYRIGHT NOTICE
 
-get_iplayer v2.82, Copyright (C) 2008-2010 Phil Lewis
+get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis
   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
   This is free software, and you are welcome to redistribute it under certain
   conditions; use --conditions for details.
