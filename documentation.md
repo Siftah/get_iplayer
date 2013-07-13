@@ -658,7 +658,7 @@ The following substitutions may be available to certain options such as --comman
 
 **[Click Here for All External Program Options](manpage#external-program-options)**
 
-Several external programs can be used by get_iplayer. The required programs for each mode and type are listed **[here](installation#External%20Program%20Requirements)**. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
+Several external programs can be used by get_iplayer. The required programs for each mode and type are listed **[here](modes#external-programs)**. The following options are used to specify the exact path so that get_iplayer knows where they are. If they are already in $PATH then there is no need to specify them:
 
     --flvstreamer
     --ffmpeg
