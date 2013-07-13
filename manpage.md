@@ -30,13 +30,13 @@
 
 * [COPYRIGHT NOTICE](#copyright-notice)
 
-<a id="name"></a>
+<a name="name"></a>
 
 # NAME
 
 get_iplayer - Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more
 
-<a id="synopsis"></a>
+<a name="synopsis"></a>
 
 # SYNOPSIS
 
@@ -56,7 +56,7 @@ get_iplayer --stream [&lt;options&gt;] --type=livetv,liveradio &lt;regex|index&g
 
 get_iplayer --refresh
 
-<a id="description"></a>
+<a name="description"></a>
 
 # DESCRIPTION
 
@@ -72,12 +72,12 @@ get_iplayer utilises the rtmpdump tool to record BBC iPlayer programmes from RTM
 
 In PVR mode, get_iplayer can be called from cron to record programmes to a schedule.
 
-<a id="options"></a>
+<a name="options"></a>
 
 # OPTIONS
 
 
-<a id="search-options"></a>
+<a name="search-options"></a>
 
 ## Search Options
 
@@ -124,7 +124,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--versions &lt;versions&gt;**
 : Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: &#39;--versions signed,audiodescribed,default&#39; will prefer signed and audiodescribed programmes if available.  Default: &#39;default&#39;
 
-<a id="display-options"></a>
+<a name="display-options"></a>
 
 ## Display Options
 
@@ -213,7 +213,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **-V**
 : Show get_iplayer version and exit.
 
-<a id="recording-options"></a>
+<a name="recording-options"></a>
 
 ## Recording Options
 
@@ -344,7 +344,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--wav**
 : In radio realaudio mode output as wav and don&#39;t transcode to mp3
 
-<a id="output-options"></a>
+<a name="output-options"></a>
 
 ## Output Options
 
@@ -460,7 +460,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--xml-names**
 : Create freevo/Mythtv menu of programme names -&gt; episodes
 
-<a id="pvr-options"></a>
+<a name="pvr-options"></a>
 
 ## PVR Options
 
@@ -498,7 +498,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--pvr-single &lt;search name&gt;**
 : Runs a named PVR search. Synonyms: --pvrsingle
 
-<a id="config-options"></a>
+<a name="config-options"></a>
 
 ## Config Options
 
@@ -563,7 +563,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--webrequest &lt;urlencoded string&gt;**
 : Specify all options as a urlencoded string of &quot;name=val&amp;name=val&amp;...&quot;
 
-<a id="external-program-options"></a>
+<a name="external-program-options"></a>
 
 ## External Program Options
 
@@ -589,7 +589,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--vlc &lt;path&gt;**
 : Location of vlc or cvlc binary
 
-<a id="tagging-options"></a>
+<a name="tagging-options"></a>
 
 ## Tagging Options
 
@@ -627,7 +627,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--tag-utf8**
 : AtomicParsley accepts UTF-8 input
 
-<a id="author"></a>
+<a name="author"></a>
 
 # AUTHOR
 
@@ -635,7 +635,7 @@ get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt;
 
 This manual page was originally written by Jonathan Wiltshire &lt;jmw@debian.org&gt; for the Debian project (but may be used by others).
 
-<a id="copyright-notice"></a>
+<a name="copyright-notice"></a>
 
 # COPYRIGHT NOTICE
 
