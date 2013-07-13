@@ -2,27 +2,29 @@
 
 ## Table of Contents
 
-* [Searching](#Searching)
-* [Recording](#Recording)
-* [Live Recording](#Live Recording)
-* [Searching the Future Programme Schedule](#Searching the Future Programme Schedule)
-* [Searching the Recording History](#Searching the Recording History)
-* [Indexing and Caching Features](#Indexing and Caching Features)
-* [Updating get_iplayer](#Updating get_iplayer)
-* [Streaming](#Streaming)
-* [Live Streaming](#Live Streaming)
-* [Saving Settings](#Saving Settings)
-* [Using a Web Proxy](#Using a Web Proxy)
-* [Option Presets and Shortcuts](#Option Presets and Shortcuts)
-* [Subtitles](#Subtitles)
-* [More Programme Information](#More Programme Information)
-* [Filenames and Directories](#Filenames and Directories)
-* [Custom Commands](#Custom Commands)
-* [PVR Usage](#PVR Usage)
-* [Substitution Parameters](#Substitution Parameters)
-* [External Programs](#External Programs)
-* [Metadata Tagging](#Metadata Tagging)
-* [Notes](#Notes)
+* [Searching](#searching)
+* [Recording](#recording)
+* [Live Recording](#live-recording)
+* [Searching the Future Programme Schedule](#searching-the-future-programme-schedule)
+* [Searching the Recording History](#searching-the-recording-history)
+* [Indexing and Caching Features](#indexing-and-caching-features)
+* [Updating get_iplayer](#updating-get_iplayer)
+* [Streaming](#streaming)
+* [Live Streaming](#live-streaming)
+* [Saving Settings](#saving-settings)
+* [Using a Web Proxy](#using-a-web-proxy)
+* [Option Presets and Shortcuts](#option-presets-and-shortcuts)
+* [Subtitles](#subtitles)
+* [More Programme Information](#more-programme-information)
+* [Filenames and Directories](#filenames-and-directories)
+* [Custom Commands](#custom-commands)
+* [PVR Usage](#pvr-usage)
+* [Substitution Parameters](#substitution-parameters)
+* [Scheduling the PVR](#scheduling-the-pvr)
+* [External Programs](#external-programs)
+* [Metadata Tagging](#metadata-tagging)
+* [Notes](#notes)
+
 
 ## Command Usage
 
@@ -38,7 +40,7 @@ For advanced and extended options run:
 
 ## Examples
 
-<a name="Searching"></a>
+<a name="searching"></a>
 ### Searching
 
 **[Click Here for All Search Options](manpage#search-options)**
@@ -99,7 +101,7 @@ List all programme metadata and available streaming modes for programme with ind
 
     get_iplayer --info 123
 
-<a name="Recording"></a>
+<a name="recording"></a>
 ### Recording
 
 **[Click Here for All Recording Options](manpage#recording-options)**
@@ -169,7 +171,7 @@ Record a radio programme trying flashaudio then flashaac modes in order until on
 **Note:** Possible modes are (in increasing order of quality): flashaaclow, flashaudio, flashaacstd, flashaachigh. Use the `-–info` option to see what modes are available for a programme.
 
 
-<a name="Live Recording"></a>
+<a name="live-recording"></a>
 ### Live Recording
 
 **[Click Here for All Recording Options](manpage#recording-options)**
@@ -192,7 +194,7 @@ Record a High Quality Live BBC iPlayer Radio programme (e.g. BBC Radio 1):
     get_iplayer --type=radio "http://www.bbc.co.uk/iplayer/playlive/bbc_radio_one"
     get_iplayer --type=radio --pid=bbc_radio_one
 
-<a name="Searching the Future Programme Schedule"></a>
+<a name="searching-the-future-programme-schedule"></a>
 ### Searching the Future Programme Schedule
 
 **[Click Here for All Search Options](manpage#search-options)**
@@ -215,7 +217,7 @@ You cannot record a programme in the future but you can queue it in the PVR for 
 
     get_iplayer --pvrqueue --type=tv 123
 
-<a name="Searching the Recording History"></a>
+<a name="searching-the-recording-history"></a>
 ### Searching the Recording History
 
 **[Click Here for All Search Options](manpage#search-options)**
@@ -238,7 +240,7 @@ Download thumbnails for all recorded programmes matching “Doctor Who” in the
 
     get_iplayer --history "Doctor Who" --thumbnailonly --skipdeleted
 
-<a name="Indexing and Caching Features"></a>
+<a name="indexing-and-caching-features"></a>
 ### Indexing and Caching Features
 
 **[Click Here for All Config Options](manpage#config-options)**
@@ -267,7 +269,7 @@ Include  ONLY these channels in the programme cache (i.e. only these channels wi
 
     get_iplayer --refresh-include="bbc" --type=tv --refresh
 
-<a name="Updating get_iplayer"></a>
+<a name="updating-get_iplayer"></a>
 ### Updating get_iplayer
 
 **[Click Here for All Config Options](manpage#config-options)**
@@ -288,7 +290,7 @@ If you installed using a package manager then please see the Install page for fu
 
 Download the latest Installer and re-run it. You can then uninstall the get_iplayer component and then re-install that component. The same goes for each of the other components if you so wish.
 
-<a name="Streaming"></a>
+<a name="streaming"></a>
 ### Streaming
 
 **[Click Here for All Output Options](manpage#output-options)**
@@ -305,7 +307,7 @@ Stream a programme in mplayer/vlc/ffplay while not recording it to disk:
     get_iplayer --stream 123 --player="vlc -"
     get_iplayer --stream 123 --player="ffplay -"
 
-<a name="Live Streaming"></a>
+<a name="live-streaming"></a>
 ### Live Streaming
 
 **[Click Here for All Output Options](manpage#output-options)**
@@ -325,7 +327,7 @@ Stream a live BBC iPlayer radio programme to mplayer while not recording it to d
     get_iplayer --stream --type=radio "http://www.bbc.co.uk/iplayer/playlive/bbc_radio_one" | mplayer -cache 64 -
     get_iplayer --stream --pid='bbc_radio_one' | mplayer -cache 64 -
 
-<a name="Using a Web Proxy"></a>
+<a name="using-a-web-proxy"></a>
 ### Using a Web Proxy
 
 **[Click Here for All Recording Options](manpage#recording-options)**
@@ -336,7 +338,7 @@ If you are behind a web proxy you can use the following to specify it:
 
 All modes other than http will not work through a web proxy. To make only the meta-data web requests go through the proxy add the –partial-proxy option. This will only work if your network allows direct access to the streaming port (e.g. port 1935).
 
-<a name="Saving Settings"></a>
+<a name="saving-settings"></a>
 ### Saving Settings
 
 **[Click Here for All Config Options](manpage#config-options)**
@@ -373,7 +375,7 @@ The option key is the option name with hyphens removed.  For example, `--file-pr
     fileprefix <name>-<episode>
     raw 1
 
-<a name="Option Presets and Shortcuts"></a>
+<a name="option-presets-and-shortcuts"></a>
 ### Option Presets and Shortcuts
 
 **[Click Here for All Config Options](manpage#config-options)**
@@ -412,7 +414,7 @@ Now, to run the preset at any time I simply type:
 
     get_iplayer --preset=last24
 
-<a name="Subtitles"></a>
+<a name="subtitles"></a>
 ### Subtitles
 
 **[Click Here for All Recording Options](manpage#recording-options)**
@@ -425,7 +427,7 @@ Record programme number 123 with subtitles (if available) and optionally insert 
 
     get_iplayer --subsonly --get 123
 
-<a name="More Programme Information"></a>
+<a name="more-programme-information"></a>
 ### More Programme Information
 
 **[Click Here for All Display Options](manpage#display-options)**
@@ -480,7 +482,7 @@ Get all subtitles for files that still exist (Note that you can only get subs if
 
     get_iplayer --subs-only --history --skipdeleted
 
-<a name="Filenames and Directories"></a>
+<a name="filenames-and-directories"></a>
 ### Filenames and Directories
 
 **[Click Here for All Output Options](manpage#output-options)**
@@ -524,7 +526,7 @@ Use a subdirectory format with [substitution parameters](#Substitution Parameter
 
     --subdir-format="<nameshort>-<seriesnum>"
 
-<a name="Custom Commands"></a>
+<a name="custom-commands"></a>
 ### Custom Commands
 
 **[Click Here for All Output Options](manpage#output-options)**
@@ -541,7 +543,7 @@ Using the --command option to background transcode your recorded video to MPEG-T
 	
 	get_iplayer --get 123 --raw --command 'ffmpeg -v quiet -i "<filename>" -vcodec copy -acodec mp2 -vbsf h264_mp4toannexb "<dir>/<fileprefix>.ts" &'
 
-<a name="PVR Usage"></a>
+<a name="pvr-usage"></a>
 ### PVR Usage
 
 **[Click Here for All PVR Options](manpage#pvr-options)**
@@ -586,7 +588,7 @@ Run the PVR (this really should be added to your scheduler such as cron):
 
     get_iplayer --pvr
 
-<a name="Scheduling the PVR"></a>
+<a name="scheduling-the-pvr"></a>
 ### Scheduling the PVR
 
 **[Click Here for All PVR Options](manpage#pvr-options)**
@@ -609,7 +611,7 @@ Or, run the PVR Scheduler from the command line. This will fire off the PVR ever
 
 With the latest installer there will be an entry in the Start menu to 'Run PVR Scheduler Now'. This will start a command window which will fire off the PVR every 4 hours. Alternatively if, you wish to use the Windows Scheduler see [this guide](http://www.beebotron.org/helper_get_iplayer_help.php) for full instructions.
 
-<a name="Substitution Parameters"></a>
+<a name="substitution-parameters"></a>
 ### Substitution Parameters
 
 The following substitutions may be available to certain options such as --command and --fileprefix. To see a list of all available parameters for a specific programme use the --info option.
@@ -651,7 +653,7 @@ The following substitutions may be available to certain options such as --comman
     <lastbcast>     = Time when programme was last broadcast
     <lastbcastrel>  = Relative time when programme was last broadcast
 
-<a name="External Programs"></a>
+<a name="external-programs"></a>
 ### External Programs
 
 **[Click Here for All External Program Options](manpage#external-program-options)**
@@ -672,19 +674,19 @@ e.g. to save the ffmpeg location to your default settings in Linux/OS X (you don
 
     get_iplayer --add-prefs --ffmpeg="/usr/bin/ffmpeg"
 
-<a name="Metadata Tagging"></a>
+<a name="metadata-tagging"></a>
 ### Metadata Tagging
 
 **[Click Here for All Metadata Tagging Options](manpage#tagging-options)**
 
 get_iplayer optionally adds metadata tags to output files in MP4, M4A and MP3 format.  Details on metadata tagging can be found **[here](tagging)**.
 
-<a name="Notes"></a>
+<a name="notes"></a>
 ### Notes
 
 The first time you run the script it will access the BBC website XML feeds and create an index of all programmes currently available.
 
-<a name="Todo"></a>
+<a name="todo"></a>
 ### Todo
 
 These still need documenting:
