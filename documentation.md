@@ -124,6 +124,10 @@ Record Radio programme number 10123 and tv programme number 324 (see index list)
 
     get_iplayer --get 10123 324
 
+Record national radio programme and convert audio from AAC to MP3:
+
+    get_iplayer --type=radio --get "Bells on Sunday" --aactomp3
+
 Record Podcasts matching 'Moyles':
 
     get_iplayer --type=podcast --get "Moyles"
