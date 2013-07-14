@@ -12,7 +12,7 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
 2. Ensure package database is current:
 
-    `sudo apt-get update`
+        sudo apt-get update
 
 3. Download the get-iplayer package for Debian testing from your preferred mirror:
 
@@ -20,23 +20,23 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
 4. Install the downloaded DEB file (version 2.82-2 in this example):
 
-    `sudo gdebi get-iplayer_2.82-2_all.deb`
+        sudo gdebi get-iplayer_2.82-2_all.deb
     
     Required dependencies will also be installed.
 
 5. Install components not installed by gdebi:
 
-    `sudo apt-get install atomicparsley id3v2 libmp3-info-perl libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-perl`
+        sudo apt-get install atomicparsley id3v2 libmp3-info-perl libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-perl
 
 6. Install components from squeeze-backports:
 
-    `sudo apt-get -t squeeze-backports install ffmpeg mplayer `
+        sudo apt-get -t squeeze-backports install ffmpeg mplayer
     
     If you already have ffmpeg and mplayer packages installed, they will be upgraded.  The ffmpeg package must be upgraded since it is not compatible with newer versions of get_iplayer.
 
 7. Run CLI:
 
-    `get_iplayer […]`
+        get_iplayer […]
 
 ### Web PVR Manager (WPM)
 
@@ -44,7 +44,7 @@ The WPM is installed along with the CLI.
 
 1. Launch the WPM with:
 
-    `get_iplayer_web_pvr`
+        get_iplayer_web_pvr
 
 2. Once the WPM is running, connect to it by opening this URL in your browser:
 
