@@ -27,3 +27,9 @@ Before posting to the mailing list search the archive here:
 to see if your question has already been asked and answered.
 
 Do **NOT** use the issue tracker in the GitHub repository.  It is for the use of contributors working on get_iplayer itself.  Any usage queries, feature requests or problem reports should go to the mailing list.
+
+### Beginner Guides and Forums
+
+Somes guides for get_iplayer beginners, along with user forums, may be found at:
+
+<http://getiplayer.co.uk>
