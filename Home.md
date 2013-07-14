@@ -10,6 +10,8 @@ About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 
 [[Getting Help|help]]
 
+[Beginner Guides and Forums](http://getiplayer.co.uk)
+
 [[Unix Manual Page|manpage]]
 
 [[Complete Options List|options]]
