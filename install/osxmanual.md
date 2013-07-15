@@ -1,3 +1,4 @@
+
 ## OS X Manual Installation
 
 ### Perl Support
@@ -7,15 +8,42 @@ Additional Perl modules may be installed using the [local::lib method](manual) d
 
 ### External Programs
 
-WIP
+1. Download a bundle containing the external programs from one of the links below (select the link appropriate for your version of OS X):
+
+    OS X 10.6 (Snow Leopard) or higher, 64-bit Intel only:
+
+    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/x86_64/20130714/get_iplayer-osx-utils-x86_64-20130714.zip>
+
+    OS X 10.5 (Leopard), 32-bit Intel only:
+
+    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/i386/20130714/get_iplayer-osx-utils-i386-20130714.zip>
+
+    **NOTE:** There is no bundle available for PowerPC machines.
+
+2. Extract the zip file, open a command prompt and navigate to the directory containing the extracted files.  For example:
+
+        cd ~/Downloads/get_iplayer-osx-utils-x86_64-20130714
+
+3. Create the installation directory if it does not exist:
+
+        sudo mkdir -p /usr/local/bin
+
+4. Install the external programs:
+
+        sudo install -m 755 AtomicParsley ffmpeg id3v2 mplayer rtmpdump /usr/local/bin
 
 ### Command-line Interface (CLI)
 
-Use the CLI [manual installation procedure](manual) described for Linux/Unix.
+Create the installation directory if it does not exist:
+
+    sudo mkdir -p /usr/local/bin
+
+then use the CLI [manual installation procedure](manual) described for Linux/Unix.
 
 ### Web PVR Manager (WPM)
 
-Use the WPM [manual installation procedure](manual) described for Linux/Unix.
+Create the installation directory if it does not exist:
 
+    sudo mkdir -p /usr/local/bin
 
-
+then use the WPM [manual installation procedure](manual) described for Linux/Unix.
