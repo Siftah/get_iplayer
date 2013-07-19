@@ -24,9 +24,7 @@ get_iplayer's GitHub repository is mirrored with the Git repository at:
 
 <http://git.infradead.org/get_iplayer.git/>
 
-For access information see:
-
-<http://www.infradead.org/get_iplayer/html/get_iplayer.html>
+Post to the [get_iplayer mailing list](http://lists.infradead.org/mailman/listinfo/get_iplayer) to request access.
 
 ### Documentation
 
