@@ -12,7 +12,7 @@ Follow a few basic guidelines for pull requests:
 
 - Each pull request should contain only one new feature or a fix for a single bug.
 
-- Each pull request should contain only one commit.
+- Each pull request should contain only one commit whenever possible.
 
 - Each pull request should be independent of changes made in any other pull request.
 
