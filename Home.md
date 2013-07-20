@@ -2,6 +2,8 @@
 
 **2013-06-23: TV Downloads Broken? [[Upgrade to Version 2.83|release283]]**
 
+[[Release Notes|releasenotes]]
+
 [[Installation|installation]]
 
 [[Usage and Examples|documentation]]
@@ -27,8 +29,6 @@
 [[Tutorials|tutorials]]
 
 [[Contribute to get_iplayer|contribute]]
-
-[[Release Notes|releasenotes]]
 
 [DRM and Fair Use](http://www.infradead.org/get_iplayer/html/get_iplayer.html)
 
