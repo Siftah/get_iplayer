@@ -32,4 +32,4 @@ About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 
 [[Release Notes|releasenotes]]
 
-*Some material in this wiki was scraped from the old get_iplayer site at linuxcentre.net*
+*Some material in this wiki was scraped from the defunct get_iplayer site at linuxcentre.net*
