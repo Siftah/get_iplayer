@@ -32,4 +32,4 @@ Do **NOT** use the issue tracker in the GitHub repository.  It is for the use of
 
 Somes guides for get_iplayer beginners, along with user forums, may be found at:
 
-<http://getiplayer.co.uk>
+<http://squarepenguin.co.uk>
