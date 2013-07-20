@@ -2,15 +2,13 @@
 
 **2013-06-23: TV Downloads Broken? [[Upgrade to Version 2.83|release283]]**
 
-About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
-
 [[Installation|installation]]
 
 [[Usage and Examples|documentation]]
 
 [[Getting Help|help]]
 
-[Beginner Guides and Forums](http://getiplayer.co.uk)
+[Beginner Guides and Forums](http://squarepenguin.co.uk)
 
 [[Unix Manual Page|manpage]]
 
@@ -31,5 +29,7 @@ About: <http://www.infradead.org/get_iplayer/html/get_iplayer.html>
 [[Contribute|contribute]]
 
 [[Release Notes|releasenotes]]
+
+[get_iplayer@infradead.org](http://www.infradead.org/get_iplayer/html/get_iplayer.html)
 
 *Some material in this wiki was scraped from the defunct get_iplayer site at linuxcentre.net*
