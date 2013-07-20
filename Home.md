@@ -26,8 +26,6 @@
 
 [[Web PVR Manager Help|webpvr]]
 
-[[Tutorials|tutorials]]
-
 [[Contribute to get_iplayer|contribute]]
 
 [DRM and Fair Use](http://www.infradead.org/get_iplayer/html/get_iplayer.html)
