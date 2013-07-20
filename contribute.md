@@ -6,6 +6,8 @@ If you would like to contribute to get_iplayer development, fork the repository 
 
 <https://github.com/dinkypumpkin/get_iplayer>
 
+You will need a GitHub account in order to fork the repository and submit pull requests.
+
 Follow a few basic guidelines for pull requests:
 
 - Each pull request should be submitted from its own topic branch in your fork of the repository.  This will make it easier to manage further changes after the pull request is submitted.
