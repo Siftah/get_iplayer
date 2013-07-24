@@ -18,6 +18,8 @@ You will need to locate or build the external programs yourself.  You can see th
 
 The file is in INI format.  The "url" value in each section contains the  download URL for that program.  Extract the downloaded archives and install the binaries to your location of choice.
 
+**NOTE:** LAME and VLC support obsolete functionality and thus are not generally required for manual installation.  They appear in the above .INI file for use by the Windows installer.  If you wish to use VLC as media viewer, perform a full VLC installation separately.
+
 ### Command-line Interface (CLI)
 
 1. Download an archive of the latest get_iplayer release from:
