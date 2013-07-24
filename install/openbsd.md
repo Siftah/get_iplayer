@@ -4,15 +4,19 @@ These instructions are for OpenBSD 5.3.
 
 ### Command-line Interface (CLI)
 
-1. Install get_iplayer package and dependencies
+1. Install get_iplayer 2.82 package and dependencies from release repository (assumes PKG_PATH configured)
 
-	    sudo pkg_add get_iplayer
+        sudo pkg_add get_iplayer
+
+2. Update to get_iplayer 2.83 package from snapshots repository
+
+        sudo pkg_add http://www.mirrorservice.org/pub/OpenBSD/snapshots/packages/`uname -m`/get_iplayer-2.83.tgz
     
-2. Install components not installed with get_iplayer package
+3. Install components not installed with get_iplayer package
 
-    	sudo pkg_add ffmpeg mplayer p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained
+        sudo pkg_add ffmpeg mplayer p5-Net-SMTP-SSL p5-Authen-SASL p5-Net-SMTP-TLS-ButMaintained
 
-3. Run CLI with:
+4. Run CLI with:
 
     	get_iplayer […]
 
@@ -21,4 +25,3 @@ NOTE: If you use SSL email, you may see a deprecation warning about the use of S
 ### Web PVR Manager (WPM)
 
 The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](manual).
-
