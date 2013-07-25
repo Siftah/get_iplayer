@@ -18,7 +18,7 @@ If you install the PBI package, you may skip steps #1 and #2.
 
 1. Install Perl
 
-		pkg_add -r perl
+		sudo pkg_add -r perl
 
     NOTE: Perl may already be installed if you installed a desktop environment.
 
@@ -31,12 +31,12 @@ If you install the PBI package, you may skip steps #1 and #2.
 	
 	Install flvstreamer to avoid building it along with get_iplayer port:
 
-		pkg_add -r flvstreamer
+		sudo pkg_add -r flvstreamer
 
 	Install get_iplayer port:
 
 		cd /usr/ports/net/get_iplayer
-		make install clean
+		sudo make install clean
 
 3. Install Perl modules
 
