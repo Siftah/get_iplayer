@@ -10,7 +10,7 @@ These instructions are for OpenBSD 5.3.
 
 2. Update to get_iplayer 2.83 package from snapshots repository
 
-        sudo pkg_add http://www.mirrorservice.org/pub/OpenBSD/snapshots/packages/`uname -m`/get_iplayer-2.83.tgz
+        sudo pkg_add http://www.mirrorservice.org/pub/OpenBSD/snapshots/packages/`machine -a`/get_iplayer-2.83.tgz
     
 3. Install components not installed with get_iplayer package
 
