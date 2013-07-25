@@ -47,7 +47,7 @@ There are several different action buttons along the top and bottom of the searc
 
 >**HEY! OVER HERE!** - The queued recordings and PVR searches that you add will only actually be recorded when you click the **Run PVR** button at the top of the page.
 
-- **Refresh Cache** – You must regularly refresh the programme cache to see new programmes. Clicking this opens another tab that refreshes the list of programmes from the online feeds of the selected programme type web sites. If you leave it open it will auto-refresh every 4 hours unless you override the settings.
+- **Refresh Cache** – You must regularly refresh the programme cache to see new programmes. Clicking this button opens another tab or window that refreshes the list of programmes from the online feeds of the selected programme types. If you leave it open it will auto-refresh every hour unless you override the settings.
 
     **NOTE:** It may take a while to reload page when refreshing caches.
 
