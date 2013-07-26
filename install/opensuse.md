@@ -71,6 +71,8 @@ These instructions are for openSUSE 12.3.
     
     <http://127.0.0.1:1935>
 
+    **NOTE:** As of v2.83, this no longer works due to changes in the WPM.  You will see several messages saying "The web pvr was unable to start." and your browser will not open.  However, the WPM actually will have started.  You can connect to it in your browser by clicking the URL above.
+
 4. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
 
 5. Stop the WPM by typing Ctrl-C in the xterm where it is running.
