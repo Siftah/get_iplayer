@@ -2,11 +2,7 @@
 
 These instructions are for openSUSE 12.3.
 
-**2013-06-23: The openSUSE get_iplayer package has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the package is updated, please see [this page](swfurl) for instructions on configuring get_iplayer to restore the TV downloads.**
-
 ### Command-line Interface (CLI)
-
-The CLI package for openSUSE is maintained in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository.
 
 1. Install restricted formats support according to the instructions here:
 
@@ -20,7 +16,13 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 
 3. Install get_iplayer package and dependencies
 
-    	sudo zypper install get_iplayer
+    The get_iplayer package in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository has not been updated to 2.83+ and thus should not be used.  You can find an updated package supplied through the openSUSE Build Service: 
+
+    <http://software.opensuse.org/package/get_iplayer>
+
+    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually:
+
+    	sudo zypper install get_iplayer-2.83-2.1.noarch.rpm
 
 4. Install components not installed with get_iplayer package
 
@@ -40,9 +42,7 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 
     	sudo zypper install perl-Net-SMTP-TLS-0.12-6.1.noarch.rpm
 
-    If you opt for one-click installation, the initial "Additional Software Repositories" screen will display an option to "Remain subscribed to these repositories after installation".  Since these are one-off installations, uncheck that option.
-
-	There is no packaged version of id3v2 available, but you will not require it with the MP3::Tag module installed.
+    There is no packaged version of id3v2 available, but you will not require it with the MP3::Tag module installed.
 
 6. Run CLI with:
 
@@ -51,13 +51,17 @@ The CLI package for openSUSE is maintained in the [Packman](http://packman.links
 
 ### Web PVR Manager (WPM)
 
-The WPM is maintained in a separate package in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository. 
-
 1. Install CLI as described above
 
 2. Install WPM package and dependencies
 
-    	sudo zypper install get_iplayer-pvr
+    The get_iplayer-pvr package in the [Packman](http://packman.links2linux.org/package/get_iplayer) repository has not been updated to 2.83+ and thus should not be used.  You can find an updated package supplied through the openSUSE Build Service: 
+
+    <http://software.opensuse.org/package/get_iplayer-pvr>
+
+    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually:
+
+    	sudo zypper install get_iplayer-pvr-2.83-2.1.noarch.rpm
 
 3. Launch the WPM with:
 
