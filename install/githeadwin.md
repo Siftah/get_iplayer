@@ -18,7 +18,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 	<http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer>
 	
-	**NOTE:** Make sure the file is saved as a plain text file (Text Document). Your web browser may prompt you save the file as "get_iplayer.txt".  Change the file name to "get_iplayer.pl".  You may also rename the file after downloading.
+	**NOTE:** Make sure the file is saved as a plain text file (Text Document). Your web browser may prompt you to save the file as "get_iplayer.txt".  If so, change the file name to "get_iplayer.pl" after downloading.
 
 2. Back up and replace existing CLI (requires admin privileges)
 
@@ -39,7 +39,7 @@ Updating an existing Windows installation is different from updating a Linux/Uni
 
 	<http://git.infradead.org/get_iplayer.git/blob_plain/master:/get_iplayer.cgi>
 
-	**NOTE:** Make sure the file is saved as a plain text file (Text Document).  Your web browser may prompt you save the file as "get_iplayer.txt" or "get_iplayer.cgi.txt".  Change the file name to "get_iplayer.cgi".  You may also rename the file after downloading.
+	**NOTE:** Make sure the file is saved as a plain text file (Text Document).  Your web browser may prompt you to save the file as "get_iplayer.txt" or "get_iplayer.cgi.txt".  If so, change the file name to "get_iplayer.cgi" after downloading.
 
 2. Back up and replace existing WPM (requires admin privileges)
 
