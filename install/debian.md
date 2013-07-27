@@ -12,7 +12,7 @@ These instructions are for Debian 7 (stable, wheezy).  Information for Debian 6 
 
     	sudo apt-get install ffmpeg mplayer libmp3-tag-perl libnet-smtp-ssl-perl libauthen-sasl-perl
 
-3. The packaged Perl modules for secure email with TLS in Debian 7.0 are currently incompatible with the packaged version of IO::Socket::SSL.  If TLS is your only secure email option, you can use the [[local::lib method|manual] to create a local Perl module library and install the necessary module:
+3. The packaged Perl modules for secure email with TLS in Debian 7.0 are currently incompatible with the packaged version of IO::Socket::SSL.  If TLS is your only secure email option, you can use the [local::lib method](manual) to create a local Perl module library and install the necessary module:
 
 		cpanm Net::SMTP::TLS::ButMaintained
 
