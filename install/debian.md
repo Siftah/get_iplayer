@@ -1,12 +1,14 @@
 ## Debian
 
-These instructions are for Debian 7 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [here](debian6).
+These instructions are for Debian 7.1 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [here](debian6).
 
 ### Command-line Interface (CLI)
 
 1. Install get-iplayer package (note that package name contains hyphen, not underscore)
 
 	    sudo apt-get install get-iplayer
+
+    **NOTE:** The get-iplayer package (2.82-2+deb7u1) in Debian 7.1 has been patched to restore TV downloading functions broken in version 2.82-2 by BBC changes.  However, you are encouraged to upgrade to the testing or unstable package (see below) in order to get the most recent release of get_iplayer.
 
 2. Install components not installed with get-iplayer package
 
