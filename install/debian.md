@@ -27,7 +27,7 @@ The WPM is installed along with the CLI.
 
 1. Launch the WPM with:
 
-    `get_iplayer_web_pvr`
+        get_iplayer_web_pvr
 
 2. Once the WPM is running, connect to it by opening this URL in your browser:
 
