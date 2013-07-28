@@ -12,7 +12,7 @@ These instructions are for openSUSE 12.3.
 
 2. Update package database
 
-    	sudo zypper update
+    	sudo zypper refresh
 
 3. Install get_iplayer package and dependencies
 
