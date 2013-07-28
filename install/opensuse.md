@@ -26,23 +26,27 @@ These instructions are for openSUSE 12.3.
 
 4. Install components not installed with get_iplayer package
 
-    	sudo zypper install perl-MP3-Tag perl-Net-SMTP-SSL perl-Authen-SASL
+    	sudo zypper install perl-MP3-Tag perl-Net-SMTP-SSL perl-Authen-SASL id3v2
 
-5. The official openSUSE repositories do not provide packages for AtomicParsley, nor do they provide packaged Perl modules to support TLS secure email.  You can find third-party packages supplied through the openSUSE Build Service: 
+5. The official openSUSE repositories do not provide packages for AtomicParsley and MP3::Info, nor do they provide packaged Perl modules to support TLS secure email.  You can find third-party packages supplied through the openSUSE Build Service: 
 
     <http://software.opensuse.org/package/AtomicParsley>
+
+    <http://software.opensuse.org/package/perl-MP3-Info>
     
     <http://software.opensuse.org/package/perl-Net-SMTP-TLS>
 
-    Although labelled as unstable, these packages should be safe to install. You may opt for one-click installation, or you may download the RPM files and install them manually:
+    Although labelled as unstable, these packages should be safe to install. You may opt for one-click installation, or you may download the RPM files and install them manually (amend file names as needed):
 
     	sudo zypper install AtomicParsley-0.9.2+svn110-3.1.i586.rpm
 
     NOTE: Download the correct AtomicParsley RPM for your system architecture.
 
-    	sudo zypper install perl-Net-SMTP-TLS-0.12-6.1.noarch.rpm
+        sudo zypper install perl-MP3-Info-1.23-7.1.i586.rpm
 
-    There is no packaged version of id3v2 available, but you will not require it with the MP3::Tag module installed.
+    NOTE: Download the correct MP3::Info RPM for your system architecture.
+
+    	sudo zypper install perl-Net-SMTP-TLS-0.12-6.1.noarch.rpm
 
 6. Run CLI with:
 
