@@ -14,6 +14,8 @@ Each substitution parameter can now have the separator defined as a prefix insid
 
 This signifies that the prefix will be omitted if the associated parameter value is empty.
 
+**NOTE:** This new separator syntax is only useful with `<senum>` and `<episodeshort>` since all other metadata fields will almost always be populated.  The new syntax was implemented primarily to make it easier to create output file names compatible with XBMC scrapers.
+
 Below are some examples showing how the output file prefix is altered by the changes in get_iplayer 2.83+.  OLD and NEW refer to pre- and post-2.83 behaviour, respectively.
 
 1. The Painted Veil (film, series/episode numbers undefined)
