@@ -15,6 +15,9 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
 1. Add the PPA repository
 
+        # If you do not have apt-add-repository on your system, first install python-software-properties
+        sudo apt-get install python-software-properties
+
     	sudo apt-add-repository ppa:jon-hedgerows/get-iplayer
 
 2. Ensure package database is current
