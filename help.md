@@ -14,9 +14,9 @@ Linux/Unix/OS X users who installed a packaged version of get_iplayer may have a
 
 Windows users can go to **get_iplayer -> Help -> get_iplayer Example Commands** in the Start menu.  If you are using the Windows 8 Start screen you will need to show "All Apps" to see the **get_iplayer Example Commands** button.  The Windows shortcut will take you to the [Usage and Examples](documentation) page in this wiki.
 
-### Beginner Guides and Forums
+### User Forums and Beginner Guides
 
-Somes guides for get_iplayer beginners, along with user forums, may be found at:
+User forums, along with guides for get_iplayer beginners, may be found at:
 
 <http://squarepenguin.co.uk>
 
@@ -32,6 +32,10 @@ Before posting to the mailing list search the archive here:
 
 to see if your question has already been asked and answered.
 
-### Issue Tracker
+### Support Requests
 
-Do **NOT** use the issue tracker in the GitHub repository.  It is for the use of contributors working on get_iplayer itself.  Any usage queries, feature requests or problem reports should go to the mailing list.
+**ALL** usage queries, feature requests or problem reports should go to the user forums or mailing list.
+
+* Do **NOT** use the issue tracker in this GitHub repository for support requests.  It is for the use of contributors working on get_iplayer itself.  
+
+* Do **NOT** contact the maintainer(s) directly with support requests.  Your query will go unanswered.
