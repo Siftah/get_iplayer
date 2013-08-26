@@ -36,6 +36,4 @@ to see if your question has already been asked and answered.
 
 * **ALL** usage queries, feature requests or problem reports should go to the user forums or mailing list.
 
-* Do **NOT** use the issue tracker in this GitHub repository for support requests.  It is for the use of contributors working on get_iplayer itself.  
-
 * Do **NOT** contact the maintainer(s) directly with support requests.  Your query will go unanswered.
