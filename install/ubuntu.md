@@ -5,7 +5,7 @@ These instructions are for Ubuntu 13.04 (Raring Ringtail).
 
 Although the Debian get-iplayer package is incorporated in Ubuntu repositories, Ubuntu users are recommended to use the get_iplayer PPA version.  If you must use the Ubuntu package, refer to the [Debian instructions](debian). The only change for Ubuntu is that you should additionally install the `libnet-smtp-tls-butmaintained-perl` package.  
 
-Ubuntu LTS (Long Term Support) releases such as 12.04 (Precise Pangolin) will very likely have obsolete get-iplayer packages in their repositories.  Please use the PPA version instead.  Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) should use the [][manual installation procedure|manual]].
+Ubuntu LTS (Long Term Support) releases such as 12.04 (Precise Pangolin) will very likely have obsolete get-iplayer packages in their repositories.  Please use the PPA version instead.  Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) should use the [manual installation procedure](manual).
 
 ### get_iplayer PPA
 
