@@ -128,4 +128,36 @@ The [README](https://raw.github.com/dinkypumpkin/get_iplayer/master/README-get_i
 
 The [README](https://raw.github.com/dinkypumpkin/get_iplayer/master/README-get_iplayer.cgi.txt) contains instructions.
 
+## Relationship to CLI
+
+When you invoke an action in the WPM such as "Search", "Record" or "Add to PVR", behind the scenes the WPM constructs a command string and runs the get_iplayer CLI just as if you typed the equivalent command at a prompt.  However, the WPM was designed as a standalone, simpler - and more limited - interface to get_iplayer, and thus lacks a number of  options available to the CLI.  The WPM also was designed to maintain its own configuration settings separate from preferences set with the CLI using `--prefs-add`.   It is strongly recommended that if you are a WPM user you do all your configuration in the WPM.  However, there are some very particular cases where CLI preferences may be required.  Below is list of considerations to keep in mind if you attempt to use CLI preferences from the WPM.
+
+1. The WPM cannot load, display, or change the values of CLI preferences.  Any settings you save in the WPM are saved for the WPM only.  In order to view or change the values of your preferences, you must use the CLI with `--prefs-show`, `--prefs-add` and `--prefs-del`.
+2. Any WPM setting with a non-empty value will override the equivalent CLI preference value.  This is the same as if you override a preference value by adding the equivalent option to the CLI command line.
+3. Any WPM setting with a text string value (e.g., "Exclude Channels Containing") will **not** override the equivalent CLI preference if the string value is empty, so it is technically possible (though not advisable) to use the equivalent CLI preference.
+4. Any WPM setting with a boolean (on/off) value (e.g., "Refresh Future Schedule") will **always** override the equivalent CLI preference since it always has a value (on or off).  These settings must **always** be made in the WPM.
+5. Any WPM setting with a fixed set of possible values (e.g., "Download Metadata") will **always** override the equivalent CLI preference since it always has a value (one of the set). These settings must **always** be made in the WPM.
+6. Any CLI preference that does not have an equivalent WPM setting (e.g., "aactomp3") will **always** be used by the CLI when it is invoked from the WPM.
+
+Examples:
+
+1. You may wish to permanently exclude BBC Three from your search results.  To do that, set the necessary preference with the CLI:
+
+		get_iplayer --prefs-add --exclude-channel "BBC Three"
+
+	However, if you enter any value in the "Exclude Channels Containing" setting in the WPM, it will override your CLI preference.  It will **not** be added to it.  It is strongly recommended that you make this and similar settings in the WPM.
+
+2. You may always wish to pull in the following week's listings whenever you refresh your programme cache.  To do that with the CLI, you set the necessary preference:
+
+		get_iplayer --prefs-add --refresh-future
+
+	This preference will **always** be overridden by the WPM.  Instead, you must set "Refresh Future Schedule" = On in the WPM.
+
+3. You may wish to convert all your radio downloads to MP3 automatically.  To do that, set the necessary preference with the CLI:
+
+		get_iplayer --prefs-add --aactomp3
+
+
+	Since the WPM does not support a "aactomp3" setting - and thus cannot override it - this preference will be used for all radio downloads.
+
 *Source: linuxcentre.net*
