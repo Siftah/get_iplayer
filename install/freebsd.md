@@ -1,6 +1,6 @@
 ## FreeBSD / PC-BSD
 
-These instructions are for FreeBSD 9.1 / PC-BSD 9.1-RELEASE using `pkgng`.
+These instructions are for FreeBSD / PC-BSD 9.1-RELEASE using `pkgng`.
 
 ### Command-line Interface (CLI)
 
