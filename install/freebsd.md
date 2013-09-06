@@ -60,7 +60,7 @@ If you install the PBI package, you must skip steps #1 and #2 below.
 
 		get_iplayer --prefs-add --ffmpeg=ffmpeg1
 
-	**NOTE:** The `--aactomp3` option for get_iplayer will not work with either of the ffmpeg packages in FreeBSD since they are not built with the LAME MP3 encoder.
+	**FreeBSD Only:** The `--aactomp3` option for get_iplayer will not work with either of the ffmpeg packages since they are not built with the LAME MP3 encoder.
 
 6. Run CLI:
 
