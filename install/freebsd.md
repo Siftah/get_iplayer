@@ -1,26 +1,24 @@
 ## FreeBSD / PC-BSD
 
-These instructions are for FreeBSD / PC-BSD 9.1.
+These instructions are for FreeBSD 9.1 / PC-BSD 9.1-RELEASE using `pkgng`.
 
 ### Command-line Interface (CLI)
 
-If you have converted your system to use *pkgng*, replace `pkg_add -r` to `pkg install` in the instructions below.
-
 #### PC-BSD Only
-
-**2013-06-23: The PBI version of get_iplayer has not yet been updated to version 2.83 and consequently cannot download BBC TV programmes.  Until the PBI version is updated, build the get_iplayer port as described below.**
 
 PC-BSD offers get_iplayer packaged in PBI format, which you can install with AppCafe or with:
 
 	sudo pbi_add -r get_iplayer
 
-If you install the PBI package, you may skip steps #1 and #2.
+If you install the PBI package, you must skip steps #1 and #2 below.
+
+**NOTE:** The PBI version of get_iplayer is only available for 64-bit PC-BSD.  If you have a 32-bit version of PC-BSD 9.1 (released before 32-bit builds were discontinued in June 2013), **do not** install the get_iplayer 2.82 PBI - it is broken.
 
 1. Install Perl
 
-		sudo pkg_add -r perl
+		sudo pkg install perl
 
-    NOTE: Perl may already be installed if you installed a desktop environment.
+    NOTE: Perl will likely already be installed if you installed a desktop environment.
 
 2. Install get_iplayer port
 
@@ -29,9 +27,9 @@ If you install the PBI package, you may skip steps #1 and #2.
 		sudo portsnap fetch
 		sudo portsnap extract
 	
-	Install flvstreamer to avoid building it along with get_iplayer port:
+	Install dependencies to avoid unnecessary builds:
 
-		sudo pkg_add -r flvstreamer
+		sudo pkg install p5-libwww rtmpdump
 
 	Install get_iplayer port:
 
@@ -40,21 +38,21 @@ If you install the PBI package, you may skip steps #1 and #2.
 
 3. Install Perl modules
 
-		sudo pkg_add -r p5-MP3-Tag p5-MP3-Info p5-XML-Simple p5-Net-SMTP-SSL p5-Net-SMTP-TLS
+		sudo pkg install p5-MP3-Tag p5-MP3-Info p5-XML-Simple p5-Net-SMTP-SSL p5-Net-SMTP-TLS
 
 4. Install external programs (except ffmpeg)
 
-		sudo pkg_add -r rtmpdump AtomicParsley id3v2 mplayer
+		sudo pkg install AtomicParsley id3v2 mplayer
 
 5. Install ffmpeg
 
-	FreeBSD/PC-BSD offers two packaged versions of ffmpeg.  Version 0.7.x is packaged as *ffmpeg*, while version 1.0.x is packaged as *ffmpeg1*.  Install with:
+	FreeBSD/PC-BSD offers two packaged versions of ffmpeg.  Version 0.7.x is packaged as *ffmpeg*, while version 1.x is packaged as *ffmpeg1*.  Install with:
 
-		sudo pkg_add -r ffmpeg
+		sudo pkg install ffmpeg
 
 	OR
 
-		sudo pkg_add -r ffmpeg1
+		sudo pkg install ffmpeg1
 
 	NOTE: The *ffmpeg* package may already be installed if you installed a desktop environment.  Don't remove it - other packages depend on it.
 
@@ -62,7 +60,7 @@ If you install the PBI package, you may skip steps #1 and #2.
 
 		get_iplayer --prefs-add --ffmpeg=ffmpeg1
 
-	**NOTE:** The `--aactomp3` option for get_iplayer will not work with either of the ffmpeg packages since they are not built with the LAME MP3 encoder.
+	**NOTE:** The `--aactomp3` option for get_iplayer will not work with either of the ffmpeg packages in FreeBSD since they are not built with the LAME MP3 encoder.
 
 6. Run CLI:
 
