@@ -141,7 +141,7 @@ Below are representative values for recordings made with each of the radio recor
 |**flashaachigh**|Radio 3|RTMP streaming|AAC|320 kbps|Radio 3 live only| 
 |**flashaacstd**|National Radio|RTMP streaming|AAC|128 kbps|320 kbps (Radio 3 only)|
 |**flashaaclow**|National Radio|RTMP streaming|AAC|48 kbps||
-|**flashaudio**|Regional and Local Radio|RTMP streaming|MP3|128/80 kbps|Regional radio = 128 kbps AAC live and 129 kbps MP3 catch-up, Local radio = 96 kbps AAC live and 80 kbps MP3 catch-up|
+|**flashaudio**|Regional and Local Radio|RTMP streaming|MP3|128/80 kbps|Regional radio: 128 kbps AAC live / 128 kbps MP3 catch-up, Local radio: 96 kbps AAC live / 80 kbps MP3 catch-up|
 |**wma**|National, Regional and Local Radio|MMS streaming|WMA|96 kbps|320 kbps (Radio 3 only)|
 
 <a name="shortcut-expansions"></a>
