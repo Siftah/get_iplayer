@@ -2,7 +2,9 @@
 
 See general information about file and directory naming [here](documentation#filenames-and-directories).
 
-get_iplayer 2.83 introduced a slightly extended syntax for [substitution parameters](documentation#substitution-parameters) used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC users since XBMC expects particular formats for names of files to be automatically imported.
+#### Substitution Parameters
+
+get_iplayer 2.83 introduced a slightly extended syntax for [substitution parameters](documentation#substitution-parameters) used with the `fileprefix` option.  It is now possible to define separators in `fileprefix` that are omitted when the associated parameter is empty.  This should be of use to all get_iplayer users, but will be of particular value to XBMC/Plex users since scrapers expect particular formats for names of files to be automatically imported.
 
 Consider this example:
 
@@ -45,3 +47,8 @@ Below are some examples showing how the output file prefix is altered by the cha
 		NEW: Silent_Witness.s16e00.Change_Part_1
 
 	There is no difference since when get_iplayer can determine the series number but can't determine an episode number, there is no way to select an arbitrary value for the latter. It must be fixed manually.
+
+
+#### Dates in Episode Names
+
+Some programmes (EastEnders, for example) have episode names that contain only the date of broadcast in UK short format: dd/mm/yyyy.  By default, the date will be interpolated into the name of the output file as dd_mm_yyyy.  XBMC/Plex scrapers may only be able to recognise a date in ISO yyyy-mm-dd format.  In order to convert dates to ISO format, use the `--isodate` option.

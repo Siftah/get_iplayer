@@ -18,7 +18,7 @@
 
 [[Metadata Tagging|tagging]]
 
-[[Output File Naming|fileprefix]] (XBMC users - read this)
+[[Output File Naming|fileprefix]] (XBMC/Plex users - read this)
 
 [[Using the PVR with cron|pvrcron]]
 
