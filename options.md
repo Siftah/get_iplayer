@@ -17,10 +17,6 @@
 * [External Program Options](#external-program-options)
 
 * [Tagging Options](#tagging-options)
-|et_iplayer v2.84, Co|yright (C) 2008-2010 Phil Lewis||
-| This program comes|ith ABSOLUTELY NO WARRANTY; for|etails use --warranty.|
-| This is free softwa|e, and you are welcome to redist|ibute it under certain|
-| conditions; use --c|nditions for details..||
 
 <a id="search-options"></a>
 
