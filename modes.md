@@ -167,7 +167,7 @@ Same as TV Shortcuts
 
 |Shortcut|Modes|Notes|  
 |--------|-----|-----|  
-|**good**|flashaachigh,flashaacstd,flashaudio,flashaaclow,wma||
+|**good**|flashaachigh,flashaacstd,flashaudio,flashaaclow||
 |**better**|same as 'good'||
 |**best**|same as 'good'||
 |**default**|synonym for 'better'||
