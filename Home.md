@@ -1,7 +1,5 @@
 ## get_iplayer Documentation
 
-**2013-06-23: TV Downloads Broken? [[Upgrade to Version 2.83|release283]]**
-
 [[Release Notes|releasenotes]]
 
 [[Installation|installation]]
