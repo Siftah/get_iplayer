@@ -1,6 +1,6 @@
 ## get_iplayer Options
 
-## Table of Contents
+# Table of Contents
 
 * [Search Options](#search-options)
 
@@ -17,6 +17,10 @@
 * [External Program Options](#external-program-options)
 
 * [Tagging Options](#tagging-options)
+|et_iplayer v2.84, Co|yright (C) 2008-2010 Phil Lewis||
+| This program comes|ith ABSOLUTELY NO WARRANTY; for|etails use --warranty.|
+| This is free softwa|e, and you are welcome to redist|ibute it under certain|
+| conditions; use --c|nditions for details..||
 
 <a id="search-options"></a>
 
@@ -24,18 +28,18 @@
 
 |Options file|Command line|Description|
 |------------|------------|-----------|
-|before|--before &lt;n&gt;|Limit search to programmes added to the cache before N hours ago|
+|before|--before|Limit search to programmes added to the cache before N hours ago|
 |category|--category &lt;string&gt;|Narrow search to matched categories (regex or comma separated values)|
 |channel|--channel &lt;string&gt;|Narrow search to matched channel(s) (regex or comma separated values)|
 |exclude|--exclude &lt;string&gt;|Narrow search to exclude matched programme names (regex or comma separated values)|
 |excludecategory|--exclude-category &lt;string&gt;|Narrow search to exclude matched categories (regex or comma separated values)|
 |excludechannel|--exclude-channel &lt;string&gt;|Narrow search to exclude matched channel(s) (regex or comma separated values)|
 |fields|--fields &lt;field1&gt;,&lt;field2&gt;,...|Searches only in the specified comma separated fields|
-|future|--future|Search future programme schedule if it has been indexed (refresh cache with: --refresh --refresh-future).|
+|future|--future|Additionally search future programme schedule if it has been indexed (refresh cache with: --refresh --refresh-future).|
 |history|--history|Search/show recordings history|
 |long|--long, -l|Additionally search in programme descriptions and episode names (same as --fields=name,episode,desc )|
 |search|--search &lt;search term&gt;|GetOpt compliant way of specifying search args|
-|since|--since &lt;n&gt;|Limit search to programmes added to the cache in the last N hours|
+|since|--since|Limit search to programmes added to the cache in the last N hours|
 |type|--type &lt;type&gt;|Only search in these types of programmes: livetv,tv,liveradio,radio,all (tv is default)|
 |versionlist|--versions &lt;versions&gt;|Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: &#39;--versions signed,audiodescribed,default&#39; will prefer signed and audiodescribed programmes if available.  Default: &#39;default&#39;|
 
@@ -43,7 +47,7 @@
 
 ## Display Options
 
-|Options file|Command-line|Description|
+|Options file|Command line|Description|
 |------------|------------|-----------|
 |conditions|--conditions|Shows GPLv3 conditions|
 |debug|--debug|Debug output|
@@ -78,7 +82,7 @@
 
 ## Recording Options
 
-|Options file|Command-line|Description|
+|Options file|Command line|Description|
 |------------|------------|-----------|
 |aactomp3|--aactomp3|Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified)|
 |attempts|--attempts &lt;number&gt;|Number of attempts to make or resume a failed connection|
@@ -90,19 +94,19 @@
 |force|--force|Ignore programme history (unsets --hide option also). Forces a script update if used with -u|
 |get|--get, -g|Start recording matching programmes. Search terms required unless --pid specified. Use  --search=.* to force download of all available programmes.|
 |hash|--hash|Show recording progress as hashes|
-|liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow,wma)|
+|liveradiomode|--liveradiomode &lt;mode&gt;,&lt;mode&gt;,...|Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow)|
 |livetvmode|--livetvmode &lt;mode&gt;,&lt;mode&gt;,...|Live TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)|
 |metadataonly|--metadata-only|Create specified metadata info file without any recording or streaming (can also be used with thumbnail option).|
 |mmsnothread|--mmsnothread|Disable parallel threaded recording for mms|
 |modes|--modes &lt;mode&gt;,&lt;mode&gt;,...|Recording modes.  See --tvmode and --radiomode for available modes and defaults. Shortcuts: default,good,better(=default),best. Use --modes=best to select highest quality available (incl. HD TV).|
-|mp3vbr|--mp3vbr &lt;N&gt;|Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3)|
+|mp3vbr|--mp3vbr|Set LAME VBR mode to N (0 to 9) for AAC transcoding. 0 = target bitrate 245 Kbit/s, 9 = target bitrate 65 Kbit/s (requires --aactomp3)|
 |multimode|--multimode|Allow the recording of more than one mode for the same programme - WARNING: will record all specified/default modes!!|
 |overwrite|--overwrite|Overwrite recordings if they already exist|
 |partialproxy|--partial-proxy|Only uses web proxy where absolutely required (try this extra option if your proxy fails)|
 |pid|--pid &lt;pid&gt;|Record an arbitrary pid that does not necessarily appear in the index.|
 |pidrecursive|--pid-recursive|When used with --pid record all the embedded pids if the pid is a series or brand pid.|
 |proxy|--proxy, -p &lt;url&gt;|Web proxy URL e.g. &#39;http://USERNAME:PASSWORD@SERVER:PORT&#39; or &#39;http://SERVER:PORT&#39;|
-|radiomode|--radiomode &lt;mode&gt;,&lt;mode&gt;,...|Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow,wma)|
+|radiomode|--radiomode &lt;mode&gt;,&lt;mode&gt;,...|Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow)|
 |raw|--raw|Don&#39;t transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)|
 |rtmpliveradioopts|--rtmp-liveradio-opts &lt;options&gt;|Add custom options to rtmpdump for liveradio|
 |rtmplivetvopts|--rtmp-livetv-opts &lt;options&gt;|Add custom options to rtmpdump for livetv|
@@ -112,8 +116,10 @@
 |start|--start &lt;secs&#124;hh:mm:ss&gt;|Recording/streaming start offset (rtmp and realaudio only)|
 |stop|--stop &lt;secs&#124;hh:mm:ss&gt;|Recording/streaming stop offset (can be used to limit live rtmp recording length) rtmp and realaudio only|
 |suboffset|--suboffset &lt;offset&gt;|Offset the subtitle timestamps by the specified number of milliseconds|
+|subsfmt|--subsfmt &lt;format&gt;|Subtitles format.  One of: default, compact.  Default: &#39;default&#39;|
 |subsonly|--subtitles-only|Only download the subtitles, not the programme|
 |subsraw|--subsraw|Additionally save the raw subtitles file|
+|subsrequired|--subtitles-required|Do not download TV programme if subtitles are not available.|
 |subtitles|--subtitles|Download subtitles into srt/SubRip format if available and supported|
 |tagonly|--tag-only|Only update the programme tag and not download the programme (can also be used with --history)|
 |test|--test, -t|Test only - no recording (will show programme type)|

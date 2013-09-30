@@ -30,13 +30,13 @@
 
 * [COPYRIGHT NOTICE](#copyright-notice)
 
-<a name="name"></a>
+<a id="name"></a>
 
 # NAME
 
 get_iplayer - Stream Recording tool and PVR for BBC iPlayer, BBC Podcasts and more
 
-<a name="synopsis"></a>
+<a id="synopsis"></a>
 
 # SYNOPSIS
 
@@ -56,7 +56,7 @@ get_iplayer --stream [&lt;options&gt;] --type=livetv,liveradio &lt;regex|index&g
 
 get_iplayer --refresh
 
-<a name="description"></a>
+<a id="description"></a>
 
 # DESCRIPTION
 
@@ -72,12 +72,12 @@ get_iplayer utilises the rtmpdump tool to record BBC iPlayer programmes from RTM
 
 In PVR mode, get_iplayer can be called from cron to record programmes to a schedule.
 
-<a name="options"></a>
+<a id="options"></a>
 
 # OPTIONS
 
 
-<a name="search-options"></a>
+<a id="search-options"></a>
 
 ## Search Options
 
@@ -104,7 +104,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Searches only in the specified comma separated fields
 
 **--future**
-: Search future programme schedule if it has been indexed (refresh cache with: --refresh --refresh-future).
+: Additionally search future programme schedule if it has been indexed (refresh cache with: --refresh --refresh-future).
 
 **--history**
 : Search/show recordings history
@@ -124,7 +124,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--versions &lt;versions&gt;**
 : Version of programme to search or record.  List is processed from left to right and first version found is downloaded.  Example: &#39;--versions signed,audiodescribed,default&#39; will prefer signed and audiodescribed programmes if available.  Default: &#39;default&#39;
 
-<a name="display-options"></a>
+<a id="display-options"></a>
 
 ## Display Options
 
@@ -213,7 +213,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **-V**
 : Show get_iplayer version and exit.
 
-<a name="recording-options"></a>
+<a id="recording-options"></a>
 
 ## Recording Options
 
@@ -249,7 +249,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Show recording progress as hashes
 
 **--liveradiomode &lt;mode&gt;,&lt;mode&gt;,..**
-: Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow,wma)
+: Live Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaaclow)
 
 **--livetvmode &lt;mode&gt;,&lt;mode&gt;,...**
 : Live TV recording modes: flashhd,flashvhigh,flashhigh,flashstd,flashnormal,flashlow. Shortcuts: default,good,better(=default),best,rtmp,flash. (&#39;default&#39;=flashvhigh,flashhigh,flashstd,flashnormal,flashlow)
@@ -285,7 +285,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 : Web proxy URL e.g. &#39;http://USERNAME:PASSWORD@SERVER:PORT&#39; or &#39;http://SERVER:PORT&#39;
 
 **--radiomode &lt;mode&gt;,&lt;mode&gt;,...**
-: Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow,wma)
+: Radio recording modes: flashaachigh,flashaacstd,flashaudio,flashaaclow,wma. Shortcuts: default,good,better(=default),best,rtmp,flash,flashaac. (&#39;default&#39;=flashaachigh,flashaacstd,flashaudio,flashaaclow)
 
 **--raw**
 : Don&#39;t transcode or change the recording/stream in any way (i.e. radio/realaudio, rtmp/flv)
@@ -314,6 +314,9 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--suboffset &lt;offset&gt;**
 : Offset the subtitle timestamps by the specified number of milliseconds
 
+**--subsfmt &lt;format&gt;**
+: Subtitles format.  One of: default, compact.  Default: &#39;default&#39;
+
 **--subsraw**
 : Additionally save the raw subtitles file
 
@@ -322,6 +325,9 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 
 **--subtitles-only**
 : Only download the subtitles, not the programme
+
+**--subtitles-required**
+: Do not download TV programme if subtitles are not available.
 
 **--tag-only**
 : Only update the programme tag and not download the programme (can also be used with --history)
@@ -344,7 +350,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--wav**
 : In radio realaudio mode output as wav and don&#39;t transcode to mp3
 
-<a name="output-options"></a>
+<a id="output-options"></a>
 
 ## Output Options
 
@@ -460,7 +466,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--xml-names**
 : Create freevo/Mythtv menu of programme names -&gt; episodes
 
-<a name="pvr-options"></a>
+<a id="pvr-options"></a>
 
 ## PVR Options
 
@@ -498,7 +504,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--pvr-single &lt;search name&gt;**
 : Runs a named PVR search. Synonyms: --pvrsingle
 
-<a name="config-options"></a>
+<a id="config-options"></a>
 
 ## Config Options
 
@@ -563,7 +569,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--webrequest &lt;urlencoded string&gt;**
 : Specify all options as a urlencoded string of &quot;name=val&amp;name=val&amp;...&quot;
 
-<a name="external-program-options"></a>
+<a id="external-program-options"></a>
 
 ## External Program Options
 
@@ -589,7 +595,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--vlc &lt;path&gt;**
 : Location of vlc or cvlc binary
 
-<a name="tagging-options"></a>
+<a id="tagging-options"></a>
 
 ## Tagging Options
 
@@ -627,7 +633,7 @@ In PVR mode, get_iplayer can be called from cron to record programmes to a sched
 **--tag-utf8**
 : AtomicParsley accepts UTF-8 input
 
-<a name="author"></a>
+<a id="author"></a>
 
 # AUTHOR
 
@@ -635,11 +641,11 @@ get_iplayer was written by Phil Lewis &lt;iplayer2 (at sign) linuxcentre.net&gt;
 
 This manual page was originally written by Jonathan Wiltshire &lt;jmw@debian.org&gt; for the Debian project (but may be used by others).
 
-<a name="copyright-notice"></a>
+<a id="copyright-notice"></a>
 
 # COPYRIGHT NOTICE
 
-get_iplayer v2.83, Copyright (C) 2008-2010 Phil Lewis
+get_iplayer v2.84, Copyright (C) 2008-2010 Phil Lewis
   This program comes with ABSOLUTELY NO WARRANTY; for details use --warranty.
   This is free software, and you are welcome to redistribute it under certain
   conditions; use --conditions for details.
