@@ -30,11 +30,7 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
     
     You may install from the PPA over an existing get_iplayer installation from the Ubuntu repositories.  Dependencies will be updated if necessary.
 
-4. Install components not installed with get-iplayer package
-
-	    sudo apt-get install libnet-smtp-ssl-perl libauthen-sasl-perl libnet-smtp-tls-butmaintained-perl
-
-5. Run CLI with:
+4. Run CLI with:
 
     	get_iplayer […]
 
