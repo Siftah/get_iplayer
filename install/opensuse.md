@@ -20,7 +20,7 @@ These instructions are for openSUSE 12.3.
 
     <http://software.opensuse.org/package/get_iplayer>
 
-    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually:
+    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually (use current version and rpm):
 
     	sudo zypper install get_iplayer-2.83-2.1.noarch.rpm
 
@@ -63,7 +63,7 @@ These instructions are for openSUSE 12.3.
 
     <http://software.opensuse.org/package/get_iplayer-pvr>
 
-    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually:
+    Be sure to select version 2.83 or higher. Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually  (use current version and rpm):
 
     	sudo zypper install get_iplayer-pvr-2.83-2.1.noarch.rpm
 
