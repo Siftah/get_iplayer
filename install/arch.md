@@ -18,7 +18,7 @@ These instructions are for Arch Linux 3.9
 
 	Then download, build and install each package in turn:
 
-	get_iplayer: There are 2 AUR packages for get_iplayer.  The *get_iplayer* package is obsolete (v2.82) but has been patched to continue working.  The *get_iplayer-git* package installs the latest development version of get_iplayer, so it will contain new features or changes not incorporated in the current release version.
+	get_iplayer: There are 2 AUR packages for get_iplayer. The *get_iplayer* package installs a release version of get_iplayer. The *get_iplayer-git* package installs the latest development version of get_iplayer, so it will contain new features or changes not incorporated in the current release version.
 
 		cd ~/packages
 		curl -kLO https://aur.archlinux.org/packages/ge/get_iplayer/get_iplayer.tar.gz
