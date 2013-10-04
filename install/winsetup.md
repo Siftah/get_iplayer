@@ -36,6 +36,8 @@ The WPM is installed along with the CLI.
 
     <http://127.0.0.1:1935>
 
+    If the WPM does not open in your browser automatically, click the link above or enter the address in your web browser.
+
 3. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
 
 4. Stop the WPM by typing Ctrl-Break.
