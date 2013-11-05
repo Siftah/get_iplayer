@@ -12,4 +12,4 @@ and re-install get_iplayer.  When you run the installer, select only the "get_ip
 
 * You do not need to re-install get_iplayer if you do not use IE 11.  This issue does not pertain to Chrome or Firefox.
 * You do not need to re-install get_iplayer if you do not use Windows 8.1.  This issue does not pertain to Windows 8 and earlier.  Not yet, at least.
-* Do not disable Enhanced Protection Mode.  Re-install get_iplayer instead.
+* Do not disable Enhanced Protection Mode unless you have another reason to do so.  Re-install get_iplayer instead.
