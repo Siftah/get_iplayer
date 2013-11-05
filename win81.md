@@ -2,7 +2,7 @@
 
 ### Web PVR Manager and Internet Explorer 11
 
-The Web PVR Manager may not launch properly with Internet Explorer 11 after you upgrade your system to Windows 8.1.  Instead, IE 11 may display the error message "This page can’t be displayed".  This is due to IE 11's Enhanced Protection Mode, which blocks access to servers running on the machine's loopback address (127.0.0.1).  By default, the Web PVR Manager's server component runs on the loopback address at: `http://127.0.0.1:1935`.  If you encounter this error, download the updated get_iplayer installer from:
+The Web PVR Manager may not launch properly with Internet Explorer 11 after you upgrade your system to Windows 8.1.  Instead, IE 11 may display the error message "This page can’t be displayed".  This is due to IE 11's Enhanced Protected Mode, which blocks access to servers running on the machine's loopback address (127.0.0.1).  By default, the Web PVR Manager's server component runs on the loopback address at: `http://127.0.0.1:1935`.  If you encounter this error, download the updated get_iplayer installer from:
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
