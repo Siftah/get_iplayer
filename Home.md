@@ -1,6 +1,6 @@
 ## get_iplayer Documentation
 
-[[2013-11-05: Web PVR Manager and IE 11 (Windows 8.1 users - read this)|win81]]
+[[2013-11-05: Web PVR Manager and IE 11|win81]] (Windows 8.1 users - read this)
 
 [[Release Notes|releasenotes]]
 
