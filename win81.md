@@ -6,7 +6,7 @@ The Web PVR Manager may not launch properly with Internet Explorer 11 after you 
 
 <http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe>
 
-and re-install get_iplayer.  When you run the installer, select only the "get_iplayer" component for re-installation.  There is no need to re-install the helper applications.  After re-installing get_iplayer, the Web PVR Manager will be launched with your browser directed to `http://localhost:1935`.
+and re-install get_iplayer.  When you run the installer, select only the "get_iplayer" component for re-installation.  There is no need to re-install the helper applications.  After re-installing get_iplayer, the Web PVR Manager shortcut will launch your browser directed to `http://localhost:1935`.
 
 #### Notes
 
