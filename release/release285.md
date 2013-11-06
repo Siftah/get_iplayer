@@ -29,6 +29,7 @@ The primary purpose of this release is to propagate a change in the Windows inst
 
 - Added support for additional subtitle format
 - Fixed CR-LF handling for programme descriptions
+- Patched to work with Perl on Synology NAS
 
 ## Changelog
 
