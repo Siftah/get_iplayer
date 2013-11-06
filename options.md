@@ -81,7 +81,7 @@
 |Options file|Command line|Description|
 |------------|------------|-----------|
 |aactomp3|--aactomp3|Transcode AAC audio to MP3 with ffmpeg/avconv (CBR 128k unless --mp3vbr is specified)|
-|attempts|--attempts &lt;number&gt;|Number of attempts to make or resume a failed connection|
+|attempts|--attempts &lt;number&gt;|Number of attempts to make or resume a failed connection.  --attempts is applied per-stream, per-mode.  TV modes typically have two streams available.|
 |bandwidth|--bandwidth|In radio realaudio mode specify the link bandwidth in bps for rtsp streaming (default 512000)|
 |ffmpegliveradioopts|--ffmpeg-liveradio-opts &lt;options| Add custom options to ffmpeg re-muxing for liveradio|
 |ffmpeglivetvopts|--ffmpeg-livetv-opts &lt;options&gt;|Add custom options to ffmpeg re-muxing for livetv|
@@ -149,12 +149,12 @@
 |mythtv|--mythtv &lt;file&gt;|Create Mythtv streams XML of matching programmes in specified file|
 |nowrite|--nowrite, -n|No writing of file to disk (use with -x to prevent a copy being stored on disk)|
 |output|--output, -o &lt;dir&gt;|Recording output directory|
-|outputliveradio|--outputliveradio &lt;dir&gt;|Output directory for live radio recordings|
-|outputlivetv|--outputlivetv &lt;dir&gt;|Output directory for live tv recordings|
-|outputlocalfiles|--outputlocalfiles &lt;dir&gt;|Output directory for localfiles recordings|
-|outputpodcast|--outputpodcast &lt;dir&gt;|Output directory for podcast recordings|
-|outputradio|--outputradio &lt;dir&gt;|Output directory for radio recordings|
-|outputtv|--outputtv &lt;dir&gt;|Output directory for tv recordings|
+|outputliveradio|--outputliveradio &lt;dir&gt;|Output directory for live radio recordings (overrides --output)|
+|outputlivetv|--outputlivetv &lt;dir&gt;|Output directory for live tv recordings (overrides --output)|
+|outputlocalfiles|--outputlocalfiles &lt;dir&gt;|Output directory for localfiles recordings (overrides --output)|
+|outputpodcast|--outputpodcast &lt;dir&gt;|Output directory for podcast recordings (overrides --output)|
+|outputradio|--outputradio &lt;dir&gt;|Output directory for radio recordings (overrides --output)|
+|outputtv|--outputtv &lt;dir&gt;|Output directory for tv recordings (overrides --output)|
 |player|--player &#39;&lt;command&gt; &lt;options&gt;&#39;|Use specified command to directly play the stream|
 |stdout|--stdout, -x|Additionally stream to STDOUT (so you can pipe output to a player)|
 |stream|--stream|Stream to STDOUT (so you can pipe output to a player)|
