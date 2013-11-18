@@ -24,13 +24,19 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
     	sudo apt-get update
 
-3. Install get_iplayer and all dependencies from PPA:
+3. Install get_iplayer from PPA with dependencies:
 
     	sudo apt-get install get-iplayer
     
     You may install from the PPA over an existing get_iplayer installation from the Ubuntu repositories.  Dependencies will be updated if necessary.
 
-4. Run CLI with:
+4. Install additional dependencies
+
+        sudo apt-get install mplayer libavcodec-extra-53
+
+    The libavcodec-extra-53 package will replace the libavcodec-53 package if it is already installed.  The "extra" version is required for MP3 encoding.
+
+5. Run CLI with:
 
     	get_iplayer […]
 
