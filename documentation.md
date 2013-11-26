@@ -148,6 +148,14 @@ Or simply extract the PID from the URL:
 
     get_iplayer --pid b01sc0wf
 
+There are two ways to download multiple PIDs.  You can explicit match against the `pid` field (ignored by default) in the cache:
+
+    get_iplayer --get --fields=pid b012h9yn b012hbg5
+
+or you can use the `pid:` prefix to denote that your search terms are PIDs:
+
+    get_iplayer --get pid:b012h9yn pid:b012hbg5
+
 Record a video from the BBC embedded media player such as [Learning Zone](http://www.bbc.co.uk/learningzone/clips/), [BBC Archive](http://www.bbc.co.uk/archive/index.shtml) or the [BBC News site](http://news.bbc.co.uk/1/hi/video_and_audio/default.stm) (i.e. the URL of the page that contains the player):
 
     get_iplayer "tv:http://news.bbc.co.uk/1/hi/uk_politics/8104086.stm"
