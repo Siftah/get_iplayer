@@ -34,7 +34,7 @@ The WPM is installed along with the CLI.
 
 2. The WPM will launch in a console window and your default browser will be opened to this URL:
 
-    <http://127.0.0.1:1935>
+    <http://localhost:1935>
 
     If the WPM does not open in your browser automatically, click the link above or enter the address in your web browser.
 
