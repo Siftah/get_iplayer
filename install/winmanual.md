@@ -121,7 +121,7 @@ Ensure the CLI has been installed as described above.
 
 5. Once the WPM is running, connect to it by opening this URL in your browser:
 
-    <http://127.0.0.1:1935>
+    <http://localhost:1935>
 
 6. After the WPM has opened in your browser, click the `Refresh Cache` button.  A new tab or window will open that shows the cache being refreshed.  Leave that tab or window open to have the cache refreshed automatically every hour.  You can also manually refresh the cache at any time.
 
