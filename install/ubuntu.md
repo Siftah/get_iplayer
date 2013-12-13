@@ -31,7 +31,7 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
         sudo apt-get install mplayer libavcodec-extra-53
 
-    Installing the libavcodec-extra-53 and dependent libavutil-extra-51 packages will replace the libavcodec53 and libavutil51 packages if already installed.  The "extra" version is required for MP3 encoding.  NOTE: The version number (53) may change in later distributions.
+    Installing the libavcodec-extra-53 and dependent libavutil-extra-51 packages will replace the libavcodec53 and libavutil51 packages if already installed.  The "extra" version is required for MP3 encoding.  NOTE: The version number (53) may be different in earlier or later editions of Ubuntu.
 
 5. Run CLI with:
 
