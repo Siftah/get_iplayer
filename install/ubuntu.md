@@ -39,7 +39,10 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
 If you wish to remove the PPA packages and roll back any updates:
 
-	sudo ppa-purge ppa:jon-hedgerows/get-iplayer
+    # If you do not have ppa-purge on your system, first install it
+    sudo apt-get install ppa-purge
+
+    sudo ppa-purge ppa:jon-hedgerows/get-iplayer
 
 ### Web PVR Manager (WPM)
 
