@@ -1,6 +1,6 @@
 ## When SWF Verification Attacks
 
-**2013-09-30: You should update to [get_iplayer 2.84](https://github.com/dinkypumpkin/get_iplayer/releases/tag/v2.84), which has a working value for the SWF player URL.  If you previously applied the workaround described here, see the "Reverting Your Changes" section below for instructions on how to remove the workaround.**
+**2013-11-06: You should update to [get_iplayer 2.85](https://github.com/dinkypumpkin/get_iplayer/releases/tag/v2.85), which has a working value for the SWF player URL.  If you previously applied the workaround described here, see the "Reverting Your Changes" section below for instructions on how to remove the workaround.**
 
 BBC Flash media servers use SWF verification, which means they verify that you are accessing media streams with an approved SWF (Flash player) file. get_iplayer contains such a SWF player URL, which it passes to rtmpdump to use in the verification process. Very occasionally, BBC servers will stop accepting the SWF player URL used by get_iplayer and you will be unable to download programmes.  This usually manifests as a series of rtmpdump errors in the get_iplayer output log similar to:
 
