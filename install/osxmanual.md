@@ -1,4 +1,3 @@
-
 ## OS X Manual Installation
 
 ### Perl Support
@@ -12,11 +11,11 @@ Additional Perl modules may be installed using the [local::lib method](manual) d
 
     OS X 10.6 (Snow Leopard) or higher, 64-bit Intel only:
 
-    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/x86_64/20130714/get_iplayer-osx-utils-x86_64-20130714.zip>
+    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/x86_64/20140122/get_iplayer-osx-utils-x86_64-20140122.zip/download>
 
     OS X 10.5 (Leopard), 32-bit Intel only:
 
-    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/i386/20130714/get_iplayer-osx-utils-i386-20130714.zip>
+    <http://sourceforge.net/projects/get-iplayer/files/osx/utils/i386/20140122/get_iplayer-osx-utils-i386-20140122.zip/download>
 
     **NOTE:** There is no bundle available for PowerPC machines.
 
