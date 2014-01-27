@@ -21,7 +21,7 @@ Additional Perl modules may be installed using the [local::lib method](manual) d
 
 2. Extract the zip file, open a command prompt and navigate to the directory containing the extracted files.  For example:
 
-        cd ~/Downloads/get_iplayer-osx-utils-x86_64-20130714
+        cd ~/Downloads/get_iplayer-osx-utils-x86_64-20140122
 
 3. Create the installation directory if it does not exist:
 
