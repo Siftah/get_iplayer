@@ -660,12 +660,12 @@ The following substitutions may be available to certain options such as --comman
     <dltime>         = Time when the file was obtained in HH:MM:SS format
     <timeadded>      = Time when programme was added to cache (epoch format)
     <expiry>         = Time when programme will expire from web
-    <expiryrel>      = Telative time when programme will expire from web
+    <expiryrel>      = Relative time when programme will expire from web
     <firstbcast>     = Date and time when programme was first broadcast
-    <firstbcastdate> = date portion of <firstbcast>
+    <firstbcastdate> = Date portion of <firstbcast> in YYYY-MM-DD format
     <firstbcastrel>  = Relative time when programme was first broadcast
     <lastbcast>      = Date and time when programme was last broadcast
-    <lastbcastdate>  = Date portion of <lastbcast>
+    <lastbcastdate>  = Date portion of <lastbcast> in YYYY-MM-DD format
     <lastbcastrel>   = Relative time when programme was last broadcast
 
 <a name="external-programs"></a>
