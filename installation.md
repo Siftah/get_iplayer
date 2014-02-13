@@ -9,6 +9,8 @@
 - Requirements
 	- [Perl Support](#requirements-perl)
 	- [External Programs](#requirements-programs)
+<a name="linux"></a>
+<a name="unix"></a>
 - Linux/Unix
     - [Manual Installation](manual)
     - Package Installation
@@ -19,17 +21,21 @@
         - [Arch Linux](arch)
         - [OpenBSD](openbsd)
         - [FreeBSD / PC-BSD](freebsd)
+<a name="osx"></a>
 - OS X
     * [Homebrew](osxhomebrew)
     * [MacPorts](osxmacports)
     * [Manual Installation](osxmanual)
+<a name="windows"></a>
 - Windows
     * [Installer](winsetup)
     * [Manual Installation](winmanual)
+<a name="githead"></a>
 - Git HEAD
     - [Using Git (all platforms)](githeadgit)
     - [Linux/Unix/OS X](githeadunix)
     - [Windows](githeadwin)
+<a name="miscellaneous"></a>
 - Miscellaneous
 	- [Perlbrew](perlbrew)
 
