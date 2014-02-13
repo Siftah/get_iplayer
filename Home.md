@@ -28,6 +28,6 @@
 
 [[Contribute to get_iplayer|contribute]]
 
-[DRM and Fair Use](http://www.infradead.org/get_iplayer/html/get_iplayer.html)
+[DRM and Fair Use](http://www.infradead.org/get_iplayer/html/get_iplayer.html) (external link)
 
 *Some material in this wiki was scraped from the defunct get_iplayer site at linuxcentre.net*
