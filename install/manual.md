@@ -112,7 +112,7 @@ A few distros do not provide all the necessary external programs in their offici
 
     	sudo install -m 755 ./get_iplayer.cgi /usr/local/bin
 
-4. Launch WPM (assumed installed in PATH):
+4. Launch WPM in a terminal window (assumed installed in PATH):
 
     	get_iplayer.cgi --listen 127.0.0.1 --port 1935
 
