@@ -37,7 +37,7 @@ packaged with Raspbian frequently fails with files downloaded with get_iplayer.
 
 The WPM is installed along with the CLI.
 
-1. Launch the WPM in a console window with this command:
+1. Launch the WPM in a terminal window with this command:
 
     	get_iplayer_web_pvr
 
