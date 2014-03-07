@@ -115,7 +115,7 @@ Ensure the CLI has been installed as described above.
 
 	NOTE: the batch file assumes that perl.exe is installed somewhere in PATH.  If it is not, put the full path to perl.exe in the batch file.
 
-4. Launch WPM:
+4. Launch WPM in a console window with this command:
 
     	get_iplayer.cgi.cmd
 
