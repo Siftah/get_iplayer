@@ -27,7 +27,7 @@ These instructions are for Debian 7.1 (stable, wheezy).  Information for Debian 
 
 The WPM is installed along with the CLI.
 
-1. Launch the WPM with:
+1. Launch the WPM in a terminal window with this command:
 
         get_iplayer_web_pvr
 
