@@ -361,6 +361,8 @@ Save or update proxy settings and verbose mode as user defaults (in `~/.get_ipla
 
     get_iplayer --prefs-add --verbose --proxy=http://proxy.domain.com:3128
 
+See below for options file format.
+
 Additionally save programme type settings (this will only update the specified options – existing options will be retained):
 
     get_iplayer --prefs-add --type=radio,tv
