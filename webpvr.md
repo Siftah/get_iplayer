@@ -41,7 +41,7 @@ There are several different action buttons along the top and bottom of the searc
 
 - **Play** - Select the checkbox next to the programme(s) you want to playback and click this to download an m3u playlist (you should associate m3u playlists with VLC in your browser for immediate playback).
 
-- **Queue** - Select the checkbox next to the programme(s) you want to record and click this to queue them for when the PVR next runs (i.e.by clicking ‘Run PVR’).
+- **Queue** - Select the checkbox next to the programme(s) you want to record and click this to queue them for when the PVR next runs (i.e.by clicking 'Run PVR').
 
 - **Add Search to PVR** - Once you have added the search terms to get the list of programmes you wish to regularly record, click this button.
 
