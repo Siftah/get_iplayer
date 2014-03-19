@@ -1,6 +1,6 @@
 ## Debian
 
-These instructions are for Debian 7.1 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [here](debian6).
+These instructions are for Debian 7.1 (stable, wheezy).  Information for Debian 6 (squeeze) can be found [[here|debian6]].
 
 ### Command-line Interface (CLI)
 
