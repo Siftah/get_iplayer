@@ -199,7 +199,7 @@ There may be times when the #1 CDN is not responding properly or rejecting conne
 
 Be aware that the #2 CDN in your second attempt may correspond to the problematic #1 CDN from the previous download attempt, so a few retries may be required to get a connection to the working CDN.
 
-<a name="external-programmes"></a>
+<a name="external-programs"></a>
 ## External Programs
 
 The table below shows the external programmes required to download and - if applicable - convert and tag files produced from each combination of recording mode and output format used by get_iplayer.
