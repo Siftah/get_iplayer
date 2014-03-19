@@ -74,4 +74,4 @@ The new metadata fields may be used as substitution parameters for `--file-prefi
 
 The full log of changes since v2.83 can be viewed here:
 
-<https://github.com/dinkypumpkin/get_iplayer/compare/v2.83…v2.84>
+<https://github.com/dinkypumpkin/get_iplayer/compare/v2.83...v2.84>
