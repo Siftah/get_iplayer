@@ -20,7 +20,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 - Do you want the default behaviour, which is to download the best available SD video for a single TV programme?
 
-	CLI: `get_iplayer --modes=default […]`
+	CLI: `get_iplayer --modes=default [...]`
 
 	NOTE: `--modes=default` can be omitted for the CLI since it is, well, the default.
 
@@ -40,7 +40,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 
 - Do you want to download HD video (if available) for a single programme?
 
-	CLI: `get_iplayer --modes=best […]`
+	CLI: `get_iplayer --modes=best [...]`
 
 	WPM: Enter "best" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
 
@@ -56,7 +56,7 @@ The easiest way to decide which shortcut to use is to answer a few simple questi
 	
 - Do you want to revert to pre-2.83 default behaviour and download lower-quality video for a single programme?
 
-	CLI: `get_iplayer --modes=good […]`
+	CLI: `get_iplayer --modes=good [...]`
 
 	WPM: Enter "good" (without quotes) in **Recording Modes** field and click **Apply Settings**, then record programme.
 

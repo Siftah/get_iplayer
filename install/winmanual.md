@@ -1,6 +1,6 @@
 ## Windows Manual Installation
 
-Windows users are strongly recommended to use the [get_iplayer Windows installer](winsetup).  However if you must use your own Perl distribution and your own versions of rtmpdump, ffmpeg, etc., it is possible to do a manual installation on Windows.  The instructions below describe one way to perform a manual installation, but you may find a different method works better on your system.
+Windows users are strongly recommended to use the [[get_iplayer Windows installer|winsetup]].  However if you must use your own Perl distribution and your own versions of rtmpdump, ffmpeg, etc., it is possible to do a manual installation on Windows.  The instructions below describe one way to perform a manual installation, but you may find a different method works better on your system.
 
 ### Perl Support
 

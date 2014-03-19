@@ -2,7 +2,7 @@
 
 "Git HEAD" is the latest development version of get_iplayer from the Git repository. There may be occasions when you wish to use the Git HEAD version of get_iplayer in order to test bug fixes or new features.
 
-Windows lacks a built-in command line downloader, but you may install either [curl](http://www.paehl.com/open_source/?download=curl_730_0_ssl.zip) or [wget](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe) yourself and use the [download instructions for Linux/Unix/OS X](githeadunix).  The only difference is that you should rename the CLI script from "get_iplayer" to "get_iplayer.pl" after downloading.  The instructions below describe an alternative method to download the files with your web browser.
+Windows lacks a built-in command line downloader, but you may install either [curl](http://www.paehl.com/open_source/?download=curl_730_0_ssl.zip) or [wget](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe) yourself and use the [[download instructions for Linux/Unix/OS X|githeadunix]].  The only difference is that you should rename the CLI script from "get_iplayer" to "get_iplayer.pl" after downloading.  The instructions below describe an alternative method to download the files with your web browser.
 
 Updating an existing Windows installation is different from updating a Linux/Unix/OS X installation.  Regardless of how you download the Git HEAD scripts, use the update instructions below.
 

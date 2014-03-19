@@ -90,7 +90,7 @@ Settings are grouped into 5 tabs: Advanced Search, Display, Columns, Recording a
 
 >**HEY! OVER HERE!** - WPM does not download HD TV (where available) by default out of consideration for users with limited internet bandwidth.  If you wish to download HD TV, change the value of *Recording Modes* in the **Recording** tab to "best" (without quotes).  Use the **Save As Default** button to make the setting permanent (see below).
 
-The settings correspond to options for the get_iplayer CLI.  See [[this page|manpage]] for a full list.  Not all get_iplayer options are available to the WPM.  For those options, get_iplayer uses either its default values or values that have been saved to its user options file with `get_iplayer --prefs-add` (examples [[here|documentation#saving-settings]].
+The settings correspond to options for the get_iplayer CLI.  See [[this page|manpage]] for a full list.  Not all get_iplayer options are available to the WPM.  For those options, get_iplayer uses either its default values or values that have been saved to its user options file with `get_iplayer --prefs-add` (examples [[here|documentation#saving-settings]]).
 
 When you change settings, use the buttons beneath the settings tabs to apply them:
 

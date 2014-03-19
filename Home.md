@@ -10,7 +10,7 @@
 
 [[Getting Help|help]]
 
-[Beginner Guides and Forums](http://squarepenguin.co.uk)
+[Beginner Guides and Forums](http://squarepenguin.co.uk) (external link)
 
 [[Unix Manual Page|manpage]]
 
