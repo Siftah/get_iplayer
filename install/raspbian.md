@@ -4,8 +4,7 @@ These instructions are for Raspbian wheezy.
 
 ### Command-line Interface (CLI)
 
-Although the Debian get-iplayer package is incorporated in Raspbian repositories, Raspbian users are recommended to use the get_iplayer repository version (see below).  If you must use the Debian package, refer to the above instructions for Debian installation.  Note that the version of AtomicParsley
-packaged with Raspbian frequently fails with files downloaded with get_iplayer.
+Although the Debian get-iplayer package is incorporated in Raspbian repositories, Raspbian users are recommended to use the get_iplayer repository version (see below).  If you must use the Debian package, refer to the above instructions for Debian installation.  Note that the version of AtomicParsley packaged with Raspbian frequently fails with files downloaded with get_iplayer.
 
 #### get_iplayer Repository Installation
 
