@@ -50,7 +50,7 @@ These instructions are for openSUSE 13.1.
 
 6. Run CLI with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
 
 
 ### Web PVR Manager (WPM)

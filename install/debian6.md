@@ -36,7 +36,7 @@ The get-iplayer package available in the squeeze repository is obsolete and shou
 
 7. Run CLI:
 
-        get_iplayer […]
+        get_iplayer [...]
 
 ### Web PVR Manager (WPM)
 

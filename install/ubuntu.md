@@ -35,7 +35,7 @@ The [get-iplayer PPA](https://launchpad.net/~jon-hedgerows/+archive/get-iplayer)
 
 5. Run CLI with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
 
 If you wish to remove the PPA packages and roll back any updates:
 

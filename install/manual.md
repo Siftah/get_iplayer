@@ -47,7 +47,7 @@ To install cpanminus and local::lib and set up your local library in ~/perl5:
 
 This example is for the bash shell and assumes that your profile is loaded from ~/.profile, but you may prefer to use ~/.bash_profile.  You may also prefer to initialise your environment in ~/.bashrc and load that file from ~/.profile or ~/.bash_profile. The equivalent locations are different for different shells, e.g., ~/.login and ~/.cshrc for csh or ~/.login and ~/.tcshrc for tcsh.  The "eval" statement initialises environment variables necessary for local::lib to function, so place it in whichever file you use to set up your shell environment.
 
-After your local library is set up, you can install modules with `cpanm Module::Name [Module::Name …]`. For example, to install the Perl modules for get_iplayer:
+After your local library is set up, you can install modules with `cpanm Module::Name [Module::Name ...]`. For example, to install the Perl modules for get_iplayer:
 
 	cpanm LWP MP3::Info MP3::Tag Net::SMTP::SSL Net::SMTP::TLS::ButMaintained XML::Simple
 

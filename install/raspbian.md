@@ -31,7 +31,7 @@ packaged with Raspbian frequently fails with files downloaded with get_iplayer.
 
 4. Run CLI with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
 
 ### Web PVR Manager (WPM)
 

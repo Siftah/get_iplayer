@@ -20,7 +20,7 @@ These instructions are for Debian 7.1 (stable, wheezy).  Information for Debian 
 
 4. Run CLI with:
 
-		get_iplayer […]
+		get_iplayer [...]
 
 
 ### Web PVR Manager (WPM)

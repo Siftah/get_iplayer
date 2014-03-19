@@ -18,7 +18,7 @@ These instructions are for OpenBSD 5.3.
 
 4. Run CLI with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
 
 NOTE: If you use SSL email, you may see a deprecation warning about the use of SSL_verify_mode, a parameter used by the IO::Socket::SSL module.  However, your emails should still be transmitted successfully.
 

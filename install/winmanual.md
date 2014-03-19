@@ -80,7 +80,7 @@ The file is in INI format.  The "url" value in each section contains the  downlo
 
 10. Run CLI with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
     	
 
 ### Web PVR Manager (WPM)
