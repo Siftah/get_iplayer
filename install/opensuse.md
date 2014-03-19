@@ -1,6 +1,6 @@
 ## openSUSE
 
-These instructions are for openSUSE 12.3.
+These instructions are for openSUSE 13.1.
 
 ### Command-line Interface (CLI)
 
@@ -22,7 +22,7 @@ These instructions are for openSUSE 12.3.
 
     Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually (use current version and rpm):
 
-    	sudo zypper install get_iplayer-2.84-1.1.noarch.rpm
+    	sudo zypper install get_iplayer-2.85-5.1.noarch.rpm
 
 4. Install components not installed with get_iplayer package
 
@@ -65,7 +65,7 @@ These instructions are for openSUSE 12.3.
 
     Although labelled as unstable, the package should be safe to install. You may opt for one-click installation, or you may download the RPM file and install it manually  (use current version and rpm):
 
-    	sudo zypper install get_iplayer-pvr-2.84-1.1.noarch.rpm
+    	sudo zypper install get_iplayer-pvr-2.85-1.1.noarch.rpm
 
 3. Launch the WPM in a terminal window with this command:
 
