@@ -2,7 +2,7 @@
 
 ### Oh-So-Important Note:
 
-**If the version of get_iplayer you are about to install was released before 2013-06-06, please do not install it.  It is broken due to changes by the BBC. All releases of get_iplayer 2.83 or higher are fixed, and most package versions of get_iplayer 2.82 have been fixed.  Check the information for your release.  If you must continue using get_iplayer 2.82 released before 2013-06-06, see [this page|swfurl) for instructions on how to adjust your get_iplayer settings to restore downloads.**
+**If the version of get_iplayer you are about to install was released before 2013-06-06, please do not install it.  It is broken due to changes by the BBC. All releases of get_iplayer 2.83 or higher are fixed, and most package versions of get_iplayer 2.82 have been fixed.  Check the information for your release.  If you must continue using get_iplayer 2.82 released before 2013-06-06, see [[this page|swfurl]] for instructions on how to adjust your get_iplayer settings to restore downloads.**
 
 ## Table of Contents
 
