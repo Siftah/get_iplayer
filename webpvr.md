@@ -8,7 +8,7 @@ The Web PVR Manager (WPM) is a Web-based search front-end to get_iplayer which a
 
 ## Installation
 
-See the [get_iplayer installation page](installation) for instructions on how to install and run WPM.  Bear in mind that WPM is a front end for the get_iplayer command-line interface (CLI), so you must install the CLI, its related Perl modules and the necessary external applications along with WPM.  In particular, note that [ffmpeg](http://ffmpeg.org) and [rtmpdump](http://rtmpdump.mplayerhq.hu/) are required for streaming or recording of the Flash streams that comprise the bulk of BBC iPlayer content.
+See the [[get_iplayer installation page|installation]] for instructions on how to install and run WPM.  Bear in mind that WPM is a front end for the get_iplayer command-line interface (CLI), so you must install the CLI, its related Perl modules and the necessary external applications along with WPM.  In particular, note that [ffmpeg](http://ffmpeg.org) and [rtmpdump](http://rtmpdump.mplayerhq.hu/) are required for streaming or recording of the Flash streams that comprise the bulk of BBC iPlayer content.
 
 Windows users should download and run the latest [get_iplayer installer](http://www.infradead.org/get_iplayer_win/get_iplayer_setup_latest.exe), which will set up everything you need.  You can launch WPM from `All Programs -> get_iplayer -> Web PVR Manager` on the Start menu or the `Web PVR Manager` tile in Windows 8.
 
@@ -90,7 +90,7 @@ Settings are grouped into 5 tabs: Advanced Search, Display, Columns, Recording a
 
 >**HEY! OVER HERE!** - WPM does not download HD TV (where available) by default out of consideration for users with limited internet bandwidth.  If you wish to download HD TV, change the value of *Recording Modes* in the **Recording** tab to "best" (without quotes).  Use the **Save As Default** button to make the setting permanent (see below).
 
-The settings correspond to options for the get_iplayer CLI.  See [this page](manpage) for a full list.  Not all get_iplayer options are available to the WPM.  For those options, get_iplayer uses either its default values or values that have been saved to its user options file with `get_iplayer --prefs-add` (examples [here](documentation#Saving%20Settings)).
+The settings correspond to options for the get_iplayer CLI.  See [[this page|manpage]] for a full list.  Not all get_iplayer options are available to the WPM.  For those options, get_iplayer uses either its default values or values that have been saved to its user options file with `get_iplayer --prefs-add` (examples [[here|documentation#saving-settings]].
 
 When you change settings, use the buttons beneath the settings tabs to apply them:
 
