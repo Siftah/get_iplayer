@@ -35,4 +35,4 @@ The primary purpose of this release is to propagate a change in the Windows inst
 
 The full log of changes since v2.84 can be viewed here:
 
-<https://github.com/dinkypumpkin/get_iplayer/compare/v2.84…v2.85>
+<https://github.com/dinkypumpkin/get_iplayer/compare/v2.84...v2.85>

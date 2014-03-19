@@ -93,4 +93,4 @@ An example:
 
 The full log of changes since v2.82 can be viewed here:
 
-<https://github.com/dinkypumpkin/get_iplayer/compare/v2.82…v2.83>
+<https://github.com/dinkypumpkin/get_iplayer/compare/v2.82...v2.83>
