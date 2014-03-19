@@ -89,7 +89,7 @@ A few distros do not provide all the necessary external programs in their offici
 
 5. Run CLI (assumed installed in PATH) with:
 
-    	get_iplayer […]
+    	get_iplayer [...]
 
 <a name="manual-wpm"></a>
 ### Web PVR Manager (WPM)
