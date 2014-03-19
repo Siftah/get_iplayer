@@ -3,7 +3,7 @@
 ### Perl Support
 Perl is part of the OS X base system, so no installation is necessary.
 
-Additional Perl modules may be installed using the [local::lib method](manual) described for Linux/Unix.  Note that the LWP and XML::Simple modules are already installed with the system Perl on OS X.
+Additional Perl modules may be installed using the [[local::lib method|manual#manual-perl-locallib]] described for Linux/Unix.  Note that the LWP and XML::Simple modules are already installed with the system Perl on OS X.
 
 ### External Programs
 
