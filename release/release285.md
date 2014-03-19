@@ -22,7 +22,7 @@ All Windows users should use this installer to upgrade to get_iplayer 2.85.  The
 
 ### Internet Explorer 11 Compatibility
 
-The primary purpose of this release is to propagate a change in the Windows installation that is required to make the Web PVR Manager compatible with Internet Explorer 11.  The change is explained in [this page](ie11).
+The primary purpose of this release is to propagate a change in the Windows installation that is required to make the Web PVR Manager compatible with Internet Explorer 11.  The change is explained in [[this page|ie11]].
 
 
 ### Other Changes
