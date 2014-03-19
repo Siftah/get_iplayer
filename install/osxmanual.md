@@ -37,7 +37,7 @@ Create the installation directory if it does not exist:
 
     sudo mkdir -p /usr/local/bin
 
-then use the CLI [manual installation procedure](manual) described for Linux/Unix.
+then use the CLI [[manual installation procedure|manual]] described for Linux/Unix.
 
 ### Web PVR Manager (WPM)
 
@@ -45,4 +45,4 @@ Create the installation directory if it does not exist:
 
     sudo mkdir -p /usr/local/bin
 
-then use the WPM [manual installation procedure](manual) described for Linux/Unix.
+then use the WPM [[manual installation procedure|manual]] described for Linux/Unix.

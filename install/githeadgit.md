@@ -22,8 +22,8 @@
 
 	You may run both the CLI and WPM directly from the cloned repository. If you wish to update your existing installation:
 
-	**Linux/Unix/OS X:** Proceed from step #2 in the CLI and WPM [manual installation procedures](manual).  If you are replacing a package installation, it is recommended that you first remove the get_iplayer package (but leave external programs installed), then follow the manual installation procedure to install the Git HEAD version to /usr/local/bin (or similar).
+	**Linux/Unix/OS X:** Proceed from step #2 in the CLI and WPM [[manual installation procedures|manual]].  If you are replacing a package installation, it is recommended that you first remove the get_iplayer package (but leave external programs installed), then follow the manual installation procedure to install the Git HEAD version to /usr/local/bin (or similar).
 
-	**Windows:** See the instructions [here](githeadwin).
+	**Windows:** See the instructions [[here|githeadwin]].
 
 

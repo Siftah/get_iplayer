@@ -2,7 +2,7 @@
 
 These instructions are for Ubuntu 13.10 (Saucy Salamander).
 
-The get-iplayer versions incorporated in Ubuntu repositories are nearly always out of date or broken, so Ubuntu users should install from the get_iplayer PPA.  Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) should use the [manual installation procedure](manual).
+The get-iplayer versions incorporated in Ubuntu repositories are nearly always out of date or broken, so Ubuntu users should install from the get_iplayer PPA.  Ubuntu editions that have [reached end-of-life](https://wiki.ubuntu.com/Releases) should use the [[manual installation procedure|manual]].
 
 ### get_iplayer PPA
 

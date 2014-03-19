@@ -6,7 +6,7 @@ Full information on installing get_iplayer with [Homebrew](http://brew.sh) can b
 
 ### Perl Support
 
-Homebrew is designed to work with the system Perl installed with OS X, so no additional Perl installation is required.  The OS X system Perl already includes the LWP and XML::Simple modules. Additional Perl modules may be installed using the [local::lib method](manual) described for Linux/Unix.  
+Homebrew is designed to work with the system Perl installed with OS X, so no additional Perl installation is required.  The OS X system Perl already includes the LWP and XML::Simple modules. Additional Perl modules may be installed using the [[local::lib method|manual]] described for Linux/Unix.  
 
 ### External Programs
 

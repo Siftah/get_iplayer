@@ -86,5 +86,5 @@ NOTE: If you use SSL email, you may see a deprecation warning about the use of S
 
 ### Web PVR Manager (WPM)
 
-The WPM is not installed with the get_iplayer package.  Use the [manual installation procedure](manual).
+The WPM is not installed with the get_iplayer package.  Use the [[manual installation procedure|manual]].
 

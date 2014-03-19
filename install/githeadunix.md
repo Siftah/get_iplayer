@@ -16,7 +16,7 @@
 
 2. Back up and replace existing CLI
 
-	You may run the CLI from the download location. If you wish to replace your existing get_iplayer installation, proceed from step #2 in the CLI [manual installation procedure](manual) after first backing up your existing CLI.  
+	You may run the CLI from the download location. If you wish to replace your existing get_iplayer installation, proceed from step #2 in the CLI [[manual installation procedure|manual]] after first backing up your existing CLI.  
 
 	If you are replacing a package installation, it is recommended that you first remove the get_iplayer package (but leave external programs installed), then follow the manual installation procedure to install the Git HEAD version to /usr/local/bin (or similar). 
 
@@ -34,7 +34,7 @@
 
 2. Back up and replace existing WPM
 
-	You may run the WPM from the download location.  If you wish to replace your existing get_iplayer installation, proceed from step #2 in the WPM [manual installation procedure](manual) after first backing up your existing WPM.  
+	You may run the WPM from the download location.  If you wish to replace your existing get_iplayer installation, proceed from step #2 in the WPM [[manual installation procedure|manual]] after first backing up your existing WPM.  
 
 	If you are replacing a package installation, it is recommended that you first remove the get_iplayer package (but leave external programs installed), then follow the manual installation procedure to install the Git HEAD version to /usr/local/bin (or similar).  
 

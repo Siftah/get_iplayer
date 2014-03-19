@@ -39,8 +39,8 @@ Because MacPorts is a self-contained system, you must install the MacPorts build
     
 ### Command-line Interface (CLI)
 
-Use the CLI [manual installation procedure](manual) described for Linux/Unix.
+Use the CLI [[manual installation procedure|manual]] described for Linux/Unix.
 
 ### Web PVR Manager (WPM)
 
-Use the WPM [manual installation procedure](manual) described for Linux/Unix.
+Use the WPM [[manual installation procedure|manual]] described for Linux/Unix.

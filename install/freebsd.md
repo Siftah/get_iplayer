@@ -68,7 +68,7 @@ If you install the PBI package, you must skip steps #1 and #2 below.
 
 ### Web PVR Manager (WPM)
 
-The WPM is installed as a system service, but it requires additional configuration and a small patch to work, as described below.  You may also use the [manual installation procedure](manual).
+The WPM is installed as a system service, but it requires additional configuration and a small patch to work, as described below.  You may also use the [[manual installation procedure|manual]].
 
 1. Create a location to store preferences, caches, and downloads
 
