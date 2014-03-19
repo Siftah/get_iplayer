@@ -20,34 +20,34 @@ It is also recommended to install [VLC Media Player](http://www.videolan.org/vlc
 
 There are several different tabs along the top of the page:
 
-- **Search** – Shows you a list of all **available** programmes that match your default options. Use any of the search criteria presented, enter a search term then click the **Search** button below (select the **Advanced Search** tab to get more search options).
-- **Recordings** – Shows you a list of all **recorded** programmes that match your default options. Use any of the search criteria presented, enter a search term then click the **Search** button below (click **Advanced Search** to get more search options).
-- **PVR List** – Shows you a list of currently saved PVR searches or queued recordings (you can delete them from here also)
-- **Run PVR** – Runs the PVR immediately in a new tab – make sure you wait for it to fully complete before closing the browser screen. If you do not close the tab it will automatically run the PVR every 4 hours.
-- **Update Software** - Updates to the latest PVR Manager script (if it is writable) – make sure you restart the service after doing so. This feature is unavailable in Windows – use the installer and re-install the get_iplayer component to get the latest Web PVR Manager.
-- **Help** – Sends you here.
+- **Search** - Shows you a list of all **available** programmes that match your default options. Use any of the search criteria presented, enter a search term then click the **Search** button below (select the **Advanced Search** tab to get more search options).
+- **Recordings** - Shows you a list of all **recorded** programmes that match your default options. Use any of the search criteria presented, enter a search term then click the **Search** button below (click **Advanced Search** to get more search options).
+- **PVR List** - Shows you a list of currently saved PVR searches or queued recordings (you can delete them from here also)
+- **Run PVR** - Runs the PVR immediately in a new tab - make sure you wait for it to fully complete before closing the browser screen. If you do not close the tab it will automatically run the PVR every 4 hours.
+- **Update Software** - Updates to the latest PVR Manager script (if it is writable) - make sure you restart the service after doing so. This feature is unavailable in Windows - use the installer and re-install the get_iplayer component to get the latest Web PVR Manager.
+- **Help** - Sends you here.
 
 ### Action Buttons
 
 There are several different action buttons along the top and bottom of the search results:
 
-- **Search** – Enter your search term in the *Search* field and click this button to execute the search.  You and target your search at a field other than *Name* by changing the value of *Search in*.  Additional search options may found in the **Advanced Search** tab. You can search the PVR recordings history instead of the available programmes by selecting *Search History* in the search panel
+- **Search** - Enter your search term in the *Search* field and click this button to execute the search.  You and target your search at a field other than *Name* by changing the value of *Search in*.  Additional search options may found in the **Advanced Search** tab. You can search the PVR recordings history instead of the available programmes by selecting *Search History* in the search panel
 
 > **HEY! OVER HERE!** - With the default settings WPM will only search TV programmes.  Select the *BBC Radio* checkbox to add radio programmes to the search results.
 
-- **Record** – Select the checkbox next to the programme(s) you want to record and click this for immediate recording in a separate browser tab.
+- **Record** - Select the checkbox next to the programme(s) you want to record and click this for immediate recording in a separate browser tab.
 
 >**HEY! OVER HERE!** - In Linux/Unix/OSX recordings are saved by default in the directory where you started the WPM service. With the Windows installer version of WPM recordings are saved by default in the `iPlayer Recordings` folder on your desktop. You can override this in your get_iplayer preferences, or you may enter a new location in the *Override Recordings Folder* field in the **Recording** settings tab.
 
-- **Play** – Select the checkbox next to the programme(s) you want to playback and click this to download an m3u playlist (you should associate m3u playlists with VLC in your browser for immediate playback).
+- **Play** - Select the checkbox next to the programme(s) you want to playback and click this to download an m3u playlist (you should associate m3u playlists with VLC in your browser for immediate playback).
 
-- **Queue** – Select the checkbox next to the programme(s) you want to record and click this to queue them for when the PVR next runs (i.e.by clicking ‘Run PVR’).
+- **Queue** - Select the checkbox next to the programme(s) you want to record and click this to queue them for when the PVR next runs (i.e.by clicking ‘Run PVR’).
 
-- **Add Search to PVR** – Once you have added the search terms to get the list of programmes you wish to regularly record, click this button.
+- **Add Search to PVR** - Once you have added the search terms to get the list of programmes you wish to regularly record, click this button.
 
 >**HEY! OVER HERE!** - The queued recordings and PVR searches that you add will only actually be recorded when you click the **Run PVR** button at the top of the page.
 
-- **Refresh Cache** – You must regularly refresh the programme cache to see new programmes. Clicking this button opens another tab or window that refreshes the list of programmes from the online feeds of the selected programme types. If you leave it open it will auto-refresh every hour unless you override the settings.
+- **Refresh Cache** - You must regularly refresh the programme cache to see new programmes. Clicking this button opens another tab or window that refreshes the list of programmes from the online feeds of the selected programme types. If you leave it open it will auto-refresh every hour unless you override the settings.
 
     **NOTE:** It may take a while to reload page when refreshing caches.
 
