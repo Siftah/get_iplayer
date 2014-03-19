@@ -12,7 +12,7 @@ Linux/Unix/OS X users who installed a packaged version of get_iplayer may have a
 
 	man get_iplayer
 
-Windows users can go to **get_iplayer -> Help -> get_iplayer Example Commands** in the Start menu.  If you are using the Windows 8 Start screen you will need to show "All Apps" to see the **get_iplayer Example Commands** button.  The Windows shortcut will take you to the [Usage and Examples](documentation) page in this wiki.
+Windows users can go to **get_iplayer -> Help -> get_iplayer Example Commands** in the Start menu.  If you are using the Windows 8 Start screen you will need to show "All Apps" to see the **get_iplayer Example Commands** button.  The Windows shortcut will take you to the [[Usage and Examples|documentation]] page in this wiki.
 
 ### User Forums and Beginner Guides
 
