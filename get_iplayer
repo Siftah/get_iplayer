@@ -1897,13 +1897,14 @@ sub exists_in_path {
 # Checks history for files that are over 30 days old and asks user if they should be deleted
 # "$prog->{pid}|$prog->{name}|$prog->{episode}|$prog->{type}|".time()."|$prog->{mode}|$prog->{filename}\n";
 sub purge_downloaded_files {
+
 	my $hist = shift;
 	my @delete;
 	my @proglist;
 	my $days = shift;
 
 	# Return if disabled or running in a typically non-interactive mode
-	return 0 if $opt->{nopurge} || $opt->{nowrite} || $opt->{quiet} || $opt->{silent};
+	return 0;
 
 	for my $pid ( $hist->get_pids() ) {
 		my $record = $hist->get_record( $pid );
@@ -7384,7 +7385,7 @@ sub download_subtitles {
 
 	# in case --subtitles used with --pid for radio programme
 	return unless $prog->{type} eq "tv";
-	
+
 	# Don't redownload subs if the file already exists
 	if ( ( -f $file || -f "$prog->{dir}/$prog->{fileprefix}.partial.srt" ) && ! $opt->{overwrite} ) {
 		main::logger "INFO: Skipping subtitles download - file already exists: $file\n" if $opt->{verbose};
